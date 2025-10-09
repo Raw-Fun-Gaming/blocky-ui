@@ -1,0 +1,152 @@
+/* ========================================
+   HOVER EFFECTS
+   Blocky UI - 3D Interactive States
+   ======================================== */
+
+/* ========================================
+   BUTTON HOVER EFFECTS
+   ======================================== */
+
+.blocky-btn-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+}
+
+.blocky-btn-wrapper:active {
+  transform: translateY(1px);
+  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+}
+
+.blocky-btn-wrapper:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   CARD HOVER EFFECTS
+   ======================================== */
+
+.blocky-card-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.5),
+    var(--blocky-inset-combined);
+}
+
+.blocky-card-wrapper:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.4),
+    var(--blocky-inset-combined);
+}
+
+/* ========================================
+   TAG HOVER EFFECTS
+   ======================================== */
+
+.blocky-tag-wrapper:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+}
+
+.blocky-tag-wrapper:active {
+  transform: translateX(-50%) translateY(1px);
+  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+}
+
+/* ========================================
+   INFO HOVER EFFECTS
+   ======================================== */
+
+.blocky-info-wrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.5),
+    var(--blocky-inset-combined);
+}
+
+/* ========================================
+   MODAL HOVER EFFECTS (CLOSE BUTTON)
+   ======================================== */
+
+.blocky-modal-close:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4), 0 8px 20px rgba(255, 68, 68, 0.5),
+    var(--blocky-inset-combined);
+}
+
+.blocky-modal-close:active {
+  transform: scale(1);
+  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+}
+
+/* ========================================
+   GENERIC 3D HOVER EFFECTS
+   ======================================== */
+
+.blocky-hover-lift:hover {
+  animation: liftUp var(--blocky-transition-normal) ease forwards;
+}
+
+.blocky-hover-press:active {
+  animation: pressDown var(--blocky-transition-fast) ease forwards;
+}
+
+.blocky-hover-glow:hover {
+  animation: glowPulse 1s ease-in-out infinite;
+}
+
+.blocky-hover-border:hover {
+  animation: borderGlow 1s ease-in-out infinite;
+}
+
+/* ========================================
+   GRADIENT HOVER EFFECTS
+   ======================================== */
+
+.blocky-gradient:hover::before {
+  animation: radialPulse 1.5s ease-in-out infinite;
+}
+
+/* ========================================
+   DISABLED STATE (NO HOVER)
+   ======================================== */
+
+.blocky-disabled:hover,
+[disabled]:hover {
+  transform: none;
+  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far),
+    var(--blocky-inset-combined);
+  cursor: not-allowed;
+}
+
+/* ========================================
+   FOCUS-VISIBLE (ACCESSIBILITY)
+   ======================================== */
+
+.blocky-btn-wrapper:focus-visible,
+.blocky-card-wrapper:focus-visible,
+.blocky-modal-close:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Reduce hover effects on touch devices */
+  .blocky-btn-wrapper:hover,
+  .blocky-card-wrapper:hover,
+  .blocky-tag-wrapper:hover,
+  .blocky-info-wrapper:hover {
+    transform: none;
+  }
+
+  /* But keep active states for touch feedback */
+  .blocky-btn-wrapper:active {
+    transform: translateY(2px);
+  }
+
+  .blocky-card-wrapper:active {
+    transform: scale(0.98);
+  }
+}

@@ -1,0 +1,114 @@
+/* ========================================
+   BLOCKY CARD COMPONENT
+   3D blocky card with hover effects
+   ======================================== */
+
+/* ========================================
+   CARD WRAPPER
+   Main card container with 3D styling
+   ======================================== */
+
+.blocky-card-wrapper {
+  position: relative;
+  display: inline-block;
+  min-width: var(--blocky-card-min-width);
+  min-height: var(--blocky-card-min-height);
+  padding: var(--blocky-padding-lg);
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.9) 0%,
+    rgba(40, 40, 60, 0.85) 50%,
+    rgba(30, 30, 50, 0.8) 100%
+  );
+  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--blocky-border-radius);
+  backdrop-filter: var(--blocky-blur-md);
+  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  transition: all var(--blocky-transition-normal) ease;
+  overflow: hidden;
+}
+
+.blocky-card-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ========================================
+   CARD CONTENT
+   Inner content container
+   ======================================== */
+
+.blocky-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  color: var(--blocky-text-primary);
+}
+
+/* ========================================
+   CARD TITLE
+   Card heading with emphasis
+   ======================================== */
+
+.blocky-card-title {
+  margin: 0 0 var(--blocky-margin-md) 0;
+  color: var(--blocky-text-primary);
+  font-size: var(--blocky-font-lg);
+  font-weight: var(--blocky-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--blocky-letter-spacing-wide);
+  text-shadow: var(--blocky-text-shadow-md);
+  padding-bottom: var(--blocky-padding-sm);
+  border-bottom: var(--blocky-border-width-thin) solid rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   CARD CONTENT AREA
+   Main content text and elements
+   ======================================== */
+
+.blocky-card-content {
+  line-height: var(--blocky-line-height-normal);
+  font-size: var(--blocky-font-md);
+}
+
+.blocky-card-content p {
+  margin: var(--blocky-margin-sm) 0;
+}
+
+.blocky-card-content ul,
+.blocky-card-content ol {
+  margin: var(--blocky-margin-sm) 0;
+  padding-left: var(--blocky-padding-xl);
+}
+
+/* ========================================
+   CARD HOVER STATE
+   3D lifting effect on hover
+   ======================================== */
+
+.blocky-card-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.5),
+    var(--blocky-inset-combined);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ========================================
+   CARD ACTIVE STATE
+   Subtle press effect on click
+   ======================================== */
+
+.blocky-card-wrapper:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.4),
+    var(--blocky-inset-combined);
+}

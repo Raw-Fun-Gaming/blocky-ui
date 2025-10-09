@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blocky UI Demo</title>
+  <link rel="stylesheet" href="dist/blocky-ui.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      min-height: 100vh;
+      color: white;
+    }
+
+    .demo-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .demo-section {
+      margin: 40px 0;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+    }
+
+    .demo-section h2 {
+      margin-top: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1>🎮 Blocky UI Component Library Demo</h1>
+
+    <!-- Buttons Section -->
+    <div class="demo-section">
+      <h2>Buttons</h2>
+      <div class="button-group" id="buttons-container"></div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="demo-section">
+      <h2>Cards</h2>
+      <div class="demo-grid" id="cards-container"></div>
+    </div>
+
+    <!-- Modal Section -->
+    <div class="demo-section">
+      <h2>Modals</h2>
+      <div class="button-group" id="modals-container"></div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="demo-section">
+      <h2>Info Overlays</h2>
+      <div class="button-group" id="info-container"></div>
+    </div>
+
+    <!-- Page Section -->
+    <div class="demo-section">
+      <h2>Full-Screen Page</h2>
+      <div class="button-group" id="page-container"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { BlockyUI } from './dist/index.esm.js';
+
+    // Buttons Demo
+    const buttonsContainer = document.getElementById('buttons-container');
+    const buttonVariants = ['default', 'primary', 'secondary', 'danger'];
+
+    buttonVariants.forEach(variant => {
+      const btn = BlockyUI.createButton({
+        text: variant.toUpperCase(),
+        variant: variant,
+        onClick: () => alert(`${variant} button clicked!`)
+      });
+      buttonsContainer.appendChild(btn);
+    });
+
+    // Disabled button
+    const disabledBtn = BlockyUI.createButton({
+      text: 'DISABLED',
+      disabled: true
+    });
+    buttonsContainer.appendChild(disabledBtn);
+
+    // Cards Demo
+    const cardsContainer = document.getElementById('cards-container');
+    const cardData = [
+      { title: 'Feature 1', content: 'This is a 3D blocky card with gradient styling.' },
+      { title: 'Feature 2', content: 'Hover over the card to see the lifting effect.' },
+      { title: 'Feature 3', content: 'All components use pure CSS for 3D depth.' }
+    ];
+
+    cardData.forEach(data => {
+      const card = BlockyUI.createCard(data);
+      cardsContainer.appendChild(card);
+    });
+
+    // Modals Demo
+    const modalsContainer = document.getElementById('modals-container');
+
+    // Simple modal
+    const simpleModalBtn = BlockyUI.createButton({
+      text: 'SIMPLE MODAL',
+      variant: 'primary',
+      onClick: () => {
+        const modal = BlockyUI.createModal({
+          title: 'Welcome',
+          content: 'This is a blocky modal with 3D effects!',
+          buttons: [
+            { text: 'OK', onClick: () => {} }
+          ]
+        });
+        modal.show();
+      }
+    });
+    modalsContainer.appendChild(simpleModalBtn);
+
+    // Notification modal
+    const notificationBtn = BlockyUI.createButton({
+      text: 'NOTIFICATION',
+      variant: 'primary',
+      onClick: () => {
+        BlockyUI.showNotification(
+          'Success!',
+          'Your action was completed successfully.',
+          () => console.log('Notification closed')
+        );
+      }
+    });
+    modalsContainer.appendChild(notificationBtn);
+
+    // Confirmation modal
+    const confirmBtn = BlockyUI.createButton({
+      text: 'CONFIRMATION',
+      variant: 'secondary',
+      onClick: () => {
+        BlockyUI.showConfirmation(
+          'Confirm Action',
+          'Are you sure you want to proceed?',
+          () => alert('Confirmed!'),
+          () => alert('Cancelled!')
+        );
+      }
+    });
+    modalsContainer.appendChild(confirmBtn);
+
+    // Error modal
+    const errorBtn = BlockyUI.createButton({
+      text: 'ERROR',
+      variant: 'danger',
+      onClick: () => {
+        BlockyUI.showError(
+          'Error Occurred',
+          'Something went wrong. Please try again.'
+        );
+      }
+    });
+    modalsContainer.appendChild(errorBtn);
+
+    // Info Overlays Demo
+    const infoContainer = document.getElementById('info-container');
+    const infoColors = ['yellow', 'green', 'blue', 'purple', 'red'];
+
+    infoColors.forEach(color => {
+      const btn = BlockyUI.createButton({
+        text: color.toUpperCase(),
+        onClick: () => {
+          const info = BlockyUI.createInfo({
+            title: `${color.toUpperCase()} INFO`,
+            titleColor: color,
+            content: `This is a ${color} themed info overlay!`,
+            onClose: () => console.log('Info closed')
+          });
+          document.body.appendChild(info);
+        }
+      });
+      infoContainer.appendChild(btn);
+    });
+
+    // Page Demo
+    const pageContainer = document.getElementById('page-container');
+
+    // Simple page
+    const simplePageBtn = BlockyUI.createButton({
+      text: 'SIMPLE PAGE',
+      variant: 'primary',
+      onClick: () => {
+        const page = BlockyUI.createPage({
+          content: `
+            <h1>Welcome to Blocky UI</h1>
+            <p>This is a full-screen page overlay with 3D blocky styling.</p>
+            <p>Click outside or press Escape to close.</p>
+          `,
+          onClose: () => console.log('Page closed')
+        });
+        page.show();
+      }
+    });
+    pageContainer.appendChild(simplePageBtn);
+
+    // Rich content page
+    const richPageBtn = BlockyUI.createButton({
+      text: 'RICH CONTENT',
+      variant: 'secondary',
+      onClick: () => {
+        const richContent = document.createElement('div');
+        richContent.innerHTML = `
+          <h1>🎮 Blocky UI Features</h1>
+          <h2>Pure CSS 3D Effects</h2>
+          <p>All components use pure CSS for depth and styling - no SVG generation or runtime styling.</p>
+
+          <h2>Component Library</h2>
+          <ul>
+            <li>Buttons with 4 color variants</li>
+            <li>Cards with hover effects</li>
+            <li>Modals with backdrop blur</li>
+            <li>Info overlays with 5 color themes</li>
+            <li>Full-screen pages</li>
+          </ul>
+
+          <h2>Zero Dependencies</h2>
+          <p>Lightweight and portable with no runtime dependencies.</p>
+        `;
+
+        const page = BlockyUI.createPage({
+          content: richContent,
+          onClose: () => console.log('Rich page closed')
+        });
+        page.show();
+      }
+    });
+    pageContainer.appendChild(richPageBtn);
+  </script>
+</body>
+</html>

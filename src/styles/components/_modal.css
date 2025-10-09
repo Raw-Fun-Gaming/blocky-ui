@@ -1,0 +1,126 @@
+/* ========================================
+   BLOCKY MODAL COMPONENT
+   3D blocky modal with backdrop and animations
+   ======================================== */
+
+/* ========================================
+   MODAL WRAPPER
+   Main modal container with 3D styling
+   ======================================== */
+
+.blocky-modal-wrapper {
+  position: relative;
+  max-width: var(--blocky-modal-max-width);
+  width: 90%;
+  min-height: var(--blocky-modal-min-height);
+  max-height: 80vh;
+  overflow: hidden;
+  cursor: default;
+  box-sizing: border-box;
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.95) 0%,
+    rgba(40, 40, 60, 0.9) 50%,
+    rgba(30, 30, 50, 0.85) 100%
+  );
+  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--blocky-border-radius-lg);
+  backdrop-filter: var(--blocky-blur-lg);
+  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  animation: modalSlideIn var(--blocky-animation-slide) ease-out;
+}
+
+.blocky-modal-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ========================================
+   MODAL CLOSE BUTTON
+   Positioned in top-right with 3D effect
+   ======================================== */
+
+.blocky-modal-close {
+  /* Inherits from .blocky-close-btn in _shared.css */
+}
+
+/* ========================================
+   MODAL BODY
+   Content area with proper padding
+   ======================================== */
+
+.blocky-modal-body {
+  position: relative;
+  z-index: 2;
+  padding: var(--blocky-padding-lg) var(--blocky-padding-xl);
+  color: var(--blocky-text-primary);
+  line-height: var(--blocky-line-height-normal);
+  font-size: var(--blocky-font-md);
+}
+
+.blocky-modal-body p {
+  margin: var(--blocky-margin-sm) 0;
+}
+
+.blocky-modal-body h1,
+.blocky-modal-body h2,
+.blocky-modal-body h3,
+.blocky-modal-body h4,
+.blocky-modal-body h5,
+.blocky-modal-body h6 {
+  margin: var(--blocky-margin-md) 0 var(--blocky-margin-sm) 0;
+  color: var(--blocky-text-primary);
+  font-weight: var(--blocky-font-weight-bold);
+}
+
+/* ========================================
+   MODAL FOOTER
+   Button area with centered layout
+   ======================================== */
+
+.blocky-modal-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: var(--blocky-margin-md);
+  justify-content: center;
+  align-items: center;
+  padding: var(--blocky-padding-md) var(--blocky-padding-lg) var(--blocky-padding-lg);
+  border-top: var(--blocky-border-width-thin) solid rgba(255, 255, 255, 0.2);
+  margin-top: var(--blocky-margin-md);
+}
+
+.blocky-modal-footer .blocky-btn-wrapper {
+  margin: 0;
+}
+
+/* ========================================
+   MODAL ANIMATIONS
+   ======================================== */
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-30px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,100 @@
+/* ========================================
+   BLOCKY UI - MODULAR CSS ARCHITECTURE
+
+   A lightweight, zero-dependency TypeScript UI component library
+   for 3D blocky-themed interfaces.
+
+   Features:
+   - Pure CSS 3D depth effects (no SVG)
+   - Responsive design with mobile-first approach
+   - Gradient backgrounds with radial overlays
+   - Zero runtime dependencies
+   - Full TypeScript support
+
+   Component Library:
+   - Buttons (4 variants with 3D effects)
+   - Modals (full-featured with backdrop)
+   - Cards (content containers with hover effects)
+   - Info (overlay popups with 5 color themes)
+   - Tags (compact display elements)
+   - Pages (full-screen overlays with scrollable content)
+   ======================================== */
+
+/* ========================================
+   BASE STYLES
+   Core variables, shared components, and utilities
+   ======================================== */
+
+@import url('./base/_variables.css');
+@import url('./base/_shared.css');
+@import url('./base/_responsive.css');
+
+/* ========================================
+   ANIMATIONS
+   Keyframes and hover effects for all components
+   ======================================== */
+
+@import url('./animations/_keyframes.css');
+@import url('./animations/_hover-effects.css');
+
+/* ========================================
+   COMPONENTS
+   Individual component styles with 3D blocky effects
+   ======================================== */
+
+@import url('./components/_button.css');
+@import url('./components/_modal.css');
+@import url('./components/_card.css');
+@import url('./components/_info.css');
+@import url('./components/_tag.css');
+@import url('./components/_page.css');
+
+/* ========================================
+   ARCHITECTURE NOTES
+
+   File Structure:
+   src/styles/
+   ├── blocky-ui.css              # Main entry point (this file)
+   ├── base/
+   │   ├── _variables.css         # CSS custom properties and design tokens
+   │   ├── _shared.css            # Shared component styles and utilities
+   │   └── _responsive.css        # Mobile-first responsive design (matches Stack Rush breakpoints)
+   ├── animations/
+   │   ├── _keyframes.css         # All animation definitions
+   │   └── _hover-effects.css     # Interactive 3D hover states
+   └── components/
+       ├── _button.css            # 3D blocky button styles
+       ├── _modal.css             # Modal component styles
+       ├── _card.css              # Card component styles
+       ├── _info.css              # Info overlay styles with color themes
+       ├── _tag.css               # Tag component styles
+       └── _page.css              # Full-screen page overlay styles
+
+   Design System:
+   - Pure CSS 3D depth with multi-layer box-shadows
+   - Gradient backgrounds with radial overlays
+   - Component isolation for maintainability
+   - Animation system with performance optimization
+   - Responsive design matching Stack Rush game breakpoints
+
+   3D Depth System:
+   - Base shadow: 0 4px 0 rgba(0, 0, 0, 0.3)
+   - Far shadow: 0 8px 16px rgba(0, 0, 0, 0.4)
+   - Inset highlights: inset 0 2px 0 rgba(255, 255, 255, 0.2)
+   - Inset shadows: inset 0 -2px 0 rgba(0, 0, 0, 0.3)
+   - Hover lifts: -3px translateY with enhanced shadows
+   - Active press: +1px translateY with reduced shadows
+
+   Performance Features:
+   - Optimized animations with GPU acceleration
+   - Reduced motion support for accessibility
+   - High DPI screen enhancements
+   - Efficient selector specificity management
+   - Touch device optimizations
+
+   Build Integration:
+   - PostCSS processing for vendor prefixes
+   - CSS minification and optimization
+   - Tree-shaking support for unused styles
+   - Source map generation for debugging
+   ======================================== */

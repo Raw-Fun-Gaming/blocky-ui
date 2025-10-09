@@ -1,0 +1,171 @@
+/* ========================================
+   BLOCKY INFO COMPONENT
+   Info overlay with color themes
+   ======================================== */
+
+/* ========================================
+   INFO WRAPPER
+   Main info container with 3D styling
+   ======================================== */
+
+.blocky-info-wrapper {
+  position: relative;
+  min-width: var(--blocky-info-min-width);
+  max-width: min(500px, calc(100% - 80px));
+  padding: var(--blocky-padding-xl);
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.95) 0%,
+    rgba(40, 40, 60, 0.9) 50%,
+    rgba(30, 30, 50, 0.85) 100%
+  );
+  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--blocky-border-radius-lg);
+  backdrop-filter: var(--blocky-blur-lg);
+  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  animation: infoFadeIn var(--blocky-animation-slide) ease-out;
+  overflow: hidden;
+}
+
+.blocky-info-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ========================================
+   INFO TITLE
+   Styled title with theme colors
+   ======================================== */
+
+.blocky-info-title {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 var(--blocky-margin-md) 0;
+  font-size: var(--blocky-font-2xl);
+  text-shadow: var(--blocky-text-shadow-lg);
+}
+
+/* ========================================
+   INFO BODY
+   Content area
+   ======================================== */
+
+.blocky-info-body {
+  position: relative;
+  z-index: 2;
+  line-height: var(--blocky-line-height-normal);
+  font-size: var(--blocky-font-md);
+  color: var(--blocky-text-primary);
+}
+
+.blocky-info-body p {
+  margin: var(--blocky-margin-sm) 0;
+}
+
+/* ========================================
+   COLOR THEMES
+   Different color themes for info title
+   ======================================== */
+
+/* Yellow Theme */
+.blocky-info-wrapper.theme-yellow {
+  border-color: rgba(255, 194, 1, 0.5);
+}
+
+.blocky-info-wrapper.theme-yellow .blocky-info-title {
+  color: #ffc201;
+  text-shadow: 0 0 12px rgba(255, 194, 1, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blocky-info-wrapper.theme-yellow::before {
+  background: radial-gradient(circle at center, rgba(255, 194, 1, 0.2) 0%, transparent 70%);
+}
+
+/* Green Theme */
+.blocky-info-wrapper.theme-green {
+  border-color: rgba(28, 230, 28, 0.5);
+}
+
+.blocky-info-wrapper.theme-green .blocky-info-title {
+  color: #1ce61c;
+  text-shadow: 0 0 12px rgba(28, 230, 28, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blocky-info-wrapper.theme-green::before {
+  background: radial-gradient(circle at center, rgba(28, 230, 28, 0.2) 0%, transparent 70%);
+}
+
+/* Blue Theme */
+.blocky-info-wrapper.theme-blue {
+  border-color: rgba(4, 123, 255, 0.5);
+}
+
+.blocky-info-wrapper.theme-blue .blocky-info-title {
+  color: #047bff;
+  text-shadow: 0 0 12px rgba(4, 123, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blocky-info-wrapper.theme-blue::before {
+  background: radial-gradient(circle at center, rgba(4, 123, 255, 0.2) 0%, transparent 70%);
+}
+
+/* Purple Theme */
+.blocky-info-wrapper.theme-purple {
+  border-color: rgba(150, 50, 255, 0.5);
+}
+
+.blocky-info-wrapper.theme-purple .blocky-info-title {
+  color: #9632ff;
+  text-shadow: 0 0 12px rgba(150, 50, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blocky-info-wrapper.theme-purple::before {
+  background: radial-gradient(circle at center, rgba(150, 50, 255, 0.2) 0%, transparent 70%);
+}
+
+/* Red Theme */
+.blocky-info-wrapper.theme-red {
+  border-color: rgba(255, 68, 68, 0.5);
+}
+
+.blocky-info-wrapper.theme-red .blocky-info-title {
+  color: #ff4444;
+  text-shadow: 0 0 12px rgba(255, 68, 68, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blocky-info-wrapper.theme-red::before {
+  background: radial-gradient(circle at center, rgba(255, 68, 68, 0.2) 0%, transparent 70%);
+}
+
+/* ========================================
+   INFO HOVER STATE
+   Subtle scale effect on hover
+   ======================================== */
+
+.blocky-info-wrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.5),
+    var(--blocky-inset-combined);
+}
+
+/* ========================================
+   INFO ANIMATIONS
+   ======================================== */
+
+@keyframes infoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

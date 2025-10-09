@@ -1,0 +1,179 @@
+/* ========================================
+   BLOCKY BUTTON COMPONENT
+   3D blocky button with pure CSS styling
+   ======================================== */
+
+/* ========================================
+   BUTTON WRAPPER
+   Container for button with positioning
+   ======================================== */
+
+.blocky-btn-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: var(--blocky-margin-sm);
+}
+
+/* ========================================
+   BUTTON ELEMENT
+   The actual button with 3D blocky effects
+   ======================================== */
+
+.blocky-btn {
+  position: relative;
+  min-width: var(--blocky-button-min-width);
+  min-height: var(--blocky-button-min-height);
+  padding: var(--blocky-padding-md) var(--blocky-padding-xl);
+  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--blocky-border-radius);
+  font-size: var(--blocky-font-md);
+  font-weight: var(--blocky-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--blocky-letter-spacing-wide);
+  color: var(--blocky-text-primary);
+  text-shadow: var(--blocky-text-shadow-md);
+  backdrop-filter: var(--blocky-blur-md);
+  cursor: pointer;
+  outline: none;
+  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  transition: all var(--blocky-transition-normal) ease;
+  overflow: hidden;
+}
+
+/* ========================================
+   BUTTON VARIANTS - DEFAULT
+   Gray gradient for default button
+   ======================================== */
+
+.blocky-btn.default {
+  background: linear-gradient(
+    180deg,
+    rgba(100, 100, 100, 0.95) 0%,
+    rgba(100, 100, 100, 0.7) 50%,
+    rgba(100, 100, 100, 0.5) 100%
+  );
+}
+
+.blocky-btn.default::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(100, 100, 100, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+/* ========================================
+   BUTTON VARIANTS - PRIMARY
+   Blue gradient for primary button
+   ======================================== */
+
+.blocky-btn.primary {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 123, 255, 0.95) 0%,
+    rgba(4, 123, 255, 0.7) 50%,
+    rgba(4, 123, 255, 0.5) 100%
+  );
+  border-color: rgba(4, 123, 255, 0.5);
+}
+
+.blocky-btn.primary::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(4, 123, 255, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+/* ========================================
+   BUTTON VARIANTS - SECONDARY
+   Light blue gradient for secondary button
+   ======================================== */
+
+.blocky-btn.secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(85, 223, 255, 0.95) 0%,
+    rgba(85, 223, 255, 0.7) 50%,
+    rgba(85, 223, 255, 0.5) 100%
+  );
+  border-color: rgba(85, 223, 255, 0.5);
+}
+
+.blocky-btn.secondary::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(85, 223, 255, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+/* ========================================
+   BUTTON VARIANTS - DANGER
+   Red gradient for danger button
+   ======================================== */
+
+.blocky-btn.danger {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 68, 68, 0.95) 0%,
+    rgba(255, 68, 68, 0.7) 50%,
+    rgba(255, 68, 68, 0.5) 100%
+  );
+  border-color: rgba(255, 68, 68, 0.5);
+}
+
+.blocky-btn.danger::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 68, 68, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+/* ========================================
+   BUTTON HOVER STATE
+   3D lifting effect on hover
+   ======================================== */
+
+.blocky-btn-wrapper:hover .blocky-btn {
+  transform: translateY(-3px);
+  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   BUTTON ACTIVE STATE
+   3D pressing effect on click
+   ======================================== */
+
+.blocky-btn-wrapper:active .blocky-btn {
+  transform: translateY(1px);
+  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+}
+
+/* ========================================
+   BUTTON DISABLED STATE
+   Reduced opacity and no interaction
+   ======================================== */
+
+.blocky-btn:disabled,
+.blocky-btn-wrapper .blocky-btn:disabled {
+  opacity: var(--blocky-opacity-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}
+
+.blocky-btn-wrapper:has(.blocky-btn:disabled):hover {
+  transform: none;
+}
+
+/* ========================================
+   BUTTON FOCUS STATE (ACCESSIBILITY)
+   ======================================== */
+
+.blocky-btn:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 3px;
+}

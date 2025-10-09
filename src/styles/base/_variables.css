@@ -1,0 +1,159 @@
+/* ========================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   Blocky UI - 3D Blocky Theme
+   ======================================== */
+
+:root {
+  /* ========================================
+     COLOR PALETTE
+     ======================================== */
+
+  /* Primary Colors */
+  --blocky-primary: #55dfff;
+  --blocky-primary-dark: #047bff;
+  --blocky-success: #1ce61c;
+  --blocky-warning: #ffc201;
+  --blocky-danger: #ff4444;
+
+  /* Button Variant Colors */
+  --blocky-button-default: rgba(100, 100, 100, 0.9);
+  --blocky-button-primary: rgba(4, 123, 255, 0.9);
+  --blocky-button-secondary: rgba(85, 223, 255, 0.9);
+  --blocky-button-danger: rgba(255, 68, 68, 0.9);
+
+  /* Text Colors */
+  --blocky-text-primary: #ffffff;
+  --blocky-text-secondary: rgba(255, 255, 255, 0.8);
+  --blocky-text-disabled: #666666;
+
+  /* Background Colors */
+  --blocky-overlay-modal: rgba(0, 0, 0, 0.8);
+  --blocky-overlay-info: rgba(0, 0, 0, 0.6);
+  --blocky-bg-dark: rgba(0, 0, 0, 0.3);
+
+  /* Info Title Colors */
+  --blocky-info-yellow: rgba(255, 194, 1, 0.9);
+  --blocky-info-green: rgba(28, 230, 28, 0.9);
+  --blocky-info-blue: rgba(4, 123, 255, 0.9);
+  --blocky-info-purple: rgba(150, 50, 255, 0.9);
+  --blocky-info-red: rgba(255, 68, 68, 0.9);
+
+  /* ========================================
+     3D DEPTH EFFECTS
+     ======================================== */
+
+  /* Box Shadow Layers for 3D Effect */
+  --blocky-shadow-base: 0 4px 0 rgba(0, 0, 0, 0.3);
+  --blocky-shadow-far: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --blocky-shadow-hover: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.5);
+  --blocky-shadow-active: 0 2px 0 rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  /* Inset Highlights for 3D Effect */
+  --blocky-inset-highlight: inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  --blocky-inset-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  --blocky-inset-combined: inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+
+  /* ========================================
+     SPACING & SIZING
+     ======================================== */
+
+  /* Component Dimensions */
+  --blocky-button-min-width: 120px;
+  --blocky-button-min-height: 40px;
+  --blocky-card-min-width: 300px;
+  --blocky-card-min-height: 180px;
+  --blocky-modal-min-height: 180px;
+  --blocky-modal-max-width: min(500px, calc(100% - 100px));
+  --blocky-info-min-width: 300px;
+  --blocky-tag-min-width: 200px;
+
+  /* Padding & Margins */
+  --blocky-padding-xs: 4px;
+  --blocky-padding-sm: 8px;
+  --blocky-padding-md: 12px;
+  --blocky-padding-lg: 16px;
+  --blocky-padding-xl: 20px;
+  --blocky-margin-sm: 8px;
+  --blocky-margin-md: 12px;
+  --blocky-margin-lg: 16px;
+
+  /* Border */
+  --blocky-border-width: 3px;
+  --blocky-border-width-thin: 2px;
+  --blocky-border-width-thick: 4px;
+  --blocky-border-radius: 6px;
+  --blocky-border-radius-sm: 4px;
+  --blocky-border-radius-lg: 8px;
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+
+  /* Font Sizes */
+  --blocky-font-xs: 10px;
+  --blocky-font-sm: 12px;
+  --blocky-font-md: 14px;
+  --blocky-font-lg: 16px;
+  --blocky-font-xl: 18px;
+  --blocky-font-2xl: 20px;
+
+  /* Font Weights */
+  --blocky-font-weight-normal: 400;
+  --blocky-font-weight-medium: 500;
+  --blocky-font-weight-bold: 700;
+
+  /* Letter Spacing */
+  --blocky-letter-spacing-tight: -0.02em;
+  --blocky-letter-spacing-normal: 0em;
+  --blocky-letter-spacing-wide: 0.05em;
+
+  /* Line Heights */
+  --blocky-line-height-tight: 1.2;
+  --blocky-line-height-normal: 1.5;
+  --blocky-line-height-loose: 1.8;
+
+  /* ========================================
+     EFFECTS & ANIMATIONS
+     ======================================== */
+
+  /* Transition Durations */
+  --blocky-transition-fast: 0.15s;
+  --blocky-transition-normal: 0.3s;
+  --blocky-transition-slow: 0.5s;
+
+  /* Animation Durations */
+  --blocky-animation-slide: 0.3s;
+  --blocky-animation-fade: 0.2s;
+  --blocky-animation-bounce: 0.4s;
+
+  /* Z-Index Layers */
+  --blocky-z-base: 0;
+  --blocky-z-content: 10;
+  --blocky-z-dropdown: 100;
+  --blocky-z-overlay-info: 800;
+  --blocky-z-overlay-modal: 900;
+
+  /* Backdrop Blur */
+  --blocky-blur-sm: blur(4px);
+  --blocky-blur-md: blur(8px);
+  --blocky-blur-lg: blur(12px);
+
+  /* Text Shadow */
+  --blocky-text-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --blocky-text-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --blocky-text-shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 12px rgba(255, 255, 255, 0.3);
+
+  /* Opacity Levels */
+  --blocky-opacity-disabled: 0.5;
+  --blocky-opacity-hover: 0.9;
+  --blocky-opacity-active: 1;
+
+  /* ========================================
+     PAGE BORDER GRADIENT COLORS
+     Animated gradient colors for page borders
+     ======================================== */
+  --blocky-page-border-color-1: rgba(255, 100, 100, 0.8);
+  --blocky-page-border-color-2: rgba(255, 150, 100, 0.8);
+  --blocky-page-border-color-3: rgba(255, 200, 100, 0.8);
+}

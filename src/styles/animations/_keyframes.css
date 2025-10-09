@@ -1,0 +1,283 @@
+/* ========================================
+   KEYFRAME ANIMATIONS
+   Blocky UI - 3D Blocky Theme
+   ======================================== */
+
+/* ========================================
+   MODAL ANIMATIONS
+   ======================================== */
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-30px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideOut {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px) scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   INFO ANIMATIONS
+   ======================================== */
+
+@keyframes infoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes infoSlideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   BUTTON ANIMATIONS
+   ======================================== */
+
+@keyframes buttonPress {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonPulse {
+  0%,
+  100% {
+    box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far),
+      var(--blocky-inset-combined);
+  }
+  50% {
+    box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far),
+      var(--blocky-inset-combined), 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ========================================
+   CARD ANIMATIONS
+   ======================================== */
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================================
+   TAG ANIMATIONS
+   ======================================== */
+
+@keyframes tagSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes tagBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* ========================================
+   GLOW ANIMATIONS
+   ======================================== */
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes borderGlow {
+  0%,
+  100% {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* ========================================
+   3D DEPTH ANIMATIONS
+   ======================================== */
+
+@keyframes liftUp {
+  from {
+    transform: translateY(0);
+    box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far);
+  }
+  to {
+    transform: translateY(-3px);
+    box-shadow: var(--blocky-shadow-hover);
+  }
+}
+
+@keyframes pressDown {
+  from {
+    transform: translateY(0);
+    box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far);
+  }
+  to {
+    transform: translateY(2px);
+    box-shadow: var(--blocky-shadow-active);
+  }
+}
+
+/* ========================================
+   GRADIENT ANIMATIONS
+   ======================================== */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes radialPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* ========================================
+   UTILITY ANIMATIONS
+   ======================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}

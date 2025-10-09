@@ -1,0 +1,144 @@
+/* ========================================
+   BLOCKY TAG COMPONENT
+   Compact tag element with 3D styling
+   ======================================== */
+
+/* ========================================
+   TAG WRAPPER
+   Main tag container with positioning
+   ======================================== */
+
+.blocky-tag-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: var(--blocky-tag-min-width);
+  padding: var(--blocky-padding-sm) var(--blocky-padding-lg);
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.95) 0%,
+    rgba(40, 40, 60, 0.85) 50%,
+    rgba(30, 30, 50, 0.8) 100%
+  );
+  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--blocky-border-radius);
+  backdrop-filter: var(--blocky-blur-md);
+  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  transition: all var(--blocky-transition-normal) ease;
+  z-index: var(--blocky-z-dropdown);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.blocky-tag-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ========================================
+   TAG FLIPPED POSITIONING
+   Alternative positioning for flipped tags
+   ======================================== */
+
+.blocky-tag-wrapper.flipped {
+  top: auto;
+  bottom: 20px;
+  animation: tagSlideIn var(--blocky-animation-slide) ease-out;
+}
+
+/* ========================================
+   TAG CONTENT
+   Inner content container
+   ======================================== */
+
+.blocky-tag-content {
+  position: relative;
+  z-index: 2;
+  color: var(--blocky-text-primary);
+}
+
+/* ========================================
+   TAG HEADER
+   Optional header with title
+   ======================================== */
+
+.blocky-tag-header {
+  margin-bottom: var(--blocky-margin-sm);
+  padding-bottom: var(--blocky-padding-xs);
+  border-bottom: var(--blocky-border-width-thin) solid rgba(255, 255, 255, 0.2);
+}
+
+.blocky-tag-title {
+  margin: 0;
+  font-size: var(--blocky-font-md);
+  font-weight: var(--blocky-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--blocky-letter-spacing-wide);
+  text-shadow: var(--blocky-text-shadow-sm);
+}
+
+/* ========================================
+   TAG BODY
+   Main content area
+   ======================================== */
+
+.blocky-tag-body {
+  font-size: var(--blocky-font-sm);
+  line-height: var(--blocky-line-height-normal);
+}
+
+.blocky-tag-body p {
+  margin: var(--blocky-margin-sm) 0;
+}
+
+/* ========================================
+   TAG HOVER STATE
+   3D lifting effect on hover
+   ======================================== */
+
+.blocky-tag-wrapper:hover {
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.blocky-tag-wrapper.flipped:hover {
+  transform: translateX(-50%) translateY(3px);
+}
+
+/* ========================================
+   TAG ACTIVE STATE
+   Pressing effect on click
+   ======================================== */
+
+.blocky-tag-wrapper:active {
+  transform: translateX(-50%) translateY(1px);
+  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+}
+
+.blocky-tag-wrapper.flipped:active {
+  transform: translateX(-50%) translateY(-1px);
+}
+
+/* ========================================
+   TAG ANIMATIONS
+   ======================================== */
+
+@keyframes tagSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

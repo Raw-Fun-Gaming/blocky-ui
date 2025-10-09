@@ -1,0 +1,234 @@
+/* ========================================
+   BLOCKY PAGE COMPONENT
+   Full-screen page overlay with scrollable content
+   ======================================== */
+
+/* ========================================
+   CSS CUSTOM PROPERTIES FOR SMOOTH TRANSITIONS
+   Enable smooth color transitions for border gradient
+   ======================================== */
+
+@property --blocky-page-border-color-1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(255, 100, 100, 0.8);
+}
+
+@property --blocky-page-border-color-2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(255, 150, 100, 0.8);
+}
+
+@property --blocky-page-border-color-3 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(255, 200, 100, 0.8);
+}
+
+/* ========================================
+   PAGE OVERLAY
+   Full-screen backdrop with blur effect
+   ======================================== */
+
+.blocky-page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--blocky-overlay-modal);
+  backdrop-filter: var(--blocky-blur-lg);
+  -webkit-backdrop-filter: var(--blocky-blur-lg);
+  z-index: var(--blocky-z-overlay-modal);
+  cursor: pointer;
+  opacity: 0;
+  animation: pageFadeIn var(--blocky-transition-normal) ease-out forwards;
+  overflow: hidden;
+}
+
+/* ========================================
+   PAGE CONTENT
+   Full-screen content container with scrolling
+   ======================================== */
+
+.blocky-page-content {
+  position: relative;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  margin: 20px;
+  padding: 4px;
+  background: linear-gradient(
+    to top,
+    var(--blocky-page-border-color-1, rgba(255, 100, 100, 0.8)) 0%,
+    var(--blocky-page-border-color-2, rgba(255, 150, 100, 0.8)) 50%,
+    var(--blocky-page-border-color-3, rgba(255, 200, 100, 0.8)) 100%
+  );
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  border-radius: var(--blocky-border-radius-lg);
+  backdrop-filter: var(--blocky-blur-lg);
+  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  cursor: default;
+  overflow-y: auto;
+  overflow-x: hidden;
+  animation: pageSlideIn var(--blocky-animation-slide) ease-out, pageBorderRise 3s linear infinite;
+  box-sizing: border-box;
+  transition:
+    --blocky-page-border-color-1 2s ease-in-out,
+    --blocky-page-border-color-2 2s ease-in-out,
+    --blocky-page-border-color-3 2s ease-in-out;
+}
+
+/* Inner content background */
+.blocky-page-content::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.95) 0%,
+    rgba(40, 40, 60, 0.9) 50%,
+    rgba(30, 30, 50, 0.85) 100%
+  );
+  border-radius: calc(var(--blocky-border-radius-lg) - 2px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blocky-page-content::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: calc(var(--blocky-border-radius-lg) - 2px);
+}
+
+/* ========================================
+   PAGE WRAPPER
+   Inner content wrapper with padding
+   ======================================== */
+
+.blocky-page-wrapper {
+  position: relative;
+  z-index: 2;
+  padding: var(--blocky-padding-xl);
+  color: var(--blocky-text-primary);
+  line-height: var(--blocky-line-height-normal);
+  font-size: var(--blocky-font-md);
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.blocky-page-wrapper p {
+  margin: var(--blocky-margin-sm) 0;
+}
+
+.blocky-page-wrapper h1,
+.blocky-page-wrapper h2,
+.blocky-page-wrapper h3,
+.blocky-page-wrapper h4,
+.blocky-page-wrapper h5,
+.blocky-page-wrapper h6 {
+  margin: var(--blocky-margin-md) 0 var(--blocky-margin-sm) 0;
+  color: var(--blocky-text-primary);
+  font-weight: var(--blocky-font-weight-bold);
+}
+
+/* ========================================
+   PAGE CLOSE BUTTON
+   Positioned in top-right, inherits from shared.css
+   ======================================== */
+
+.blocky-page-content .blocky-close-btn {
+  z-index: 10;
+}
+
+/* ========================================
+   PAGE ANIMATIONS
+   ======================================== */
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageSlideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pageFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes pageSlideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes pageBorderRise {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .blocky-page-content {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    margin: 15px;
+  }
+
+  .blocky-page-wrapper {
+    padding: var(--blocky-padding-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .blocky-page-content {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  .blocky-page-wrapper {
+    padding: var(--blocky-padding-md);
+  }
+}
