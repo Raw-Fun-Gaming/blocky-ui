@@ -229,21 +229,94 @@
       onClick: () => {
         const richContent = document.createElement('div');
         richContent.innerHTML = `
-          <h1>🎮 Blocky UI Features</h1>
+          <h1>🎮 Blocky UI Component Library</h1>
+
           <h2>Pure CSS 3D Effects</h2>
-          <p>All components use pure CSS for depth and styling - no SVG generation or runtime styling.</p>
+          <p>All components use pure CSS for depth and styling - no SVG generation or runtime styling. The distinctive 3D blocky aesthetic is achieved through multi-layer box shadows, gradient backgrounds, and backdrop blur effects.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
 
           <h2>Component Library</h2>
           <ul>
-            <li>Buttons with 4 color variants</li>
-            <li>Cards with hover effects</li>
-            <li>Modals with backdrop blur</li>
-            <li>Info overlays with 5 color themes</li>
-            <li>Full-screen pages</li>
+            <li><strong>Buttons:</strong> 4 color variants (default, primary, secondary, danger) with 3D hover effects</li>
+            <li><strong>Cards:</strong> Content containers with 3D styling and optional headers</li>
+            <li><strong>Modals:</strong> Overlay dialogs with backdrop blur and smooth animations</li>
+            <li><strong>Info Overlays:</strong> 5 color themes (yellow, green, blue, purple, red) with auto-dismiss</li>
+            <li><strong>Tags:</strong> Small label-style tags with compact styling</li>
+            <li><strong>Full-screen Pages:</strong> Scrollable pages with animated gradient borders</li>
           </ul>
 
+          <h2>Animated Gradient Borders</h2>
+          <p>Page components feature unique animated gradient borders that smoothly transition between 7 predefined color sets:</p>
+          <ul>
+            <li>🌅 Warm sunset (red-orange-yellow)</li>
+            <li>🌊 Cool ocean (blue-cyan-turquoise)</li>
+            <li>🪄 Purple magic (purple-pink-rose)</li>
+            <li>🌲 Green forest (emerald-lime-yellow)</li>
+            <li>🌈 Rainbow spectrum (red-green-blue)</li>
+            <li>🌇 Golden hour (orange-gold-yellow)</li>
+            <li>⚡ Neon glow (cyan-magenta-yellow)</li>
+          </ul>
+          <p>The gradient colors rise from bottom to top in a 10-second animation loop, with smooth 2-second transitions between color changes using CSS @property.</p>
+
           <h2>Zero Dependencies</h2>
-          <p>Lightweight and portable with no runtime dependencies.</p>
+          <p>Lightweight and portable with no runtime dependencies. The entire library is built with TypeScript and pure CSS, making it easy to integrate into any project.</p>
+
+          <h2>TypeScript Support</h2>
+          <p>Full type definitions included for all components, options, and instances. The library uses a modern factory pattern that returns typed instances with methods.</p>
+
+          <h2>Responsive Design</h2>
+          <p>All components are fully responsive with mobile-first design. Breakpoints at 840px, 768px, 560px, and 480px ensure optimal display on all devices.</p>
+
+          <h2>Installation</h2>
+          <p>Install via npm (coming soon):</p>
+          <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; overflow-x: auto;">npm install blocky-ui</pre>
+
+          <h2>Usage Example</h2>
+          <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; overflow-x: auto; line-height: 1.6;">
+import { BlockyUI } from 'blocky-ui';
+import 'blocky-ui/styles';
+
+// Create button
+const button = BlockyUI.createButton({
+  text: 'Click Me',
+  variant: 'primary',
+  onClick: () => console.log('Clicked')
+});
+
+// Create modal
+const modal = BlockyUI.createModal({
+  title: 'Hello',
+  content: 'World',
+  buttons: [
+    { text: 'OK', variant: 'primary', onClick: () => {} }
+  ]
+});
+modal.show();
+
+// Show notification
+BlockyUI.showNotification('Success!', 'Operation completed.');
+          </pre>
+
+          <h2>License</h2>
+          <p>MIT License - Free to use in personal and commercial projects.</p>
+
+          <h2>Repository</h2>
+          <p>GitHub: <a href="https://github.com/fuR-Gaming/blocky-ui" style="color: var(--blocky-primary);">fuR-Gaming/blocky-ui</a></p>
+
+          <h2>Credits</h2>
+          <p>Design inspired by Stack Rush's multiplierTag component. Built with Claude Code.</p>
+
+          <p style="margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 6px;">
+            <em>Scroll down to test the animated gradient border behavior with long content...</em>
+          </p>
+
+          <div style="height: 400px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); border-radius: 6px; margin-top: 20px;">
+            <p style="text-align: center; font-size: 20px;">
+              ⬇️<br>
+              End of content<br>
+              The gradient border should remain visible while scrolling
+            </p>
+          </div>
         `;
 
         const page = BlockyUI.createPage({
