@@ -110,7 +110,11 @@
    ======================================== */
 
 .blocky-disabled:hover,
-[disabled]:hover {
+.blocky-btn[disabled]:hover,
+.blocky-btn-wrapper [disabled]:hover,
+.blocky-modal-wrapper [disabled]:hover,
+.blocky-card[disabled]:hover,
+.blocky-info[disabled]:hover {
   transform: none;
   box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far),
     var(--blocky-inset-combined);

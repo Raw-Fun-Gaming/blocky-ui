@@ -66,13 +66,13 @@
   );
   background-size: 100% 200%;
   background-position: 0% 100%;
+  background-attachment: fixed;
   border-radius: var(--blocky-border-radius-lg);
   backdrop-filter: var(--blocky-blur-lg);
   box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
   cursor: default;
-  overflow-y: auto;
-  overflow-x: hidden;
-  animation: pageSlideIn var(--blocky-animation-slide) ease-out, pageBorderRise 3s linear infinite;
+  overflow: hidden;
+  animation: pageSlideIn var(--blocky-animation-slide) ease-out, pageBorderRise 10s linear infinite;
   box-sizing: border-box;
   transition:
     --blocky-page-border-color-1 2s ease-in-out,
@@ -80,7 +80,7 @@
     --blocky-page-border-color-3 2s ease-in-out;
 }
 
-/* Inner content background */
+/* Inner scrollable content container */
 .blocky-page-content::after {
   content: '';
   position: absolute;
@@ -118,14 +118,20 @@
    ======================================== */
 
 .blocky-page-wrapper {
-  position: relative;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
   z-index: 2;
   padding: var(--blocky-padding-xl);
   color: var(--blocky-text-primary);
   line-height: var(--blocky-line-height-normal);
   font-size: var(--blocky-font-md);
-  min-height: 100%;
   box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: calc(var(--blocky-border-radius-lg) - 2px);
 }
 
 .blocky-page-wrapper p {

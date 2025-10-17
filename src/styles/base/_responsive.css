@@ -14,12 +14,6 @@
     font-size: calc(var(--blocky-font-xl) * 0.85);
   }
 
-  .blocky-modal-wrapper,
-  .blocky-card-wrapper,
-  .blocky-info-wrapper {
-    transform: scale(0.85);
-  }
-
   .blocky-btn-wrapper {
     padding: calc(var(--blocky-padding-md) * 0.85);
     font-size: calc(var(--blocky-font-md) * 0.85);
@@ -120,7 +114,6 @@
   .blocky-modal-wrapper,
   .blocky-card-wrapper,
   .blocky-info-wrapper {
-    transform: scale(0.7);
     min-width: 200px;
     max-width: calc(100vw - 20px);
   }
@@ -171,7 +164,6 @@
 @media (max-height: 380px) {
   .blocky-modal-wrapper,
   .blocky-info-wrapper {
-    transform: scale(0.8);
     max-height: 85vh;
   }
 
@@ -190,7 +182,6 @@
 @media (max-height: 280px) {
   .blocky-modal-wrapper,
   .blocky-info-wrapper {
-    transform: scale(0.7);
     max-height: 80vh;
   }
 
@@ -214,7 +205,6 @@
   .blocky-modal-wrapper,
   .blocky-card-wrapper,
   .blocky-info-wrapper {
-    transform: scale(0.75);
     font-size: var(--blocky-font-sm);
   }
 

@@ -149,8 +149,8 @@
 
 .blocky-close-btn {
   position: absolute;
-  top: var(--blocky-padding-md);
-  right: var(--blocky-padding-md);
+  top: var(--blocky-padding-sm);
+  right: var(--blocky-padding-sm);
   width: 32px;
   height: 32px;
   padding: 0;
