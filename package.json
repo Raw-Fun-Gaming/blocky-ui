@@ -1,5 +1,5 @@
 {
-  "name": "blocky-ui",
+  "name": "@furic/blocky-ui",
   "version": "1.0.0",
   "description": "A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS",
   "type": "module",
@@ -28,12 +28,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fur-gaming/blocky-ui.git"
+    "url": "https://github.com/fuR-Gaming/blocky-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/fur-gaming/blocky-ui/issues"
+    "url": "https://github.com/fuR-Gaming/blocky-ui/issues"
   },
-  "homepage": "https://github.com/fur-gaming/blocky-ui#readme",
+  "homepage": "https://github.com/fuR-Gaming/blocky-ui#readme",
   "engines": {
     "node": ">=14.0.0"
   },

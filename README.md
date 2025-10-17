@@ -1,19 +1,19 @@
 # Blocky UI
 
-[![npm version](https://img.shields.io/npm/v/blocky-ui?style=for-the-badge&logo=npm&color=55dfff)](https://www.npmjs.com/package/blocky-ui)
-[![npm downloads](https://img.shields.io/npm/dm/blocky-ui?style=for-the-badge&logo=npm&color=ff4444)](https://www.npmjs.com/package/blocky-ui)
+[![npm version](https://img.shields.io/npm/v/@furic/blocky-ui?style=for-the-badge&logo=npm&color=55dfff)](https://www.npmjs.com/package/@furic/blocky-ui)
+[![npm downloads](https://img.shields.io/npm/dm/@furic/blocky-ui?style=for-the-badge&logo=npm&color=ff4444)](https://www.npmjs.com/package/@furic/blocky-ui)
 [![GitHub release](https://img.shields.io/github/v/release/fuR-Gaming/blocky-ui?style=for-the-badge&logo=github&color=00ff88)](https://github.com/fuR-Gaming/blocky-ui/releases)
 [![License](https://img.shields.io/github/license/fuR-Gaming/blocky-ui?style=for-the-badge&color=ffaa00)](https://github.com/fuR-Gaming/blocky-ui/blob/main/LICENSE)
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Pure CSS](https://img.shields.io/badge/Pure%20CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Zero Dependencies](https://img.shields.io/badge/Zero%20Dependencies-55dfff?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/blocky-ui)
+[![Zero Dependencies](https://img.shields.io/badge/Zero%20Dependencies-55dfff?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/@furic/blocky-ui)
 [![Game Ready](https://img.shields.io/badge/Game%20Ready-ff4444?style=for-the-badge&logo=gamepad&logoColor=white)](https://github.com/fuR-Gaming/blocky-ui/wiki/Complete-Examples)
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/fuR-Gaming/blocky-ui/ci.yml?style=for-the-badge&logo=github-actions)](https://github.com/fuR-Gaming/blocky-ui/actions)
 [![GitHub Pages](https://img.shields.io/github/deployments/fuR-Gaming/blocky-ui/github-pages?style=for-the-badge&logo=github&label=Demo%20Site&color=00ff88)](https://fur-gaming.github.io/blocky-ui/)
 [![Wiki](https://img.shields.io/badge/Wiki-Documentation-00ff88?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/fuR-Gaming/blocky-ui/wiki)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/blocky-ui?style=for-the-badge&logo=webpack&color=purple)](https://bundlephobia.com/package/blocky-ui)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@furic/blocky-ui?style=for-the-badge&logo=webpack&color=purple)](https://bundlephobia.com/package/@furic/blocky-ui)
 
 A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS.
 
@@ -45,14 +45,14 @@ Inspired by the multiplier tags in Stack Rush, I wanted to create a lightweight 
 ## Installation
 
 ```bash
-npm install blocky-ui
+npm install @furic/blocky-ui
 ```
 
 ## Usage
 
 ```typescript
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from '@furic/blocky-ui';
+import '@furic/blocky-ui/styles';
 
 // Create a button
 const button = BlockyUI.createButton({
