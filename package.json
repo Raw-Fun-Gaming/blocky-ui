@@ -1,5 +1,5 @@
 {
-  "name": "@furic/blocky-ui",
+  "name": "blocky-ui-lite",
   "version": "1.0.0",
   "description": "A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS",
   "type": "module",
