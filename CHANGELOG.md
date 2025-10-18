@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-01-18
+
+### Changed
+- **Package name**: Changed from `@furic/blocky-ui` to `blocky-ui-lite` for better branding
+- Updated all documentation to reference `blocky-ui-lite`
+- Updated CDN links in demo page and wiki
+- Fixed `loadFallback()` function definition order in demo page
+
+### Documentation
+- Updated README.md with new package name and badges
+- Updated all wiki pages with new package references
+- Updated demo page (docs/index.html) with correct CDN links
+
 ## [1.0.0] - 2025-01-18
 
 ### Added
