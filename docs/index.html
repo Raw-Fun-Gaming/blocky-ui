@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blocky UI - Live Demo</title>
     <meta name="description" content="Interactive demo of Blocky UI - A lightweight, 3D blocky-themed UI component library">
-    <link rel="stylesheet" href="https://unpkg.com/blocky-ui@latest/dist/blocky-ui.css">
+    <link rel="stylesheet" href="https://unpkg.com/blocky-ui-lite@latest/dist/blocky-ui.css">
     <style>
         /* ========================================
            DEMO PAGE STYLES
@@ -386,19 +386,21 @@ import 'blocky-ui-lite/styles';</pre>
         </p>
     </div>
 
-    <script src="https://unpkg.com/blocky-ui@latest/dist/index.umd.js" onerror="loadFallback()"></script>
     <script>
         // Fallback CDN loading
         function loadFallback() {
             console.warn('Primary CDN failed, trying fallback...');
             const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/npm/blocky-ui@1/dist/index.umd.js';
+            script.src = 'https://cdn.jsdelivr.net/npm/blocky-ui-lite@1/dist/index.umd.js';
             script.onerror = () => {
                 console.error('CDN loading failed. Please check your internet connection or NPM package availability.');
                 document.getElementById('cdn-error').style.display = 'block';
             };
             document.head.appendChild(script);
         }
+    </script>
+    <script src="https://unpkg.com/blocky-ui-lite@latest/dist/index.umd.js" onerror="loadFallback()"></script>
+    <script>
 
         // Wait for BlockyUI to load
         function initializeDemo() {
