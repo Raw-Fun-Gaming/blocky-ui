@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2025-01-18
+
+### Added
+- **Component Variants**: Added `variant` property support to BlockyTag and BlockyCard components
+- **ComponentVariant Type**: New shared type for component color variants (default, primary, secondary, danger)
+- **Tag Variants**: BlockyTag now supports 4 color gradients matching button variants
+- **Card Variants**: BlockyCard now supports 4 color gradients matching button variants
+
+### Changed
+- **Type System**: Renamed `ButtonVariant` to `ComponentVariant` for better accuracy
+- **BlockyTag**: Removed `flipped` property in favor of simpler positioning
+
+### Removed
+- **BlockyTag**: Removed `flipped` property and related CSS styles
+
+### Documentation
+- Updated demo.html with tag and card variants showcase
+- Updated docs/index.html (GitHub Pages) with proper tag spacing and variants
+- Fixed tags section to use correct `content` property and container positioning
+
 ## [1.0.1] - 2025-01-18
 
 ### Changed
