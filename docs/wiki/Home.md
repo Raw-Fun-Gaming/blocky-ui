@@ -118,13 +118,13 @@ Blocky Component
 
 1. **Install Package**
    ```bash
-   npm install blocky-ui
+   npm install blocky-ui-lite
    ```
 
 2. **Import & Use**
    ```typescript
-   import { BlockyUI } from 'blocky-ui';
-   import 'blocky-ui/styles';
+   import { BlockyUI } from 'blocky-ui-lite';
+   import 'blocky-ui-lite/styles';
 
    const button = BlockyUI.createButton({
      text: 'Launch Sequence',
@@ -135,7 +135,7 @@ Blocky Component
 
 3. **Styles Included**
    ```typescript
-   // CSS is automatically imported via 'blocky-ui/styles'
+   // CSS is automatically imported via 'blocky-ui-lite/styles'
    // No separate link tag needed
    ```
 

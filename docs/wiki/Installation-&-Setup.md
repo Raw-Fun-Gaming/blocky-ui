@@ -7,26 +7,26 @@ This guide will help you get Blocky UI up and running in your project.
 ### NPM (Recommended)
 
 ```bash
-npm install blocky-ui
+npm install blocky-ui-lite
 ```
 
 ### Yarn
 
 ```bash
-yarn add blocky-ui
+yarn add blocky-ui-lite
 ```
 
 ### PNPM
 
 ```bash
-pnpm add blocky-ui
+pnpm add blocky-ui-lite
 ```
 
-### CDN (Coming Soon)
+### CDN
 
 ```html
-<script src="https://unpkg.com/blocky-ui@latest/dist/index.umd.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/blocky-ui@latest/dist/blocky-ui.css">
+<script src="https://unpkg.com/blocky-ui-lite@latest/dist/index.umd.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/blocky-ui-lite@latest/dist/blocky-ui.css">
 ```
 
 ## Basic Setup
@@ -34,8 +34,8 @@ pnpm add blocky-ui
 ### 1. Import the Library
 
 ```typescript
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';  // Import CSS
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';  // Import CSS
 ```
 
 ### 2. Create Your First Component
@@ -59,7 +59,7 @@ Open your application and you should see a beautiful 3D blocky button!
 Blocky UI is built with TypeScript and includes full type definitions. No additional setup required!
 
 ```typescript
-import type { BlockyButtonOptions, BlockyModalOptions } from 'blocky-ui';
+import type { BlockyButtonOptions, BlockyModalOptions } from 'blocky-ui-lite';
 
 const buttonOptions: BlockyButtonOptions = {
   text: 'Submit',
@@ -73,8 +73,8 @@ const buttonOptions: BlockyButtonOptions = {
 ### Vanilla JavaScript/TypeScript
 
 ```typescript
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';
 
 const app = document.getElementById('app');
 const button = BlockyUI.createButton({
@@ -88,8 +88,8 @@ app?.appendChild(button);
 
 ```tsx
 import { useEffect, useRef } from 'react';
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';
 
 function BlockyButton({ text, variant, onClick }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -115,8 +115,8 @@ function BlockyButton({ text, variant, onClick }) {
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';
 
 const buttonContainer = ref(null);
 
@@ -136,8 +136,8 @@ onMounted(() => {
 ```svelte
 <script>
   import { onMount } from 'svelte';
-  import { BlockyUI } from 'blocky-ui';
-  import 'blocky-ui/styles';
+  import { BlockyUI } from 'blocky-ui-lite';
+  import 'blocky-ui-lite/styles';
 
   let container;
 
@@ -218,16 +218,16 @@ export default {
 
 **Solution**: Ensure you're importing the CSS:
 ```typescript
-import 'blocky-ui/styles';
+import 'blocky-ui-lite/styles';
 ```
 
 ### TypeScript Errors
 
-**Problem**: Cannot find module 'blocky-ui'
+**Problem**: Cannot find module 'blocky-ui-lite'
 
 **Solution**: Ensure the package is installed:
 ```bash
-npm install blocky-ui
+npm install blocky-ui-lite
 ```
 
 ### Vite Import Issues
@@ -242,7 +242,7 @@ npm install blocky-ui
 
 **Solution**: Check your `package.json` has `"type": "module"` or use `.cjs` imports:
 ```javascript
-const { BlockyUI } = require('blocky-ui/dist/index.cjs.js');
+const { BlockyUI } = require('blocky-ui-lite/dist/index.cjs.js');
 ```
 
 ## Next Steps

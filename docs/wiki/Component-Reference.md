@@ -564,7 +564,7 @@ import type {
   BlockyInfoOptions,
   BlockyTagOptions,
   BlockyPageOptions
-} from 'blocky-ui';
+} from 'blocky-ui-lite';
 ```
 
 ---

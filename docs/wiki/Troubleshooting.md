@@ -6,14 +6,14 @@ Common issues and their solutions when using Blocky UI.
 
 ### NPM Installation Fails
 
-**Problem**: `npm install blocky-ui` fails with errors
+**Problem**: `npm install blocky-ui-lite` fails with errors
 
 **Solutions**:
 
 1. **Clear NPM cache**:
    ```bash
    npm cache clean --force
-   npm install blocky-ui
+   npm install blocky-ui-lite
    ```
 
 2. **Check Node.js version**:
@@ -23,12 +23,12 @@ Common issues and their solutions when using Blocky UI.
 
 3. **Try with different registry**:
    ```bash
-   npm install blocky-ui --registry=https://registry.npmjs.org/
+   npm install blocky-ui-lite --registry=https://registry.npmjs.org/
    ```
 
 4. **Use exact version**:
    ```bash
-   npm install blocky-ui@1.0.0
+   npm install blocky-ui-lite@1.0.0
    ```
 
 ---
@@ -50,7 +50,7 @@ Common issues and their solutions when using Blocky UI.
    ```json
    {
      "dependencies": {
-       "blocky-ui": "^1.0.0"
+       "blocky-ui-lite": "^1.0.0"
      }
    }
    ```
@@ -58,20 +58,20 @@ Common issues and their solutions when using Blocky UI.
 3. **Reinstall package**:
    ```bash
    npm uninstall blocky-ui
-   npm install blocky-ui
+   npm install blocky-ui-lite
    ```
 
 4. **Check import path**:
    ```typescript
    // ✅ Correct
-   import { BlockyUI } from 'blocky-ui';
-   import 'blocky-ui/styles';
+   import { BlockyUI } from 'blocky-ui-lite';
+   import 'blocky-ui-lite/styles';
 
    // ❌ Wrong
-   import { BlockyUI } from 'blocky-ui/dist/index.esm.js';
+   import { BlockyUI } from 'blocky-ui-lite/dist/index.esm.js';
    ```
 
-### Cannot Find Module 'blocky-ui/styles'
+### Cannot Find Module 'blocky-ui-lite/styles'
 
 **Problem**: CSS import fails
 
@@ -88,9 +88,9 @@ Common issues and their solutions when using Blocky UI.
 
 2. **Alternative import paths**:
    ```typescript
-   import 'blocky-ui/styles';  // Preferred
+   import 'blocky-ui-lite/styles';  // Preferred
    // or
-   import 'blocky-ui/dist/blocky-ui.css';  // Direct path
+   import 'blocky-ui-lite/dist/blocky-ui.css';  // Direct path
    ```
 
 3. **Bundler configuration** (Webpack/Vite):
@@ -120,18 +120,18 @@ Common issues and their solutions when using Blocky UI.
 
 1. **Import CSS**:
    ```typescript
-   import 'blocky-ui/styles';  // Must be imported!
+   import 'blocky-ui-lite/styles';  // Must be imported!
    ```
 
 2. **Check CSS load order**:
    ```typescript
    // ✅ Correct order
-   import 'blocky-ui/styles';     // First
+   import 'blocky-ui-lite/styles';     // First
    import './your-app-styles.css'; // Then your styles
 
    // ❌ Wrong - your styles might override blocky styles
    import './your-app-styles.css';
-   import 'blocky-ui/styles';
+   import 'blocky-ui-lite/styles';
    ```
 
 3. **Verify CSS in browser DevTools**:
@@ -245,8 +245,8 @@ Use `onMounted` or `ref`:
 ```vue
 <script setup>
 import { onMounted, ref } from 'vue';
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';
 
 const container = ref(null);
 
@@ -305,7 +305,7 @@ export default defineConfig({
      BlockyButtonOptions,
      BlockyModalOptions,
      BlockyModalInstance
-   } from 'blocky-ui';
+   } from 'blocky-ui-lite';
    ```
 
 2. **Type assertion for edge cases**:
@@ -325,13 +325,13 @@ export default defineConfig({
 
 ### Missing Type Definitions
 
-**Problem**: `Could not find a declaration file for module 'blocky-ui'`
+**Problem**: `Could not find a declaration file for module 'blocky-ui-lite'`
 
 **Solutions**:
 
 1. **Verify dist/ contains index.d.ts**:
    ```bash
-   ls node_modules/blocky-ui/dist/
+   ls node_modules/blocky-ui-lite/dist/
    # Should show: index.d.ts
    ```
 
@@ -345,7 +345,7 @@ export default defineConfig({
 3. **Force reinstall**:
    ```bash
    rm -rf node_modules/blocky-ui
-   npm install blocky-ui
+   npm install blocky-ui-lite
    ```
 
 ---

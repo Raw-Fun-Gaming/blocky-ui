@@ -18,8 +18,8 @@ Real-world implementation examples for Blocky UI components.
 Complete main menu with navigation and modals.
 
 ```typescript
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';
 
 class GameMenu {
   private container: HTMLElement;
@@ -186,8 +186,8 @@ const menu = new GameMenu('app');
 Slot machine-style interface with multiplier tags and win notifications.
 
 ```typescript
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';
 
 class SlotMachine {
   private balance: number = 1000;
@@ -351,8 +351,8 @@ const slotMachine = new SlotMachine('app');
 Complete settings interface with tabs and controls.
 
 ```typescript
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';
 
 class SettingsPanel {
   private currentTab: string = 'general';
@@ -584,8 +584,8 @@ const settings = new SettingsPanel('app');
 In-game shop with items and purchase confirmations.
 
 ```typescript
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { BlockyUI } from 'blocky-ui-lite';
+import 'blocky-ui-lite/styles';
 
 interface ShopItem {
   id: string;
