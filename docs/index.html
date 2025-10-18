@@ -310,7 +310,8 @@
         <!-- Tags Demo -->
         <div class="demo-section">
             <h2>🏷️ Blocky Tags</h2>
-            <div class="demo-buttons" id="tag-demo">
+            <p style="text-align: center; opacity: 0.8; margin-bottom: 20px;">Tags with different color variants for multipliers and labels</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 100px 60px; justify-content: center; padding: 20px;" id="tag-demo">
                 <!-- Tags will be added here by JavaScript -->
             </div>
         </div>
@@ -489,6 +490,7 @@ import 'blocky-ui-lite/styles';</pre>
             const cardConfigs = [
                 {
                     title: 'Player Stats',
+                    variant: 'primary',
                     content: `
                         <div>
                             <p><strong>Level:</strong> <span style="color: #55dfff;">42</span></p>
@@ -500,6 +502,7 @@ import 'blocky-ui-lite/styles';</pre>
                 },
                 {
                     title: 'Game Progress',
+                    variant: 'secondary',
                     content: `
                         <div style="padding-bottom: 50px">
                             <p><strong>Current Level:</strong><br>World 3-7</p>
@@ -511,6 +514,7 @@ import 'blocky-ui-lite/styles';</pre>
                 },
                 {
                     title: 'Achievements',
+                    variant: 'danger',
                     content: `
                         <div>
                             <p><strong>Total:</strong> 24/50</p>
@@ -555,17 +559,27 @@ import 'blocky-ui-lite/styles';</pre>
             // Create tag demos
             const tagDemo = document.getElementById('tag-demo');
             const tags = [
-                { text: '×2.0', variant: 'default' },
-                { text: '×5.0', variant: 'primary' },
-                { text: '×10.0', variant: 'secondary' },
-                { text: 'JACKPOT', variant: 'danger' }
+                { content: '×2.0', variant: 'default' },
+                { content: '×5.0', variant: 'primary' },
+                { content: '×10.0', variant: 'secondary' },
+                { content: 'NEW', variant: 'primary' },
+                { content: 'VIP', variant: 'danger' }
             ];
 
             tags.forEach(config => {
+                // Create a relative positioned container for proper display
+                const container = document.createElement('div');
+                container.style.position = 'relative';
+                container.style.width = '180px';
+                container.style.height = '80px';
+                container.style.display = 'flex';
+                container.style.alignItems = 'center';
+                container.style.justifyContent = 'center';
+                container.style.flexShrink = '0';
+
                 const tag = BlockyUI.createTag(config);
-                tag.style.fontSize = '1.2rem';
-                tag.style.padding = '8px 16px';
-                tagDemo.appendChild(tag);
+                container.appendChild(tag);
+                tagDemo.appendChild(container);
             });
 
             // Add click counter

@@ -1,8 +1,11 @@
 // Blocky UI TypeScript Types
 
+export type ComponentVariant = 'default' | 'primary' | 'secondary' | 'danger';
+export type TitleColorTheme = 'yellow' | 'green' | 'blue' | 'purple' | 'red';
+
 export interface BlockyButtonOptions {
   text: string;
-  variant?: 'default' | 'primary' | 'secondary' | 'danger';
+  variant?: ComponentVariant;
   onClick?: () => void;
   disabled?: boolean;
   className?: string;
@@ -20,6 +23,7 @@ export interface BlockyModalOptions {
 export interface BlockyCardOptions {
   title?: string;
   content: string | HTMLElement;
+  variant?: ComponentVariant;
   className?: string;
 }
 
@@ -34,8 +38,8 @@ export interface BlockyInfoOptions {
 export interface BlockyTagOptions {
   title?: string;
   content: string | HTMLElement;
+  variant?: ComponentVariant;
   className?: string;
-  flipped?: boolean;
 }
 
 export interface BlockyPageOptions {
@@ -49,9 +53,6 @@ export interface BlockyPageInstance {
   close(): void;
   element: HTMLDivElement;
 }
-
-export type TitleColorTheme = 'yellow' | 'green' | 'blue' | 'purple' | 'red';
-export type ButtonVariant = 'default' | 'primary' | 'secondary' | 'danger';
 
 export interface ComponentEventHandlers {
   onClick?: () => void;

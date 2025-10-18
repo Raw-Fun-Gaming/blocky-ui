@@ -7,9 +7,8 @@ export class BlockyTag {
   static create(options: BlockyTagOptions): HTMLDivElement {
     // Create tag wrapper
     const tagWrapper = document.createElement('div');
-    tagWrapper.className = options.flipped
-      ? 'blocky-tag-wrapper flipped blocky-gradient blocky-3d'
-      : 'blocky-tag-wrapper blocky-gradient blocky-3d';
+    const variant = options.variant || 'default';
+    tagWrapper.className = `blocky-tag-wrapper blocky-gradient blocky-3d ${variant}`;
 
     // Create tag content container
     const tagContent = document.createElement('div');

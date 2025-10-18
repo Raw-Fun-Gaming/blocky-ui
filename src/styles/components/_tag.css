@@ -44,14 +44,48 @@
 }
 
 /* ========================================
-   TAG FLIPPED POSITIONING
-   Alternative positioning for flipped tags
+   TAG VARIANTS
+   Color variants for different tag types
    ======================================== */
 
-.blocky-tag-wrapper.flipped {
-  top: auto;
-  bottom: 20px;
-  animation: tagSlideIn var(--blocky-animation-slide) ease-out;
+/* Default variant - gray gradient */
+.blocky-tag-wrapper.default {
+  background: linear-gradient(
+    180deg,
+    rgba(100, 100, 100, 0.95) 0%,
+    rgba(100, 100, 100, 0.7) 50%,
+    rgba(100, 100, 100, 0.5) 100%
+  );
+}
+
+/* Primary variant - blue gradient */
+.blocky-tag-wrapper.primary {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 123, 255, 0.95) 0%,
+    rgba(4, 123, 255, 0.7) 50%,
+    rgba(4, 123, 255, 0.5) 100%
+  );
+}
+
+/* Secondary variant - cyan gradient */
+.blocky-tag-wrapper.secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(85, 223, 255, 0.95) 0%,
+    rgba(85, 223, 255, 0.7) 50%,
+    rgba(85, 223, 255, 0.5) 100%
+  );
+}
+
+/* Danger variant - red gradient */
+.blocky-tag-wrapper.danger {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 68, 68, 0.95) 0%,
+    rgba(255, 68, 68, 0.7) 50%,
+    rgba(255, 68, 68, 0.5) 100%
+  );
 }
 
 /* ========================================

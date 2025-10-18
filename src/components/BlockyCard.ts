@@ -7,7 +7,8 @@ export class BlockyCard {
   static create(options: BlockyCardOptions): HTMLDivElement {
     // Create wrapper container
     const wrapper = document.createElement('div');
-    wrapper.className = 'blocky-card-wrapper blocky-gradient blocky-3d';
+    const variant = options.variant || 'default';
+    wrapper.className = `blocky-card-wrapper blocky-gradient blocky-3d ${variant}`;
 
     // Create actual card content
     const card = document.createElement('div');

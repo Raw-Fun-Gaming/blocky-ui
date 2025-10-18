@@ -41,6 +41,51 @@
 }
 
 /* ========================================
+   CARD VARIANTS
+   Color variants for different card types
+   ======================================== */
+
+/* Default variant - gray gradient */
+.blocky-card-wrapper.default {
+  background: linear-gradient(
+    180deg,
+    rgba(100, 100, 100, 0.9) 0%,
+    rgba(100, 100, 100, 0.7) 50%,
+    rgba(100, 100, 100, 0.6) 100%
+  );
+}
+
+/* Primary variant - blue gradient */
+.blocky-card-wrapper.primary {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 123, 255, 0.9) 0%,
+    rgba(4, 123, 255, 0.7) 50%,
+    rgba(4, 123, 255, 0.6) 100%
+  );
+}
+
+/* Secondary variant - cyan gradient */
+.blocky-card-wrapper.secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(85, 223, 255, 0.9) 0%,
+    rgba(85, 223, 255, 0.7) 50%,
+    rgba(85, 223, 255, 0.6) 100%
+  );
+}
+
+/* Danger variant - red gradient */
+.blocky-card-wrapper.danger {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 68, 68, 0.9) 0%,
+    rgba(255, 68, 68, 0.7) 50%,
+    rgba(255, 68, 68, 0.6) 100%
+  );
+}
+
+/* ========================================
    CARD CONTENT
    Inner content container
    ======================================== */
