@@ -28,12 +28,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fuR-Gaming/blocky-ui.git"
+    "url": "https://github.com/raw-fun-gaming/blocky-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/fuR-Gaming/blocky-ui/issues"
+    "url": "https://github.com/raw-fun-gaming/blocky-ui/issues"
   },
-  "homepage": "https://github.com/fuR-Gaming/blocky-ui#readme",
+  "homepage": "https://github.com/raw-fun-gaming/blocky-ui#readme",
   "engines": {
     "node": ">=14.0.0"
   },
