@@ -36,6 +36,7 @@ Inspired by the multiplier tags in Stack Rush, I wanted to create a lightweight 
 
 - **🎮 3D Blocky Aesthetic**: Multi-layer box shadows creating realistic 3D depth
 - **🎨 Pure CSS Styling**: No SVG generation, hardware-accelerated rendering
+- **🎭 Theme Support**: Built-in themes (blocky, fall-guys) with easy customization
 - **📦 Zero Dependencies**: Pure TypeScript/JavaScript with no external dependencies
 - **💪 Full TypeScript Support**: Complete type safety with comprehensive interfaces
 - **📱 Responsive Design**: Mobile-first approach with adaptive breakpoints
@@ -53,6 +54,9 @@ npm install blocky-ui-lite
 ```typescript
 import { BlockyUI } from 'blocky-ui-lite';
 import 'blocky-ui-lite/styles';
+
+// Set a theme (optional - defaults to 'blocky')
+BlockyUI.setTheme('fall-guys'); // or 'blocky' for default theme
 
 // Create a button
 const button = BlockyUI.createButton({
@@ -133,6 +137,37 @@ confirmModal.show();
 ![Blocky Page](screenshots/page.png)
 *Full-screen pages with animated gradient borders*
 
+## 🎭 Themes
+
+Blocky UI supports multiple themes out of the box. Switch themes at runtime with a single line of code:
+
+```typescript
+import { BlockyUI } from 'blocky-ui-lite';
+
+// Switch to Fall Guys theme (bright, playful cartoon style)
+BlockyUI.setTheme('fall-guys');
+
+// Switch back to default blocky theme
+BlockyUI.setTheme('blocky');
+```
+
+### Available Themes
+
+| Theme | Description |
+|-------|-------------|
+| `blocky` | Default dark theme with deep shadows and purple accents |
+| `fall-guys` | Bright, playful cartoon style with cyan backgrounds, solid black shadows, purple headers, and rounded corners |
+
+### Theme Features
+
+**Fall Guys Theme** includes:
+- Light cyan (`#64d4ff`) backgrounds
+- Solid black drop shadows (no transparency)
+- Purple gradient headers with white text
+- White borders on components
+- More rounded corners (16-20px)
+- Playful, cartoon-like aesthetic
+
 ## Styling
 
 Blocky UI uses pure CSS with 3D box-shadow effects, gradient backgrounds, and smooth transitions. All components feature:
@@ -142,6 +177,7 @@ Blocky UI uses pure CSS with 3D box-shadow effects, gradient backgrounds, and sm
 - Gradient backgrounds with radial overlays
 - Responsive breakpoints for all screen sizes
 - Customizable color variants
+- Theme-based styling via `data-blocky-theme` attribute
 
 ## 🎨 Visual Design
 
@@ -207,6 +243,8 @@ blocky-ui/
 │       │   ├── _info.css
 │       │   ├── _tag.css
 │       │   └── _page.css
+│       ├── themes/
+│       │   └── _fall-guys.css  # Fall Guys theme
 │       └── blocky-ui.css   # Main entry point
 ├── dist/                  # Built output (generated)
 │   ├── index.esm.js       # ES Module build
