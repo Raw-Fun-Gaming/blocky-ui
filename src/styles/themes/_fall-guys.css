@@ -1,0 +1,529 @@
+/* ========================================
+   FALL GUYS THEME
+   Bright, playful, cartoon-style UI
+   Inspired by Fall Guys game aesthetic
+
+   Key characteristics from reference:
+   - Light cyan/sky blue backgrounds
+   - Dark black drop shadows (bottom-right)
+   - Thick white borders
+   - Colored header bars (configurable per game)
+   - Very rounded corners
+   ======================================== */
+
+/* ========================================
+   THEME SELECTOR
+   Apply this theme by adding data-blocky-theme="fall-guys"
+   to the html or body element
+   ======================================== */
+
+[data-blocky-theme='fall-guys'] {
+  /* ========================================
+     COLOR PALETTE - BRIGHT & PLAYFUL
+     ======================================== */
+
+  /* Primary Colors - Vibrant */
+  --blocky-primary: #00d4ff;
+  --blocky-primary-dark: #0099cc;
+  --blocky-success: #4cd964;
+  --blocky-warning: #ffd93d;
+  --blocky-danger: #ff6b6b;
+
+  /* Button Variant Colors */
+  --blocky-button-default: #64d4ff;
+  --blocky-button-primary: #ff5096;
+  --blocky-button-secondary: #9b59b6;
+  --blocky-button-danger: #ff6b6b;
+
+  /* Text Colors */
+  --blocky-text-primary: #1a1a2e;
+  --blocky-text-secondary: rgba(26, 26, 46, 0.8);
+  --blocky-text-disabled: #a0a0a0;
+  --blocky-text-light: #ffffff;
+
+  /* Background Colors - Light cyan like Fall Guys */
+  --blocky-overlay-modal: rgba(100, 212, 255, 0.9);
+  --blocky-overlay-info: rgba(100, 212, 255, 0.8);
+  --blocky-bg-light: #64d4ff;
+  --blocky-bg-card: #64d4ff;
+
+  /* Container background - Light cyan gradient */
+  --blocky-container-bg: #64d4ff;
+  --blocky-container-bg-light: #7ee0ff;
+  --blocky-container-bg-dark: #4ac8f5;
+
+  /* ========================================
+     3D DEPTH EFFECTS - DARK SHADOWS
+     Fall Guys uses dark black shadows to bottom-right
+     ======================================== */
+
+  /* Box Shadow - SOLID BLACK, offset to bottom-right (like Fall Guys) */
+  --blocky-shadow-base: 4px 4px 0 #000000;
+  --blocky-shadow-far: 6px 6px 0 #000000;
+  --blocky-shadow-hover: 8px 8px 0 #000000;
+  --blocky-shadow-active: 2px 2px 0 #000000;
+
+  /* Inset Highlights - Subtle for 3D candy effect */
+  --blocky-inset-highlight: inset 0 2px 0 rgba(255, 255, 255, 0.4);
+  --blocky-inset-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  --blocky-inset-combined: inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+
+  /* ========================================
+     SPACING & SIZING - MORE ROUNDED
+     ======================================== */
+
+  /* Border - Thick white borders */
+  --blocky-border-width: 4px;
+  --blocky-border-width-thin: 3px;
+  --blocky-border-width-thick: 5px;
+  --blocky-border-radius: 16px;
+  --blocky-border-radius-sm: 12px;
+  --blocky-border-radius-lg: 20px;
+
+  /* Border color - Solid white */
+  --blocky-border-color: #ffffff;
+  --blocky-border-color-hover: #ffffff;
+
+  /* ========================================
+     TYPOGRAPHY - BOLDER
+     ======================================== */
+
+  /* Font Weights - Heavier for cartoon look */
+  --blocky-font-weight-normal: 500;
+  --blocky-font-weight-medium: 600;
+  --blocky-font-weight-bold: 800;
+
+  /* Text Shadow - Dark for readability on light backgrounds */
+  --blocky-text-shadow-sm: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  --blocky-text-shadow-md: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  --blocky-text-shadow-lg: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  /* White text shadow for dark backgrounds */
+  --blocky-text-shadow-light: 2px 2px 0 rgba(0, 0, 0, 0.3);
+
+  /* ========================================
+     PAGE BORDER GRADIENT COLORS
+     ======================================== */
+  --blocky-page-border-color-1: rgba(255, 100, 150, 0.9);
+  --blocky-page-border-color-2: rgba(130, 80, 255, 0.9);
+  --blocky-page-border-color-3: rgba(0, 200, 255, 0.9);
+
+  /* ========================================
+     HEADER BAR COLORS (Configurable)
+     Games can override these with CSS custom properties
+     Uses same color names as TitleColorTheme: yellow, green, blue, purple, red
+     Default is PURPLE like Fall Guys "EPIC" items (good contrast with white text)
+     ======================================== */
+  --blocky-header-bg: linear-gradient(180deg, #b370d4 0%, #9b59b6 100%);
+  --blocky-header-text: #ffffff;
+
+  /* Header bar colors matching TitleColorTheme */
+  /* Note: Yellow/Green have dark text for better contrast */
+  --blocky-header-yellow: linear-gradient(180deg, #ffd93d 0%, #f5a623 100%);
+  --blocky-header-yellow-text: #1a1a2e;
+  --blocky-header-green: linear-gradient(180deg, #5ce65c 0%, #4cd964 100%);
+  --blocky-header-green-text: #1a1a2e;
+  --blocky-header-blue: linear-gradient(180deg, #5cb8ff 0%, #0984e3 100%);
+  --blocky-header-purple: linear-gradient(180deg, #b370d4 0%, #9b59b6 100%);
+  --blocky-header-red: linear-gradient(180deg, #ff8585 0%, #ff6b6b 100%);
+}
+
+/* ========================================
+   COMPONENT OVERRIDES
+   Fall Guys specific styling for components
+   ======================================== */
+
+/* ========================================
+   BUTTONS - Simpler styling with solid black shadow
+   Fall Guys buttons don't have thick white borders
+   ======================================== */
+
+/* Remove box-shadow from btn-wrapper (base theme adds it on hover) */
+[data-blocky-theme='fall-guys'] .blocky-btn-wrapper,
+[data-blocky-theme='fall-guys'] .blocky-btn-wrapper:hover,
+[data-blocky-theme='fall-guys'] .blocky-btn-wrapper:active {
+  box-shadow: none;
+  transform: none;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-btn {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--blocky-border-radius);
+  font-weight: var(--blocky-font-weight-bold);
+  box-shadow: var(--blocky-shadow-base);
+}
+
+/* Default button - Light cyan with dark text */
+[data-blocky-theme='fall-guys'] .blocky-btn.default {
+  background: linear-gradient(
+    180deg,
+    #7ee0ff 0%,
+    #64d4ff 50%,
+    #4ac8f5 100%
+  );
+  color: var(--blocky-text-primary);
+  text-shadow: none;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-btn.default::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
+}
+
+/* Primary button - Hot pink with WHITE text */
+[data-blocky-theme='fall-guys'] .blocky-btn.primary {
+  background: linear-gradient(
+    180deg,
+    #ff6eb0 0%,
+    #ff5096 50%,
+    #e6407d 100%
+  );
+  color: #ffffff;
+  text-shadow: none;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-btn.primary::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+}
+
+/* Secondary button - Purple with WHITE text */
+[data-blocky-theme='fall-guys'] .blocky-btn.secondary {
+  background: linear-gradient(
+    180deg,
+    #b370d4 0%,
+    #9b59b6 50%,
+    #8447a0 100%
+  );
+  color: #ffffff;
+  text-shadow: none;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-btn.secondary::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+}
+
+/* Danger button - Coral red with WHITE text */
+[data-blocky-theme='fall-guys'] .blocky-btn.danger {
+  background: linear-gradient(
+    180deg,
+    #ff8585 0%,
+    #ff6b6b 50%,
+    #e65555 100%
+  );
+  color: #ffffff;
+  text-shadow: none;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-btn.danger::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+}
+
+/* Button hover - Lift up and increase shadow */
+[data-blocky-theme='fall-guys'] .blocky-btn-wrapper:hover .blocky-btn {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--blocky-shadow-hover);
+}
+
+/* Button active - Press down */
+[data-blocky-theme='fall-guys'] .blocky-btn-wrapper:active .blocky-btn {
+  transform: translate(2px, 2px);
+  box-shadow: var(--blocky-shadow-active);
+}
+
+/* ========================================
+   MODALS - Light cyan background with white border
+   ======================================== */
+
+[data-blocky-theme='fall-guys'] .blocky-modal-wrapper {
+  background: linear-gradient(
+    180deg,
+    #7ee0ff 0%,
+    #64d4ff 50%,
+    #4ac8f5 100%
+  );
+  border: var(--blocky-border-width) solid var(--blocky-border-color);
+  border-radius: var(--blocky-border-radius-lg);
+  box-shadow: var(--blocky-shadow-far), var(--blocky-inset-combined);
+  overflow: hidden; /* Prevent horizontal scrollbar */
+}
+
+[data-blocky-theme='fall-guys'] .blocky-modal-wrapper::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+}
+
+/* Modal content - ensure proper padding around header */
+[data-blocky-theme='fall-guys'] .blocky-modal-wrapper .blocky-content {
+  padding: 0;
+}
+
+/* Modal header with colored bar (default purple like Fall Guys) */
+[data-blocky-theme='fall-guys'] .blocky-modal-wrapper .blocky-header-bordered {
+  background: var(--blocky-header-bg);
+  margin: 0;
+  padding: var(--blocky-padding-md) var(--blocky-padding-lg);
+  padding-bottom: var(--blocky-margin-md);
+  border-radius: calc(var(--blocky-border-radius-lg) - var(--blocky-border-width)) calc(var(--blocky-border-radius-lg) - var(--blocky-border-width)) 0 0;
+  border-bottom: none;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-modal-wrapper .blocky-title-enhanced {
+  color: var(--blocky-text-light);
+  text-shadow: none; /* No text shadow for better readability */
+  margin: 0;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-modal-body {
+  color: var(--blocky-text-primary);
+  padding: var(--blocky-padding-md) var(--blocky-padding-lg);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-modal-body h1,
+[data-blocky-theme='fall-guys'] .blocky-modal-body h2,
+[data-blocky-theme='fall-guys'] .blocky-modal-body h3,
+[data-blocky-theme='fall-guys'] .blocky-modal-body h4,
+[data-blocky-theme='fall-guys'] .blocky-modal-body h5,
+[data-blocky-theme='fall-guys'] .blocky-modal-body h6 {
+  color: var(--blocky-text-primary);
+  text-shadow: none;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-modal-footer {
+  border-top-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Modal footer buttons should be styled as primary (prominent action buttons) */
+[data-blocky-theme='fall-guys'] .blocky-modal-footer .blocky-btn.default {
+  background: linear-gradient(
+    180deg,
+    #ff6eb0 0%,
+    #ff5096 50%,
+    #e6407d 100%
+  );
+  color: #ffffff;
+}
+
+/* ========================================
+   CARDS - Light cyan with colored header bar
+   Like Fall Guys shop cards
+   ======================================== */
+
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper {
+  background: linear-gradient(
+    180deg,
+    #7ee0ff 0%,
+    #64d4ff 50%,
+    #4ac8f5 100%
+  );
+  border: var(--blocky-border-width) solid var(--blocky-border-color);
+  border-radius: var(--blocky-border-radius);
+  box-shadow: var(--blocky-shadow-base), var(--blocky-inset-combined);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-card {
+  color: var(--blocky-text-primary);
+}
+
+/* Card title - Colored header bar like Fall Guys (default yellow) */
+[data-blocky-theme='fall-guys'] .blocky-card-title {
+  color: var(--blocky-text-light);
+  background: var(--blocky-header-bg);
+  margin: calc(var(--blocky-padding-lg) * -1);
+  margin-bottom: var(--blocky-padding-md);
+  padding: var(--blocky-padding-md) var(--blocky-padding-lg);
+  border-radius: calc(var(--blocky-border-radius) - var(--blocky-border-width)) calc(var(--blocky-border-radius) - var(--blocky-border-width)) 0 0;
+  border-bottom: none;
+  text-shadow: none; /* No text shadow for better readability */
+}
+
+/* Card variants - Colored header bars (ComponentVariant) */
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper.primary .blocky-card-title {
+  background: linear-gradient(180deg, #ff6eb0 0%, #ff5096 100%);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper.secondary .blocky-card-title {
+  background: linear-gradient(180deg, #b370d4 0%, #9b59b6 100%);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper.danger .blocky-card-title {
+  background: linear-gradient(180deg, #ff8585 0%, #ff6b6b 100%);
+}
+
+/* Card header colors matching TitleColorTheme (yellow, green, blue, purple, red) */
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper.header-yellow .blocky-card-title {
+  background: var(--blocky-header-yellow);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper.header-green .blocky-card-title {
+  background: var(--blocky-header-green);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper.header-blue .blocky-card-title {
+  background: var(--blocky-header-blue);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper.header-purple .blocky-card-title {
+  background: var(--blocky-header-purple);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper.header-red .blocky-card-title {
+  background: var(--blocky-header-red);
+}
+
+/* Card hover */
+[data-blocky-theme='fall-guys'] .blocky-card-wrapper:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+}
+
+/* ========================================
+   INFO BOXES - Light cyan with colored title
+   ======================================== */
+
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper {
+  background: linear-gradient(
+    180deg,
+    #7ee0ff 0%,
+    #64d4ff 50%,
+    #4ac8f5 100%
+  );
+  border: var(--blocky-border-width) solid var(--blocky-border-color);
+  border-radius: var(--blocky-border-radius-lg);
+  box-shadow: var(--blocky-shadow-base), var(--blocky-inset-combined);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper .blocky-header-bordered {
+  padding-top: 0;
+  margin-bottom: var(--blocky-margin-md);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-info-body {
+  color: var(--blocky-text-primary);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-info-title {
+  margin: 0;
+}
+
+/* Info color themes - Colored title text */
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper.theme-yellow .blocky-info-title {
+  color: #f5a623;
+  text-shadow: var(--blocky-text-shadow-md);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper.theme-green .blocky-info-title {
+  color: #4cd964;
+  text-shadow: var(--blocky-text-shadow-md);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper.theme-blue .blocky-info-title {
+  color: #0984e3;
+  text-shadow: var(--blocky-text-shadow-md);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper.theme-purple .blocky-info-title {
+  color: #9b59b6;
+  text-shadow: var(--blocky-text-shadow-md);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper.theme-red .blocky-info-title {
+  color: #ff6b6b;
+  text-shadow: var(--blocky-text-shadow-md);
+}
+
+/* Info hover */
+[data-blocky-theme='fall-guys'] .blocky-info-wrapper:hover {
+  transform: translate(-2px, -2px) scale(1.01);
+  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+}
+
+/* ========================================
+   PAGES - Light cyan background with gradient border
+   ======================================== */
+
+[data-blocky-theme='fall-guys'] .blocky-page-overlay {
+  background: var(--blocky-overlay-modal);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-page-content {
+  border-radius: var(--blocky-border-radius-lg);
+  box-shadow: var(--blocky-shadow-far);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-page-content::after {
+  background: linear-gradient(
+    180deg,
+    #7ee0ff 0%,
+    #64d4ff 50%,
+    #4ac8f5 100%
+  );
+}
+
+[data-blocky-theme='fall-guys'] .blocky-page-content::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.4) 0%, transparent 40%);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-page-wrapper {
+  color: var(--blocky-text-primary);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-page-wrapper h1,
+[data-blocky-theme='fall-guys'] .blocky-page-wrapper h2,
+[data-blocky-theme='fall-guys'] .blocky-page-wrapper h3,
+[data-blocky-theme='fall-guys'] .blocky-page-wrapper h4,
+[data-blocky-theme='fall-guys'] .blocky-page-wrapper h5,
+[data-blocky-theme='fall-guys'] .blocky-page-wrapper h6 {
+  color: var(--blocky-text-primary);
+  text-shadow: var(--blocky-text-shadow-sm);
+}
+
+/* ========================================
+   TAGS - Light cyan colored
+   ======================================== */
+
+[data-blocky-theme='fall-guys'] .blocky-tag-wrapper {
+  background: linear-gradient(
+    180deg,
+    #7ee0ff 0%,
+    #64d4ff 50%,
+    #4ac8f5 100%
+  );
+  border: var(--blocky-border-width-thin) solid var(--blocky-border-color);
+  border-radius: var(--blocky-border-radius-sm);
+  box-shadow: var(--blocky-shadow-base), var(--blocky-inset-combined);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-tag {
+  color: var(--blocky-text-primary);
+}
+
+/* ========================================
+   CLOSE BUTTONS - Red with white border
+   ======================================== */
+
+[data-blocky-theme='fall-guys'] .blocky-close-btn {
+  background: linear-gradient(
+    180deg,
+    #ff8585 0%,
+    #ff6b6b 100%
+  );
+  border: 3px solid var(--blocky-border-color);
+  color: var(--blocky-text-light);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-close-btn:hover {
+  background: linear-gradient(
+    180deg,
+    #ff9999 0%,
+    #ff8080 100%
+  );
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+}

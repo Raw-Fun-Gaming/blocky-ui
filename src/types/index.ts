@@ -3,6 +3,13 @@
 export type ComponentVariant = 'default' | 'primary' | 'secondary' | 'danger';
 export type TitleColorTheme = 'yellow' | 'green' | 'blue' | 'purple' | 'red';
 
+/**
+ * Available BlockyUI themes
+ * - 'blocky': Default dark 3D blocky theme
+ * - 'fall-guys': Bright, playful cartoon theme with white borders
+ */
+export type BlockyTheme = 'blocky' | 'fall-guys';
+
 export interface BlockyButtonOptions {
   text: string;
   variant?: ComponentVariant;

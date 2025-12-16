@@ -16,8 +16,14 @@ import type { BlockyPageInstance } from './types';
 export * from './types';
 export type { BlockyModalInstance, BlockyPageInstance };
 
+// Import theme type for internal use
+import type { BlockyTheme } from './types';
+
 // Main BlockyUI class with static factory methods
 export class BlockyUI {
+  // Current theme
+  private static currentTheme: BlockyTheme = 'blocky';
+
   // Component creation methods
   static createButton = BlockyButton.create;
   static createModal = BlockyModal.create;
@@ -25,6 +31,29 @@ export class BlockyUI {
   static createInfo = BlockyInfo.create;
   static createTag = BlockyTag.create;
   static createPage = BlockyPage.create;
+
+  /**
+   * Sets the current theme for all BlockyUI components
+   * @param theme - The theme to apply ('blocky' | 'fall-guys')
+   */
+  static setTheme(theme: BlockyTheme): void {
+    BlockyUI.currentTheme = theme;
+    if (theme === 'blocky') {
+      // Remove theme attribute for default theme
+      document.documentElement.removeAttribute('data-blocky-theme');
+    } else {
+      // Set theme attribute for custom themes
+      document.documentElement.setAttribute('data-blocky-theme', theme);
+    }
+  }
+
+  /**
+   * Gets the current theme
+   * @returns The current theme name
+   */
+  static getTheme(): BlockyTheme {
+    return BlockyUI.currentTheme;
+  }
 
   /**
    * Creates and shows a confirmation modal with Cancel/Confirm buttons
