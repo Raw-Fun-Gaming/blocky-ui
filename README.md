@@ -109,34 +109,6 @@ confirmModal.show();
 - **Confirmation Dialogs** - Yes/No confirmation modals
 - **Notifications** - Toast-style notifications
 
-## 📸 Visual Showcase
-
-### Component Gallery
-
-**Blocky Buttons**
-![Blocky Buttons](screenshots/buttons.png)
-*4 variants: default, primary, secondary, danger*
-
-**Blocky Modal**
-![Blocky Modal](screenshots/modal.png)
-*Full-featured modals with backdrop blur and smooth animations*
-
-**Blocky Cards**
-![Blocky Cards](screenshots/cards.png)
-*3D content containers with optional headers*
-
-**Blocky Info**
-![Blocky Info](screenshots/info.png)
-*Overlay popups with 5 customizable color themes*
-
-**Blocky Tags**
-![Blocky Tags](screenshots/tags.png)
-*Compact status tags with gradient styling*
-
-**Blocky Page**
-![Blocky Page](screenshots/page.png)
-*Full-screen pages with animated gradient borders*
-
 ## 🎭 Themes
 
 Blocky UI supports multiple themes out of the box. Switch themes at runtime with a single line of code:
