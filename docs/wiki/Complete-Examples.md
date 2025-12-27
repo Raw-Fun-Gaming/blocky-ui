@@ -350,6 +350,25 @@ const slotMachine = new SlotMachine('app');
 
 Complete settings interface with tabs and controls.
 
+**Note**: This example uses plain HTML `<select>` elements for simplicity. For a more polished look, use `BlockyUI.createDropdown()` instead:
+
+```typescript
+// Replace plain <select> with BlockyDropdown
+const languageDropdown = BlockyUI.createDropdown({
+  label: 'Language:',
+  options: [
+    { value: 'en', label: 'English' },
+    { value: 'es', label: 'Spanish' },
+    { value: 'fr', label: 'French' }
+  ],
+  value: 'en',
+  variant: 'default',
+  onChange: (value) => console.log('Language changed to:', value)
+});
+```
+
+### Full Example
+
 ```typescript
 import { BlockyUI } from 'blocky-ui-lite';
 import 'blocky-ui-lite/styles';

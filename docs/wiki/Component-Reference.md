@@ -676,5 +676,5 @@ import type {
 
 **Next Steps:**
 - [Complete Examples](Complete-Examples) - See real-world examples
-- [Styling & Theming](Styling-&-Theming) - Customize the look
-- [API Reference](API-Reference) - Full API documentation
+- [Architecture Overview](Architecture-Overview) - System design and patterns
+- [Troubleshooting](Troubleshooting) - Common issues and solutions
