@@ -5,6 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5] - 2025-12-27
+
+### Added
+- **BlockyDropdown Component**: New theme-aware dropdown component with:
+  - 4 color variants (default, primary, secondary, danger)
+  - Theme support for both blocky and fall-guys themes
+  - Custom CSS dropdown arrow for consistent cross-browser appearance
+  - Optional label support
+  - Disabled state handling
+  - TypeScript type definitions
+
+### Changed
+- **Demo Refactoring**: Separated demo.html into modular files for better organization:
+  - Extracted CSS to `demo.css` (275 lines)
+  - Extracted JavaScript to `demo.js` (456 lines)
+  - Clean HTML structure in `demo.html` (216 lines)
+- **Demo Enhancements**: Added professional presentation elements:
+  - Animated gradient header with glow effects
+  - Key Features section with 6 feature cards
+  - Quick Installation section with styled code blocks
+  - Professional footer with navigation links
+  - Grid pattern background overlay
+- **GitHub Pages**: Consolidated `docs/index.html` to redirect to `demo.html` for single source of truth
+
+### Documentation
+- Improved demo page organization and maintainability
+- Added comprehensive section comments in demo.js
+- Enhanced visual presentation with animated elements
+
 ## [1.0.4] - 2025-12-17
 
 ### Added
