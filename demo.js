@@ -3,7 +3,9 @@
 // Interactive demonstrations of all components
 // ========================================
 
-import { BlockyUI } from './dist/index.esm.js';
+// BlockyUI is loaded from UMD build via CDN
+// Accessing from window.BlockyUI.BlockyUI
+const BlockyUI = window.BlockyUI?.BlockyUI || window.BlockyUI;
 
 // ========================================
 // THEME SWITCHER
