@@ -10,6 +10,7 @@ import { BlockyCard } from './components/BlockyCard';
 import { BlockyInfo } from './components/BlockyInfo';
 import { BlockyTag } from './components/BlockyTag';
 import { BlockyPage } from './components/BlockyPage';
+import { BlockyDropdown } from './components/BlockyDropdown';
 import type { BlockyPageInstance } from './types';
 
 // Export all types
@@ -31,6 +32,7 @@ export class BlockyUI {
   static createInfo = BlockyInfo.create;
   static createTag = BlockyTag.create;
   static createPage = BlockyPage.create;
+  static createDropdown = BlockyDropdown.create;
 
   /**
    * Sets the current theme for all BlockyUI components
@@ -125,7 +127,7 @@ export class BlockyUI {
 }
 
 // Export individual components
-export { BlockyButton, BlockyModal, BlockyCard, BlockyInfo, BlockyTag, BlockyPage };
+export { BlockyButton, BlockyModal, BlockyCard, BlockyInfo, BlockyTag, BlockyPage, BlockyDropdown };
 
 // Default export
 export default BlockyUI;

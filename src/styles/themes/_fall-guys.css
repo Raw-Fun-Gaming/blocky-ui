@@ -527,3 +527,49 @@
   transform: translate(-1px, -1px);
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
 }
+
+/* ========================================
+   FALL GUYS THEME - DROPDOWN
+   ======================================== */
+
+[data-blocky-theme='fall-guys'] .blocky-dropdown {
+  border-radius: var(--blocky-border-radius);
+  border-width: var(--blocky-border-width);
+  box-shadow: var(--blocky-shadow-base);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-dropdown:hover:not(:disabled) {
+  box-shadow: var(--blocky-shadow-far);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-dropdown.default {
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%),
+    linear-gradient(180deg, #7ee0ff 0%, #64d4ff 50%, #4ac8f5 100%);
+  color: var(--blocky-text-primary);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-dropdown.primary {
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%),
+    linear-gradient(180deg, #ff6eb0 0%, #ff5096 50%, #e6407d 100%);
+  color: #ffffff;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-dropdown.secondary {
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%),
+    linear-gradient(180deg, #b370d4 0%, #9b59b6 50%, #8e44ad 100%);
+  color: #ffffff;
+}
+
+[data-blocky-theme='fall-guys'] .blocky-dropdown.danger {
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%),
+    linear-gradient(180deg, #ff8585 0%, #ff6b6b 50%, #e63946 100%);
+  color: #ffffff;
+}

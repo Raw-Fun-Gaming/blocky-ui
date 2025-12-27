@@ -49,6 +49,22 @@ export interface BlockyTagOptions {
   className?: string;
 }
 
+export interface BlockyDropdownOption {
+  value: string;
+  label: string;
+}
+
+export interface BlockyDropdownOptions {
+  options: BlockyDropdownOption[];
+  value?: string;
+  variant?: ComponentVariant;
+  onChange?: (value: string) => void;
+  disabled?: boolean;
+  placeholder?: string;
+  label?: string;
+  className?: string;
+}
+
 export interface BlockyPageOptions {
   content: string | HTMLElement;
   onClose?: () => void;

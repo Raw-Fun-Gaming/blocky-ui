@@ -1,0 +1,278 @@
+/* ========================================
+   DEMO PAGE STYLES
+   Custom styles for demo.html
+   ======================================== */
+
+/* ========================================
+   BASE LAYOUT
+   ======================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   DEMO CONTAINER
+   ======================================== */
+
+.demo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   DEMO SECTIONS
+   ======================================== */
+
+.demo-section {
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.demo-section h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ========================================
+   LAYOUT UTILITIES
+   ======================================== */
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.header-wrapper h1 {
+  margin: 0;
+}
+
+/* ========================================
+   DEMO HEADER
+   ======================================== */
+
+.demo-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 3px solid rgba(85, 223, 255, 0.5);
+  position: relative;
+  z-index: 10;
+}
+
+.demo-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #55dfff, #ff4444, #00ff88);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from {
+    filter: drop-shadow(0 0 20px rgba(85, 223, 255, 0.5));
+  }
+  to {
+    filter: drop-shadow(0 0 30px rgba(85, 223, 255, 0.8))
+            drop-shadow(0 0 40px rgba(255, 68, 68, 0.3));
+  }
+}
+
+.demo-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.demo-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.demo-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(85, 223, 255, 0.1);
+  border: 2px solid #55dfff;
+  color: #55dfff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.demo-link:hover {
+  background: rgba(85, 223, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 rgba(85, 223, 255, 0.3), 0 8px 16px rgba(85, 223, 255, 0.2);
+}
+
+/* ========================================
+   GRID PATTERN OVERLAY
+   ======================================== */
+
+.grid-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(85, 223, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(85, 223, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ========================================
+   KEY FEATURES
+   ======================================== */
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(85, 223, 255, 0.05);
+  border-radius: 8px;
+  border: 2px solid rgba(85, 223, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(85, 223, 255, 0.1);
+  border-color: rgba(85, 223, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* ========================================
+   INSTALLATION
+   ======================================== */
+
+.install-code {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 8px;
+  border: 2px solid rgba(85, 223, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.install-npm {
+  margin: 0;
+  color: #55dfff;
+  font-size: 1.1rem;
+  text-shadow: 0 0 10px rgba(85, 223, 255, 0.5);
+  font-family: 'Courier New', monospace;
+}
+
+.install-import {
+  margin: 0;
+  color: #00ff88;
+  font-size: 0.95rem;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+  font-family: 'Courier New', monospace;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-top: 3px solid rgba(85, 223, 255, 0.5);
+  margin-top: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.footer a {
+  color: #55dfff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #00ff88;
+  text-decoration: underline;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-wrapper h1 {
+    font-size: 1.5rem;
+  }
+
+  .demo-title {
+    font-size: 2rem;
+  }
+
+  .demo-subtitle {
+    font-size: 1rem;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+}
