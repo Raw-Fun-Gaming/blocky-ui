@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.4] - 2025-12-17
+
+### Added
+- **Theme Support**: New theming system with `BlockyUI.setTheme()` API for switching themes at runtime
+- **Fall Guys Theme**: New playful theme inspired by Fall Guys aesthetic featuring:
+  - Bright cyan backgrounds with solid black shadows
+  - Purple gradient headers
+  - Rounded corners for a softer, cartoon-like appearance
+  - Playful color palette optimized for casual gaming UIs
+- **BlockyTheme Type**: New TypeScript type for theme selection ('blocky' | 'fall-guys')
+- **Themes Directory**: New `src/styles/themes/` directory for theme CSS files
+
+### Documentation
+- Updated README.md with theme usage examples
+- Added theme features list and available themes documentation
+- Updated file structure documentation to include themes directory
+
+## [1.0.3] - 2025-01-18
+
+### Changed
+- Fixed repository URL format in package.json
+
 ## [1.0.2] - 2025-01-18
 
 ### Added
@@ -28,7 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.1] - 2025-01-18
 
 ### Changed
-- **Package name**: Changed from `@furic/blocky-ui` to `blocky-ui-lite` for better branding
+- **Package name**: Changed from `@Raw-Fun-Gaming/blocky-ui` to `blocky-ui-lite` for better branding
 - Updated all documentation to reference `blocky-ui-lite`
 - Updated CDN links in demo page and wiki
 - Fixed `loadFallback()` function definition order in demo page
