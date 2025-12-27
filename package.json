@@ -43,7 +43,8 @@
     "dev": "npm run build:watch",
     "demo": "npm run build && python3 -m http.server 8001 & sleep 2 && open http://localhost:8001/demo.html",
     "clean": "rm -rf dist",
-    "prepublishOnly": "npm run clean && npm run build"
+    "prepublishOnly": "npm run clean && npm run build",
+    "sync-wiki": "cp docs/wiki/*.md ~/Projects/blocky-ui.wiki/ && git -C ~/Projects/blocky-ui.wiki add . && git -C ~/Projects/blocky-ui.wiki commit -m 'Sync wiki from main repo' && git -C ~/Projects/blocky-ui.wiki push"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
