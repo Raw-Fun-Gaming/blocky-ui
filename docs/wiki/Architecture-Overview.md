@@ -401,9 +401,8 @@ button {
 ## Next Steps
 
 - [Component Reference](Component-Reference) - Detailed API documentation
-- [Styling & Theming](Styling-&-Theming) - Customization guide
-- [Performance Optimization](Performance-Optimization) - Best practices
-- [Development Workflow](Development-Workflow) - Contributing guide
+- [Complete Examples](Complete-Examples) - Real-world usage examples
+- [Troubleshooting](Troubleshooting) - Common issues and solutions
 
 ---
 

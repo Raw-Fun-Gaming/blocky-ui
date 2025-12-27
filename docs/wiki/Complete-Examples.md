@@ -728,10 +728,10 @@ const shop = new GameShop('app');
 
 ## More Examples
 
-For more examples, check out:
-- [Game Integration](Game-Integration) - Framework-specific examples
-- [Common Patterns](Common-Patterns) - Reusable patterns
-- [API Reference](API-Reference) - Complete API documentation
+For more information, check out:
+- [Component Reference](Component-Reference) - Complete API documentation
+- [Architecture Overview](Architecture-Overview) - System design and patterns
+- [Troubleshooting](Troubleshooting) - Common issues and solutions
 
 ---
 

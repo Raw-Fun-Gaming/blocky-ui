@@ -6,34 +6,13 @@ Welcome to the **Blocky UI** comprehensive documentation wiki! This is your comp
 
 ### Getting Started
 - [Installation & Setup](Installation-&-Setup) - Get up and running quickly
-- [Quick Start Guide](Quick-Start-Guide) - Your first components in 5 minutes
+- [Component Reference](Component-Reference) - Complete API documentation for all components
 - [Architecture Overview](Architecture-Overview) - Understanding the system design
 
-### Core Documentation
-- [Component Reference](Component-Reference) - Complete API documentation
-- [Build System](Build-System) - Understanding the Rollup-based build pipeline
-- [TypeScript Support](TypeScript-Support) - Type definitions and usage
-
-### Development Guides
-- [Development Workflow](Development-Workflow) - Contributing and extending
-- [Styling & Theming](Styling-&-Theming) - Customization and CSS variables
-- [Animation System](Animation-System) - Understanding the 3D effects and transitions
-
-### Advanced Topics
-- [CSS Architecture](CSS-Architecture) - Deep dive into the pure CSS system
-- [Performance Optimization](Performance-Optimization) - Best practices for production
-- [Browser Compatibility](Browser-Compatibility) - Support matrix and fallbacks
-
-### Examples & Tutorials
+### Examples & Resources
 - [Complete Examples](Complete-Examples) - Real-world implementation examples
-- [Game Integration](Game-Integration) - Using with game engines and frameworks
-- [Common Patterns](Common-Patterns) - Reusable patterns and solutions
-
-### Reference
-- [API Reference](API-Reference) - Complete method and interface reference
-- [CSS Class Reference](CSS-Class-Reference) - All CSS classes and their purposes
 - [Troubleshooting](Troubleshooting) - Common issues and solutions
-- [Migration Guide](Migration-Guide) - Upgrading between versions
+- [Live Demo](https://raw-fun-gaming.github.io/blocky-ui/) - Interactive component showcase
 
 ## 🎯 Project Overview
 
@@ -179,8 +158,8 @@ Blocky Component
 
 1. **New to the library?** Start with [Installation & Setup](Installation-&-Setup)
 2. **Want to see code?** Check out [Complete Examples](Complete-Examples)
-3. **Building a game?** Read [Game Integration](Game-Integration)
-4. **Contributing?** See [Development Workflow](Development-Workflow)
+3. **Need API details?** Read [Component Reference](Component-Reference)
+4. **Having issues?** See [Troubleshooting](Troubleshooting)
 
 ---
 
