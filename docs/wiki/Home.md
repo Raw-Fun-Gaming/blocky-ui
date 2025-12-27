@@ -80,6 +80,7 @@ Blocky Component
 
 ### Interactive Components
 - **[BlockyButton](Component-Reference#blockybutton)** - 4 variants with 3D hover effects
+- **[BlockyDropdown](Component-Reference#blockydropdown)** - Theme-aware dropdowns with 4 variants
 - **[BlockyModal](Component-Reference#blockymodal)** - Full-featured modals with backdrop blur
 
 ### Display Components

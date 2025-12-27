@@ -95,6 +95,7 @@ confirmModal.show();
 
 ### Interactive Components
 - **[BlockyButton](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockybutton)** - 4 variants with 3D hover effects
+- **[BlockyDropdown](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockydropdown)** - Theme-aware dropdowns with 4 variants and custom arrow
 - **[BlockyModal](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockymodal)** - Full-featured modals with backdrop blur and animations
 
 ### Display Components

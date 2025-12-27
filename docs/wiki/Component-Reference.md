@@ -90,6 +90,111 @@ const customButton = BlockyUI.createButton({
 
 ---
 
+## BlockyDropdown
+
+Theme-aware dropdown component with 4 color variants and custom CSS arrow styling.
+
+### API
+
+```typescript
+interface BlockyDropdownOptions {
+  options: BlockyDropdownOption[];    // Dropdown options (required)
+  value?: string;                     // Initial selected value
+  variant?: ComponentVariant;         // Color variant: 'default', 'primary', 'secondary', 'danger'
+  onChange?: (value: string) => void; // Change event handler
+  disabled?: boolean;                 // Disable the dropdown
+  placeholder?: string;               // Placeholder text
+  label?: string;                     // Optional label above dropdown
+  className?: string;                 // Additional CSS classes
+}
+
+interface BlockyDropdownOption {
+  value: string;                      // Option value
+  label: string;                      // Option display text
+}
+```
+
+### Usage
+
+```typescript
+import { BlockyUI } from 'blocky-ui-lite';
+
+// Simple dropdown
+const dropdown = BlockyUI.createDropdown({
+  options: [
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+    { value: 'option3', label: 'Option 3' }
+  ],
+  value: 'option1',
+  variant: 'primary',
+  onChange: (value) => {
+    console.log('Selected:', value);
+  }
+});
+
+document.body.appendChild(dropdown);
+
+// Dropdown with label
+const labeledDropdown = BlockyUI.createDropdown({
+  label: 'Select an option:',
+  options: [
+    { value: 'a', label: 'Choice A' },
+    { value: 'b', label: 'Choice B' }
+  ],
+  variant: 'secondary'
+});
+
+// Theme switcher example
+const themeDropdown = BlockyUI.createDropdown({
+  options: [
+    { value: 'blocky', label: 'Blocky Theme' },
+    { value: 'fall-guys', label: 'Fall Guys Theme' }
+  ],
+  value: 'blocky',
+  variant: 'secondary',
+  onChange: (theme) => {
+    BlockyUI.setTheme(theme);
+  }
+});
+```
+
+### Features
+
+- **4 Color Variants**: default (gray), primary (blue), secondary (cyan), danger (red)
+- **Theme Support**: Automatically adapts to blocky and fall-guys themes
+- **Custom Arrow**: CSS-based dropdown arrow for consistent cross-browser appearance
+- **Optional Label**: Add descriptive labels above dropdowns
+- **Disabled State**: Visual feedback with reduced opacity
+- **Type Safety**: Full TypeScript support with autocomplete
+
+### Styling
+
+The dropdown inherits the blocky 3D aesthetic:
+- Multi-layer box shadows for depth
+- Gradient backgrounds matching variant colors
+- Hover lift animation (2px translateY)
+- Backdrop blur effect
+- Theme-aware color transitions
+
+```css
+/* All dropdowns share these base classes */
+.blocky-dropdown-wrapper {
+  /* Container for dropdown and optional label */
+}
+
+.blocky-dropdown {
+  /* Native select with custom styling */
+}
+
+/* Hover effects are automatic */
+.blocky-dropdown:hover {
+  /* Custom hover effects */
+}
+```
+
+---
+
 ## BlockyModal
 
 Full-featured modals with backdrop blur, close button, and footer actions.
