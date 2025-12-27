@@ -18,7 +18,6 @@
 A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS.
 
 > 🎮 **[Live Demo](https://raw-fun-gaming.github.io/blocky-ui/) - Try all components interactively!**
-> 📸 **See the [Visual Showcase](#-visual-showcase) below for component screenshots and examples!**
 > 📚 **[Complete Documentation](../../wiki) | [Local Docs](docs/wiki/) | [Architecture Guide](docs/wiki/Architecture-Overview.md)**
 
 ![Blocky UI Demo](screenshots/demo-page.png)
