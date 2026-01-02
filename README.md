@@ -102,7 +102,7 @@ confirmModal.show();
 - **[BlockyCard](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockycard)** - Content containers with 3D styling
 - **[BlockyInfo](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockyinfo)** - Overlay popups with 5 color themes (yellow, green, blue, purple, red)
 - **[BlockyTag](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockytag)** - Status/location tags with gradient styling
-- **[BlockyPage](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockypage)** - Full-screen pages with animated gradient borders (7 color sets)
+- **[BlockyPage](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockypage)** - Full-screen pages with animated gradient borders (7 color sets) and optional auto-hide scrollbar
 
 ### Utility Components
 - **Error Dialogs** - Pre-configured error modals

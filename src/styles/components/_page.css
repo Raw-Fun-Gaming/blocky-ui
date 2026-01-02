@@ -150,6 +150,48 @@
 }
 
 /* ========================================
+   CUSTOM SCROLLBAR (OPTIONAL)
+   Auto-hide scrollbar positioned below close button
+   ======================================== */
+
+/* Custom scrollbar for page wrapper */
+.blocky-page-wrapper.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.blocky-page-wrapper.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  /* Start below close button and end above bottom for symmetry */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  transition: background 0.3s ease-out;
+}
+
+.blocky-page-wrapper.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  transition: background 0.3s ease-out;
+}
+
+/* Show scrollbar when hovering over content or actively scrolling */
+.blocky-page-wrapper.custom-scrollbar:hover::-webkit-scrollbar-track,
+.blocky-page-wrapper.custom-scrollbar.scrolling::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.15s ease-in;
+}
+
+.blocky-page-wrapper.custom-scrollbar:hover::-webkit-scrollbar-thumb,
+.blocky-page-wrapper.custom-scrollbar.scrolling::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.15s ease-in;
+}
+
+.blocky-page-wrapper.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ========================================
    PAGE CLOSE BUTTON
    Positioned in top-right, inherits from shared.css
    ======================================== */

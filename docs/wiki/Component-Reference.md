@@ -473,6 +473,7 @@ interface BlockyPageOptions {
   showCloseButton?: boolean;       // Show close button (default: true)
   onClose?: () => void;           // Close callback
   className?: string;              // Additional CSS classes
+  customScrollbar?: boolean;       // Enable custom auto-hide scrollbar (default: true)
 }
 
 BlockyUI.createPage(options: BlockyPageOptions): HTMLDivElement
@@ -485,26 +486,45 @@ BlockyUI.createPage(options: BlockyPageOptions): HTMLDivElement
 - **Close button**: Optional close functionality
 - **Backdrop blur**: Modern glassmorphism effect
 - **Responsive**: Adapts to all screen sizes
+- **Custom scrollbar**: Auto-hide scrollbar positioned below close button (optional)
+
+### Custom Scrollbar
+
+The `customScrollbar` option (default: `true`) provides an auto-hiding scrollbar that:
+- **Prevents overlap** with the close button on narrow screens
+- **Fades in** when hovering over content or actively scrolling
+- **Fades out** after 1 second of inactivity
+- **Positioned** below the close button with symmetric margins (40px top, 20px bottom)
+
+**When to use:**
+- **Enable (default)**: For most pages where native browser scrollbar overlap is not acceptable
+- **Disable (`customScrollbar: false`)**: When you prefer native browser scrollbar behavior and overlap with close button is acceptable, or when you have strict UX design requirements
+
+**Note**: Custom scrollbar works on WebKit browsers (Chrome, Safari, Edge). Firefox uses native scrollbar styling.
 
 ### Examples
 
 ```typescript
-// Basic page
+// Basic page (custom scrollbar enabled by default)
 const page = BlockyUI.createPage({
   content: '<h1>Welcome</h1><p>This is a full-screen page</p>'
 });
 document.body.appendChild(page);
 
-// Page with close callback
-const gamePage = BlockyUI.createPage({
-  content: gameContent,
-  showCloseButton: true,
-  onClose: () => {
-    console.log('Page closed');
-    // Return to main menu
-  }
+// Page with custom scrollbar explicitly enabled
+const infoPage = BlockyUI.createPage({
+  content: gameInfoHTML,
+  customScrollbar: true,  // Auto-hide scrollbar (default)
+  onClose: () => console.log('Info closed')
 });
-document.body.appendChild(gamePage);
+document.body.appendChild(infoPage);
+
+// Page with native browser scrollbar
+const strictPage = BlockyUI.createPage({
+  content: strictDesignContent,
+  customScrollbar: false  // Use native browser scrollbar
+});
+document.body.appendChild(strictPage);
 
 // Page without close button
 const lockedPage = BlockyUI.createPage({

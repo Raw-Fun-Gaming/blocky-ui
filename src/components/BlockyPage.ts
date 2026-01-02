@@ -57,6 +57,11 @@ export class BlockyPage {
     const pageWrapper = document.createElement('div');
     pageWrapper.className = 'blocky-page-wrapper';
 
+    // Add custom scrollbar class if enabled (default: true)
+    if (options.customScrollbar !== false) {
+      pageWrapper.classList.add('custom-scrollbar');
+    }
+
     // Add content to wrapper
     if (typeof options.content === 'string') {
       pageWrapper.innerHTML = options.content;
@@ -77,6 +82,18 @@ export class BlockyPage {
         pageContent.style.setProperty('--blocky-page-border-color-3', color3);
       }, 3000);
     };
+
+    // Setup scrollbar auto-hide if custom scrollbar is enabled
+    if (options.customScrollbar !== false) {
+      let scrollTimeout: number;
+      pageWrapper.addEventListener('scroll', () => {
+        pageWrapper.classList.add('scrolling');
+        clearTimeout(scrollTimeout);
+        scrollTimeout = window.setTimeout(() => {
+          pageWrapper.classList.remove('scrolling');
+        }, 1000);
+      });
+    }
 
     // Page instance object
     const instance: BlockyPageInstance = {

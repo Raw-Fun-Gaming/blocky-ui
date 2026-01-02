@@ -69,6 +69,7 @@ export interface BlockyPageOptions {
   content: string | HTMLElement;
   onClose?: () => void;
   className?: string;
+  customScrollbar?: boolean; // Enable custom auto-hide scrollbar (default: true)
 }
 
 export interface BlockyPageInstance {
