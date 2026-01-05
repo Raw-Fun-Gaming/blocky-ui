@@ -126,6 +126,30 @@
   --blocky-header-blue: linear-gradient(180deg, #5cb8ff 0%, #0984e3 100%);
   --blocky-header-purple: linear-gradient(180deg, #b370d4 0%, #9b59b6 100%);
   --blocky-header-red: linear-gradient(180deg, #ff8585 0%, #ff6b6b 100%);
+
+  /* ========================================
+     GAME ENGINE DESIGN TOKENS
+     Override --game-* tokens for light theme
+     ======================================== */
+
+  /* Text Colors - Dark for light background */
+  --game-text-primary: #1a1a2e;
+  --game-text-secondary: rgba(26, 26, 46, 0.7);
+  --game-text-muted: rgba(26, 26, 46, 0.5);
+  --game-text-highlight: #1a5f2a;
+
+  /* Background Colors - Light/white tints for light theme */
+  --game-bg-card: rgba(255, 255, 255, 0.1);
+  --game-bg-card-hover: rgba(255, 255, 255, 0.2);
+  --game-bg-highlight: rgba(0, 0, 0, 0.1);
+
+  /* Border Colors - Dark for light background */
+  --game-border-primary: rgba(0, 0, 0, 0.1);
+  --game-border-hover: rgba(99, 102, 241, 0.4);
+
+  /* Button Colors - Yellow/gold for Fall Guys */
+  --game-btn-primary-bg: linear-gradient(135deg, #ffeb3b 0%, #ffc107 100%);
+  --game-btn-primary-text: #1a1a2e;
 }
 
 /* ========================================
@@ -274,6 +298,10 @@
 [data-blocky-theme='fall-guys'] .blocky-modal-body {
   color: var(--blocky-text-primary);
   padding: var(--blocky-padding-md) var(--blocky-padding-lg);
+}
+
+[data-blocky-theme='fall-guys'] .blocky-modal-body p {
+  color: var(--blocky-text-primary);
 }
 
 [data-blocky-theme='fall-guys'] .blocky-modal-body h1,
