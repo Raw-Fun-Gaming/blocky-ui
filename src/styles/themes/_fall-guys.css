@@ -134,8 +134,8 @@
 
   /* Text Colors - Dark for light background */
   --game-text-primary: #1a1a2e;
-  --game-text-secondary: rgba(26, 26, 46, 0.7);
-  --game-text-muted: rgba(26, 26, 46, 0.5);
+  --game-text-secondary: rgba(26, 26, 46, 0.85);
+  --game-text-muted: rgba(26, 26, 46, 0.6);
   --game-text-highlight: #1a5f2a;
 
   /* Background Colors - Light/white tints for light theme */
