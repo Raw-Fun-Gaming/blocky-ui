@@ -22,6 +22,7 @@ export interface BlockyModalOptions {
   title: string;
   content: string | HTMLElement;
   showCloseButton?: boolean;
+  closeOnOverlayClick?: boolean; // Whether clicking the overlay closes the modal (default: true)
   buttons: BlockyButtonOptions[];
   onClose?: () => void;
   className?: string;

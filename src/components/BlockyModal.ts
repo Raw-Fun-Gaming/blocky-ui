@@ -109,19 +109,23 @@ export class BlockyModal {
       e.stopPropagation();
     });
 
-    // Close modal when clicking overlay
-    overlay.addEventListener('click', () => {
-      instance.close();
-    });
-
-    // Close modal on Escape key
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+    // Close modal when clicking overlay (unless disabled)
+    if (options.closeOnOverlayClick !== false) {
+      overlay.addEventListener('click', () => {
         instance.close();
-        document.removeEventListener('keydown', handleEscape);
-      }
-    };
-    document.addEventListener('keydown', handleEscape);
+      });
+    }
+
+    // Close modal on Escape key (unless overlay click is disabled)
+    if (options.closeOnOverlayClick !== false) {
+      const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          instance.close();
+          document.removeEventListener('keydown', handleEscape);
+        }
+      };
+      document.addEventListener('keydown', handleEscape);
+    }
 
     modalWrapper.appendChild(modalContent);
     overlay.appendChild(modalWrapper);
