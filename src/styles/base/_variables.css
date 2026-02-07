@@ -27,7 +27,7 @@
   --blocky-text-disabled: #666666;
 
   /* Background Colors */
-  --blocky-overlay-modal: rgba(0, 0, 0, 0.8);
+  --blocky-overlay-modal: rgba(0, 0, 0, 0.9);
   --blocky-overlay-info: rgba(0, 0, 0, 0.6);
   --blocky-bg-dark: rgba(0, 0, 0, 0.3);
 

@@ -38,8 +38,6 @@
   width: 100%;
   height: 100%;
   background: var(--blocky-overlay-modal);
-  backdrop-filter: var(--blocky-blur-lg);
-  -webkit-backdrop-filter: var(--blocky-blur-lg);
   z-index: var(--blocky-z-overlay-modal);
   cursor: pointer;
   opacity: 0;
