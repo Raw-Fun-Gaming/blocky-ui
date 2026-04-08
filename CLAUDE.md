@@ -591,6 +591,25 @@ Use defined z-index variables for consistent layering:
 
 ## Common Patterns
 
+### Adding a New Theme
+
+4 files need to be touched when adding a new theme:
+
+1. **Create theme CSS**: `src/styles/themes/_your-theme.css`
+   - Use `[data-blocky-theme='your-theme']` selector for all overrides
+   - Follow the structure of `_fall-guys.css` or `_animal-crossing.css` as a template
+   - Override CSS variables first (colors, shadows, borders, radii, typography)
+   - Then add component-specific overrides (buttons, modals, cards, info, tags, pages, dropdowns, close buttons)
+   - Remember to set `::before { background: none; }` on components if suppressing radial overlays
+2. **Import in CSS entry**: Add `@import url('./themes/_your-theme.css');` to `src/styles/blocky-ui.css` (after existing theme imports)
+3. **Update type**: Add theme name to `BlockyTheme` union in `src/types/index.ts`
+4. **Update demo**: Add option to theme dropdown in `docs/demo.js` (search for the `createDropdown` options array)
+
+**Existing themes for reference**:
+- `blocky` (default) — dark 3D blocky aesthetic, defined in base styles
+- `fall-guys` — bright cartoon style, solid black offset shadows, thick white borders, 16px radius
+- `animal-crossing` — flat cozy NookPhone style, soft diffused shadows, earthy tones, 30px containers, 999px pill buttons
+
 ### Creating a New Component
 
 1. **Create TypeScript file**: `src/components/BlockyNewComponent.ts`
