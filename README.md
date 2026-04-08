@@ -1,9 +1,4 @@
-# Blocky UI
-
-[![npm](https://img.shields.io/npm/v/blocky-ui-lite)](https://www.npmjs.com/package/blocky-ui-lite)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/blocky-ui/ci.yml)](https://github.com/raw-fun-gaming/blocky-ui/actions)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/blocky-ui-lite)](https://bundlephobia.com/package/blocky-ui-lite)
-[![License](https://img.shields.io/github/license/raw-fun-gaming/blocky-ui)](LICENSE)
+# [Blocky UI](https://raw-fun-gaming.github.io/blocky-ui/) &middot; [![npm](https://img.shields.io/npm/v/blocky-ui-lite)](https://www.npmjs.com/package/blocky-ui-lite) [![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/blocky-ui/ci.yml)](https://github.com/raw-fun-gaming/blocky-ui/actions) [![Bundle Size](https://img.shields.io/bundlephobia/minzip/blocky-ui-lite)](https://bundlephobia.com/package/blocky-ui-lite) [![License](https://img.shields.io/github/license/raw-fun-gaming/blocky-ui)](LICENSE)
 
 A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS.
 
