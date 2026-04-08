@@ -9,7 +9,7 @@ nav_order: 2
 
 ## Context
 
-blocky-ui currently ships two themes: the default dark 3D "blocky" theme and a bright cartoon-style "fall-guys" theme. We're adding an **Animal Crossing** theme inspired by the NookPhone UI from Animal Crossing: New Horizons. The goal is a flat, minimal, cozy aesthetic with earthy/nature tones that feels distinctly AC while working within the existing theme system.
+The **Animal Crossing** theme is inspired by the NookPhone UI from Animal Crossing: New Horizons. A flat, minimal, cozy aesthetic with earthy/nature tones.
 
 Reference: `references/screen-1-home-screen-blank_orig.jpg` (NookPhone home screen with pill-shaped action buttons)
 
