@@ -6,33 +6,33 @@ nav_order: 2
 
 # Installation & Setup
 
-This guide will help you get Blocky UI up and running in your project.
+This guide will help you get Raw Fun UI up and running in your project.
 
 ## Installation Methods
 
 ### NPM (Recommended)
 
 ```bash
-npm install blocky-ui-lite
+npm install raw-fun-ui
 ```
 
 ### Yarn
 
 ```bash
-yarn add blocky-ui-lite
+yarn add raw-fun-ui
 ```
 
 ### PNPM
 
 ```bash
-pnpm add blocky-ui-lite
+pnpm add raw-fun-ui
 ```
 
 ### CDN
 
 ```html
-<script src="https://unpkg.com/blocky-ui-lite@latest/dist/index.umd.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/blocky-ui-lite@latest/dist/blocky-ui.css">
+<script src="https://unpkg.com/raw-fun-ui@latest/dist/index.umd.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/raw-fun-ui@latest/dist/raw-fun-ui.css">
 ```
 
 ## Basic Setup
@@ -40,14 +40,14 @@ pnpm add blocky-ui-lite
 ### 1. Import the Library
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';  // Import CSS
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';  // Import CSS
 ```
 
 ### 2. Create Your First Component
 
 ```typescript
-const button = BlockyUI.createButton({
+const button = RawFunUI.createButton({
   text: 'Click Me',
   variant: 'primary',
   onClick: () => alert('Button clicked!')
@@ -62,12 +62,12 @@ Open your application and you should see a beautiful 3D blocky button!
 
 ## TypeScript Configuration
 
-Blocky UI is built with TypeScript and includes full type definitions. No additional setup required!
+Raw Fun UI is built with TypeScript and includes full type definitions. No additional setup required!
 
 ```typescript
-import type { BlockyButtonOptions, BlockyModalOptions } from 'blocky-ui-lite';
+import type { RfuiButtonOptions, RfuiModalOptions } from 'raw-fun-ui';
 
-const buttonOptions: BlockyButtonOptions = {
+const buttonOptions: RfuiButtonOptions = {
   text: 'Submit',
   variant: 'primary',
   onClick: () => {}
@@ -79,11 +79,11 @@ const buttonOptions: BlockyButtonOptions = {
 ### Vanilla JavaScript/TypeScript
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 const app = document.getElementById('app');
-const button = BlockyUI.createButton({
+const button = RawFunUI.createButton({
   text: 'Hello World',
   variant: 'primary'
 });
@@ -94,15 +94,15 @@ app?.appendChild(button);
 
 ```tsx
 import { useEffect, useRef } from 'react';
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
-function BlockyButton({ text, variant, onClick }) {
+function RfuiButton({ text, variant, onClick }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (ref.current) {
-      const button = BlockyUI.createButton({ text, variant, onClick });
+      const button = RawFunUI.createButton({ text, variant, onClick });
       ref.current.appendChild(button);
       return () => ref.current?.removeChild(button);
     }
@@ -121,13 +121,13 @@ function BlockyButton({ text, variant, onClick }) {
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 const buttonContainer = ref(null);
 
 onMounted(() => {
-  const button = BlockyUI.createButton({
+  const button = RawFunUI.createButton({
     text: 'Click Me',
     variant: 'primary',
     onClick: () => console.log('Clicked!')
@@ -142,13 +142,13 @@ onMounted(() => {
 ```svelte
 <script>
   import { onMount } from 'svelte';
-  import { BlockyUI } from 'blocky-ui-lite';
-  import 'blocky-ui-lite/styles';
+  import { RawFunUI } from 'raw-fun-ui';
+  import 'raw-fun-ui/styles';
 
   let container;
 
   onMount(() => {
-    const button = BlockyUI.createButton({
+    const button = RawFunUI.createButton({
       text: 'Click Me',
       variant: 'primary',
       onClick: () => console.log('Clicked!')
@@ -175,7 +175,7 @@ export default defineConfig({
     fs: {
       allow: [
         process.cwd(),
-        '/path/to/blocky-ui'  // Add blocky-ui path
+        '/path/to/raw-fun-ui'  // Add raw-fun-ui path
       ]
     }
   }
@@ -184,7 +184,7 @@ export default defineConfig({
 
 ### Webpack
 
-No special configuration needed! Blocky UI works out of the box with Webpack.
+No special configuration needed! Raw Fun UI works out of the box with Webpack.
 
 ```javascript
 // webpack.config.js

@@ -1,18 +1,18 @@
-import type { BlockyTagOptions } from '../types';
+import type { RfuiTagOptions } from '../types';
 
-export class BlockyTag {
+export class RfuiTag {
   /**
-   * Creates a 3D blocky-themed tag (compact display element)
+   * Creates a 3D rfui-themed tag (compact display element)
    */
-  static create(options: BlockyTagOptions): HTMLDivElement {
+  static create(options: RfuiTagOptions): HTMLDivElement {
     // Create tag wrapper
     const tagWrapper = document.createElement('div');
     const variant = options.variant || 'default';
-    tagWrapper.className = `blocky-tag-wrapper blocky-gradient blocky-3d ${variant}`;
+    tagWrapper.className = `rfui-tag-wrapper rfui-gradient rfui-3d ${variant}`;
 
     // Create tag content container
     const tagContent = document.createElement('div');
-    tagContent.className = 'blocky-tag-content';
+    tagContent.className = 'rfui-tag-content';
 
     if (options.className) {
       tagContent.className += ` ${options.className}`;
@@ -21,10 +21,10 @@ export class BlockyTag {
     // Create header if title is provided
     if (options.title) {
       const header = document.createElement('div');
-      header.className = 'blocky-tag-header';
+      header.className = 'rfui-tag-header';
 
       const title = document.createElement('h3');
-      title.className = 'blocky-tag-title';
+      title.className = 'rfui-tag-title';
       title.textContent = options.title;
       header.appendChild(title);
       tagContent.appendChild(header);
@@ -32,7 +32,7 @@ export class BlockyTag {
 
     // Add content
     const contentDiv = document.createElement('div');
-    contentDiv.className = 'blocky-tag-body';
+    contentDiv.className = 'rfui-tag-body';
 
     if (typeof options.content === 'string') {
       contentDiv.innerHTML = options.content;

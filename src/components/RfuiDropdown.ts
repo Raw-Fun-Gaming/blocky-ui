@@ -1,25 +1,25 @@
-import type { BlockyDropdownOptions } from '../types';
+import type { RfuiDropdownOptions } from '../types';
 
-export class BlockyDropdown {
+export class RfuiDropdown {
   /**
-   * Creates a 3D blocky-themed dropdown with pure CSS styling
+   * Creates a 3D rfui-themed dropdown with pure CSS styling
    */
-  static create(options: BlockyDropdownOptions): HTMLDivElement {
+  static create(options: RfuiDropdownOptions): HTMLDivElement {
     // Create dropdown wrapper
     const wrapper = document.createElement('div');
-    wrapper.className = 'blocky-dropdown-wrapper';
+    wrapper.className = 'rfui-dropdown-wrapper';
 
     // Create label if provided
     if (options.label) {
       const labelEl = document.createElement('label');
-      labelEl.className = 'blocky-dropdown-label';
+      labelEl.className = 'rfui-dropdown-label';
       labelEl.textContent = options.label;
       wrapper.appendChild(labelEl);
     }
 
     // Create select element
     const select = document.createElement('select');
-    select.className = `blocky-dropdown blocky-gradient blocky-3d ${options.variant || 'default'}`;
+    select.className = `rfui-dropdown rfui-gradient rfui-3d ${options.variant || 'default'}`;
 
     if (options.className) {
       select.className += ` ${options.className}`;

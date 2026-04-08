@@ -3,29 +3,29 @@
    Theme-aware dropdown component with 3D styling
    ======================================== */
 
-.blocky-dropdown-wrapper {
+.rfui-dropdown-wrapper {
   position: relative;
   display: inline-flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.blocky-dropdown-label {
+.rfui-dropdown-label {
   font-weight: bold;
   opacity: 0.9;
   font-size: 14px;
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
 }
 
-.blocky-dropdown {
+.rfui-dropdown {
   position: relative;
   padding: 10px 35px 10px 15px;
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
-  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--blocky-border-radius);
-  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--rfui-border-radius);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
   backdrop-filter: blur(8px);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   outline: none;
@@ -44,28 +44,28 @@
    ======================================== */
 
 /* Variant styles - Default */
-.blocky-dropdown.default {
-  background-color: var(--blocky-button-default);
+.rfui-dropdown.default {
+  background-color: var(--rfui-button-default);
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, rgba(100, 100, 100, 0.95) 0%, rgba(100, 100, 100, 0.7) 50%, rgba(100, 100, 100, 0.5) 100%);
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
 }
 
 /* Variant styles - Primary */
-.blocky-dropdown.primary {
-  background-color: var(--blocky-button-primary);
+.rfui-dropdown.primary {
+  background-color: var(--rfui-button-primary);
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, rgba(4, 123, 255, 0.95) 0%, rgba(4, 123, 255, 0.7) 50%, rgba(4, 123, 255, 0.5) 100%);
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
 }
 
 /* Variant styles - Secondary */
-.blocky-dropdown.secondary {
-  background-color: var(--blocky-button-secondary);
+.rfui-dropdown.secondary {
+  background-color: var(--rfui-button-secondary);
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%),
@@ -74,13 +74,13 @@
 }
 
 /* Variant styles - Danger */
-.blocky-dropdown.danger {
-  background-color: var(--blocky-button-danger);
+.rfui-dropdown.danger {
+  background-color: var(--rfui-button-danger);
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, rgba(255, 68, 68, 0.95) 0%, rgba(255, 68, 68, 0.7) 50%, rgba(255, 68, 68, 0.5) 100%);
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
 }
 
 /* ========================================
@@ -88,27 +88,27 @@
    ======================================== */
 
 /* Hover state */
-.blocky-dropdown:hover:not(:disabled) {
+.rfui-dropdown:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
 }
 
 /* Focus state */
-.blocky-dropdown:focus {
+.rfui-dropdown:focus {
   outline: 2px solid rgba(255, 255, 255, 0.5);
   outline-offset: 2px;
 }
 
 /* Disabled state */
-.blocky-dropdown:disabled,
-.blocky-dropdown-wrapper .blocky-disabled {
+.rfui-dropdown:disabled,
+.rfui-dropdown-wrapper .rfui-disabled {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
 }
 
 /* Option elements */
-.blocky-dropdown option {
+.rfui-dropdown option {
   background: rgba(26, 26, 46, 0.95);
   color: white;
   padding: 8px;

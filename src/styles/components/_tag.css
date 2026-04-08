@@ -8,30 +8,30 @@
    Main tag container with positioning
    ======================================== */
 
-.blocky-tag-wrapper {
+.rfui-tag-wrapper {
   position: absolute;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  min-width: var(--blocky-tag-min-width);
-  padding: var(--blocky-padding-sm) var(--blocky-padding-lg);
+  min-width: var(--rfui-tag-min-width);
+  padding: var(--rfui-padding-sm) var(--rfui-padding-lg);
   background: linear-gradient(
     180deg,
     rgba(60, 60, 80, 0.95) 0%,
     rgba(40, 40, 60, 0.85) 50%,
     rgba(30, 30, 50, 0.8) 100%
   );
-  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--blocky-border-radius);
-  backdrop-filter: var(--blocky-blur-md);
-  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
-  transition: all var(--blocky-transition-normal) ease;
-  z-index: var(--blocky-z-dropdown);
+  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--rfui-border-radius);
+  backdrop-filter: var(--rfui-blur-md);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+  transition: all var(--rfui-transition-normal) ease;
+  z-index: var(--rfui-z-dropdown);
   overflow: hidden;
   cursor: pointer;
 }
 
-.blocky-tag-wrapper::before {
+.rfui-tag-wrapper::before {
   content: '';
   position: absolute;
   top: 0;
@@ -49,7 +49,7 @@
    ======================================== */
 
 /* Default variant - gray gradient */
-.blocky-tag-wrapper.default {
+.rfui-tag-wrapper.default {
   background: linear-gradient(
     180deg,
     rgba(100, 100, 100, 0.95) 0%,
@@ -59,7 +59,7 @@
 }
 
 /* Primary variant - blue gradient */
-.blocky-tag-wrapper.primary {
+.rfui-tag-wrapper.primary {
   background: linear-gradient(
     180deg,
     rgba(4, 123, 255, 0.95) 0%,
@@ -69,7 +69,7 @@
 }
 
 /* Secondary variant - cyan gradient */
-.blocky-tag-wrapper.secondary {
+.rfui-tag-wrapper.secondary {
   background: linear-gradient(
     180deg,
     rgba(85, 223, 255, 0.95) 0%,
@@ -79,7 +79,7 @@
 }
 
 /* Danger variant - red gradient */
-.blocky-tag-wrapper.danger {
+.rfui-tag-wrapper.danger {
   background: linear-gradient(
     180deg,
     rgba(255, 68, 68, 0.95) 0%,
@@ -93,10 +93,10 @@
    Inner content container
    ======================================== */
 
-.blocky-tag-content {
+.rfui-tag-content {
   position: relative;
   z-index: 2;
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
 }
 
 /* ========================================
@@ -104,19 +104,19 @@
    Optional header with title
    ======================================== */
 
-.blocky-tag-header {
-  margin-bottom: var(--blocky-margin-sm);
-  padding-bottom: var(--blocky-padding-xs);
-  border-bottom: var(--blocky-border-width-thin) solid rgba(255, 255, 255, 0.2);
+.rfui-tag-header {
+  margin-bottom: var(--rfui-margin-sm);
+  padding-bottom: var(--rfui-padding-xs);
+  border-bottom: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.2);
 }
 
-.blocky-tag-title {
+.rfui-tag-title {
   margin: 0;
-  font-size: var(--blocky-font-md);
-  font-weight: var(--blocky-font-weight-bold);
+  font-size: var(--rfui-font-md);
+  font-weight: var(--rfui-font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: var(--blocky-letter-spacing-wide);
-  text-shadow: var(--blocky-text-shadow-sm);
+  letter-spacing: var(--rfui-letter-spacing-wide);
+  text-shadow: var(--rfui-text-shadow-sm);
 }
 
 /* ========================================
@@ -124,13 +124,13 @@
    Main content area
    ======================================== */
 
-.blocky-tag-body {
-  font-size: var(--blocky-font-sm);
-  line-height: var(--blocky-line-height-normal);
+.rfui-tag-body {
+  font-size: var(--rfui-font-sm);
+  line-height: var(--rfui-line-height-normal);
 }
 
-.blocky-tag-body p {
-  margin: var(--blocky-margin-sm) 0;
+.rfui-tag-body p {
+  margin: var(--rfui-margin-sm) 0;
 }
 
 /* ========================================
@@ -138,13 +138,13 @@
    3D lifting effect on hover
    ======================================== */
 
-.blocky-tag-wrapper:hover {
+.rfui-tag-wrapper:hover {
   transform: translateX(-50%) translateY(-3px);
-  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-.blocky-tag-wrapper.flipped:hover {
+.rfui-tag-wrapper.flipped:hover {
   transform: translateX(-50%) translateY(3px);
 }
 
@@ -153,12 +153,12 @@
    Pressing effect on click
    ======================================== */
 
-.blocky-tag-wrapper:active {
+.rfui-tag-wrapper:active {
   transform: translateX(-50%) translateY(1px);
-  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
 }
 
-.blocky-tag-wrapper.flipped:active {
+.rfui-tag-wrapper.flipped:active {
   transform: translateX(-50%) translateY(-1px);
 }
 

@@ -1,18 +1,18 @@
-import type { BlockyCardOptions } from '../types';
+import type { RfuiCardOptions } from '../types';
 
-export class BlockyCard {
+export class RfuiCard {
   /**
-   * Creates a 3D blocky-themed card with pure CSS styling
+   * Creates a 3D rfui-themed card with pure CSS styling
    */
-  static create(options: BlockyCardOptions): HTMLDivElement {
+  static create(options: RfuiCardOptions): HTMLDivElement {
     // Create wrapper container
     const wrapper = document.createElement('div');
     const variant = options.variant || 'default';
-    wrapper.className = `blocky-card-wrapper blocky-gradient blocky-3d ${variant}`;
+    wrapper.className = `rfui-card-wrapper rfui-gradient rfui-3d ${variant}`;
 
     // Create actual card content
     const card = document.createElement('div');
-    card.className = 'blocky-card';
+    card.className = 'rfui-card';
 
     if (options.className) {
       card.className += ` ${options.className}`;
@@ -20,13 +20,13 @@ export class BlockyCard {
 
     if (options.title) {
       const title = document.createElement('h3');
-      title.className = 'blocky-card-title';
+      title.className = 'rfui-card-title';
       title.textContent = options.title;
       card.appendChild(title);
     }
 
     const content = document.createElement('div');
-    content.className = 'blocky-card-content';
+    content.className = 'rfui-card-content';
 
     if (typeof options.content === 'string') {
       content.innerHTML = options.content;

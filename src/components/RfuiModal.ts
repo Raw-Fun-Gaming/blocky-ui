@@ -1,29 +1,29 @@
-import type { BlockyModalOptions } from '../types';
-import { BlockyButton } from './BlockyButton';
+import type { RfuiModalOptions } from '../types';
+import { RfuiButton } from './RfuiButton';
 
-export interface BlockyModalInstance {
+export interface RfuiModalInstance {
   show(): void;
   close(): void;
   element: HTMLDivElement;
 }
 
-export class BlockyModal {
+export class RfuiModal {
   /**
-   * Creates a 3D blocky-themed modal with backdrop blur and pure CSS styling
+   * Creates a 3D rfui-themed modal with backdrop blur and pure CSS styling
    * Returns an instance with show() and close() methods
    */
-  static create(options: BlockyModalOptions): BlockyModalInstance {
+  static create(options: RfuiModalOptions): RfuiModalInstance {
     // Create modal overlay
     const overlay = document.createElement('div');
-    overlay.className = 'blocky-modal-overlay';
+    overlay.className = 'rfui-modal-overlay';
 
     // Create modal wrapper
     const modalWrapper = document.createElement('div');
-    modalWrapper.className = 'blocky-modal-wrapper blocky-gradient blocky-3d';
+    modalWrapper.className = 'rfui-modal-wrapper rfui-gradient rfui-3d';
 
     // Create modal content container
     const modalContent = document.createElement('div');
-    modalContent.className = 'blocky-content';
+    modalContent.className = 'rfui-content';
 
     if (options.className) {
       modalContent.className += ` ${options.className}`;
@@ -31,15 +31,15 @@ export class BlockyModal {
 
     // Create header
     const header = document.createElement('div');
-    header.className = 'blocky-header-bordered';
+    header.className = 'rfui-header-bordered';
 
     const title = document.createElement('h2');
-    title.className = 'blocky-title-enhanced';
+    title.className = 'rfui-title-enhanced';
     title.textContent = options.title;
     header.appendChild(title);
 
     // Modal instance object
-    const instance: BlockyModalInstance = {
+    const instance: RfuiModalInstance = {
       element: overlay,
       show() {
         document.body.appendChild(overlay);
@@ -58,7 +58,7 @@ export class BlockyModal {
     // Create close button if enabled
     if (options.showCloseButton !== false) {
       const closeBtn = document.createElement('button');
-      closeBtn.className = 'blocky-close-btn';
+      closeBtn.className = 'rfui-close-btn';
       closeBtn.addEventListener('click', () => {
         instance.close();
       });
@@ -67,7 +67,7 @@ export class BlockyModal {
 
     // Create body
     const body = document.createElement('div');
-    body.className = 'blocky-modal-body';
+    body.className = 'rfui-modal-body';
 
     if (typeof options.content === 'string') {
       body.innerHTML = options.content;
@@ -80,10 +80,10 @@ export class BlockyModal {
     // Create footer with buttons
     if (options.buttons && options.buttons.length > 0) {
       const footer = document.createElement('div');
-      footer.className = 'blocky-modal-footer';
+      footer.className = 'rfui-modal-footer';
 
       options.buttons.forEach((buttonOptions) => {
-        const button = BlockyButton.create({
+        const button = RfuiButton.create({
           ...buttonOptions,
           onClick: () => {
             if (buttonOptions.onClick) buttonOptions.onClick();

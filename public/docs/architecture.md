@@ -6,11 +6,11 @@ nav_order: 4
 
 # Architecture Overview
 
-Understanding the design and structure of Blocky UI.
+Understanding the design and structure of Raw Fun UI.
 
 ## System Architecture
 
-Blocky UI is built with a modular, component-based architecture that emphasizes:
+Raw Fun UI is built with a modular, component-based architecture that emphasizes:
 - **Separation of concerns**: TypeScript for logic, CSS for styling
 - **Performance**: Pure CSS effects, no runtime styling calculations
 - **Type safety**: Full TypeScript support with comprehensive interfaces
@@ -18,7 +18,7 @@ Blocky UI is built with a modular, component-based architecture that emphasizes:
 
 ## Component Structure
 
-Every Blocky UI component follows a consistent structure:
+Every Raw Fun UI component follows a consistent structure:
 
 ```
 ┌─────────────────────────────────────┐
@@ -35,8 +35,8 @@ Every Blocky UI component follows a consistent structure:
 
 ### Layer Breakdown
 
-1. **Wrapper Element** (`div.blocky-*-wrapper`) — Positioning, transforms, z-index
-2. **Main Element** (`div.blocky-*`, `button.blocky-btn`) — 3D styling, gradients, borders
+1. **Wrapper Element** (`div.rfui-*-wrapper`) — Positioning, transforms, z-index
+2. **Main Element** (`div.rfui-*`, `button.rfui-btn`) — 3D styling, gradients, borders
 3. **Gradient Overlay** (`::before` pseudo-element) — Radial gradient for depth
 4. **Content Layer** — User content, interactive elements
 
@@ -45,7 +45,7 @@ Every Blocky UI component follows a consistent structure:
 ### Multi-layer Box Shadow
 
 ```css
-.blocky-3d {
+.rfui-3d {
   box-shadow:
     0 4px 0 rgba(0, 0, 0, 0.3),           /* Base shadow - ground contact */
     0 8px 16px rgba(0, 0, 0, 0.4),        /* Far shadow - depth */
@@ -57,7 +57,7 @@ Every Blocky UI component follows a consistent structure:
 ### Hover Transform
 
 ```css
-.blocky-3d:hover {
+.rfui-3d:hover {
   transform: translateY(-3px);
   box-shadow:
     0 6px 0 rgba(0, 0, 0, 0.3),
@@ -73,7 +73,7 @@ Every Blocky UI component follows a consistent structure:
 
 ```
 src/styles/
-├── blocky-ui.css          # Main entry point
+├── raw-fun-ui.css          # Main entry point
 ├── base/
 │   ├── _variables.css     # CSS custom properties
 │   ├── _shared.css        # Shared component styles
@@ -97,7 +97,7 @@ src/styles/
 ### CSS Cascade Strategy
 
 1. **Variables** → Color palette, spacing, shadows
-2. **Shared styles** → `.blocky-3d`, `.blocky-gradient`, `.blocky-disabled`
+2. **Shared styles** → `.rfui-3d`, `.rfui-gradient`, `.rfui-disabled`
 3. **Component styles** → Component-specific layouts and variants
 4. **Responsive** → Mobile-first media queries
 5. **Themes** → Override variables and component styles per theme
@@ -107,13 +107,13 @@ src/styles/
 ### Component Factory Pattern
 
 ```typescript
-export class BlockyButton {
-  static create(options: BlockyButtonOptions): HTMLButtonElement {
+export class RfuiButton {
+  static create(options: RfuiButtonOptions): HTMLButtonElement {
     const wrapper = document.createElement('div');
-    wrapper.className = 'blocky-btn-wrapper';
+    wrapper.className = 'rfui-btn-wrapper';
 
     const button = document.createElement('button');
-    button.className = `blocky-btn blocky-gradient blocky-3d ${options.variant || 'default'}`;
+    button.className = `rfui-btn rfui-gradient rfui-3d ${options.variant || 'default'}`;
 
     button.textContent = options.text;
     if (options.onClick) button.addEventListener('click', options.onClick);
@@ -127,7 +127,7 @@ export class BlockyButton {
 ### Modal Instance Pattern
 
 ```typescript
-export interface BlockyModalInstance {
+export interface RfuiModalInstance {
   show(): void;
   close(): void;
   element: HTMLDivElement;
@@ -144,7 +144,7 @@ Modals return instance objects for manual control — `modal.show()` / `modal.cl
 | `index.cjs.js` | CommonJS | Node.js, older tools |
 | `index.umd.js` | UMD | Browser `<script>` tags |
 | `index.d.ts` | TypeScript | Type definitions |
-| `blocky-ui.css` | CSS | Compiled and minified styles |
+| `raw-fun-ui.css` | CSS | Compiled and minified styles |
 
 ## Responsive Design
 

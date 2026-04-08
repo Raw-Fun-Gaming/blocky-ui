@@ -8,15 +8,15 @@
    Used by modal, card, and info components
    ======================================== */
 
-.blocky-content {
+.rfui-content {
   position: relative;
-  z-index: var(--blocky-z-content);
+  z-index: var(--rfui-z-content);
   padding: 0;
   width: 100%;
   max-height: 80vh;
   overflow-y: auto;
   box-sizing: border-box;
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
   min-height: 100px;
 }
 
@@ -25,14 +25,14 @@
    Standard and bordered variants
    ======================================== */
 
-.blocky-header {
-  padding: var(--blocky-padding-md) var(--blocky-padding-lg);
+.rfui-header {
+  padding: var(--rfui-padding-md) var(--rfui-padding-lg);
 }
 
-.blocky-header-bordered {
+.rfui-header-bordered {
   margin: 0;
-  padding: var(--blocky-padding-md) var(--blocky-padding-lg);
-  border-bottom: var(--blocky-border-width-thin) solid rgba(255, 255, 255, 0.3);
+  padding: var(--rfui-padding-md) var(--rfui-padding-lg);
+  border-bottom: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.3);
 }
 
 /* ========================================
@@ -40,24 +40,24 @@
    Base and enhanced variants with 3D text effects
    ======================================== */
 
-.blocky-title {
+.rfui-title {
   margin: 0;
-  color: var(--blocky-text-primary);
-  font-size: var(--blocky-font-xl);
-  font-weight: var(--blocky-font-weight-bold);
+  color: var(--rfui-text-primary);
+  font-size: var(--rfui-font-xl);
+  font-weight: var(--rfui-font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: var(--blocky-letter-spacing-wide);
+  letter-spacing: var(--rfui-letter-spacing-wide);
 }
 
-.blocky-title-enhanced {
+.rfui-title-enhanced {
   margin: 0;
-  color: var(--blocky-text-primary);
-  font-size: var(--blocky-font-xl);
-  font-weight: var(--blocky-font-weight-bold);
+  color: var(--rfui-text-primary);
+  font-size: var(--rfui-font-xl);
+  font-weight: var(--rfui-font-weight-bold);
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: var(--blocky-letter-spacing-wide);
-  text-shadow: var(--blocky-text-shadow-lg);
+  letter-spacing: var(--rfui-letter-spacing-wide);
+  text-shadow: var(--rfui-text-shadow-lg);
 }
 
 /* ========================================
@@ -65,33 +65,33 @@
    Different overlay styles for modals and info
    ======================================== */
 
-.blocky-modal-overlay {
+.rfui-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--blocky-overlay-modal);
-  backdrop-filter: var(--blocky-blur-md);
+  background: var(--rfui-overlay-modal);
+  backdrop-filter: var(--rfui-blur-md);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: var(--blocky-z-overlay-modal);
+  z-index: var(--rfui-z-overlay-modal);
   cursor: pointer;
   opacity: 0;
-  animation: modalFadeIn var(--blocky-transition-normal) ease-out forwards;
+  animation: modalFadeIn var(--rfui-transition-normal) ease-out forwards;
 }
 
-.blocky-info-overlay {
+.rfui-info-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--blocky-overlay-info);
-  backdrop-filter: var(--blocky-blur-md);
-  -webkit-backdrop-filter: var(--blocky-blur-md);
-  z-index: var(--blocky-z-overlay-info);
+  background: var(--rfui-overlay-info);
+  backdrop-filter: var(--rfui-blur-md);
+  -webkit-backdrop-filter: var(--rfui-blur-md);
+  z-index: var(--rfui-z-overlay-info);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,22 +102,22 @@
    Reusable 3D depth styles
    ======================================== */
 
-.blocky-3d {
-  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--blocky-border-radius);
-  backdrop-filter: var(--blocky-blur-md);
-  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
-  transition: all var(--blocky-transition-normal) ease;
+.rfui-3d {
+  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--rfui-border-radius);
+  backdrop-filter: var(--rfui-blur-md);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+  transition: all var(--rfui-transition-normal) ease;
 }
 
-.blocky-3d:hover {
+.rfui-3d:hover {
   transform: translateY(-2px);
-  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
 }
 
-.blocky-3d:active {
+.rfui-3d:active {
   transform: translateY(1px);
-  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
 }
 
 /* ========================================
@@ -125,12 +125,12 @@
    Reusable gradient patterns for different colors
    ======================================== */
 
-.blocky-gradient {
+.rfui-gradient {
   position: relative;
   overflow: hidden;
 }
 
-.blocky-gradient::before {
+.rfui-gradient::before {
   content: '';
   position: absolute;
   top: 0;
@@ -147,42 +147,42 @@
    Used by modal and info components
    ======================================== */
 
-.blocky-close-btn {
+.rfui-close-btn {
   position: absolute;
-  top: var(--blocky-padding-sm);
-  right: var(--blocky-padding-sm);
+  top: var(--rfui-padding-sm);
+  right: var(--rfui-padding-sm);
   width: 32px;
   height: 32px;
   padding: 0;
-  border: var(--blocky-border-width-thin) solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--blocky-border-radius-sm);
+  border: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--rfui-border-radius-sm);
   background: linear-gradient(180deg, rgba(255, 68, 68, 0.9) 0%, rgba(255, 68, 68, 0.7) 100%);
-  color: var(--blocky-text-primary);
-  font-size: var(--blocky-font-lg);
-  font-weight: var(--blocky-font-weight-bold);
+  color: var(--rfui-text-primary);
+  font-size: var(--rfui-font-lg);
+  font-weight: var(--rfui-font-weight-bold);
   cursor: pointer;
-  box-shadow: var(--blocky-shadow-base), var(--blocky-inset-combined);
-  transition: all var(--blocky-transition-fast) ease;
-  z-index: var(--blocky-z-dropdown);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-inset-combined);
+  transition: all var(--rfui-transition-fast) ease;
+  z-index: var(--rfui-z-dropdown);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.blocky-close-btn::before {
+.rfui-close-btn::before {
   content: '×';
   line-height: 1;
 }
 
-.blocky-close-btn:hover {
+.rfui-close-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.5),
-    var(--blocky-inset-combined);
+    var(--rfui-inset-combined);
 }
 
-.blocky-close-btn:active {
+.rfui-close-btn:active {
   transform: translateY(0);
-  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
 }
 
 /* ========================================
@@ -190,13 +190,13 @@
    Only affects blocky components
    ======================================== */
 
-.blocky-disabled,
-.blocky-btn[disabled],
-.blocky-btn-wrapper [disabled],
-.blocky-modal-wrapper [disabled],
-.blocky-card [disabled],
-.blocky-info [disabled] {
-  opacity: var(--blocky-opacity-disabled);
+.rfui-disabled,
+.rfui-btn[disabled],
+.rfui-btn-wrapper [disabled],
+.rfui-modal-wrapper [disabled],
+.rfui-card [disabled],
+.rfui-info [disabled] {
+  opacity: var(--rfui-opacity-disabled);
   cursor: not-allowed;
   pointer-events: none;
 }

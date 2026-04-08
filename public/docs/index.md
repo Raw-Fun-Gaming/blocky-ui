@@ -5,26 +5,26 @@ nav_order: 1
 permalink: /docs/
 ---
 
-# Blocky UI
+# Raw Fun UI
 
-Welcome to the **Blocky UI** documentation! A lightweight, zero-dependency TypeScript UI component library for 3D blocky-themed interfaces.
+Welcome to the **Raw Fun UI** documentation! A lightweight, zero-dependency TypeScript UI component library for 3D rfui-themed interfaces.
 
 [Live Demo]({{ site.baseurl }}/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[GitHub](https://github.com/Raw-Fun-Gaming/blocky-ui){: .btn .fs-5 .mb-4 .mb-md-0 }
+[GitHub](https://github.com/Raw-Fun-Gaming/raw-fun-ui){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
 ## Quick Start
 
 ```bash
-npm install blocky-ui-lite
+npm install raw-fun-ui
 ```
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
-const button = BlockyUI.createButton({
+const button = RawFunUI.createButton({
   text: 'Launch Sequence',
   variant: 'primary',
   onClick: () => console.log('Launched!')
@@ -44,25 +44,25 @@ const button = BlockyUI.createButton({
 
 | Component | Description |
 |-----------|-------------|
-| [BlockyButton]({{ site.baseurl }}/docs/components#blockybutton) | 4 variants with 3D hover effects |
-| [BlockyDropdown]({{ site.baseurl }}/docs/components#blockydropdown) | Theme-aware dropdowns with 4 variants |
-| [BlockyModal]({{ site.baseurl }}/docs/components#blockymodal) | Full-featured modals with backdrop blur |
-| [BlockyCard]({{ site.baseurl }}/docs/components#blockycard) | Content containers with 3D styling |
-| [BlockyInfo]({{ site.baseurl }}/docs/components#blockyinfo) | Overlay popups with 5 color themes |
-| [BlockyTag]({{ site.baseurl }}/docs/components#blockytag) | Status tags with gradient styling |
-| [BlockyPage]({{ site.baseurl }}/docs/components#blockypage) | Full-screen pages with animated gradient borders |
+| [RfuiButton]({{ site.baseurl }}/docs/components#blockybutton) | 4 variants with 3D hover effects |
+| [RfuiDropdown]({{ site.baseurl }}/docs/components#blockydropdown) | Theme-aware dropdowns with 4 variants |
+| [RfuiModal]({{ site.baseurl }}/docs/components#blockymodal) | Full-featured modals with backdrop blur |
+| [RfuiCard]({{ site.baseurl }}/docs/components#blockycard) | Content containers with 3D styling |
+| [RfuiInfo]({{ site.baseurl }}/docs/components#blockyinfo) | Overlay popups with 5 color themes |
+| [RfuiTag]({{ site.baseurl }}/docs/components#blockytag) | Status tags with gradient styling |
+| [RfuiPage]({{ site.baseurl }}/docs/components#blockypage) | Full-screen pages with animated gradient borders |
 
 ## Themes
 
-Blocky UI ships with 3 themes:
+Raw Fun UI ships with 3 themes:
 
-- **Blocky** (default) — dark 3D blocky aesthetic
+- **Rfui** (default) — dark 3D blocky aesthetic
 - **Fall Guys** — bright cartoon style with white borders
 - **Animal Crossing** — flat cozy NookPhone style with earthy tones
 
 ```typescript
-BlockyUI.setTheme('fall-guys');
-BlockyUI.setTheme('animal-crossing');
+RawFunUI.setTheme('fall-guys');
+RawFunUI.setTheme('animal-crossing');
 ```
 
 ## Design Philosophy

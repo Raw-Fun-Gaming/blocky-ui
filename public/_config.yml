@@ -1,7 +1,7 @@
-title: Blocky UI
-description: A lightweight, 3D blocky-themed UI component library
+title: Raw Fun UI
+description: A game-themed UI component library with switchable themes
 url: https://raw-fun-gaming.github.io
-baseurl: /blocky-ui
+baseurl: /raw-fun-ui
 
 remote_theme: just-the-docs/just-the-docs
 
@@ -12,15 +12,15 @@ search.heading_level: 3
 
 aux_links:
   "GitHub":
-    - "https://github.com/Raw-Fun-Gaming/blocky-ui"
+    - "https://github.com/Raw-Fun-Gaming/raw-fun-ui"
   "NPM":
-    - "https://www.npmjs.com/package/blocky-ui-lite"
+    - "https://www.npmjs.com/package/raw-fun-ui"
   "Live Demo":
-    - "https://raw-fun-gaming.github.io/blocky-ui/"
+    - "https://raw-fun-gaming.github.io/raw-fun-ui/"
 
 aux_links_new_tab: true
 
-footer_content: "Blocky UI &mdash; lightweight, 3D blocky-themed UI components."
+footer_content: "Raw Fun UI &mdash; game-themed UI components with switchable themes."
 
 nav_sort: order
 

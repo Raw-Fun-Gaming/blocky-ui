@@ -1,17 +1,17 @@
-import type { BlockyInfoOptions } from '../types';
+import type { RfuiInfoOptions } from '../types';
 
-export class BlockyInfo {
+export class RfuiInfo {
   /**
    * Create an info overlay with 3D blocky styling and color themes
    */
-  static create(options: BlockyInfoOptions): HTMLDivElement {
+  static create(options: RfuiInfoOptions): HTMLDivElement {
     // Create info overlay with transparent blur
     const overlay = document.createElement('div');
-    overlay.className = 'blocky-info-overlay';
+    overlay.className = 'rfui-info-overlay';
 
     // Create info wrapper
     const infoWrapper = document.createElement('div');
-    infoWrapper.className = 'blocky-info-wrapper blocky-gradient blocky-3d';
+    infoWrapper.className = 'rfui-info-wrapper rfui-gradient rfui-3d';
 
     // Apply color theme class if specified
     if (options.titleColor) {
@@ -20,7 +20,7 @@ export class BlockyInfo {
 
     // Create info content container
     const infoContent = document.createElement('div');
-    infoContent.className = 'blocky-content';
+    infoContent.className = 'rfui-content';
 
     if (options.className) {
       infoContent.className += ` ${options.className}`;
@@ -30,17 +30,17 @@ export class BlockyInfo {
     let header: HTMLDivElement | undefined;
     if (options.title) {
       header = document.createElement('div');
-      header.className = 'blocky-header-bordered';
+      header.className = 'rfui-header-bordered';
 
       const title = document.createElement('h2');
-      title.className = `blocky-info-title blocky-title-enhanced`;
+      title.className = `rfui-info-title rfui-title-enhanced`;
       title.textContent = options.title;
       header.appendChild(title);
     }
 
     // Create body
     const body = document.createElement('div');
-    body.className = 'blocky-info-body';
+    body.className = 'rfui-info-body';
 
     if (typeof options.content === 'string') {
       body.innerHTML = options.content;

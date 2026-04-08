@@ -13,7 +13,7 @@ The **Fall Guys** theme is a bright, playful, cartoon-style UI inspired by the F
 
 ## Theme Name
 
-`fall-guys` — applied via `data-blocky-theme="fall-guys"` on the root element.
+`fall-guys` — applied via `data-rfui-theme="fall-guys"` on the root element.
 
 ## Color Palette
 
@@ -59,12 +59,12 @@ Default header: purple gradient (`#9b59b6` → `#b370d4`), white text. Five colo
 
 | Token | Value |
 |-------|-------|
-| `--blocky-shadow-base` | `4px 4px 0 #000000` |
-| `--blocky-shadow-far` | `6px 6px 0 #000000` |
-| `--blocky-shadow-hover` | `8px 8px 0 #000000` |
-| `--blocky-shadow-active` | `2px 2px 0 #000000` |
-| `--blocky-inset-highlight` | `inset 0 2px 0 rgba(255, 255, 255, 0.4)` |
-| `--blocky-inset-shadow` | `inset 0 -2px 0 rgba(0, 0, 0, 0.1)` |
+| `--rfui-shadow-base` | `4px 4px 0 #000000` |
+| `--rfui-shadow-far` | `6px 6px 0 #000000` |
+| `--rfui-shadow-hover` | `8px 8px 0 #000000` |
+| `--rfui-shadow-active` | `2px 2px 0 #000000` |
+| `--rfui-inset-highlight` | `inset 0 2px 0 rgba(255, 255, 255, 0.4)` |
+| `--rfui-inset-shadow` | `inset 0 -2px 0 rgba(0, 0, 0, 0.1)` |
 
 Radial gradient overlays on `::before` (top highlight). No backdrop-filter blur.
 
@@ -74,9 +74,9 @@ Very rounded, cartoon-like:
 
 | Token | Value |
 |-------|-------|
-| `--blocky-border-radius` | `16px` |
-| `--blocky-border-radius-sm` | `12px` |
-| `--blocky-border-radius-lg` | `20px` |
+| `--rfui-border-radius` | `16px` |
+| `--rfui-border-radius-sm` | `12px` |
+| `--rfui-border-radius-lg` | `20px` |
 
 ## Borders
 
@@ -84,24 +84,24 @@ Thick, solid white borders:
 
 | Token | Value |
 |-------|-------|
-| `--blocky-border-width` | `4px` |
-| `--blocky-border-width-thin` | `3px` |
-| `--blocky-border-width-thick` | `5px` |
-| `--blocky-border-color` | `#ffffff` |
+| `--rfui-border-width` | `4px` |
+| `--rfui-border-width-thin` | `3px` |
+| `--rfui-border-width-thick` | `5px` |
+| `--rfui-border-color` | `#ffffff` |
 
 ## Typography
 
 | Token | Value |
 |-------|-------|
-| `--blocky-text-primary` | `#1a1a2e` (dark text on light backgrounds) |
-| `--blocky-text-secondary` | `rgba(26, 26, 46, 0.8)` |
-| `--blocky-text-disabled` | `#a0a0a0` |
-| `--blocky-text-light` | `#ffffff` |
-| `--blocky-font-weight-normal` | `500` |
-| `--blocky-font-weight-medium` | `600` |
-| `--blocky-font-weight-bold` | `800` |
-| `--blocky-text-shadow-sm` | `1px 1px 0 rgba(0, 0, 0, 0.2)` |
-| `--blocky-text-shadow-md` | `2px 2px 0 rgba(0, 0, 0, 0.2)` |
+| `--rfui-text-primary` | `#1a1a2e` (dark text on light backgrounds) |
+| `--rfui-text-secondary` | `rgba(26, 26, 46, 0.8)` |
+| `--rfui-text-disabled` | `#a0a0a0` |
+| `--rfui-text-light` | `#ffffff` |
+| `--rfui-font-weight-normal` | `500` |
+| `--rfui-font-weight-medium` | `600` |
+| `--rfui-font-weight-bold` | `800` |
+| `--rfui-text-shadow-sm` | `1px 1px 0 rgba(0, 0, 0, 0.2)` |
+| `--rfui-text-shadow-md` | `2px 2px 0 rgba(0, 0, 0, 0.2)` |
 
 ## Gradients
 
@@ -128,8 +128,8 @@ background: radial-gradient(
 
 | State | Transform | Shadow |
 |-------|-----------|--------|
-| Hover | `translate(-2px, -2px)` | `--blocky-shadow-hover` |
-| Active | `translate(2px, 2px)` | `--blocky-shadow-active` |
+| Hover | `translate(-2px, -2px)` | `--rfui-shadow-hover` |
+| Active | `translate(2px, 2px)` | `--rfui-shadow-active` |
 
 Diagonal movement (both X and Y axes) — creates a "peeling off" cartoon effect.
 

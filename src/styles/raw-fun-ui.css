@@ -2,7 +2,7 @@
    BLOCKY UI - MODULAR CSS ARCHITECTURE
 
    A lightweight, zero-dependency TypeScript UI component library
-   for 3D blocky-themed interfaces.
+   for 3D rfui-themed interfaces.
 
    Features:
    - Pure CSS 3D depth effects (no SVG)
@@ -63,7 +63,7 @@
 
    File Structure:
    src/styles/
-   ├── blocky-ui.css              # Main entry point (this file)
+   ├── raw-fun-ui.css              # Main entry point (this file)
    ├── base/
    │   ├── _variables.css         # CSS custom properties and design tokens
    │   ├── _shared.css            # Shared component styles and utilities

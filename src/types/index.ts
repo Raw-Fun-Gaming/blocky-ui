@@ -1,17 +1,17 @@
-// Blocky UI TypeScript Types
+// Raw Fun UI TypeScript Types
 
 export type ComponentVariant = 'default' | 'primary' | 'secondary' | 'danger';
 export type TitleColorTheme = 'yellow' | 'green' | 'blue' | 'purple' | 'red';
 
 /**
- * Available BlockyUI themes
+ * Available RawFunUI themes
  * - 'blocky': Default dark 3D blocky theme
  * - 'fall-guys': Bright, playful cartoon theme with white borders
  * - 'animal-crossing': Flat, cozy theme with earthy tones and pill shapes
  */
-export type BlockyTheme = 'blocky' | 'fall-guys' | 'animal-crossing';
+export type RfuiTheme = 'blocky' | 'fall-guys' | 'animal-crossing';
 
-export interface BlockyButtonOptions {
+export interface RfuiButtonOptions {
   text: string;
   variant?: ComponentVariant;
   onClick?: () => void;
@@ -19,24 +19,24 @@ export interface BlockyButtonOptions {
   className?: string;
 }
 
-export interface BlockyModalOptions {
+export interface RfuiModalOptions {
   title: string;
   content: string | HTMLElement;
   showCloseButton?: boolean;
   closeOnOverlayClick?: boolean; // Whether clicking the overlay closes the modal (default: true)
-  buttons: BlockyButtonOptions[];
+  buttons: RfuiButtonOptions[];
   onClose?: () => void;
   className?: string;
 }
 
-export interface BlockyCardOptions {
+export interface RfuiCardOptions {
   title?: string;
   content: string | HTMLElement;
   variant?: ComponentVariant;
   className?: string;
 }
 
-export interface BlockyInfoOptions {
+export interface RfuiInfoOptions {
   title?: string;
   titleColor?: 'yellow' | 'green' | 'blue' | 'purple' | 'red';
   content: string | HTMLElement;
@@ -44,20 +44,20 @@ export interface BlockyInfoOptions {
   onClose?: () => void;
 }
 
-export interface BlockyTagOptions {
+export interface RfuiTagOptions {
   title?: string;
   content: string | HTMLElement;
   variant?: ComponentVariant;
   className?: string;
 }
 
-export interface BlockyDropdownOption {
+export interface RfuiDropdownOption {
   value: string;
   label: string;
 }
 
-export interface BlockyDropdownOptions {
-  options: BlockyDropdownOption[];
+export interface RfuiDropdownOptions {
+  options: RfuiDropdownOption[];
   value?: string;
   variant?: ComponentVariant;
   onChange?: (value: string) => void;
@@ -67,14 +67,14 @@ export interface BlockyDropdownOptions {
   className?: string;
 }
 
-export interface BlockyPageOptions {
+export interface RfuiPageOptions {
   content: string | HTMLElement;
   onClose?: () => void;
   className?: string;
   customScrollbar?: boolean; // Enable custom auto-hide scrollbar (default: true)
 }
 
-export interface BlockyPageInstance {
+export interface RfuiPageInstance {
   show(): void;
   close(): void;
   element: HTMLDivElement;
@@ -88,20 +88,20 @@ export interface ComponentEventHandlers {
 }
 
 export interface CSSClassNames {
-  BUTTON_WRAPPER: 'blocky-btn-wrapper';
-  MODAL_WRAPPER: 'blocky-modal-wrapper';
-  CARD_WRAPPER: 'blocky-card-wrapper';
-  TAG_WRAPPER: 'blocky-tag-wrapper';
-  INFO_WRAPPER: 'blocky-info-wrapper';
+  BUTTON_WRAPPER: 'rfui-btn-wrapper';
+  MODAL_WRAPPER: 'rfui-modal-wrapper';
+  CARD_WRAPPER: 'rfui-card-wrapper';
+  TAG_WRAPPER: 'rfui-tag-wrapper';
+  INFO_WRAPPER: 'rfui-info-wrapper';
 
-  BLOCKY_CONTENT: 'blocky-content';
-  BLOCKY_HEADER: 'blocky-header';
-  BLOCKY_HEADER_BORDERED: 'blocky-header-bordered';
-  BLOCKY_TITLE: 'blocky-title';
-  BLOCKY_TITLE_ENHANCED: 'blocky-title-enhanced';
+  RFUI_CONTENT: 'rfui-content';
+  RFUI_HEADER: 'rfui-header';
+  RFUI_HEADER_BORDERED: 'rfui-header-bordered';
+  RFUI_TITLE: 'rfui-title';
+  RFUI_TITLE_ENHANCED: 'rfui-title-enhanced';
 
-  MODAL_OVERLAY: 'blocky-modal-overlay';
-  INFO_OVERLAY: 'blocky-info-overlay';
+  MODAL_OVERLAY: 'rfui-modal-overlay';
+  INFO_OVERLAY: 'rfui-info-overlay';
 }
 
 export interface AnimationConfig {
@@ -120,12 +120,12 @@ export interface ResponsiveBreakpoints {
   desktop: '900px';
 }
 
-export interface BlockyUIInterface {
-  createButton(options: BlockyButtonOptions): HTMLElement;
-  createModal(options: BlockyModalOptions): HTMLElement;
-  createCard(options: BlockyCardOptions): HTMLElement;
-  createInfo(options: BlockyInfoOptions): HTMLElement;
-  createTag(options: BlockyTagOptions): HTMLElement;
+export interface RawFunUIInterface {
+  createButton(options: RfuiButtonOptions): HTMLElement;
+  createModal(options: RfuiModalOptions): HTMLElement;
+  createCard(options: RfuiCardOptions): HTMLElement;
+  createInfo(options: RfuiInfoOptions): HTMLElement;
+  createTag(options: RfuiTagOptions): HTMLElement;
 
   showModal(modal: HTMLElement): void;
   closeModal(modal: HTMLElement): void;

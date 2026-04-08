@@ -1,7 +1,7 @@
 {
-  "name": "blocky-ui-lite",
-  "version": "1.0.10",
-  "description": "A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS",
+  "name": "raw-fun-ui",
+  "version": "2.0.0",
+  "description": "A game-themed UI component library with switchable themes, built with TypeScript and pure CSS",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -16,8 +16,8 @@
     "components",
     "typescript",
     "css",
-    "blocky",
-    "3d",
+    "raw-fun",
+    "game-themes",
     "animations",
     "vanilla-js",
     "lightweight",
@@ -28,12 +28,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raw-fun-gaming/blocky-ui.git"
+    "url": "git+https://github.com/raw-fun-gaming/raw-fun-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/raw-fun-gaming/blocky-ui/issues"
+    "url": "https://github.com/raw-fun-gaming/raw-fun-ui/issues"
   },
-  "homepage": "https://github.com/raw-fun-gaming/blocky-ui#readme",
+  "homepage": "https://github.com/raw-fun-gaming/raw-fun-ui#readme",
   "engines": {
     "node": ">=14.0.0"
   },
@@ -41,7 +41,7 @@
     "build": "rollup -c",
     "build:watch": "rollup -c -w",
     "dev": "npm run build:watch",
-    "demo": "npm run build && cp dist/blocky-ui.css dist/index.umd.js public/ && python3 -m http.server 8002 --directory public & sleep 3 && open http://localhost:8002/index.html",
+    "demo": "npm run build && cp dist/raw-fun-ui.css dist/index.umd.js public/ && python3 -m http.server 8002 --directory public & sleep 3 && open http://localhost:8002/index.html",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build"
   },
@@ -63,7 +63,7 @@
       "require": "./dist/index.cjs.js",
       "types": "./dist/index.d.ts"
     },
-    "./styles": "./dist/blocky-ui.css",
-    "./dist/blocky-ui.css": "./dist/blocky-ui.css"
+    "./styles": "./dist/raw-fun-ui.css",
+    "./dist/raw-fun-ui.css": "./dist/raw-fun-ui.css"
   }
 }

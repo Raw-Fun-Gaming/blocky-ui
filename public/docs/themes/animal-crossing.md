@@ -13,7 +13,7 @@ The **Animal Crossing** theme is inspired by the NookPhone UI from Animal Crossi
 
 ## Theme Name
 
-`animal-crossing` — applied via `data-blocky-theme="animal-crossing"` on the root element.
+`animal-crossing` — applied via `data-rfui-theme="animal-crossing"` on the root element.
 
 ## Color Palette
 
@@ -58,13 +58,13 @@ Default header: teal gradient (`#34a09c` → `#3db0a8`), white text.
 
 | Token | Value |
 |-------|-------|
-| `--blocky-shadow-base` | `0 2px 8px rgba(31, 82, 110, 0.10)` |
-| `--blocky-shadow-far` | `0 4px 16px rgba(31, 82, 110, 0.12)` |
-| `--blocky-shadow-hover` | `0 6px 20px rgba(31, 82, 110, 0.15)` |
-| `--blocky-shadow-active` | `0 1px 4px rgba(31, 82, 110, 0.08)` |
-| `--blocky-inset-highlight` | `none` |
-| `--blocky-inset-shadow` | `none` |
-| `--blocky-inset-combined` | `none` |
+| `--rfui-shadow-base` | `0 2px 8px rgba(31, 82, 110, 0.10)` |
+| `--rfui-shadow-far` | `0 4px 16px rgba(31, 82, 110, 0.12)` |
+| `--rfui-shadow-hover` | `0 6px 20px rgba(31, 82, 110, 0.15)` |
+| `--rfui-shadow-active` | `0 1px 4px rgba(31, 82, 110, 0.08)` |
+| `--rfui-inset-highlight` | `none` |
+| `--rfui-inset-shadow` | `none` |
+| `--rfui-inset-combined` | `none` |
 
 No radial gradient overlays on `::before` pseudo-elements. No backdrop-filter blur.
 
@@ -80,9 +80,9 @@ Two tiers, matching the NookPhone reference:
 | Card/modal header inner radius | `calc(30px - border-width)` | Flush with container |
 
 CSS variables:
-- `--blocky-border-radius`: `30px`
-- `--blocky-border-radius-sm`: `24px`
-- `--blocky-border-radius-lg`: `32px`
+- `--rfui-border-radius`: `30px`
+- `--rfui-border-radius-sm`: `24px`
+- `--rfui-border-radius-lg`: `32px`
 
 ## Borders
 
@@ -90,11 +90,11 @@ Subtle, earth-toned borders instead of bright white:
 
 | Token | Value |
 |-------|-------|
-| `--blocky-border-width` | `2px` |
-| `--blocky-border-width-thin` | `1.5px` |
-| `--blocky-border-width-thick` | `3px` |
-| `--blocky-border-color` | `rgba(31, 82, 110, 0.08)` |
-| `--blocky-border-color-hover` | `rgba(31, 82, 110, 0.12)` |
+| `--rfui-border-width` | `2px` |
+| `--rfui-border-width-thin` | `1.5px` |
+| `--rfui-border-width-thick` | `3px` |
+| `--rfui-border-color` | `rgba(31, 82, 110, 0.08)` |
+| `--rfui-border-color-hover` | `rgba(31, 82, 110, 0.12)` |
 
 Buttons get a subtle white inner border: `2px solid rgba(255, 255, 255, 0.25)`.
 
@@ -102,14 +102,14 @@ Buttons get a subtle white inner border: `2px solid rgba(255, 255, 255, 0.25)`.
 
 | Token | Value |
 |-------|-------|
-| `--blocky-text-primary` | `#1f526e` (navy) |
-| `--blocky-text-secondary` | `rgba(31, 82, 110, 0.7)` |
-| `--blocky-text-disabled` | `rgba(31, 82, 110, 0.35)` |
-| `--blocky-text-light` | `#fffbed` (cream — for text on colored backgrounds) |
-| `--blocky-font-weight-normal` | `500` |
-| `--blocky-font-weight-medium` | `600` |
-| `--blocky-font-weight-bold` | `700` |
-| `--blocky-text-shadow-*` | `none` (flat style, no text shadows) |
+| `--rfui-text-primary` | `#1f526e` (navy) |
+| `--rfui-text-secondary` | `rgba(31, 82, 110, 0.7)` |
+| `--rfui-text-disabled` | `rgba(31, 82, 110, 0.35)` |
+| `--rfui-text-light` | `#fffbed` (cream — for text on colored backgrounds) |
+| `--rfui-font-weight-normal` | `500` |
+| `--rfui-font-weight-medium` | `600` |
+| `--rfui-font-weight-bold` | `700` |
+| `--rfui-text-shadow-*` | `none` (flat style, no text shadows) |
 
 ## Gradients
 
@@ -126,8 +126,8 @@ background: linear-gradient(180deg, #3db0a8 0%, #34a09c 100%);
 
 | State | Transform | Shadow |
 |-------|-----------|--------|
-| Hover | `translateY(-2px)` | `--blocky-shadow-hover` |
-| Active | `translateY(0)` | `--blocky-shadow-active` |
+| Hover | `translateY(-2px)` | `--rfui-shadow-hover` |
+| Active | `translateY(0)` | `--rfui-shadow-active` |
 
 Gentle lift only — no X-axis translation (unlike fall-guys diagonal movement).
 
@@ -197,13 +197,13 @@ Gentle lift only — no X-axis translation (unlike fall-guys diagonal movement).
 ## Files to Create/Modify
 
 1. **Create**: `src/styles/themes/_animal-crossing.css` — theme CSS (following fall-guys pattern)
-2. **Modify**: `src/styles/blocky-ui.css` — add `@import url('./themes/_animal-crossing.css');`
-3. **Modify**: `src/types/index.ts` — add `'animal-crossing'` to `BlockyTheme` union type
+2. **Modify**: `src/styles/raw-fun-ui.css` — add `@import url('./themes/_animal-crossing.css');`
+3. **Modify**: `src/types/index.ts` — add `'animal-crossing'` to `RfuiTheme` union type
 
 ## Verification
 
 1. `npm run build` — ensure clean build with new theme CSS
-2. In a consuming project, call `BlockyUI.setTheme('animal-crossing')` and verify:
+2. In a consuming project, call `RawFunUI.setTheme('animal-crossing')` and verify:
    - All component variants render correctly
    - Colors match the reference palette
    - Buttons are pill-shaped, containers are rounded rects

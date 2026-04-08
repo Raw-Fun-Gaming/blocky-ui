@@ -23,7 +23,7 @@ const baseConfig = {
       sourceMap: production ? false : true
     }),
     postcss({
-      extract: 'blocky-ui.css',
+      extract: 'raw-fun-ui.css',
       minimize: production,
       sourceMap: !production,
       plugins: [
@@ -70,7 +70,7 @@ export default [
     output: {
       file: 'dist/index.umd.js',
       format: 'umd',
-      name: 'BlockyUI',
+      name: 'RawFunUI',
       sourcemap: !production
     },
     plugins: [

@@ -1,51 +1,51 @@
-// Main entry point for Blocky UI package
+// Main entry point for Raw Fun UI package
 
 // Import styles
-import './styles/blocky-ui.css';
+import './styles/raw-fun-ui.css';
 
 // Import components
-import { BlockyButton } from './components/BlockyButton';
-import { BlockyModal, BlockyModalInstance } from './components/BlockyModal';
-import { BlockyCard } from './components/BlockyCard';
-import { BlockyInfo } from './components/BlockyInfo';
-import { BlockyTag } from './components/BlockyTag';
-import { BlockyPage } from './components/BlockyPage';
-import { BlockyDropdown } from './components/BlockyDropdown';
-import type { BlockyPageInstance } from './types';
+import { RfuiButton } from './components/RfuiButton';
+import { RfuiModal, RfuiModalInstance } from './components/RfuiModal';
+import { RfuiCard } from './components/RfuiCard';
+import { RfuiInfo } from './components/RfuiInfo';
+import { RfuiTag } from './components/RfuiTag';
+import { RfuiPage } from './components/RfuiPage';
+import { RfuiDropdown } from './components/RfuiDropdown';
+import type { RfuiPageInstance } from './types';
 
 // Export all types
 export * from './types';
-export type { BlockyModalInstance, BlockyPageInstance };
+export type { RfuiModalInstance, RfuiPageInstance };
 
 // Import theme type for internal use
-import type { BlockyTheme } from './types';
+import type { RfuiTheme } from './types';
 
-// Main BlockyUI class with static factory methods
-export class BlockyUI {
+// Main RawFunUI class with static factory methods
+export class RawFunUI {
   // Current theme
-  private static currentTheme: BlockyTheme = 'blocky';
+  private static currentTheme: RfuiTheme = 'blocky';
 
   // Component creation methods
-  static createButton = BlockyButton.create;
-  static createModal = BlockyModal.create;
-  static createCard = BlockyCard.create;
-  static createInfo = BlockyInfo.create;
-  static createTag = BlockyTag.create;
-  static createPage = BlockyPage.create;
-  static createDropdown = BlockyDropdown.create;
+  static createButton = RfuiButton.create;
+  static createModal = RfuiModal.create;
+  static createCard = RfuiCard.create;
+  static createInfo = RfuiInfo.create;
+  static createTag = RfuiTag.create;
+  static createPage = RfuiPage.create;
+  static createDropdown = RfuiDropdown.create;
 
   /**
-   * Sets the current theme for all BlockyUI components
+   * Sets the current theme for all RawFunUI components
    * @param theme - The theme to apply ('blocky' | 'fall-guys')
    */
-  static setTheme(theme: BlockyTheme): void {
-    BlockyUI.currentTheme = theme;
+  static setTheme(theme: RfuiTheme): void {
+    RawFunUI.currentTheme = theme;
     if (theme === 'blocky') {
       // Remove theme attribute for default theme
-      document.documentElement.removeAttribute('data-blocky-theme');
+      document.documentElement.removeAttribute('data-rfui-theme');
     } else {
       // Set theme attribute for custom themes
-      document.documentElement.setAttribute('data-blocky-theme', theme);
+      document.documentElement.setAttribute('data-rfui-theme', theme);
     }
   }
 
@@ -53,8 +53,8 @@ export class BlockyUI {
    * Gets the current theme
    * @returns The current theme name
    */
-  static getTheme(): BlockyTheme {
-    return BlockyUI.currentTheme;
+  static getTheme(): RfuiTheme {
+    return RawFunUI.currentTheme;
   }
 
   /**
@@ -65,8 +65,8 @@ export class BlockyUI {
     message: string,
     onConfirm: () => void,
     onCancel?: () => void
-  ): BlockyModalInstance {
-    const modal = BlockyUI.createModal({
+  ): RfuiModalInstance {
+    const modal = RawFunUI.createModal({
       title: title,
       content: message,
       buttons: [
@@ -89,8 +89,8 @@ export class BlockyUI {
   /**
    * Creates and shows a notification modal with OK button
    */
-  static showNotification(title: string, message: string, onClose?: () => void): BlockyModalInstance {
-    const modal = BlockyUI.createModal({
+  static showNotification(title: string, message: string, onClose?: () => void): RfuiModalInstance {
+    const modal = RawFunUI.createModal({
       title: title,
       content: message,
       onClose: onClose,
@@ -108,8 +108,8 @@ export class BlockyUI {
   /**
    * Creates and shows an error modal with danger-styled OK button
    */
-  static showError(title: string, message: string, onClose?: () => void): BlockyModalInstance {
-    const modal = BlockyUI.createModal({
+  static showError(title: string, message: string, onClose?: () => void): RfuiModalInstance {
+    const modal = RawFunUI.createModal({
       title: title,
       content: message,
       buttons: [
@@ -127,7 +127,7 @@ export class BlockyUI {
 }
 
 // Export individual components
-export { BlockyButton, BlockyModal, BlockyCard, BlockyInfo, BlockyTag, BlockyPage, BlockyDropdown };
+export { RfuiButton, RfuiModal, RfuiCard, RfuiInfo, RfuiTag, RfuiPage, RfuiDropdown };
 
 // Default export
-export default BlockyUI;
+export default RawFunUI;

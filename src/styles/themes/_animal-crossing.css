@@ -13,44 +13,44 @@
 
 /* ========================================
    THEME SELECTOR
-   Apply this theme by adding data-blocky-theme="animal-crossing"
+   Apply this theme by adding data-rfui-theme="animal-crossing"
    to the html or body element
    ======================================== */
 
-[data-blocky-theme='animal-crossing'] {
+[data-rfui-theme='animal-crossing'] {
   /* ========================================
      COLOR PALETTE - EARTHY & COZY
      ======================================== */
 
   /* Primary Colors - Nature */
-  --blocky-primary: #34a09c;
-  --blocky-primary-dark: #2a8480;
-  --blocky-success: #34a09c;
-  --blocky-warning: #d69632;
-  --blocky-danger: #c45c5c;
+  --rfui-primary: #34a09c;
+  --rfui-primary-dark: #2a8480;
+  --rfui-success: #34a09c;
+  --rfui-warning: #d69632;
+  --rfui-danger: #c45c5c;
 
   /* Button Variant Colors */
-  --blocky-button-default: #937c60;
-  --blocky-button-primary: #34a09c;
-  --blocky-button-secondary: #d69632;
-  --blocky-button-danger: #c45c5c;
+  --rfui-button-default: #937c60;
+  --rfui-button-primary: #34a09c;
+  --rfui-button-secondary: #d69632;
+  --rfui-button-danger: #c45c5c;
 
   /* Text Colors */
-  --blocky-text-primary: #1f526e;
-  --blocky-text-secondary: rgba(31, 82, 110, 0.7);
-  --blocky-text-disabled: rgba(31, 82, 110, 0.35);
-  --blocky-text-light: #fffbed;
+  --rfui-text-primary: #1f526e;
+  --rfui-text-secondary: rgba(31, 82, 110, 0.7);
+  --rfui-text-disabled: rgba(31, 82, 110, 0.35);
+  --rfui-text-light: #fffbed;
 
   /* Background Colors - Cream & Sand */
-  --blocky-overlay-modal: rgba(31, 82, 110, 0.3);
-  --blocky-overlay-info: rgba(232, 224, 208, 0.9);
-  --blocky-bg-light: #fffbed;
-  --blocky-bg-card: #fffbed;
+  --rfui-overlay-modal: rgba(31, 82, 110, 0.3);
+  --rfui-overlay-info: rgba(232, 224, 208, 0.9);
+  --rfui-bg-light: #fffbed;
+  --rfui-bg-card: #fffbed;
 
   /* Container background - Cream */
-  --blocky-container-bg: #fffbed;
-  --blocky-container-bg-light: #fffdf5;
-  --blocky-container-bg-dark: #f5eed8;
+  --rfui-container-bg: #fffbed;
+  --rfui-container-bg-light: #fffdf5;
+  --rfui-container-bg-dark: #f5eed8;
 
   /* ========================================
      3D DEPTH EFFECTS - SOFT DIFFUSED SHADOWS
@@ -58,69 +58,69 @@
      ======================================== */
 
   /* Box Shadow - Soft diffused */
-  --blocky-shadow-base: 0 2px 8px rgba(31, 82, 110, 0.10);
-  --blocky-shadow-far: 0 4px 16px rgba(31, 82, 110, 0.12);
-  --blocky-shadow-hover: 0 6px 20px rgba(31, 82, 110, 0.15);
-  --blocky-shadow-active: 0 1px 4px rgba(31, 82, 110, 0.08);
+  --rfui-shadow-base: 0 2px 8px rgba(31, 82, 110, 0.10);
+  --rfui-shadow-far: 0 4px 16px rgba(31, 82, 110, 0.12);
+  --rfui-shadow-hover: 0 6px 20px rgba(31, 82, 110, 0.15);
+  --rfui-shadow-active: 0 1px 4px rgba(31, 82, 110, 0.08);
 
   /* Inset Highlights - None (flat design) */
-  --blocky-inset-highlight: none;
-  --blocky-inset-shadow: none;
-  --blocky-inset-combined: none;
+  --rfui-inset-highlight: none;
+  --rfui-inset-shadow: none;
+  --rfui-inset-combined: none;
 
   /* ========================================
      SPACING & SIZING - VERY ROUNDED
      ======================================== */
 
   /* Border - Subtle earth-toned */
-  --blocky-border-width: 2px;
-  --blocky-border-width-thin: 1.5px;
-  --blocky-border-width-thick: 3px;
-  --blocky-border-radius: 30px;
-  --blocky-border-radius-sm: 24px;
-  --blocky-border-radius-lg: 32px;
+  --rfui-border-width: 2px;
+  --rfui-border-width-thin: 1.5px;
+  --rfui-border-width-thick: 3px;
+  --rfui-border-radius: 30px;
+  --rfui-border-radius-sm: 24px;
+  --rfui-border-radius-lg: 32px;
 
   /* Border color - Subtle navy tint */
-  --blocky-border-color: rgba(31, 82, 110, 0.08);
-  --blocky-border-color-hover: rgba(31, 82, 110, 0.12);
+  --rfui-border-color: rgba(31, 82, 110, 0.08);
+  --rfui-border-color-hover: rgba(31, 82, 110, 0.12);
 
   /* ========================================
      TYPOGRAPHY - CLEAN & READABLE
      ======================================== */
 
   /* Font Weights */
-  --blocky-font-weight-normal: 500;
-  --blocky-font-weight-medium: 600;
-  --blocky-font-weight-bold: 700;
+  --rfui-font-weight-normal: 500;
+  --rfui-font-weight-medium: 600;
+  --rfui-font-weight-bold: 700;
 
   /* Text Shadow - None (flat design) */
-  --blocky-text-shadow-sm: none;
-  --blocky-text-shadow-md: none;
-  --blocky-text-shadow-lg: none;
-  --blocky-text-shadow-light: none;
+  --rfui-text-shadow-sm: none;
+  --rfui-text-shadow-md: none;
+  --rfui-text-shadow-lg: none;
+  --rfui-text-shadow-light: none;
 
   /* ========================================
      PAGE BORDER GRADIENT COLORS
      ======================================== */
-  --blocky-page-border-color-1: rgba(52, 160, 156, 0.7);
-  --blocky-page-border-color-2: rgba(214, 150, 50, 0.7);
-  --blocky-page-border-color-3: rgba(147, 124, 96, 0.7);
+  --rfui-page-border-color-1: rgba(52, 160, 156, 0.7);
+  --rfui-page-border-color-2: rgba(214, 150, 50, 0.7);
+  --rfui-page-border-color-3: rgba(147, 124, 96, 0.7);
 
   /* ========================================
      HEADER BAR COLORS
      Default is TEAL like the NookPhone accent
      ======================================== */
-  --blocky-header-bg: linear-gradient(180deg, #3db0a8 0%, #34a09c 100%);
-  --blocky-header-text: #fffbed;
+  --rfui-header-bg: linear-gradient(180deg, #3db0a8 0%, #34a09c 100%);
+  --rfui-header-text: #fffbed;
 
   /* Header bar colors matching TitleColorTheme */
-  --blocky-header-yellow: linear-gradient(180deg, #e0a840 0%, #d69632 100%);
-  --blocky-header-yellow-text: #1f526e;
-  --blocky-header-green: linear-gradient(180deg, #3db0a8 0%, #34a09c 100%);
-  --blocky-header-green-text: #fffbed;
-  --blocky-header-blue: linear-gradient(180deg, #2a6a8e 0%, #1f526e 100%);
-  --blocky-header-purple: linear-gradient(180deg, #9b8bc5 0%, #8b7bb5 100%);
-  --blocky-header-red: linear-gradient(180deg, #d06868 0%, #c45c5c 100%);
+  --rfui-header-yellow: linear-gradient(180deg, #e0a840 0%, #d69632 100%);
+  --rfui-header-yellow-text: #1f526e;
+  --rfui-header-green: linear-gradient(180deg, #3db0a8 0%, #34a09c 100%);
+  --rfui-header-green-text: #fffbed;
+  --rfui-header-blue: linear-gradient(180deg, #2a6a8e 0%, #1f526e 100%);
+  --rfui-header-purple: linear-gradient(180deg, #9b8bc5 0%, #8b7bb5 100%);
+  --rfui-header-red: linear-gradient(180deg, #d06868 0%, #c45c5c 100%);
 
   /* ========================================
      GAME ENGINE DESIGN TOKENS
@@ -156,326 +156,326 @@
    ======================================== */
 
 /* Remove box-shadow from btn-wrapper (base theme adds it on hover) */
-[data-blocky-theme='animal-crossing'] .blocky-btn-wrapper,
-[data-blocky-theme='animal-crossing'] .blocky-btn-wrapper:hover,
-[data-blocky-theme='animal-crossing'] .blocky-btn-wrapper:active {
+[data-rfui-theme='animal-crossing'] .rfui-btn-wrapper,
+[data-rfui-theme='animal-crossing'] .rfui-btn-wrapper:hover,
+[data-rfui-theme='animal-crossing'] .rfui-btn-wrapper:active {
   box-shadow: none;
   transform: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-btn {
+[data-rfui-theme='animal-crossing'] .rfui-btn {
   border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: 999px;
-  font-weight: var(--blocky-font-weight-bold);
-  box-shadow: var(--blocky-shadow-base);
+  font-weight: var(--rfui-font-weight-bold);
+  box-shadow: var(--rfui-shadow-base);
 }
 
 /* Remove radial overlay on all buttons */
-[data-blocky-theme='animal-crossing'] .blocky-btn::before {
+[data-rfui-theme='animal-crossing'] .rfui-btn::before {
   background: none;
 }
 
 /* Default button - Brown/Wood */
-[data-blocky-theme='animal-crossing'] .blocky-btn.default {
+[data-rfui-theme='animal-crossing'] .rfui-btn.default {
   background: linear-gradient(
     180deg,
     #a08a70 0%,
     #937c60 100%
   );
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
   text-shadow: none;
 }
 
 /* Primary button - Teal/Ocean */
-[data-blocky-theme='animal-crossing'] .blocky-btn.primary {
+[data-rfui-theme='animal-crossing'] .rfui-btn.primary {
   background: linear-gradient(
     180deg,
     #3db0a8 0%,
     #34a09c 100%
   );
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
   text-shadow: none;
 }
 
 /* Secondary button - Amber/Bells */
-[data-blocky-theme='animal-crossing'] .blocky-btn.secondary {
+[data-rfui-theme='animal-crossing'] .rfui-btn.secondary {
   background: linear-gradient(
     180deg,
     #e0a840 0%,
     #d69632 100%
   );
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
   text-shadow: none;
 }
 
 /* Danger button - Muted Red */
-[data-blocky-theme='animal-crossing'] .blocky-btn.danger {
+[data-rfui-theme='animal-crossing'] .rfui-btn.danger {
   background: linear-gradient(
     180deg,
     #d06868 0%,
     #c45c5c 100%
   );
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
   text-shadow: none;
 }
 
 /* Button hover - Gentle lift */
-[data-blocky-theme='animal-crossing'] .blocky-btn-wrapper:hover .blocky-btn {
+[data-rfui-theme='animal-crossing'] .rfui-btn-wrapper:hover .rfui-btn {
   transform: translateY(-2px);
-  box-shadow: var(--blocky-shadow-hover);
+  box-shadow: var(--rfui-shadow-hover);
 }
 
 /* Button active - Press down */
-[data-blocky-theme='animal-crossing'] .blocky-btn-wrapper:active .blocky-btn {
+[data-rfui-theme='animal-crossing'] .rfui-btn-wrapper:active .rfui-btn {
   transform: translateY(0);
-  box-shadow: var(--blocky-shadow-active);
+  box-shadow: var(--rfui-shadow-active);
 }
 
 /* ========================================
    MODALS - Cream background with teal header
    ======================================== */
 
-[data-blocky-theme='animal-crossing'] .blocky-modal-wrapper {
+[data-rfui-theme='animal-crossing'] .rfui-modal-wrapper {
   background: #fffbed;
-  border: var(--blocky-border-width) solid var(--blocky-border-color);
-  border-radius: var(--blocky-border-radius);
-  box-shadow: var(--blocky-shadow-far);
+  border: var(--rfui-border-width) solid var(--rfui-border-color);
+  border-radius: var(--rfui-border-radius);
+  box-shadow: var(--rfui-shadow-far);
   overflow: hidden;
 }
 
 /* Remove radial overlay */
-[data-blocky-theme='animal-crossing'] .blocky-modal-wrapper::before {
+[data-rfui-theme='animal-crossing'] .rfui-modal-wrapper::before {
   background: none;
 }
 
 /* Modal content */
-[data-blocky-theme='animal-crossing'] .blocky-modal-wrapper .blocky-content {
+[data-rfui-theme='animal-crossing'] .rfui-modal-wrapper .rfui-content {
   padding: 0;
 }
 
 /* Modal header with colored bar (default teal) */
-[data-blocky-theme='animal-crossing'] .blocky-modal-wrapper .blocky-header-bordered {
-  background: var(--blocky-header-bg);
+[data-rfui-theme='animal-crossing'] .rfui-modal-wrapper .rfui-header-bordered {
+  background: var(--rfui-header-bg);
   margin: 0;
-  padding: var(--blocky-padding-md) var(--blocky-padding-lg);
-  padding-bottom: var(--blocky-margin-md);
-  border-radius: calc(var(--blocky-border-radius) - var(--blocky-border-width)) calc(var(--blocky-border-radius) - var(--blocky-border-width)) 0 0;
+  padding: var(--rfui-padding-md) var(--rfui-padding-lg);
+  padding-bottom: var(--rfui-margin-md);
+  border-radius: calc(var(--rfui-border-radius) - var(--rfui-border-width)) calc(var(--rfui-border-radius) - var(--rfui-border-width)) 0 0;
   border-bottom: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-modal-wrapper .blocky-title-enhanced {
-  color: var(--blocky-text-light);
+[data-rfui-theme='animal-crossing'] .rfui-modal-wrapper .rfui-title-enhanced {
+  color: var(--rfui-text-light);
   text-shadow: none;
   margin: 0;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-modal-body {
-  color: var(--blocky-text-primary);
-  padding: var(--blocky-padding-md) var(--blocky-padding-lg);
+[data-rfui-theme='animal-crossing'] .rfui-modal-body {
+  color: var(--rfui-text-primary);
+  padding: var(--rfui-padding-md) var(--rfui-padding-lg);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-modal-body p {
-  color: var(--blocky-text-primary);
+[data-rfui-theme='animal-crossing'] .rfui-modal-body p {
+  color: var(--rfui-text-primary);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-modal-body h1,
-[data-blocky-theme='animal-crossing'] .blocky-modal-body h2,
-[data-blocky-theme='animal-crossing'] .blocky-modal-body h3,
-[data-blocky-theme='animal-crossing'] .blocky-modal-body h4,
-[data-blocky-theme='animal-crossing'] .blocky-modal-body h5,
-[data-blocky-theme='animal-crossing'] .blocky-modal-body h6 {
-  color: var(--blocky-text-primary);
+[data-rfui-theme='animal-crossing'] .rfui-modal-body h1,
+[data-rfui-theme='animal-crossing'] .rfui-modal-body h2,
+[data-rfui-theme='animal-crossing'] .rfui-modal-body h3,
+[data-rfui-theme='animal-crossing'] .rfui-modal-body h4,
+[data-rfui-theme='animal-crossing'] .rfui-modal-body h5,
+[data-rfui-theme='animal-crossing'] .rfui-modal-body h6 {
+  color: var(--rfui-text-primary);
   text-shadow: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-modal-footer {
+[data-rfui-theme='animal-crossing'] .rfui-modal-footer {
   border-top-color: rgba(31, 82, 110, 0.08);
 }
 
 /* Modal footer default buttons promoted to teal */
-[data-blocky-theme='animal-crossing'] .blocky-modal-footer .blocky-btn.default {
+[data-rfui-theme='animal-crossing'] .rfui-modal-footer .rfui-btn.default {
   background: linear-gradient(
     180deg,
     #3db0a8 0%,
     #34a09c 100%
   );
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
 }
 
 /* ========================================
    CARDS - Cream with colored header bar
    ======================================== */
 
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper {
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper {
   background: #fffbed;
-  border: var(--blocky-border-width) solid var(--blocky-border-color);
-  border-radius: var(--blocky-border-radius);
-  box-shadow: var(--blocky-shadow-base);
+  border: var(--rfui-border-width) solid var(--rfui-border-color);
+  border-radius: var(--rfui-border-radius);
+  box-shadow: var(--rfui-shadow-base);
 }
 
 /* Remove radial overlay */
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper::before {
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper::before {
   background: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-card {
-  color: var(--blocky-text-primary);
+[data-rfui-theme='animal-crossing'] .rfui-card {
+  color: var(--rfui-text-primary);
 }
 
 /* Card title - Teal header bar (default) */
-[data-blocky-theme='animal-crossing'] .blocky-card-title {
-  color: var(--blocky-text-light);
-  background: var(--blocky-header-bg);
-  margin: calc(var(--blocky-padding-lg) * -1);
-  margin-bottom: var(--blocky-padding-md);
-  padding: var(--blocky-padding-md) var(--blocky-padding-lg);
-  border-radius: calc(var(--blocky-border-radius) - var(--blocky-border-width)) calc(var(--blocky-border-radius) - var(--blocky-border-width)) 0 0;
+[data-rfui-theme='animal-crossing'] .rfui-card-title {
+  color: var(--rfui-text-light);
+  background: var(--rfui-header-bg);
+  margin: calc(var(--rfui-padding-lg) * -1);
+  margin-bottom: var(--rfui-padding-md);
+  padding: var(--rfui-padding-md) var(--rfui-padding-lg);
+  border-radius: calc(var(--rfui-border-radius) - var(--rfui-border-width)) calc(var(--rfui-border-radius) - var(--rfui-border-width)) 0 0;
   border-bottom: none;
   text-shadow: none;
 }
 
 /* Card variants - Colored header bars (ComponentVariant) */
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper.primary .blocky-card-title {
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper.primary .rfui-card-title {
   background: linear-gradient(180deg, #3db0a8 0%, #34a09c 100%);
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper.secondary .blocky-card-title {
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper.secondary .rfui-card-title {
   background: linear-gradient(180deg, #e0a840 0%, #d69632 100%);
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper.danger .blocky-card-title {
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper.danger .rfui-card-title {
   background: linear-gradient(180deg, #d06868 0%, #c45c5c 100%);
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
 }
 
 /* Card header colors matching TitleColorTheme */
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper.header-yellow .blocky-card-title {
-  background: var(--blocky-header-yellow);
-  color: var(--blocky-text-primary);
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper.header-yellow .rfui-card-title {
+  background: var(--rfui-header-yellow);
+  color: var(--rfui-text-primary);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper.header-green .blocky-card-title {
-  background: var(--blocky-header-green);
-  color: var(--blocky-text-light);
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper.header-green .rfui-card-title {
+  background: var(--rfui-header-green);
+  color: var(--rfui-text-light);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper.header-blue .blocky-card-title {
-  background: var(--blocky-header-blue);
-  color: var(--blocky-text-light);
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper.header-blue .rfui-card-title {
+  background: var(--rfui-header-blue);
+  color: var(--rfui-text-light);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper.header-purple .blocky-card-title {
-  background: var(--blocky-header-purple);
-  color: var(--blocky-text-light);
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper.header-purple .rfui-card-title {
+  background: var(--rfui-header-purple);
+  color: var(--rfui-text-light);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper.header-red .blocky-card-title {
-  background: var(--blocky-header-red);
-  color: var(--blocky-text-light);
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper.header-red .rfui-card-title {
+  background: var(--rfui-header-red);
+  color: var(--rfui-text-light);
 }
 
 /* Card hover */
-[data-blocky-theme='animal-crossing'] .blocky-card-wrapper:hover {
+[data-rfui-theme='animal-crossing'] .rfui-card-wrapper:hover {
   transform: translateY(-2px);
-  box-shadow: var(--blocky-shadow-hover);
+  box-shadow: var(--rfui-shadow-hover);
 }
 
 /* ========================================
    INFO BOXES - Cream with colored title
    ======================================== */
 
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper {
   background: #fffbed;
-  border: var(--blocky-border-width) solid var(--blocky-border-color);
-  border-radius: var(--blocky-border-radius-lg);
-  box-shadow: var(--blocky-shadow-base);
+  border: var(--rfui-border-width) solid var(--rfui-border-color);
+  border-radius: var(--rfui-border-radius-lg);
+  box-shadow: var(--rfui-shadow-base);
 }
 
 /* Remove radial overlay */
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper::before {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper::before {
   background: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper .blocky-header-bordered {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper .rfui-header-bordered {
   padding-top: 0;
-  margin-bottom: var(--blocky-margin-md);
+  margin-bottom: var(--rfui-margin-md);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-info-body {
-  color: var(--blocky-text-primary);
+[data-rfui-theme='animal-crossing'] .rfui-info-body {
+  color: var(--rfui-text-primary);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-info-title {
+[data-rfui-theme='animal-crossing'] .rfui-info-title {
   margin: 0;
 }
 
 /* Info color themes - Colored title text */
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper.theme-yellow .blocky-info-title {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper.theme-yellow .rfui-info-title {
   color: #d69632;
   text-shadow: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper.theme-green .blocky-info-title {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper.theme-green .rfui-info-title {
   color: #34a09c;
   text-shadow: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper.theme-blue .blocky-info-title {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper.theme-blue .rfui-info-title {
   color: #1f526e;
   text-shadow: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper.theme-purple .blocky-info-title {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper.theme-purple .rfui-info-title {
   color: #8b7bb5;
   text-shadow: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper.theme-red .blocky-info-title {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper.theme-red .rfui-info-title {
   color: #c45c5c;
   text-shadow: none;
 }
 
 /* Info hover */
-[data-blocky-theme='animal-crossing'] .blocky-info-wrapper:hover {
+[data-rfui-theme='animal-crossing'] .rfui-info-wrapper:hover {
   transform: translateY(-2px) scale(1.01);
-  box-shadow: var(--blocky-shadow-hover);
+  box-shadow: var(--rfui-shadow-hover);
 }
 
 /* ========================================
    PAGES - Sand overlay with cream content
    ======================================== */
 
-[data-blocky-theme='animal-crossing'] .blocky-page-overlay {
+[data-rfui-theme='animal-crossing'] .rfui-page-overlay {
   background: rgba(232, 224, 208, 0.95);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-page-content {
-  border-radius: var(--blocky-border-radius-lg);
-  box-shadow: var(--blocky-shadow-far);
+[data-rfui-theme='animal-crossing'] .rfui-page-content {
+  border-radius: var(--rfui-border-radius-lg);
+  box-shadow: var(--rfui-shadow-far);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-page-content::after {
+[data-rfui-theme='animal-crossing'] .rfui-page-content::after {
   background: #fffbed;
 }
 
 /* Remove radial overlay */
-[data-blocky-theme='animal-crossing'] .blocky-page-content::before {
+[data-rfui-theme='animal-crossing'] .rfui-page-content::before {
   background: none;
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-page-wrapper {
-  color: var(--blocky-text-primary);
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper {
+  color: var(--rfui-text-primary);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-page-wrapper h1,
-[data-blocky-theme='animal-crossing'] .blocky-page-wrapper h2,
-[data-blocky-theme='animal-crossing'] .blocky-page-wrapper h3,
-[data-blocky-theme='animal-crossing'] .blocky-page-wrapper h4,
-[data-blocky-theme='animal-crossing'] .blocky-page-wrapper h5,
-[data-blocky-theme='animal-crossing'] .blocky-page-wrapper h6 {
-  color: var(--blocky-text-primary);
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper h1,
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper h2,
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper h3,
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper h4,
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper h5,
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper h6 {
+  color: var(--rfui-text-primary);
   text-shadow: none;
 }
 
@@ -483,21 +483,21 @@
    TAGS - Pill shaped with variant colors
    ======================================== */
 
-[data-blocky-theme='animal-crossing'] .blocky-tag-wrapper {
-  border: var(--blocky-border-width-thin) solid rgba(255, 255, 255, 0.2);
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper {
+  border: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
-  box-shadow: var(--blocky-shadow-base);
+  box-shadow: var(--rfui-shadow-base);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-tag {
-  color: var(--blocky-text-primary);
+[data-rfui-theme='animal-crossing'] .rfui-tag {
+  color: var(--rfui-text-primary);
 }
 
 /* ========================================
    CLOSE BUTTONS - Muted red circular
    ======================================== */
 
-[data-blocky-theme='animal-crossing'] .blocky-close-btn {
+[data-rfui-theme='animal-crossing'] .rfui-close-btn {
   background: linear-gradient(
     180deg,
     #d06868 0%,
@@ -505,11 +505,11 @@
   );
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 999px;
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
   box-shadow: 0 1px 4px rgba(31, 82, 110, 0.12);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-close-btn:hover {
+[data-rfui-theme='animal-crossing'] .rfui-close-btn:hover {
   background: linear-gradient(
     180deg,
     #d87878 0%,
@@ -523,44 +523,44 @@
    DROPDOWNS - Pill shaped
    ======================================== */
 
-[data-blocky-theme='animal-crossing'] .blocky-dropdown {
+[data-rfui-theme='animal-crossing'] .rfui-dropdown {
   border-radius: 999px;
-  border-width: var(--blocky-border-width);
-  box-shadow: var(--blocky-shadow-base);
+  border-width: var(--rfui-border-width);
+  box-shadow: var(--rfui-shadow-base);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-dropdown:hover:not(:disabled) {
-  box-shadow: var(--blocky-shadow-hover);
+[data-rfui-theme='animal-crossing'] .rfui-dropdown:hover:not(:disabled) {
+  box-shadow: var(--rfui-shadow-hover);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-dropdown.default {
+[data-rfui-theme='animal-crossing'] .rfui-dropdown.default {
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, #fffdf5 0%, #fffbed 50%, #f5eed8 100%);
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-dropdown.primary {
+[data-rfui-theme='animal-crossing'] .rfui-dropdown.primary {
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, #3db0a8 0%, #34a09c 50%, #2a8480 100%);
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-dropdown.secondary {
+[data-rfui-theme='animal-crossing'] .rfui-dropdown.secondary {
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, #e0a840 0%, #d69632 50%, #c08828 100%);
-  color: var(--blocky-text-primary);
+  color: var(--rfui-text-primary);
 }
 
-[data-blocky-theme='animal-crossing'] .blocky-dropdown.danger {
+[data-rfui-theme='animal-crossing'] .rfui-dropdown.danger {
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, #d06868 0%, #c45c5c 50%, #b04e4e 100%);
-  color: var(--blocky-text-light);
+  color: var(--rfui-text-light);
 }

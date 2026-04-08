@@ -1,14 +1,14 @@
-# [Blocky UI](https://raw-fun-gaming.github.io/blocky-ui/) &middot; [![npm](https://img.shields.io/npm/v/blocky-ui-lite)](https://www.npmjs.com/package/blocky-ui-lite) [![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/blocky-ui/ci.yml)](https://github.com/raw-fun-gaming/blocky-ui/actions) [![Bundle Size](https://img.shields.io/bundlephobia/minzip/blocky-ui-lite)](https://bundlephobia.com/package/blocky-ui-lite) [![License](https://img.shields.io/github/license/raw-fun-gaming/blocky-ui)](LICENSE)
+# [Raw Fun UI](https://raw-fun-gaming.github.io/raw-fun-ui/) &middot; [![npm](https://img.shields.io/npm/v/raw-fun-ui)](https://www.npmjs.com/package/raw-fun-ui) [![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/raw-fun-ui/ci.yml)](https://github.com/raw-fun-gaming/raw-fun-ui/actions) [![Bundle Size](https://img.shields.io/bundlephobia/minzip/raw-fun-ui)](https://bundlephobia.com/package/raw-fun-ui) [![License](https://img.shields.io/github/license/raw-fun-gaming/raw-fun-ui)](LICENSE)
 
-A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS.
+A game-themed UI component library with switchable themes, built with TypeScript and pure CSS.
 
-[Live Demo](https://raw-fun-gaming.github.io/blocky-ui/) · [Documentation](https://raw-fun-gaming.github.io/blocky-ui/docs/)
+[Live Demo](https://raw-fun-gaming.github.io/raw-fun-ui/) · [Documentation](https://raw-fun-gaming.github.io/raw-fun-ui/docs/)
 
-![Blocky UI Demo](screenshots/demo-page.png)
+![Raw Fun UI Demo](screenshots/demo-page.png)
 
 ## 🚀 Motivation
 
-Inspired by the multiplier tags in Stack Rush, I wanted to create a lightweight UI library that brings that distinctive 3D blocky aesthetic to any web project. Unlike heavy framework-dependent UI libraries, Blocky UI is:
+Inspired by the multiplier tags in Stack Rush, I wanted to create a lightweight UI library that brings that distinctive 3D blocky aesthetic to any web project. Unlike heavy framework-dependent UI libraries, Raw Fun UI is:
 
 - **Zero Framework Dependencies** - Works with vanilla JavaScript/TypeScript
 - **Pure CSS Effects** - Multi-layer box shadows for authentic 3D depth
@@ -17,7 +17,7 @@ Inspired by the multiplier tags in Stack Rush, I wanted to create a lightweight 
 
 ## ✨ Features
 
-- **🎮 3D Blocky Aesthetic**: Multi-layer box shadows creating realistic 3D depth
+- **🎮 3D Rfui Aesthetic**: Multi-layer box shadows creating realistic 3D depth
 - **🎨 Pure CSS Styling**: No SVG generation, hardware-accelerated rendering
 - **🎭 Theme Support**: 3 built-in themes (blocky, fall-guys, animal-crossing)
 - **📦 Zero Dependencies**: Pure TypeScript/JavaScript with no external dependencies
@@ -29,20 +29,20 @@ Inspired by the multiplier tags in Stack Rush, I wanted to create a lightweight 
 ## Installation
 
 ```bash
-npm install blocky-ui-lite
+npm install raw-fun-ui
 ```
 
 ## Usage
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 // Set a theme (optional - defaults to 'blocky')
-BlockyUI.setTheme('fall-guys'); // or 'blocky' for default theme
+RawFunUI.setTheme('fall-guys'); // or 'blocky' for default theme
 
 // Create a button
-const button = BlockyUI.createButton({
+const button = RawFunUI.createButton({
   text: 'Click Me',
   variant: 'primary',
   onClick: () => console.log('Clicked!')
@@ -51,7 +51,7 @@ const button = BlockyUI.createButton({
 document.body.appendChild(button);
 
 // Create and show a modal
-const modal = BlockyUI.createModal({
+const modal = RawFunUI.createModal({
   title: 'Welcome',
   content: 'This is a blocky modal!',
   buttons: [
@@ -63,10 +63,10 @@ modal.show();  // Show the modal
 // modal.close();  // Close programmatically
 
 // Convenience methods for common modal types
-BlockyUI.createNotification('Success!', 'Operation completed.').show();
-BlockyUI.createError('Error!', 'Something went wrong.').show();
+RawFunUI.createNotification('Success!', 'Operation completed.').show();
+RawFunUI.createError('Error!', 'Something went wrong.').show();
 
-const confirmModal = BlockyUI.createConfirmation(
+const confirmModal = RawFunUI.createConfirmation(
   'Confirm Action',
   'Are you sure?',
   () => console.log('Confirmed'),
@@ -78,15 +78,15 @@ confirmModal.show();
 ## 📦 Components
 
 ### Interactive Components
-- **[BlockyButton](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockybutton)** - 4 variants with 3D hover effects
-- **[BlockyDropdown](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockydropdown)** - Theme-aware dropdowns with 4 variants and custom arrow
-- **[BlockyModal](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockymodal)** - Full-featured modals with backdrop blur and animations
+- **[RfuiButton](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuibutton)** - 4 variants with 3D hover effects
+- **[RfuiDropdown](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuidropdown)** - Theme-aware dropdowns with 4 variants and custom arrow
+- **[RfuiModal](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuimodal)** - Full-featured modals with backdrop blur and animations
 
 ### Display Components
-- **[BlockyCard](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockycard)** - Content containers with 3D styling
-- **[BlockyInfo](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockyinfo)** - Overlay popups with 5 color themes (yellow, green, blue, purple, red)
-- **[BlockyTag](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockytag)** - Status/location tags with gradient styling
-- **[BlockyPage](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockypage)** - Full-screen pages with animated gradient borders (7 color sets) and optional auto-hide scrollbar
+- **[RfuiCard](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuicard)** - Content containers with 3D styling
+- **[RfuiInfo](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuiinfo)** - Overlay popups with 5 color themes (yellow, green, blue, purple, red)
+- **[RfuiTag](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuitag)** - Status/location tags with gradient styling
+- **[RfuiPage](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuipage)** - Full-screen pages with animated gradient borders (7 color sets) and optional auto-hide scrollbar
 
 ### Utility Components
 - **Error Dialogs** - Pre-configured error modals
@@ -98,9 +98,9 @@ confirmModal.show();
 Switch themes at runtime:
 
 ```typescript
-BlockyUI.setTheme('fall-guys');
-BlockyUI.setTheme('animal-crossing');
-BlockyUI.setTheme('blocky'); // default
+RawFunUI.setTheme('fall-guys');
+RawFunUI.setTheme('animal-crossing');
+RawFunUI.setTheme('blocky'); // default
 ```
 
 | Theme | Description |
@@ -109,18 +109,18 @@ BlockyUI.setTheme('blocky'); // default
 | `fall-guys` | Bright cartoon style — solid black offset shadows, thick white borders, 16px radius |
 | `animal-crossing` | Flat cozy NookPhone style — soft diffused shadows, earthy tones, 30px containers, pill buttons |
 
-See [Theme Design Specs](https://raw-fun-gaming.github.io/blocky-ui/docs/themes/) for full details.
+See [Theme Design Specs](https://raw-fun-gaming.github.io/raw-fun-ui/docs/themes/) for full details.
 
 ## Styling
 
-Blocky UI uses pure CSS with 3D box-shadow effects, gradient backgrounds, and smooth transitions. All components feature:
+Raw Fun UI uses pure CSS with 3D box-shadow effects, gradient backgrounds, and smooth transitions. All components feature:
 
 - 3D depth with multi-layer box shadows
 - Smooth hover and active state animations
 - Gradient backgrounds with radial overlays
 - Responsive breakpoints for all screen sizes
 - Customizable color variants
-- Theme-based styling via `data-blocky-theme` attribute
+- Theme-based styling via `data-rfui-theme` attribute
 
 ## 🎨 Visual Design
 
@@ -135,11 +135,11 @@ The components feature:
 ## 📖 Documentation
 
 ### Quick Links
-- 🏠 **[Documentation Home](https://raw-fun-gaming.github.io/blocky-ui/docs/)** - Complete documentation
-- 🚀 **[Installation & Setup](https://raw-fun-gaming.github.io/blocky-ui/docs/installation)** - Get started quickly
-- 📚 **[Component Reference](https://raw-fun-gaming.github.io/blocky-ui/docs/components)** - Full API documentation
-- 💡 **[Complete Examples](https://raw-fun-gaming.github.io/blocky-ui/docs/examples)** - Real-world examples
-- 🎨 **[Themes](https://raw-fun-gaming.github.io/blocky-ui/docs/themes/)** - Theme design specs
+- 🏠 **[Documentation Home](https://raw-fun-gaming.github.io/raw-fun-ui/docs/)** - Complete documentation
+- 🚀 **[Installation & Setup](https://raw-fun-gaming.github.io/raw-fun-ui/docs/installation)** - Get started quickly
+- 📚 **[Component Reference](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components)** - Full API documentation
+- 💡 **[Complete Examples](https://raw-fun-gaming.github.io/raw-fun-ui/docs/examples)** - Real-world examples
+- 🎨 **[Themes](https://raw-fun-gaming.github.io/raw-fun-ui/docs/themes/)** - Theme design specs
 
 ## 🎮 Perfect for Games
 
@@ -156,19 +156,19 @@ The components feature:
 ## 📁 File Structure
 
 ```
-blocky-ui/
+raw-fun-ui/
 ├── README.md               # This file
 ├── package.json           # Package configuration
 ├── rollup.config.js       # Build configuration
 ├── src/                   # Source code
 │   ├── index.ts           # Main entry point
 │   ├── components/        # Individual component classes
-│   │   ├── BlockyButton.ts
-│   │   ├── BlockyModal.ts
-│   │   ├── BlockyCard.ts
-│   │   ├── BlockyInfo.ts
-│   │   ├── BlockyTag.ts
-│   │   └── BlockyPage.ts
+│   │   ├── RfuiButton.ts
+│   │   ├── RfuiModal.ts
+│   │   ├── RfuiCard.ts
+│   │   ├── RfuiInfo.ts
+│   │   ├── RfuiTag.ts
+│   │   └── RfuiPage.ts
 │   ├── types/             # TypeScript definitions
 │   │   └── index.ts
 │   └── styles/            # CSS modules
@@ -186,13 +186,13 @@ blocky-ui/
 │       ├── themes/
 │       │   ├── _fall-guys.css
 │       │   └── _animal-crossing.css
-│       └── blocky-ui.css   # Main entry point
+│       └── raw-fun-ui.css   # Main entry point
 ├── dist/                  # Built output (generated)
 │   ├── index.esm.js       # ES Module build
 │   ├── index.cjs.js       # CommonJS build
 │   ├── index.umd.js       # UMD build
 │   ├── index.d.ts         # TypeScript declarations
-│   └── blocky-ui.css      # Processed styles
+│   └── raw-fun-ui.css      # Processed styles
 ├── public/                # GitHub Pages source
 │   ├── index.html         # Live demo page
 │   └── docs/              # Jekyll documentation pages

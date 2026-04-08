@@ -3,9 +3,9 @@
 // Interactive demonstrations of all components
 // ========================================
 
-// BlockyUI is loaded from UMD build via CDN
-// Accessing from window.BlockyUI.BlockyUI
-const BlockyUI = window.BlockyUI?.BlockyUI || window.BlockyUI;
+// RawFunUI is loaded from UMD build via CDN
+// Accessing from window.RawFunUI.RawFunUI
+const RawFunUI = window.RawFunUI?.RawFunUI || window.RawFunUI;
 
 // ========================================
 // THEME SWITCHER
@@ -20,16 +20,16 @@ const themeLabel = document.createElement('span');
 themeLabel.textContent = '🎨 Theme:';
 themeLabel.style.cssText = 'font-weight: bold; opacity: 0.9;';
 
-const themeDropdown = BlockyUI.createDropdown({
+const themeDropdown = RawFunUI.createDropdown({
   options: [
-    { value: 'blocky', label: 'Blocky (Default)' },
+    { value: 'blocky', label: 'Rfui (Default)' },
     { value: 'fall-guys', label: 'Fall Guys' },
     { value: 'animal-crossing', label: 'Animal Crossing' }
   ],
   value: 'blocky',
   variant: 'secondary',
   onChange: (value) => {
-    BlockyUI.setTheme(value);
+    RawFunUI.setTheme(value);
     console.log(`Theme changed to: ${value}`);
   }
 });
@@ -46,7 +46,7 @@ const buttonsContainer = document.getElementById('buttons-container');
 const buttonVariants = ['default', 'primary', 'secondary', 'danger'];
 
 buttonVariants.forEach(variant => {
-  const btn = BlockyUI.createButton({
+  const btn = RawFunUI.createButton({
     text: variant.toUpperCase(),
     variant: variant,
     onClick: () => alert(`${variant} button clicked!`)
@@ -55,7 +55,7 @@ buttonVariants.forEach(variant => {
 });
 
 // Disabled button
-const disabledBtn = BlockyUI.createButton({
+const disabledBtn = RawFunUI.createButton({
   text: 'DISABLED',
   disabled: true
 });
@@ -79,7 +79,7 @@ dropdownVariants.forEach(variant => {
   title.style.marginTop = '0';
   container.appendChild(title);
 
-  const dropdown = BlockyUI.createDropdown({
+  const dropdown = RawFunUI.createDropdown({
     label: 'Select an option:',
     options: [
       { value: 'option1', label: 'Option 1' },
@@ -108,7 +108,7 @@ disabledTitle.textContent = 'DISABLED Dropdown';
 disabledTitle.style.marginTop = '0';
 disabledContainer.appendChild(disabledTitle);
 
-const disabledDropdown = BlockyUI.createDropdown({
+const disabledDropdown = RawFunUI.createDropdown({
   label: 'This dropdown is disabled:',
   options: [
     { value: 'option1', label: 'Option 1' },
@@ -134,7 +134,7 @@ const cardData = [
 ];
 
 cardData.forEach(data => {
-  const card = BlockyUI.createCard(data);
+  const card = RawFunUI.createCard(data);
   cardsContainer.appendChild(card);
 });
 
@@ -145,11 +145,11 @@ cardData.forEach(data => {
 const modalsContainer = document.getElementById('modals-container');
 
 // Simple modal
-const simpleModalBtn = BlockyUI.createButton({
+const simpleModalBtn = RawFunUI.createButton({
   text: 'SIMPLE MODAL',
   variant: 'primary',
   onClick: () => {
-    const modal = BlockyUI.createModal({
+    const modal = RawFunUI.createModal({
       title: 'Welcome',
       content: 'This is a blocky modal with 3D effects!',
       buttons: [
@@ -162,11 +162,11 @@ const simpleModalBtn = BlockyUI.createButton({
 modalsContainer.appendChild(simpleModalBtn);
 
 // Notification modal
-const notificationBtn = BlockyUI.createButton({
+const notificationBtn = RawFunUI.createButton({
   text: 'NOTIFICATION',
   variant: 'primary',
   onClick: () => {
-    BlockyUI.showNotification(
+    RawFunUI.showNotification(
       'Success!',
       'Your action was completed successfully.',
       () => console.log('Notification closed')
@@ -176,11 +176,11 @@ const notificationBtn = BlockyUI.createButton({
 modalsContainer.appendChild(notificationBtn);
 
 // Confirmation modal
-const confirmBtn = BlockyUI.createButton({
+const confirmBtn = RawFunUI.createButton({
   text: 'CONFIRMATION',
   variant: 'secondary',
   onClick: () => {
-    BlockyUI.showConfirmation(
+    RawFunUI.showConfirmation(
       'Confirm Action',
       'Are you sure you want to proceed?',
       () => alert('Confirmed!'),
@@ -191,11 +191,11 @@ const confirmBtn = BlockyUI.createButton({
 modalsContainer.appendChild(confirmBtn);
 
 // Error modal
-const errorBtn = BlockyUI.createButton({
+const errorBtn = RawFunUI.createButton({
   text: 'ERROR',
   variant: 'danger',
   onClick: () => {
-    BlockyUI.showError(
+    RawFunUI.showError(
       'Error Occurred',
       'Something went wrong. Please try again.'
     );
@@ -227,7 +227,7 @@ tagData.forEach((data) => {
   container.style.justifyContent = 'center';
   container.style.flexShrink = '0';
 
-  const tag = BlockyUI.createTag({
+  const tag = RawFunUI.createTag({
     content: data.content,
     variant: data.variant
   });
@@ -244,10 +244,10 @@ const infoContainer = document.getElementById('info-container');
 const infoColors = ['yellow', 'green', 'blue', 'purple', 'red'];
 
 infoColors.forEach(color => {
-  const btn = BlockyUI.createButton({
+  const btn = RawFunUI.createButton({
     text: color.toUpperCase(),
     onClick: () => {
-      const info = BlockyUI.createInfo({
+      const info = RawFunUI.createInfo({
         title: `${color.toUpperCase()} INFO`,
         titleColor: color,
         content: `This is a ${color} themed info overlay!`,
@@ -266,13 +266,13 @@ infoColors.forEach(color => {
 const pageContainer = document.getElementById('page-container');
 
 // Simple page
-const simplePageBtn = BlockyUI.createButton({
+const simplePageBtn = RawFunUI.createButton({
   text: 'SIMPLE PAGE',
   variant: 'primary',
   onClick: () => {
-    const page = BlockyUI.createPage({
+    const page = RawFunUI.createPage({
       content: `
-        <h1>Welcome to Blocky UI</h1>
+        <h1>Welcome to Raw Fun UI</h1>
         <p>This is a full-screen page overlay with 3D blocky styling.</p>
         <p>Click outside or press Escape to close.</p>
       `,
@@ -284,13 +284,13 @@ const simplePageBtn = BlockyUI.createButton({
 pageContainer.appendChild(simplePageBtn);
 
 // Rich content page
-const richPageBtn = BlockyUI.createButton({
+const richPageBtn = RawFunUI.createButton({
   text: 'RICH CONTENT',
   variant: 'secondary',
   onClick: () => {
     const richContent = document.createElement('div');
     richContent.innerHTML = `
-      <h1>🎮 Blocky UI Component Library</h1>
+      <h1>🎮 Raw Fun UI Component Library</h1>
 
       <h2>Pure CSS 3D Effects</h2>
       <p>All components use pure CSS for depth and styling - no SVG generation or runtime styling. The distinctive 3D blocky aesthetic is achieved through multi-layer box shadows, gradient backgrounds, and backdrop blur effects.</p>
@@ -330,22 +330,22 @@ const richPageBtn = BlockyUI.createButton({
 
       <h2>Installation</h2>
       <p>Install via npm (coming soon):</p>
-      <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; overflow-x: auto;">npm install blocky-ui</pre>
+      <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; overflow-x: auto;">npm install raw-fun-ui</pre>
 
       <h2>Usage Example</h2>
       <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; overflow-x: auto; line-height: 1.6;">
-import { BlockyUI } from 'blocky-ui';
-import 'blocky-ui/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 // Create button
-const button = BlockyUI.createButton({
+const button = RawFunUI.createButton({
   text: 'Click Me',
   variant: 'primary',
   onClick: () => console.log('Clicked')
 });
 
 // Create modal
-const modal = BlockyUI.createModal({
+const modal = RawFunUI.createModal({
   title: 'Hello',
   content: 'World',
   buttons: [
@@ -355,14 +355,14 @@ const modal = BlockyUI.createModal({
 modal.show();
 
 // Show notification
-BlockyUI.showNotification('Success!', 'Operation completed.');
+RawFunUI.showNotification('Success!', 'Operation completed.');
       </pre>
 
       <h2>License</h2>
       <p>MIT License - Free to use in personal and commercial projects.</p>
 
       <h2>Repository</h2>
-      <p>GitHub: <a href="https://github.com/fuR-Gaming/blocky-ui" style="color: var(--blocky-primary);">fuR-Gaming/blocky-ui</a></p>
+      <p>GitHub: <a href="https://github.com/fuR-Gaming/raw-fun-ui" style="color: var(--rfui-primary);">fuR-Gaming/raw-fun-ui</a></p>
 
       <h2>Credits</h2>
       <p>Design inspired by Stack Rush's multiplierTag component. Built with Claude Code.</p>
@@ -380,7 +380,7 @@ BlockyUI.showNotification('Success!', 'Operation completed.');
       </div>
     `;
 
-    const page = BlockyUI.createPage({
+    const page = RawFunUI.createPage({
       content: richContent,
       onClose: () => console.log('Rich page closed')
     });
@@ -400,7 +400,7 @@ function updateButtonPreview() {
   const preview = document.getElementById('live-button-preview');
 
   preview.innerHTML = '';
-  const button = BlockyUI.createButton({
+  const button = RawFunUI.createButton({
     text: text,
     variant: variant,
     onClick: () => alert(`You clicked: ${text}`)
@@ -419,7 +419,7 @@ function updateTagPreview() {
   const preview = document.getElementById('live-tag-preview');
 
   preview.innerHTML = '';
-  const tag = BlockyUI.createTag({
+  const tag = RawFunUI.createTag({
     content: text,
     variant: variant
   });
@@ -437,11 +437,11 @@ function updateModalTrigger() {
   const preview = document.getElementById('live-modal-trigger');
 
   preview.innerHTML = '';
-  const button = BlockyUI.createButton({
+  const button = RawFunUI.createButton({
     text: 'SHOW CUSTOM MODAL',
     variant: 'primary',
     onClick: () => {
-      const modal = BlockyUI.createModal({
+      const modal = RawFunUI.createModal({
         title: title,
         content: content,
         buttons: [

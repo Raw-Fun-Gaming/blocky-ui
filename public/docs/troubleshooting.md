@@ -6,20 +6,20 @@ nav_order: 6
 
 # Troubleshooting
 
-Common issues and their solutions when using Blocky UI.
+Common issues and their solutions when using Raw Fun UI.
 
 ## Installation Issues
 
 ### NPM Installation Fails
 
-**Problem**: `npm install blocky-ui-lite` fails with errors
+**Problem**: `npm install raw-fun-ui` fails with errors
 
 **Solutions**:
 
 1. Clear NPM cache:
    ```bash
    npm cache clean --force
-   npm install blocky-ui-lite
+   npm install raw-fun-ui
    ```
 
 2. Check Node.js version (should be >=14.0.0):
@@ -29,7 +29,7 @@ Common issues and their solutions when using Blocky UI.
 
 3. Use exact version:
    ```bash
-   npm install blocky-ui-lite@latest
+   npm install raw-fun-ui@latest
    ```
 
 ---
@@ -44,11 +44,11 @@ Common issues and their solutions when using Blocky UI.
 
 ```typescript
 // Correct imports
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 // Alternative CSS import
-import 'blocky-ui-lite/dist/blocky-ui.css';
+import 'raw-fun-ui/dist/raw-fun-ui.css';
 ```
 
 ### CSS Not Loading
@@ -58,7 +58,7 @@ import 'blocky-ui-lite/dist/blocky-ui.css';
 **Solution**: Ensure CSS is imported before your app styles:
 
 ```typescript
-import 'blocky-ui-lite/styles';     // First
+import 'raw-fun-ui/styles';     // First
 import './your-app-styles.css';      // Then your styles
 ```
 
@@ -71,7 +71,7 @@ import './your-app-styles.css';      // Then your styles
 1. Check CSS variables are loaded:
    ```javascript
    getComputedStyle(document.documentElement)
-     .getPropertyValue('--blocky-shadow-base');
+     .getPropertyValue('--rfui-shadow-base');
    ```
 
 2. Check for CSS conflicts — scope your selectors:
@@ -89,10 +89,10 @@ Check variant spelling (case-sensitive):
 
 ```typescript
 // Correct
-BlockyUI.createButton({ text: 'Test', variant: 'primary' });
+RawFunUI.createButton({ text: 'Test', variant: 'primary' });
 
 // Wrong
-BlockyUI.createButton({ text: 'Test', variant: 'Primary' });
+RawFunUI.createButton({ text: 'Test', variant: 'Primary' });
 ```
 
 ---
@@ -101,16 +101,16 @@ BlockyUI.createButton({ text: 'Test', variant: 'Primary' });
 
 ### React: Components Not Updating
 
-Blocky UI creates vanilla DOM elements. Handle updates with `useEffect`:
+Raw Fun UI creates vanilla DOM elements. Handle updates with `useEffect`:
 
 ```tsx
-function BlockyButton({ text }: { text: string }) {
+function RfuiButton({ text }: { text: string }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (ref.current) {
       ref.current.innerHTML = '';
-      const button = BlockyUI.createButton({ text, variant: 'primary' });
+      const button = RawFunUI.createButton({ text, variant: 'primary' });
       ref.current.appendChild(button);
     }
   }, [text]);
@@ -121,13 +121,13 @@ function BlockyButton({ text }: { text: string }) {
 
 ### Vite: Failed to Resolve Import
 
-Add blocky-ui path to `fs.allow` in `vite.config.ts`:
+Add raw-fun-ui path to `fs.allow` in `vite.config.ts`:
 
 ```typescript
 export default defineConfig({
   server: {
     fs: {
-      allow: [process.cwd(), '/path/to/blocky-ui']
+      allow: [process.cwd(), '/path/to/raw-fun-ui']
     }
   }
 });
@@ -149,7 +149,7 @@ Override the z-index variable:
 
 ```css
 :root {
-  --blocky-z-overlay-modal: 9999;
+  --rfui-z-overlay-modal: 9999;
 }
 ```
 
@@ -175,7 +175,7 @@ document.body.appendChild(fragment);
 
 ## Browser Compatibility
 
-Blocky UI requires modern browsers (Chrome, Firefox, Safari, Edge). IE11 is not supported due to use of CSS Custom Properties, `backdrop-filter`, and modern flexbox/grid.
+Raw Fun UI requires modern browsers (Chrome, Firefox, Safari, Edge). IE11 is not supported due to use of CSS Custom Properties, `backdrop-filter`, and modern flexbox/grid.
 
 ---
 
@@ -183,5 +183,5 @@ Blocky UI requires modern browsers (Chrome, Firefox, Safari, Edge). IE11 is not 
 
 If your issue isn't listed here:
 
-1. Check [GitHub Issues](https://github.com/Raw-Fun-Gaming/blocky-ui/issues)
+1. Check [GitHub Issues](https://github.com/Raw-Fun-Gaming/raw-fun-ui/issues)
 2. Create a new issue with: version, framework, minimal reproduction code, browser/OS, and error messages

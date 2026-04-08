@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.5] - 2025-12-27
 
 ### Added
-- **BlockyDropdown Component**: New theme-aware dropdown component with:
+- **RfuiDropdown Component**: New theme-aware dropdown component with:
   - 4 color variants (default, primary, secondary, danger)
   - Theme support for blocky, fall-guys, and animal-crossing themes
   - Custom CSS dropdown arrow for consistent cross-browser appearance
@@ -37,13 +37,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.4] - 2025-12-17
 
 ### Added
-- **Theme Support**: New theming system with `BlockyUI.setTheme()` API for switching themes at runtime
+- **Theme Support**: New theming system with `RawFunUI.setTheme()` API for switching themes at runtime
 - **Fall Guys Theme**: New playful theme inspired by Fall Guys aesthetic featuring:
   - Bright cyan backgrounds with solid black shadows
   - Purple gradient headers
   - Rounded corners for a softer, cartoon-like appearance
   - Playful color palette optimized for casual gaming UIs
-- **BlockyTheme Type**: New TypeScript type for theme selection ('blocky' | 'fall-guys')
+- **RfuiTheme Type**: New TypeScript type for theme selection ('blocky' | 'fall-guys')
 - **Themes Directory**: New `src/styles/themes/` directory for theme CSS files
 
 ### Documentation
@@ -59,17 +59,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.2] - 2025-01-18
 
 ### Added
-- **Component Variants**: Added `variant` property support to BlockyTag and BlockyCard components
+- **Component Variants**: Added `variant` property support to RfuiTag and RfuiCard components
 - **ComponentVariant Type**: New shared type for component color variants (default, primary, secondary, danger)
-- **Tag Variants**: BlockyTag now supports 4 color gradients matching button variants
-- **Card Variants**: BlockyCard now supports 4 color gradients matching button variants
+- **Tag Variants**: RfuiTag now supports 4 color gradients matching button variants
+- **Card Variants**: RfuiCard now supports 4 color gradients matching button variants
 
 ### Changed
 - **Type System**: Renamed `ButtonVariant` to `ComponentVariant` for better accuracy
-- **BlockyTag**: Removed `flipped` property in favor of simpler positioning
+- **RfuiTag**: Removed `flipped` property in favor of simpler positioning
 
 ### Removed
-- **BlockyTag**: Removed `flipped` property and related CSS styles
+- **RfuiTag**: Removed `flipped` property and related CSS styles
 
 ### Documentation
 - Updated demo.html with tag and card variants showcase
@@ -79,8 +79,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.1] - 2025-01-18
 
 ### Changed
-- **Package name**: Changed from `@Raw-Fun-Gaming/blocky-ui` to `blocky-ui-lite` for better branding
-- Updated all documentation to reference `blocky-ui-lite`
+- **Package name**: Changed from `@Raw-Fun-Gaming/raw-fun-ui` to `raw-fun-ui` for better branding
+- Updated all documentation to reference `raw-fun-ui`
 - Updated CDN links in demo page and wiki
 - Fixed `loadFallback()` function definition order in demo page
 
@@ -94,12 +94,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 #### Core Components
-- BlockyButton component with 4 color variants (default, primary, secondary, danger)
-- BlockyModal component with backdrop blur and instance methods
-- BlockyCard component with 3D hover effects
-- BlockyInfo component with 5 color themes (yellow, green, blue, purple, red)
-- BlockyTag component with gradient styling
-- BlockyPage component with animated gradient borders (7 color sets)
+- RfuiButton component with 4 color variants (default, primary, secondary, danger)
+- RfuiModal component with backdrop blur and instance methods
+- RfuiCard component with 3D hover effects
+- RfuiInfo component with 5 color themes (yellow, green, blue, purple, red)
+- RfuiTag component with gradient styling
+- RfuiPage component with animated gradient borders (7 color sets)
 
 #### Styling & Design
 - Pure CSS implementation with multi-layer box shadows for 3D depth

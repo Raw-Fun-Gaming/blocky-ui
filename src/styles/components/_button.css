@@ -8,10 +8,10 @@
    Container for button with positioning
    ======================================== */
 
-.blocky-btn-wrapper {
+.rfui-btn-wrapper {
   position: relative;
   display: inline-block;
-  margin: var(--blocky-margin-sm);
+  margin: var(--rfui-margin-sm);
 }
 
 /* ========================================
@@ -19,24 +19,24 @@
    The actual button with 3D blocky effects
    ======================================== */
 
-.blocky-btn {
+.rfui-btn {
   position: relative;
-  min-width: var(--blocky-button-min-width);
-  min-height: var(--blocky-button-min-height);
-  padding: var(--blocky-padding-md) var(--blocky-padding-xl);
-  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--blocky-border-radius);
-  font-size: var(--blocky-font-md);
-  font-weight: var(--blocky-font-weight-bold);
+  min-width: var(--rfui-button-min-width);
+  min-height: var(--rfui-button-min-height);
+  padding: var(--rfui-padding-md) var(--rfui-padding-xl);
+  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--rfui-border-radius);
+  font-size: var(--rfui-font-md);
+  font-weight: var(--rfui-font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: var(--blocky-letter-spacing-wide);
-  color: var(--blocky-text-primary);
-  text-shadow: var(--blocky-text-shadow-md);
-  backdrop-filter: var(--blocky-blur-md);
+  letter-spacing: var(--rfui-letter-spacing-wide);
+  color: var(--rfui-text-primary);
+  text-shadow: var(--rfui-text-shadow-md);
+  backdrop-filter: var(--rfui-blur-md);
   cursor: pointer;
   outline: none;
-  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
-  transition: all var(--blocky-transition-normal) ease;
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+  transition: all var(--rfui-transition-normal) ease;
   overflow: hidden;
 }
 
@@ -45,7 +45,7 @@
    Gray gradient for default button
    ======================================== */
 
-.blocky-btn.default {
+.rfui-btn.default {
   background: linear-gradient(
     180deg,
     rgba(100, 100, 100, 0.95) 0%,
@@ -54,7 +54,7 @@
   );
 }
 
-.blocky-btn.default::before {
+.rfui-btn.default::before {
   background: radial-gradient(
     circle at center,
     rgba(100, 100, 100, 0.4) 0%,
@@ -67,7 +67,7 @@
    Blue gradient for primary button
    ======================================== */
 
-.blocky-btn.primary {
+.rfui-btn.primary {
   background: linear-gradient(
     180deg,
     rgba(4, 123, 255, 0.95) 0%,
@@ -77,7 +77,7 @@
   border-color: rgba(4, 123, 255, 0.5);
 }
 
-.blocky-btn.primary::before {
+.rfui-btn.primary::before {
   background: radial-gradient(
     circle at center,
     rgba(4, 123, 255, 0.4) 0%,
@@ -90,7 +90,7 @@
    Light blue gradient for secondary button
    ======================================== */
 
-.blocky-btn.secondary {
+.rfui-btn.secondary {
   background: linear-gradient(
     180deg,
     rgba(85, 223, 255, 0.95) 0%,
@@ -100,7 +100,7 @@
   border-color: rgba(85, 223, 255, 0.5);
 }
 
-.blocky-btn.secondary::before {
+.rfui-btn.secondary::before {
   background: radial-gradient(
     circle at center,
     rgba(85, 223, 255, 0.4) 0%,
@@ -113,7 +113,7 @@
    Red gradient for danger button
    ======================================== */
 
-.blocky-btn.danger {
+.rfui-btn.danger {
   background: linear-gradient(
     180deg,
     rgba(255, 68, 68, 0.95) 0%,
@@ -123,7 +123,7 @@
   border-color: rgba(255, 68, 68, 0.5);
 }
 
-.blocky-btn.danger::before {
+.rfui-btn.danger::before {
   background: radial-gradient(
     circle at center,
     rgba(255, 68, 68, 0.4) 0%,
@@ -136,9 +136,9 @@
    3D lifting effect on hover
    ======================================== */
 
-.blocky-btn-wrapper:hover .blocky-btn {
+.rfui-btn-wrapper:hover .rfui-btn {
   transform: translateY(-3px);
-  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -147,9 +147,9 @@
    3D pressing effect on click
    ======================================== */
 
-.blocky-btn-wrapper:active .blocky-btn {
+.rfui-btn-wrapper:active .rfui-btn {
   transform: translateY(1px);
-  box-shadow: var(--blocky-shadow-active), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
 }
 
 /* ========================================
@@ -157,15 +157,15 @@
    Reduced opacity and no interaction
    ======================================== */
 
-.blocky-btn:disabled,
-.blocky-btn-wrapper .blocky-btn:disabled {
-  opacity: var(--blocky-opacity-disabled);
+.rfui-btn:disabled,
+.rfui-btn-wrapper .rfui-btn:disabled {
+  opacity: var(--rfui-opacity-disabled);
   cursor: not-allowed;
   pointer-events: none;
   transform: none;
 }
 
-.blocky-btn-wrapper:has(.blocky-btn:disabled):hover {
+.rfui-btn-wrapper:has(.rfui-btn:disabled):hover {
   transform: none;
 }
 
@@ -173,7 +173,7 @@
    BUTTON FOCUS STATE (ACCESSIBILITY)
    ======================================== */
 
-.blocky-btn:focus-visible {
+.rfui-btn:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.7);
   outline-offset: 3px;
 }

@@ -6,7 +6,7 @@ nav_order: 5
 
 # Complete Examples
 
-Real-world implementation examples for Blocky UI components.
+Real-world implementation examples for Raw Fun UI components.
 
 ## Table of Contents
 
@@ -22,8 +22,8 @@ Real-world implementation examples for Blocky UI components.
 Complete main menu with navigation and modals.
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 class GameMenu {
   private container: HTMLElement;
@@ -52,7 +52,7 @@ class GameMenu {
     buttonContainer.style.alignItems = 'center';
 
     buttons.forEach(config => {
-      const button = BlockyUI.createButton({
+      const button = RawFunUI.createButton({
         text: config.text,
         variant: config.variant,
         onClick: config.action
@@ -65,7 +65,7 @@ class GameMenu {
   }
 
   private startGame() {
-    BlockyUI.showConfirmation(
+    RawFunUI.showConfirmation(
       'Start New Game',
       'Ready to begin your adventure?',
       () => console.log('Starting game...')
@@ -73,13 +73,13 @@ class GameMenu {
   }
 
   private showSettings() {
-    const modal = BlockyUI.createModal({
+    const modal = RawFunUI.createModal({
       title: 'Settings',
       content: '<div style="padding: 20px;"><label><input type="checkbox" checked> Sound Effects</label></div>',
       buttons: [
         { text: 'Cancel', variant: 'default' },
         { text: 'Save', variant: 'primary', onClick: () => {
-          BlockyUI.showNotification('Settings Saved', 'Your preferences have been saved.');
+          RawFunUI.showNotification('Settings Saved', 'Your preferences have been saved.');
         }}
       ]
     });
@@ -97,7 +97,7 @@ class GameMenu {
       `<p>${ach.unlocked ? '✓' : '🔒'} ${ach.name}</p>`
     ).join('');
 
-    const modal = BlockyUI.createModal({
+    const modal = RawFunUI.createModal({
       title: 'Achievements',
       content,
       buttons: [{ text: 'Close', variant: 'primary' }]
@@ -106,7 +106,7 @@ class GameMenu {
   }
 
   private confirmExit() {
-    BlockyUI.showConfirmation('Exit Game', 'Are you sure?', () => console.log('Exiting...'));
+    RawFunUI.showConfirmation('Exit Game', 'Are you sure?', () => console.log('Exiting...'));
   }
 }
 ```
@@ -118,8 +118,8 @@ class GameMenu {
 Slot machine-style interface with multiplier tags and win notifications.
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 class SlotMachine {
   private balance: number = 1000;
@@ -129,14 +129,14 @@ class SlotMachine {
     const container = document.getElementById(containerId)!;
 
     // Balance display
-    container.appendChild(BlockyUI.createCard({
+    container.appendChild(RawFunUI.createCard({
       title: 'Balance',
       content: `<h2 id="balance">$${this.balance}</h2>`,
       variant: 'primary'
     }));
 
     // Spin button
-    const spinBtn = BlockyUI.createButton({
+    const spinBtn = RawFunUI.createButton({
       text: 'SPIN',
       variant: 'primary',
       onClick: () => this.spin()
@@ -146,7 +146,7 @@ class SlotMachine {
 
   private spin() {
     if (this.balance < this.betAmount) {
-      BlockyUI.showError('Insufficient Balance', "You don't have enough credits!");
+      RawFunUI.showError('Insufficient Balance', "You don't have enough credits!");
       return;
     }
 
@@ -161,7 +161,7 @@ class SlotMachine {
       const winAmount = this.betAmount * multiplier;
       this.balance += winAmount;
 
-      const winModal = BlockyUI.createModal({
+      const winModal = RawFunUI.createModal({
         title: 'BIG WIN!',
         content: `<div style="text-align:center;"><h1>$${winAmount}</h1><p>${multiplier}x your bet!</p></div>`,
         buttons: [{ text: 'Collect', variant: 'primary' }]
@@ -179,14 +179,14 @@ class SlotMachine {
 Complete settings interface with tabs and controls.
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 // Tab buttons
 const tabs = ['General', 'Graphics', 'Audio', 'Controls'];
 
 tabs.forEach(tab => {
-  const button = BlockyUI.createButton({
+  const button = RawFunUI.createButton({
     text: tab,
     variant: tab === 'General' ? 'primary' : 'default',
     onClick: () => switchTab(tab)
@@ -194,8 +194,8 @@ tabs.forEach(tab => {
   tabContainer.appendChild(button);
 });
 
-// Use BlockyDropdown for select elements
-const languageDropdown = BlockyUI.createDropdown({
+// Use RfuiDropdown for select elements
+const languageDropdown = RawFunUI.createDropdown({
   label: 'Language:',
   options: [
     { value: 'en', label: 'English' },
@@ -215,8 +215,8 @@ const languageDropdown = BlockyUI.createDropdown({
 In-game shop with items and purchase confirmations.
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-import 'blocky-ui-lite/styles';
+import { RawFunUI } from 'raw-fun-ui';
+import 'raw-fun-ui/styles';
 
 interface ShopItem {
   name: string;
@@ -233,7 +233,7 @@ const items: ShopItem[] = [
 
 // Create item cards
 items.forEach(item => {
-  const card = BlockyUI.createCard({
+  const card = RawFunUI.createCard({
     content: `
       <div style="text-align: center; padding: 20px;">
         <div style="font-size: 3rem;">${item.icon}</div>
@@ -244,14 +244,14 @@ items.forEach(item => {
     `
   });
 
-  const buyBtn = BlockyUI.createButton({
+  const buyBtn = RawFunUI.createButton({
     text: 'Buy Now',
     variant: 'primary',
     onClick: () => {
-      BlockyUI.showConfirmation(
+      RawFunUI.showConfirmation(
         'Confirm Purchase',
         `Buy ${item.name} for ${item.price} coins?`,
-        () => BlockyUI.showNotification('Purchased!', `You bought ${item.name}!`)
+        () => RawFunUI.showNotification('Purchased!', `You bought ${item.name}!`)
       );
     }
   });

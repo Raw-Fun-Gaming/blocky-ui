@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Blocky UI is a lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS. It provides casino-game-style UI components with distinctive 3D depth effects, gradient backgrounds, and blocky aesthetics.
+Raw Fun UI is a lightweight, 3D rfui-themed UI component library built with TypeScript and pure CSS. It provides casino-game-style UI components with distinctive 3D depth effects, gradient backgrounds, and blocky aesthetics.
 
 **Design Inspiration**: The library's visual style is inspired by the multiplierTag component from Stack Rush, featuring multi-layer box-shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
 
@@ -18,7 +18,7 @@ Blocky UI is a lightweight, 3D blocky-themed UI component library built with Typ
 
 ## Core Design Philosophy
 
-### 3D Blocky Aesthetic
+### 3D Rfui Aesthetic
 
 The library's signature look is achieved through:
 
@@ -68,14 +68,14 @@ The library's signature look is achieved through:
 ### File Structure
 
 ```
-blocky-ui/
+raw-fun-ui/
 ├── src/
 │   ├── components/          # Component TypeScript files
-│   │   ├── BlockyButton.ts
-│   │   ├── BlockyModal.ts
-│   │   ├── BlockyCard.ts
-│   │   ├── BlockyInfo.ts
-│   │   └── BlockyTag.ts
+│   │   ├── RfuiButton.ts
+│   │   ├── RfuiModal.ts
+│   │   ├── RfuiCard.ts
+│   │   ├── RfuiInfo.ts
+│   │   └── RfuiTag.ts
 │   ├── styles/              # CSS modules
 │   │   ├── base/
 │   │   │   ├── _variables.css    # CSS custom properties
@@ -87,7 +87,7 @@ blocky-ui/
 │   │   │   ├── _card.css
 │   │   │   ├── _info.css
 │   │   │   └── _tag.css
-│   │   └── blocky-ui.css         # Main entry point
+│   │   └── raw-fun-ui.css         # Main entry point
 │   ├── types/
 │   │   └── index.ts              # TypeScript type definitions
 │   └── index.ts                  # Main export
@@ -96,7 +96,7 @@ blocky-ui/
 │   ├── index.cjs.js
 │   ├── index.umd.js
 │   ├── index.d.ts
-│   └── blocky-ui.css
+│   └── raw-fun-ui.css
 ├── rollup.config.js         # Build configuration
 ├── tsconfig.json
 └── package.json
@@ -107,15 +107,15 @@ blocky-ui/
 All components follow a static factory pattern with consistent API:
 
 ```typescript
-export class BlockyButton {
-  static create(options: BlockyButtonOptions): HTMLButtonElement {
+export class RfuiButton {
+  static create(options: RfuiButtonOptions): HTMLButtonElement {
     // 1. Create wrapper element
     const wrapper = document.createElement('div');
-    wrapper.className = 'blocky-btn-wrapper';
+    wrapper.className = 'rfui-btn-wrapper';
 
     // 2. Create main element with blocky classes
     const button = document.createElement('button');
-    button.className = `blocky-btn blocky-gradient blocky-3d ${options.variant || 'default'}`;
+    button.className = `rfui-btn rfui-gradient rfui-3d ${options.variant || 'default'}`;
 
     // 3. Apply options
     button.textContent = options.text;
@@ -134,24 +134,24 @@ export class BlockyButton {
 Modals return an instance object with methods for manual control:
 
 ```typescript
-export interface BlockyModalInstance {
+export interface RfuiModalInstance {
   show(): void;    // Add modal to DOM and display
   close(): void;   // Remove modal from DOM with animation
   element: HTMLDivElement;  // Access to underlying DOM element
 }
 
 // Create modal - returns instance
-const modal = BlockyModal.create(options);
+const modal = RfuiModal.create(options);
 
 // Manual control
 modal.show();   // Display the modal
 modal.close();  // Close the modal programmatically
 
 // Convenience methods automatically show and return instances
-const notification = BlockyUI.showNotification('Title', 'Message');
+const notification = RawFunUI.showNotification('Title', 'Message');
 // Modal is already shown, instance returned for manual control if needed
 
-const confirmation = BlockyUI.showConfirmation('Title', 'Message', onConfirm, onCancel);
+const confirmation = RawFunUI.showConfirmation('Title', 'Message', onConfirm, onCancel);
 // Modal is already shown
 ```
 
@@ -159,12 +159,12 @@ const confirmation = BlockyUI.showConfirmation('Title', 'Message', onConfirm, on
 - ✅ Intuitive API - `modal.show()` is natural and self-documenting
 - ✅ Better control - choose when to show/close
 - ✅ Cleaner code - no static method imports needed
-- ✅ TypeScript-friendly with BlockyModalInstance type
+- ✅ TypeScript-friendly with RfuiModalInstance type
 - ✅ Consistent with modern UI libraries (Chart.js, Bootstrap 5)
 
 ## Available Components
 
-### 1. BlockyButton
+### 1. RfuiButton
 
 **Purpose**: Interactive buttons with 4 color variants and 3D hover effects
 
@@ -176,9 +176,9 @@ const confirmation = BlockyUI.showConfirmation('Title', 'Message', onConfirm, on
 
 **Usage**:
 ```typescript
-import { BlockyUI } from 'blocky-ui';
+import { RawFunUI } from 'raw-fun-ui';
 
-const button = BlockyUI.createButton({
+const button = RawFunUI.createButton({
   text: 'Click Me',
   variant: 'primary',
   onClick: () => console.log('Clicked'),
@@ -188,7 +188,7 @@ const button = BlockyUI.createButton({
 document.body.appendChild(button);
 ```
 
-### 2. BlockyModal
+### 2. RfuiModal
 
 **Purpose**: Overlay modals with backdrop blur, close button, and footer actions
 
@@ -200,7 +200,7 @@ document.body.appendChild(button);
 
 **Usage**:
 ```typescript
-const modal = BlockyUI.createModal({
+const modal = RawFunUI.createModal({
   title: 'Confirm Action',
   content: 'Are you sure you want to proceed?',
   showCloseButton: true,
@@ -215,20 +215,20 @@ modal.show();  // Show the modal
 // modal.close();  // Close programmatically
 ```
 
-### 3. BlockyCard
+### 3. RfuiCard
 
 **Purpose**: Content containers with 3D styling and optional headers
 
 **Usage**:
 ```typescript
-const card = BlockyUI.createCard({
+const card = RawFunUI.createCard({
   title: 'Card Title',
   content: 'Card content goes here',
   variant: 'default'
 });
 ```
 
-### 4. BlockyInfo
+### 4. RfuiInfo
 
 **Purpose**: Temporary notifications with auto-dismiss
 
@@ -242,20 +242,20 @@ const card = BlockyUI.createCard({
 **Usage**:
 ```typescript
 // Automatically shown
-BlockyUI.showNotification(
+RawFunUI.showNotification(
   'Success!',
   'Your action was completed.',
   () => console.log('Notification closed')
 );
 ```
 
-### 5. BlockyTag
+### 5. RfuiTag
 
 **Purpose**: Small label-style tags with compact styling
 
 **Usage**:
 ```typescript
-const tag = BlockyUI.createTag({
+const tag = RawFunUI.createTag({
   text: '×2.5',
   variant: 'primary'
 });
@@ -270,21 +270,21 @@ All styling uses CSS variables for consistency and easy theming:
 ```css
 :root {
   /* Colors */
-  --blocky-primary: #55dfff;
-  --blocky-danger: #ff4444;
+  --rfui-primary: #55dfff;
+  --rfui-danger: #ff4444;
 
   /* 3D Effects */
-  --blocky-shadow-base: 0 4px 0 rgba(0, 0, 0, 0.3);
-  --blocky-shadow-far: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --rfui-shadow-base: 0 4px 0 rgba(0, 0, 0, 0.3);
+  --rfui-shadow-far: 0 8px 16px rgba(0, 0, 0, 0.4);
 
   /* Spacing */
-  --blocky-padding-md: 12px;
-  --blocky-border-radius: 6px;
+  --rfui-padding-md: 12px;
+  --rfui-border-radius: 6px;
 
   /* Z-Index Layers */
-  --blocky-z-content: 10;
-  --blocky-z-dropdown: 100;
-  --blocky-z-overlay-modal: 900;
+  --rfui-z-content: 10;
+  --rfui-z-dropdown: 100;
+  --rfui-z-overlay-modal: 900;
 }
 ```
 
@@ -292,17 +292,17 @@ All styling uses CSS variables for consistency and easy theming:
 
 **Base 3D Effect**:
 ```css
-.blocky-3d {
+.rfui-3d {
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
-  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
   backdrop-filter: blur(8px);
 }
 ```
 
 **Gradient Overlay**:
 ```css
-.blocky-gradient::before {
+.rfui-gradient::before {
   content: '';
   position: absolute;
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
@@ -313,7 +313,7 @@ All styling uses CSS variables for consistency and easy theming:
 
 **Close Button** (Shared by Modal and Info):
 ```css
-.blocky-close-btn {
+.rfui-close-btn {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -330,10 +330,10 @@ All styling uses CSS variables for consistency and easy theming:
 
 ```css
 /* ✅ Correct - Scoped to blocky components */
-.blocky-disabled,
-.blocky-btn[disabled],
-.blocky-btn-wrapper [disabled],
-.blocky-modal-wrapper [disabled] {
+.rfui-disabled,
+.rfui-btn[disabled],
+.rfui-btn-wrapper [disabled],
+.rfui-modal-wrapper [disabled] {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
@@ -378,7 +378,7 @@ The build process generates:
 - `dist/index.cjs.js` - CommonJS (for Node.js)
 - `dist/index.umd.js` - UMD (for browser <script> tags)
 - `dist/index.d.ts` - TypeScript type definitions
-- `dist/blocky-ui.css` - Compiled CSS bundle
+- `dist/raw-fun-ui.css` - Compiled CSS bundle
 
 ### Testing Locally in Another Project
 
@@ -386,18 +386,18 @@ The build process generates:
 ```json
 {
   "dependencies": {
-    "blocky-ui": "file:../blocky-ui"
+    "raw-fun-ui": "file:../raw-fun-ui"
   }
 }
 ```
 
 **Method 2: npm link**
 ```bash
-# In blocky-ui directory
+# In raw-fun-ui directory
 npm link
 
 # In consuming project
-npm link blocky-ui
+npm link raw-fun-ui
 ```
 
 **Vite Configuration** (Required for local development):
@@ -407,7 +407,7 @@ export default defineConfig({
     fs: {
       allow: [
         process.cwd(),
-        '/path/to/blocky-ui'
+        '/path/to/raw-fun-ui'
       ]
     }
   }
@@ -419,28 +419,28 @@ export default defineConfig({
 ### Installation (Future npm package)
 
 ```bash
-npm install blocky-ui
+npm install raw-fun-ui
 ```
 
 ### Basic Usage
 
 ```typescript
 // Import CSS (required)
-import 'blocky-ui/styles';
+import 'raw-fun-ui/styles';
 
 // Import components
-import { BlockyUI } from 'blocky-ui';
+import { RawFunUI } from 'raw-fun-ui';
 
 // Create and show components
-const button = BlockyUI.createButton({ text: 'Click Me', variant: 'primary' });
-const modal = BlockyUI.createModal({ title: 'Hello', content: 'World' });
+const button = RawFunUI.createButton({ text: 'Click Me', variant: 'primary' });
+const modal = RawFunUI.createModal({ title: 'Hello', content: 'World' });
 modal.show();  // Show the modal
 
 // Use convenience methods (automatically shown, returns modal instance)
-BlockyUI.showNotification('Success!', 'Operation completed.');
-BlockyUI.showError('Error!', 'Something went wrong.');
+RawFunUI.showNotification('Success!', 'Operation completed.');
+RawFunUI.showError('Error!', 'Something went wrong.');
 
-const confirmModal = BlockyUI.showConfirmation(
+const confirmModal = RawFunUI.showConfirmation(
   'Confirm',
   'Are you sure?',
   () => console.log('Confirmed'),
@@ -455,9 +455,9 @@ const confirmModal = BlockyUI.showConfirmation(
 Full type definitions are included:
 
 ```typescript
-import { BlockyButtonOptions, BlockyModalOptions, BlockyModalInstance } from 'blocky-ui';
+import { RfuiButtonOptions, RfuiModalOptions, RfuiModalInstance } from 'raw-fun-ui';
 
-const buttonOptions: BlockyButtonOptions = {
+const buttonOptions: RfuiButtonOptions = {
   text: 'Submit',
   variant: 'primary',
   onClick: () => {},
@@ -465,7 +465,7 @@ const buttonOptions: BlockyButtonOptions = {
 };
 
 // Modal instance is fully typed
-const modal: BlockyModalInstance = BlockyUI.createModal({
+const modal: RfuiModalInstance = RawFunUI.createModal({
   title: 'Title',
   content: 'Content',
   buttons: []
@@ -479,11 +479,11 @@ modal.close(); // TypeScript autocomplete available
 
 ### Factory Pattern with Instance Methods
 
-blocky-ui uses a **factory method pattern** that returns instances with methods. This provides the best of both worlds:
+raw-fun-ui uses a **factory method pattern** that returns instances with methods. This provides the best of both worlds:
 
 **Modern Factory Pattern**:
 ```typescript
-const modal = BlockyUI.createModal({});  // Factory method
+const modal = RawFunUI.createModal({});  // Factory method
 modal.show();   // Instance method
 modal.close();  // Instance method
 ```
@@ -500,7 +500,7 @@ modal.close();  // Instance method
 
 ```typescript
 // Manual control - create then show when ready
-const modal = BlockyUI.createModal({
+const modal = RawFunUI.createModal({
   title: 'Confirm',
   content: 'Are you sure?',
   buttons: [{ text: 'OK', onClick: () => {} }]
@@ -509,9 +509,9 @@ modal.show();  // Show when ready
 // modal.close();  // Close programmatically
 
 // Convenience methods - automatically shown
-BlockyUI.showNotification('Success!', 'Operation completed.');
-BlockyUI.showError('Error!', 'Something went wrong.');
-BlockyUI.showConfirmation('Confirm', 'Proceed?', onConfirm, onCancel);
+RawFunUI.showNotification('Success!', 'Operation completed.');
+RawFunUI.showError('Error!', 'Something went wrong.');
+RawFunUI.showConfirmation('Confirm', 'Proceed?', onConfirm, onCancel);
 ```
 
 **Convenience Methods**:
@@ -520,11 +520,11 @@ All convenience methods (`showNotification`, `showError`, `showConfirmation`) au
 
 ```typescript
 // Automatically shown, returns instance for manual control
-const notification = BlockyUI.showNotification('Title', 'Message');
+const notification = RawFunUI.showNotification('Title', 'Message');
 // notification.close();  // Can close programmatically if needed
 
 // Simple one-liner for fire-and-forget notifications
-BlockyUI.showError('Error!', 'Something went wrong.');
+RawFunUI.showError('Error!', 'Something went wrong.');
 ```
 
 ## Design Principles
@@ -533,7 +533,7 @@ BlockyUI.showError('Error!', 'Something went wrong.');
 
 **✅ Correct**:
 ```typescript
-button.className = 'blocky-btn blocky-gradient blocky-3d primary';
+button.className = 'rfui-btn rfui-gradient rfui-3d primary';
 ```
 
 **❌ Wrong**:
@@ -546,9 +546,9 @@ All styling belongs in CSS files, not inline styles.
 
 ### 2. Consistent Naming Convention
 
-- **Classes**: `blocky-*` prefix (e.g., `blocky-btn`, `blocky-modal`)
-- **CSS Variables**: `--blocky-*` prefix (e.g., `--blocky-primary`, `--blocky-shadow-base`)
-- **TypeScript**: PascalCase for classes (e.g., `BlockyButton`, `BlockyModal`)
+- **Classes**: `rfui-*` prefix (e.g., `rfui-btn`, `rfui-modal`)
+- **CSS Variables**: `--rfui-*` prefix (e.g., `--rfui-primary`, `--rfui-shadow-base`)
+- **TypeScript**: PascalCase for classes (e.g., `RfuiButton`, `RfuiModal`)
 
 ### 3. Component Isolation
 
@@ -556,7 +556,7 @@ Components should not affect external elements. Scope all selectors:
 
 ```css
 /* ✅ Correct - Scoped to component */
-.blocky-modal-wrapper .blocky-modal-body {
+.rfui-modal-wrapper .rfui-modal-body {
   padding: 16px;
 }
 
@@ -582,11 +582,11 @@ Use the same breakpoints as the original project:
 Use defined z-index variables for consistent layering:
 
 ```css
---blocky-z-base: 0;        /* Base elements */
---blocky-z-content: 10;    /* Content within components */
---blocky-z-dropdown: 100;  /* Close buttons, dropdowns */
---blocky-z-overlay-info: 800;   /* Info overlays */
---blocky-z-overlay-modal: 900;  /* Modal overlays */
+--rfui-z-base: 0;        /* Base elements */
+--rfui-z-content: 10;    /* Content within components */
+--rfui-z-dropdown: 100;  /* Close buttons, dropdowns */
+--rfui-z-overlay-info: 800;   /* Info overlays */
+--rfui-z-overlay-modal: 900;  /* Modal overlays */
 ```
 
 ## Common Patterns
@@ -596,13 +596,13 @@ Use defined z-index variables for consistent layering:
 4 files need to be touched when adding a new theme:
 
 1. **Create theme CSS**: `src/styles/themes/_your-theme.css`
-   - Use `[data-blocky-theme='your-theme']` selector for all overrides
+   - Use `[data-rfui-theme='your-theme']` selector for all overrides
    - Follow the structure of `_fall-guys.css` or `_animal-crossing.css` as a template
    - Override CSS variables first (colors, shadows, borders, radii, typography)
    - Then add component-specific overrides (buttons, modals, cards, info, tags, pages, dropdowns, close buttons)
    - Remember to set `::before { background: none; }` on components if suppressing radial overlays
-2. **Import in CSS entry**: Add `@import url('./themes/_your-theme.css');` to `src/styles/blocky-ui.css` (after existing theme imports)
-3. **Update type**: Add theme name to `BlockyTheme` union in `src/types/index.ts`
+2. **Import in CSS entry**: Add `@import url('./themes/_your-theme.css');` to `src/styles/raw-fun-ui.css` (after existing theme imports)
+3. **Update type**: Add theme name to `RfuiTheme` union in `src/types/index.ts`
 4. **Update demo**: Add option to theme dropdown in `docs/demo.js` (search for the `createDropdown` options array)
 
 **Existing themes for reference**:
@@ -612,23 +612,23 @@ Use defined z-index variables for consistent layering:
 
 ### Creating a New Component
 
-1. **Create TypeScript file**: `src/components/BlockyNewComponent.ts`
+1. **Create TypeScript file**: `src/components/RfuiNewComponent.ts`
 2. **Create CSS file**: `src/styles/components/_new-component.css`
 3. **Define types**: Add to `src/types/index.ts`
-4. **Import in main**: Add to `src/index.ts` and `src/styles/blocky-ui.css`
+4. **Import in main**: Add to `src/index.ts` and `src/styles/raw-fun-ui.css`
 
 ### Component Template
 
 ```typescript
-import type { BlockyNewComponentOptions } from '../types';
+import type { RfuiNewComponentOptions } from '../types';
 
-export class BlockyNewComponent {
-  static create(options: BlockyNewComponentOptions): HTMLDivElement {
+export class RfuiNewComponent {
+  static create(options: RfuiNewComponentOptions): HTMLDivElement {
     const wrapper = document.createElement('div');
-    wrapper.className = 'blocky-new-component-wrapper';
+    wrapper.className = 'rfui-new-component-wrapper';
 
     const element = document.createElement('div');
-    element.className = 'blocky-new-component blocky-gradient blocky-3d';
+    element.className = 'rfui-new-component rfui-gradient rfui-3d';
 
     // Apply options
     if (options.className) {
@@ -649,25 +649,25 @@ export class BlockyNewComponent {
    Description of component purpose
    ======================================== */
 
-.blocky-new-component-wrapper {
+.rfui-new-component-wrapper {
   position: relative;
 }
 
-.blocky-new-component {
-  padding: var(--blocky-padding-md);
+.rfui-new-component {
+  padding: var(--rfui-padding-md);
   background: linear-gradient(
     180deg,
     rgba(85, 223, 255, 0.95) 0%,
     rgba(85, 223, 255, 0.7) 50%,
     rgba(85, 223, 255, 0.5) 100%
   );
-  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
-  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
+  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
 }
 
-.blocky-new-component:hover {
+.rfui-new-component:hover {
   transform: translateY(-2px);
-  box-shadow: var(--blocky-shadow-hover), var(--blocky-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
 }
 ```
 
@@ -699,16 +699,16 @@ npm publish --access public
 
 ### Import Resolution Issues with Vite
 
-**Problem**: `Failed to resolve import "blocky-ui/styles"`
+**Problem**: `Failed to resolve import "raw-fun-ui/styles"`
 
-**Solution**: Add blocky-ui path to Vite's `fs.allow`:
+**Solution**: Add raw-fun-ui path to Vite's `fs.allow`:
 ```typescript
 export default defineConfig({
   server: {
     fs: {
       allow: [
         process.cwd(),
-        '/path/to/blocky-ui'
+        '/path/to/raw-fun-ui'
       ]
     }
   }
@@ -721,13 +721,13 @@ export default defineConfig({
 
 **Solution**: Ensure CSS import is before other styles:
 ```typescript
-import 'blocky-ui/styles';  // Must be first
+import 'raw-fun-ui/styles';  // Must be first
 import './your-app-styles.css';
 ```
 
 ### TypeScript Errors
 
-**Problem**: Cannot find module 'blocky-ui'
+**Problem**: Cannot find module 'raw-fun-ui'
 
 **Solution**: Rebuild to generate type definitions:
 ```bash
@@ -761,4 +761,4 @@ When adding new components or modifying existing ones:
 
 - **Stack Rush**: Original project where the blocky aesthetic was born
 - **Planet Blue Invasion**: Project that used cosmic-ui-lite (predecessor)
-- **fuR Gaming Engine**: Casino game framework that blocky-ui integrates with
+- **fuR Gaming Engine**: Casino game framework that raw-fun-ui integrates with

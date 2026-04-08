@@ -1,17 +1,17 @@
-import type { BlockyButtonOptions } from '../types';
+import type { RfuiButtonOptions } from '../types';
 
-export class BlockyButton {
+export class RfuiButton {
   /**
-   * Creates a 3D blocky-themed button with pure CSS styling
+   * Creates a 3D rfui-themed button with pure CSS styling
    */
-  static create(options: BlockyButtonOptions): HTMLButtonElement {
+  static create(options: RfuiButtonOptions): HTMLButtonElement {
     // Create button wrapper
     const wrapper = document.createElement('div');
-    wrapper.className = 'blocky-btn-wrapper';
+    wrapper.className = 'rfui-btn-wrapper';
 
     // Create actual button element
     const button = document.createElement('button');
-    button.className = `blocky-btn blocky-gradient blocky-3d ${options.variant || 'default'}`;
+    button.className = `rfui-btn rfui-gradient rfui-3d ${options.variant || 'default'}`;
 
     if (options.className) {
       button.className += ` ${options.className}`;

@@ -6,29 +6,29 @@ nav_order: 3
 
 # Component Reference
 
-Complete API documentation for all Blocky UI components.
+Complete API documentation for all Raw Fun UI components.
 
 ## Table of Contents
 
-- [BlockyButton](#blockybutton)
-- [BlockyDropdown](#blockydropdown)
-- [BlockyModal](#blockymodal)
-- [BlockyCard](#blockycard)
-- [BlockyInfo](#blockyinfo)
-- [BlockyTag](#blockytag)
-- [BlockyPage](#blockypage)
+- [RfuiButton](#blockybutton)
+- [RfuiDropdown](#blockydropdown)
+- [RfuiModal](#blockymodal)
+- [RfuiCard](#blockycard)
+- [RfuiInfo](#blockyinfo)
+- [RfuiTag](#blockytag)
+- [RfuiPage](#blockypage)
 - [Utility Methods](#utility-methods)
 
 ---
 
-## BlockyButton
+## RfuiButton
 
 Interactive 3D buttons with hover and active states.
 
 ### API
 
 ```typescript
-interface BlockyButtonOptions {
+interface RfuiButtonOptions {
   text: string;                    // Button text content
   variant?: 'default' | 'primary' | 'secondary' | 'danger';  // Visual style
   onClick?: () => void;            // Click event handler
@@ -36,7 +36,7 @@ interface BlockyButtonOptions {
   className?: string;              // Additional CSS classes
 }
 
-BlockyUI.createButton(options: BlockyButtonOptions): HTMLButtonElement
+RawFunUI.createButton(options: RfuiButtonOptions): HTMLButtonElement
 ```
 
 ### Variants
@@ -52,13 +52,13 @@ BlockyUI.createButton(options: BlockyButtonOptions): HTMLButtonElement
 
 ```typescript
 // Basic button
-const button = BlockyUI.createButton({
+const button = RawFunUI.createButton({
   text: 'Click Me',
   variant: 'primary'
 });
 
 // Button with click handler
-const actionButton = BlockyUI.createButton({
+const actionButton = RawFunUI.createButton({
   text: 'Submit',
   variant: 'primary',
   onClick: () => {
@@ -67,7 +67,7 @@ const actionButton = BlockyUI.createButton({
 });
 
 // Disabled button
-const disabledButton = BlockyUI.createButton({
+const disabledButton = RawFunUI.createButton({
   text: 'Loading...',
   variant: 'primary',
   disabled: true
@@ -76,15 +76,15 @@ const disabledButton = BlockyUI.createButton({
 
 ---
 
-## BlockyDropdown
+## RfuiDropdown
 
 Theme-aware dropdown component with 4 color variants and custom CSS arrow styling.
 
 ### API
 
 ```typescript
-interface BlockyDropdownOptions {
-  options: BlockyDropdownOption[];    // Dropdown options (required)
+interface RfuiDropdownOptions {
+  options: RfuiDropdownOption[];    // Dropdown options (required)
   value?: string;                     // Initial selected value
   variant?: ComponentVariant;         // Color variant
   onChange?: (value: string) => void; // Change event handler
@@ -94,7 +94,7 @@ interface BlockyDropdownOptions {
   className?: string;                 // Additional CSS classes
 }
 
-interface BlockyDropdownOption {
+interface RfuiDropdownOption {
   value: string;
   label: string;
 }
@@ -103,7 +103,7 @@ interface BlockyDropdownOption {
 ### Usage
 
 ```typescript
-const dropdown = BlockyUI.createDropdown({
+const dropdown = RawFunUI.createDropdown({
   options: [
     { value: 'option1', label: 'Option 1' },
     { value: 'option2', label: 'Option 2' },
@@ -121,30 +121,30 @@ document.body.appendChild(dropdown);
 
 ---
 
-## BlockyModal
+## RfuiModal
 
 Full-featured modals with backdrop blur, close button, and footer actions.
 
 ### API
 
 ```typescript
-interface BlockyModalOptions {
+interface RfuiModalOptions {
   title: string;                   // Modal title
   content: string | HTMLElement;   // Modal body content
   showCloseButton?: boolean;       // Show X button (default: true)
   closeOnOverlayClick?: boolean;   // Close on overlay click (default: true)
-  buttons: BlockyButtonOptions[];  // Footer action buttons (required)
+  buttons: RfuiButtonOptions[];  // Footer action buttons (required)
   onClose?: () => void;           // Close callback
   className?: string;              // Additional CSS classes
 }
 
-interface BlockyModalInstance {
+interface RfuiModalInstance {
   show(): void;                    // Display the modal
   close(): void;                   // Close the modal
   element: HTMLDivElement;         // Access to DOM element
 }
 
-BlockyUI.createModal(options: BlockyModalOptions): BlockyModalInstance
+RawFunUI.createModal(options: RfuiModalOptions): RfuiModalInstance
 ```
 
 ### Features
@@ -158,7 +158,7 @@ BlockyUI.createModal(options: BlockyModalOptions): BlockyModalInstance
 
 ```typescript
 // Basic modal
-const modal = BlockyUI.createModal({
+const modal = RawFunUI.createModal({
   title: 'Welcome',
   content: 'This is a blocky modal!',
   buttons: [
@@ -168,7 +168,7 @@ const modal = BlockyUI.createModal({
 modal.show();
 
 // Confirmation modal
-const confirmModal = BlockyUI.createModal({
+const confirmModal = RawFunUI.createModal({
   title: 'Confirm Action',
   content: 'Are you sure you want to proceed?',
   buttons: [
@@ -181,7 +181,7 @@ const confirmModal = BlockyUI.createModal({
 confirmModal.show();
 
 // Programmatic control
-const loading = BlockyUI.createModal({
+const loading = RawFunUI.createModal({
   title: 'Loading',
   content: 'Please wait...',
   buttons: []
@@ -192,32 +192,32 @@ setTimeout(() => loading.close(), 3000);
 
 ---
 
-## BlockyCard
+## RfuiCard
 
 Content cards with 3D styling and optional headers.
 
 ### API
 
 ```typescript
-interface BlockyCardOptions {
+interface RfuiCardOptions {
   title?: string;                  // Optional card title
   content: string | HTMLElement;   // Card content
   variant?: 'default' | 'primary' | 'secondary' | 'danger';
   className?: string;
 }
 
-BlockyUI.createCard(options: BlockyCardOptions): HTMLDivElement
+RawFunUI.createCard(options: RfuiCardOptions): HTMLDivElement
 ```
 
 ### Examples
 
 ```typescript
-const card = BlockyUI.createCard({
+const card = RawFunUI.createCard({
   title: 'Card Title',
   content: 'Card content goes here'
 });
 
-const primaryCard = BlockyUI.createCard({
+const primaryCard = RawFunUI.createCard({
   title: 'Important Card',
   content: 'This uses primary styling',
   variant: 'primary'
@@ -226,14 +226,14 @@ const primaryCard = BlockyUI.createCard({
 
 ---
 
-## BlockyInfo
+## RfuiInfo
 
 Overlay information popups with customizable color themes.
 
 ### API
 
 ```typescript
-interface BlockyInfoOptions {
+interface RfuiInfoOptions {
   title?: string;
   titleColor?: 'yellow' | 'green' | 'blue' | 'purple' | 'red';
   content: string | HTMLElement;
@@ -241,7 +241,7 @@ interface BlockyInfoOptions {
   onClose?: () => void;
 }
 
-BlockyUI.createInfo(options: BlockyInfoOptions): HTMLDivElement
+RawFunUI.createInfo(options: RfuiInfoOptions): HTMLDivElement
 ```
 
 ### Color Themes
@@ -256,26 +256,26 @@ BlockyUI.createInfo(options: BlockyInfoOptions): HTMLDivElement
 
 ---
 
-## BlockyTag
+## RfuiTag
 
 Small label-style tags with compact 3D styling.
 
 ### API
 
 ```typescript
-interface BlockyTagOptions {
+interface RfuiTagOptions {
   text: string;
   variant?: 'default' | 'primary' | 'secondary' | 'danger';
   className?: string;
 }
 
-BlockyUI.createTag(options: BlockyTagOptions): HTMLSpanElement
+RawFunUI.createTag(options: RfuiTagOptions): HTMLSpanElement
 ```
 
 ### Examples
 
 ```typescript
-const tag = BlockyUI.createTag({
+const tag = RawFunUI.createTag({
   text: '×2.5',
   variant: 'primary'
 });
@@ -283,21 +283,21 @@ const tag = BlockyUI.createTag({
 
 ---
 
-## BlockyPage
+## RfuiPage
 
 Full-screen pages with animated gradient borders.
 
 ### API
 
 ```typescript
-interface BlockyPageOptions {
+interface RfuiPageOptions {
   content: string | HTMLElement;
   onClose?: () => void;
   className?: string;
   customScrollbar?: boolean;  // Auto-hide scrollbar (default: true)
 }
 
-BlockyUI.createPage(options: BlockyPageOptions): HTMLDivElement
+RawFunUI.createPage(options: RfuiPageOptions): HTMLDivElement
 ```
 
 ### Features
@@ -314,38 +314,38 @@ BlockyUI.createPage(options: BlockyPageOptions): HTMLDivElement
 ### showNotification
 
 ```typescript
-BlockyUI.showNotification(
+RawFunUI.showNotification(
   title: string,
   message: string,
   onClose?: () => void
-): BlockyModalInstance
+): RfuiModalInstance
 ```
 
 ### showError
 
 ```typescript
-BlockyUI.showError(
+RawFunUI.showError(
   title: string,
   message: string,
   onClose?: () => void
-): BlockyModalInstance
+): RfuiModalInstance
 ```
 
 ### showConfirmation
 
 ```typescript
-BlockyUI.showConfirmation(
+RawFunUI.showConfirmation(
   title: string,
   message: string,
   onConfirm: () => void,
   onCancel?: () => void
-): BlockyModalInstance
+): RfuiModalInstance
 ```
 
 ### setTheme
 
 ```typescript
-BlockyUI.setTheme(theme: 'blocky' | 'fall-guys' | 'animal-crossing'): void
+RawFunUI.setTheme(theme: 'blocky' | 'fall-guys' | 'animal-crossing'): void
 ```
 
 ---
@@ -356,13 +356,13 @@ All components have full TypeScript support:
 
 ```typescript
 import type {
-  BlockyButtonOptions,
-  BlockyModalOptions,
-  BlockyModalInstance,
-  BlockyCardOptions,
-  BlockyInfoOptions,
-  BlockyTagOptions,
-  BlockyPageOptions,
-  BlockyTheme
-} from 'blocky-ui-lite';
+  RfuiButtonOptions,
+  RfuiModalOptions,
+  RfuiModalInstance,
+  RfuiCardOptions,
+  RfuiInfoOptions,
+  RfuiTagOptions,
+  RfuiPageOptions,
+  RfuiTheme
+} from 'raw-fun-ui';
 ```

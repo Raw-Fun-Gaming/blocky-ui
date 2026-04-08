@@ -1,6 +1,6 @@
 /* ========================================
    KEYFRAME ANIMATIONS
-   Blocky UI - 3D Blocky Theme
+   Raw Fun UI - 3D Rfui Theme
    ======================================== */
 
 /* ========================================
@@ -81,12 +81,12 @@
 @keyframes buttonPulse {
   0%,
   100% {
-    box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far),
-      var(--blocky-inset-combined);
+    box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far),
+      var(--rfui-inset-combined);
   }
   50% {
-    box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far),
-      var(--blocky-inset-combined), 0 0 20px rgba(255, 255, 255, 0.3);
+    box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far),
+      var(--rfui-inset-combined), 0 0 20px rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -171,22 +171,22 @@
 @keyframes liftUp {
   from {
     transform: translateY(0);
-    box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far);
+    box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far);
   }
   to {
     transform: translateY(-3px);
-    box-shadow: var(--blocky-shadow-hover);
+    box-shadow: var(--rfui-shadow-hover);
   }
 }
 
 @keyframes pressDown {
   from {
     transform: translateY(0);
-    box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far);
+    box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far);
   }
   to {
     transform: translateY(2px);
-    box-shadow: var(--blocky-shadow-active);
+    box-shadow: var(--rfui-shadow-active);
   }
 }
 

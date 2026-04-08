@@ -1,6 +1,6 @@
-import type { BlockyPageOptions, BlockyPageInstance } from '../types';
+import type { RfuiPageOptions, RfuiPageInstance } from '../types';
 
-export class BlockyPage {
+export class RfuiPage {
   /**
    * Predefined color gradient sets for page borders
    * Each set contains 3 colors that create a smooth gradient
@@ -31,23 +31,23 @@ export class BlockyPage {
   }
 
   /**
-   * Creates a full-screen blocky-themed page overlay
+   * Creates a full-screen rfui-themed page overlay
    * Returns an instance with show() and close() methods
    */
-  static create(options: BlockyPageOptions): BlockyPageInstance {
+  static create(options: RfuiPageOptions): RfuiPageInstance {
     // Create page overlay (full-screen backdrop)
     const overlay = document.createElement('div');
-    overlay.className = 'blocky-page-overlay';
+    overlay.className = 'rfui-page-overlay';
 
     // Create page content container (scrollable full-screen)
     const pageContent = document.createElement('div');
-    pageContent.className = 'blocky-page-content';
+    pageContent.className = 'rfui-page-content';
 
     // Apply random gradient colors to CSS custom properties
-    const [color1, color2, color3] = BlockyPage.getRandomGradient();
-    pageContent.style.setProperty('--blocky-page-border-color-1', color1);
-    pageContent.style.setProperty('--blocky-page-border-color-2', color2);
-    pageContent.style.setProperty('--blocky-page-border-color-3', color3);
+    const [color1, color2, color3] = RfuiPage.getRandomGradient();
+    pageContent.style.setProperty('--rfui-page-border-color-1', color1);
+    pageContent.style.setProperty('--rfui-page-border-color-2', color2);
+    pageContent.style.setProperty('--rfui-page-border-color-3', color3);
 
     if (options.className) {
       pageContent.className += ` ${options.className}`;
@@ -55,7 +55,7 @@ export class BlockyPage {
 
     // Create inner wrapper for content with padding
     const pageWrapper = document.createElement('div');
-    pageWrapper.className = 'blocky-page-wrapper';
+    pageWrapper.className = 'rfui-page-wrapper';
 
     // Add custom scrollbar class if enabled (default: true)
     if (options.customScrollbar !== false) {
@@ -76,10 +76,10 @@ export class BlockyPage {
     const startColorCycle = () => {
       // Change colors every 3 seconds (matching animation duration)
       animationInterval = window.setInterval(() => {
-        const [color1, color2, color3] = BlockyPage.getRandomGradient();
-        pageContent.style.setProperty('--blocky-page-border-color-1', color1);
-        pageContent.style.setProperty('--blocky-page-border-color-2', color2);
-        pageContent.style.setProperty('--blocky-page-border-color-3', color3);
+        const [color1, color2, color3] = RfuiPage.getRandomGradient();
+        pageContent.style.setProperty('--rfui-page-border-color-1', color1);
+        pageContent.style.setProperty('--rfui-page-border-color-2', color2);
+        pageContent.style.setProperty('--rfui-page-border-color-3', color3);
       }, 3000);
     };
 
@@ -96,7 +96,7 @@ export class BlockyPage {
     }
 
     // Page instance object
-    const instance: BlockyPageInstance = {
+    const instance: RfuiPageInstance = {
       element: overlay,
       show() {
         document.body.appendChild(overlay);
@@ -120,7 +120,7 @@ export class BlockyPage {
 
     // Create close button
     const closeBtn = document.createElement('button');
-    closeBtn.className = 'blocky-close-btn';
+    closeBtn.className = 'rfui-close-btn';
     closeBtn.addEventListener('click', () => {
       instance.close();
     });

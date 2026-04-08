@@ -8,11 +8,11 @@
    Main modal container with 3D styling
    ======================================== */
 
-.blocky-modal-wrapper {
+.rfui-modal-wrapper {
   position: relative;
-  max-width: var(--blocky-modal-max-width);
+  max-width: var(--rfui-modal-max-width);
   width: 90%;
-  min-height: var(--blocky-modal-min-height);
+  min-height: var(--rfui-modal-min-height);
   max-height: 80vh;
   overflow: hidden;
   cursor: default;
@@ -23,14 +23,14 @@
     rgba(40, 40, 60, 0.9) 50%,
     rgba(30, 30, 50, 0.85) 100%
   );
-  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--blocky-border-radius-lg);
-  backdrop-filter: var(--blocky-blur-lg);
-  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
-  animation: modalSlideIn var(--blocky-animation-slide) ease-out;
+  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--rfui-border-radius-lg);
+  backdrop-filter: var(--rfui-blur-lg);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+  animation: modalSlideIn var(--rfui-animation-slide) ease-out;
 }
 
-.blocky-modal-wrapper::before {
+.rfui-modal-wrapper::before {
   content: '';
   position: absolute;
   top: 0;
@@ -47,8 +47,8 @@
    Positioned in top-right with 3D effect
    ======================================== */
 
-.blocky-modal-close {
-  /* Inherits from .blocky-close-btn in _shared.css */
+.rfui-modal-close {
+  /* Inherits from .rfui-close-btn in _shared.css */
 }
 
 /* ========================================
@@ -56,28 +56,28 @@
    Content area with proper padding
    ======================================== */
 
-.blocky-modal-body {
+.rfui-modal-body {
   position: relative;
   z-index: 2;
-  padding: var(--blocky-padding-lg) var(--blocky-padding-xl);
-  color: var(--blocky-text-primary);
-  line-height: var(--blocky-line-height-normal);
-  font-size: var(--blocky-font-md);
+  padding: var(--rfui-padding-lg) var(--rfui-padding-xl);
+  color: var(--rfui-text-primary);
+  line-height: var(--rfui-line-height-normal);
+  font-size: var(--rfui-font-md);
 }
 
-.blocky-modal-body p {
-  margin: var(--blocky-margin-sm) 0;
+.rfui-modal-body p {
+  margin: var(--rfui-margin-sm) 0;
 }
 
-.blocky-modal-body h1,
-.blocky-modal-body h2,
-.blocky-modal-body h3,
-.blocky-modal-body h4,
-.blocky-modal-body h5,
-.blocky-modal-body h6 {
-  margin: var(--blocky-margin-md) 0 var(--blocky-margin-sm) 0;
-  color: var(--blocky-text-primary);
-  font-weight: var(--blocky-font-weight-bold);
+.rfui-modal-body h1,
+.rfui-modal-body h2,
+.rfui-modal-body h3,
+.rfui-modal-body h4,
+.rfui-modal-body h5,
+.rfui-modal-body h6 {
+  margin: var(--rfui-margin-md) 0 var(--rfui-margin-sm) 0;
+  color: var(--rfui-text-primary);
+  font-weight: var(--rfui-font-weight-bold);
 }
 
 /* ========================================
@@ -85,19 +85,19 @@
    Button area with centered layout
    ======================================== */
 
-.blocky-modal-footer {
+.rfui-modal-footer {
   position: relative;
   z-index: 2;
   display: flex;
-  gap: var(--blocky-margin-md);
+  gap: var(--rfui-margin-md);
   justify-content: center;
   align-items: center;
-  padding: var(--blocky-padding-md) var(--blocky-padding-lg) var(--blocky-padding-lg);
-  border-top: var(--blocky-border-width-thin) solid rgba(255, 255, 255, 0.2);
-  margin-top: var(--blocky-margin-md);
+  padding: var(--rfui-padding-md) var(--rfui-padding-lg) var(--rfui-padding-lg);
+  border-top: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.2);
+  margin-top: var(--rfui-margin-md);
 }
 
-.blocky-modal-footer .blocky-btn-wrapper {
+.rfui-modal-footer .rfui-btn-wrapper {
   margin: 0;
   padding: 0;
 }

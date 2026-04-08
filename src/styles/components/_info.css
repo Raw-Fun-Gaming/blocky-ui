@@ -8,26 +8,26 @@
    Main info container with 3D styling
    ======================================== */
 
-.blocky-info-wrapper {
+.rfui-info-wrapper {
   position: relative;
-  min-width: var(--blocky-info-min-width);
+  min-width: var(--rfui-info-min-width);
   max-width: min(500px, calc(100% - 80px));
-  padding: var(--blocky-padding-xl);
+  padding: var(--rfui-padding-xl);
   background: linear-gradient(
     180deg,
     rgba(60, 60, 80, 0.95) 0%,
     rgba(40, 40, 60, 0.9) 50%,
     rgba(30, 30, 50, 0.85) 100%
   );
-  border: var(--blocky-border-width) solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--blocky-border-radius-lg);
-  backdrop-filter: var(--blocky-blur-lg);
-  box-shadow: var(--blocky-shadow-base), var(--blocky-shadow-far), var(--blocky-inset-combined);
-  animation: infoFadeIn var(--blocky-animation-slide) ease-out;
+  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--rfui-border-radius-lg);
+  backdrop-filter: var(--rfui-blur-lg);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+  animation: infoFadeIn var(--rfui-animation-slide) ease-out;
   overflow: hidden;
 }
 
-.blocky-info-wrapper::before {
+.rfui-info-wrapper::before {
   content: '';
   position: absolute;
   top: 0;
@@ -44,12 +44,12 @@
    Styled title with theme colors
    ======================================== */
 
-.blocky-info-title {
+.rfui-info-title {
   position: relative;
   z-index: 2;
-  margin: 0 0 var(--blocky-margin-md) 0;
-  font-size: var(--blocky-font-2xl);
-  text-shadow: var(--blocky-text-shadow-lg);
+  margin: 0 0 var(--rfui-margin-md) 0;
+  font-size: var(--rfui-font-2xl);
+  text-shadow: var(--rfui-text-shadow-lg);
 }
 
 /* ========================================
@@ -57,16 +57,16 @@
    Content area
    ======================================== */
 
-.blocky-info-body {
+.rfui-info-body {
   position: relative;
   z-index: 2;
-  line-height: var(--blocky-line-height-normal);
-  font-size: var(--blocky-font-md);
-  color: var(--blocky-text-primary);
+  line-height: var(--rfui-line-height-normal);
+  font-size: var(--rfui-font-md);
+  color: var(--rfui-text-primary);
 }
 
-.blocky-info-body p {
-  margin: var(--blocky-margin-sm) 0;
+.rfui-info-body p {
+  margin: var(--rfui-margin-sm) 0;
 }
 
 /* ========================================
@@ -75,72 +75,72 @@
    ======================================== */
 
 /* Yellow Theme */
-.blocky-info-wrapper.theme-yellow {
+.rfui-info-wrapper.theme-yellow {
   border-color: rgba(255, 194, 1, 0.5);
 }
 
-.blocky-info-wrapper.theme-yellow .blocky-info-title {
+.rfui-info-wrapper.theme-yellow .rfui-info-title {
   color: #ffc201;
   text-shadow: 0 0 12px rgba(255, 194, 1, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.blocky-info-wrapper.theme-yellow::before {
+.rfui-info-wrapper.theme-yellow::before {
   background: radial-gradient(circle at center, rgba(255, 194, 1, 0.2) 0%, transparent 70%);
 }
 
 /* Green Theme */
-.blocky-info-wrapper.theme-green {
+.rfui-info-wrapper.theme-green {
   border-color: rgba(28, 230, 28, 0.5);
 }
 
-.blocky-info-wrapper.theme-green .blocky-info-title {
+.rfui-info-wrapper.theme-green .rfui-info-title {
   color: #1ce61c;
   text-shadow: 0 0 12px rgba(28, 230, 28, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.blocky-info-wrapper.theme-green::before {
+.rfui-info-wrapper.theme-green::before {
   background: radial-gradient(circle at center, rgba(28, 230, 28, 0.2) 0%, transparent 70%);
 }
 
 /* Blue Theme */
-.blocky-info-wrapper.theme-blue {
+.rfui-info-wrapper.theme-blue {
   border-color: rgba(4, 123, 255, 0.5);
 }
 
-.blocky-info-wrapper.theme-blue .blocky-info-title {
+.rfui-info-wrapper.theme-blue .rfui-info-title {
   color: #047bff;
   text-shadow: 0 0 12px rgba(4, 123, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.blocky-info-wrapper.theme-blue::before {
+.rfui-info-wrapper.theme-blue::before {
   background: radial-gradient(circle at center, rgba(4, 123, 255, 0.2) 0%, transparent 70%);
 }
 
 /* Purple Theme */
-.blocky-info-wrapper.theme-purple {
+.rfui-info-wrapper.theme-purple {
   border-color: rgba(150, 50, 255, 0.5);
 }
 
-.blocky-info-wrapper.theme-purple .blocky-info-title {
+.rfui-info-wrapper.theme-purple .rfui-info-title {
   color: #9632ff;
   text-shadow: 0 0 12px rgba(150, 50, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.blocky-info-wrapper.theme-purple::before {
+.rfui-info-wrapper.theme-purple::before {
   background: radial-gradient(circle at center, rgba(150, 50, 255, 0.2) 0%, transparent 70%);
 }
 
 /* Red Theme */
-.blocky-info-wrapper.theme-red {
+.rfui-info-wrapper.theme-red {
   border-color: rgba(255, 68, 68, 0.5);
 }
 
-.blocky-info-wrapper.theme-red .blocky-info-title {
+.rfui-info-wrapper.theme-red .rfui-info-title {
   color: #ff4444;
   text-shadow: 0 0 12px rgba(255, 68, 68, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.blocky-info-wrapper.theme-red::before {
+.rfui-info-wrapper.theme-red::before {
   background: radial-gradient(circle at center, rgba(255, 68, 68, 0.2) 0%, transparent 70%);
 }
 
@@ -149,10 +149,10 @@
    Subtle scale effect on hover
    ======================================== */
 
-.blocky-info-wrapper:hover {
+.rfui-info-wrapper:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.5),
-    var(--blocky-inset-combined);
+    var(--rfui-inset-combined);
 }
 
 /* ========================================
