@@ -1,3 +1,9 @@
+---
+title: Animal Crossing Theme
+layout: default
+nav_exclude: true
+---
+
 # Animal Crossing Theme — Design Spec
 
 ## Context
