@@ -2,14 +2,14 @@
 title: Home
 layout: home
 nav_order: 1
-permalink: /
+permalink: /docs/
 ---
 
 # Blocky UI
 
 Welcome to the **Blocky UI** documentation! A lightweight, zero-dependency TypeScript UI component library for 3D blocky-themed interfaces.
 
-[Live Demo]({{ site.baseurl }}/demo/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Live Demo]({{ site.baseurl }}/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [GitHub](https://github.com/Raw-Fun-Gaming/blocky-ui){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
@@ -44,13 +44,13 @@ const button = BlockyUI.createButton({
 
 | Component | Description |
 |-----------|-------------|
-| [BlockyButton]({{ site.baseurl }}/components#blockybutton) | 4 variants with 3D hover effects |
-| [BlockyDropdown]({{ site.baseurl }}/components#blockydropdown) | Theme-aware dropdowns with 4 variants |
-| [BlockyModal]({{ site.baseurl }}/components#blockymodal) | Full-featured modals with backdrop blur |
-| [BlockyCard]({{ site.baseurl }}/components#blockycard) | Content containers with 3D styling |
-| [BlockyInfo]({{ site.baseurl }}/components#blockyinfo) | Overlay popups with 5 color themes |
-| [BlockyTag]({{ site.baseurl }}/components#blockytag) | Status tags with gradient styling |
-| [BlockyPage]({{ site.baseurl }}/components#blockypage) | Full-screen pages with animated gradient borders |
+| [BlockyButton]({{ site.baseurl }}/docs/components#blockybutton) | 4 variants with 3D hover effects |
+| [BlockyDropdown]({{ site.baseurl }}/docs/components#blockydropdown) | Theme-aware dropdowns with 4 variants |
+| [BlockyModal]({{ site.baseurl }}/docs/components#blockymodal) | Full-featured modals with backdrop blur |
+| [BlockyCard]({{ site.baseurl }}/docs/components#blockycard) | Content containers with 3D styling |
+| [BlockyInfo]({{ site.baseurl }}/docs/components#blockyinfo) | Overlay popups with 5 color themes |
+| [BlockyTag]({{ site.baseurl }}/docs/components#blockytag) | Status tags with gradient styling |
+| [BlockyPage]({{ site.baseurl }}/docs/components#blockypage) | Full-screen pages with animated gradient borders |
 
 ## Themes
 

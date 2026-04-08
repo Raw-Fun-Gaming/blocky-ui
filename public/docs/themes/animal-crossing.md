@@ -1,7 +1,8 @@
 ---
-title: Animal Crossing Theme
+title: Animal Crossing
 layout: default
-nav_exclude: true
+parent: Themes
+nav_order: 2
 ---
 
 # Animal Crossing Theme — Design Spec

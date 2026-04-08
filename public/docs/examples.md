@@ -263,4 +263,4 @@ items.forEach(item => {
 
 ---
 
-**See the [Live Demo]({{ site.baseurl }}/demo/) for interactive examples.**
+**See the [Live Demo]({{ site.baseurl }}/) for interactive examples.**

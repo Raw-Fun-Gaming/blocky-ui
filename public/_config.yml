@@ -16,7 +16,7 @@ aux_links:
   "NPM":
     - "https://www.npmjs.com/package/blocky-ui-lite"
   "Live Demo":
-    - "https://raw-fun-gaming.github.io/blocky-ui/demo/"
+    - "https://raw-fun-gaming.github.io/blocky-ui/"
 
 aux_links_new_tab: true
 
@@ -26,5 +26,5 @@ nav_sort: order
 
 exclude:
   - Gemfile.lock
-  - demo/blocky-ui.css
-  - demo/index.umd.js
+  - blocky-ui.css
+  - index.umd.js
