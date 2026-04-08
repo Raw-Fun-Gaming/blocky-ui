@@ -53,7 +53,7 @@ document.body.appendChild(button);
 // Create and show a modal
 const modal = RawFunUI.createModal({
   title: 'Welcome',
-  content: 'This is a blocky modal!',
+  content: 'This is a rfui modal!',
   buttons: [
     { text: 'OK', variant: 'primary', onClick: () => {} }
   ]

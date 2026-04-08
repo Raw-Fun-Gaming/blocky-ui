@@ -10,13 +10,13 @@ Complete API documentation for all Raw Fun UI components.
 
 ## Table of Contents
 
-- [RfuiButton](#blockybutton)
-- [RfuiDropdown](#blockydropdown)
-- [RfuiModal](#blockymodal)
-- [RfuiCard](#blockycard)
-- [RfuiInfo](#blockyinfo)
-- [RfuiTag](#blockytag)
-- [RfuiPage](#blockypage)
+- [RfuiButton](#rfuibutton)
+- [RfuiDropdown](#rfuidropdown)
+- [RfuiModal](#rfuimodal)
+- [RfuiCard](#rfuicard)
+- [RfuiInfo](#rfuiinfo)
+- [RfuiTag](#rfuitag)
+- [RfuiPage](#rfuipage)
 - [Utility Methods](#utility-methods)
 
 ---
@@ -160,7 +160,7 @@ RawFunUI.createModal(options: RfuiModalOptions): RfuiModalInstance
 // Basic modal
 const modal = RawFunUI.createModal({
   title: 'Welcome',
-  content: 'This is a blocky modal!',
+  content: 'This is a rfui modal!',
   buttons: [
     { text: 'OK', variant: 'primary' }
   ]

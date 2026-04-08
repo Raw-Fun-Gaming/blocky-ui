@@ -1,5 +1,5 @@
 // ========================================
-// BLOCKY UI DEMO
+// RAW FUN UI DEMO
 // Interactive demonstrations of all components
 // ========================================
 
@@ -22,7 +22,7 @@ themeLabel.style.cssText = 'font-weight: bold; opacity: 0.9;';
 
 const themeDropdown = RawFunUI.createDropdown({
   options: [
-    { value: 'blocky', label: 'Rfui (Default)' },
+    { value: 'blocky', label: 'Blocky (Default)' },
     { value: 'fall-guys', label: 'Fall Guys' },
     { value: 'animal-crossing', label: 'Animal Crossing' }
   ],

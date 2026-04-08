@@ -44,13 +44,13 @@ const button = RawFunUI.createButton({
 
 | Component | Description |
 |-----------|-------------|
-| [RfuiButton]({{ site.baseurl }}/docs/components#blockybutton) | 4 variants with 3D hover effects |
-| [RfuiDropdown]({{ site.baseurl }}/docs/components#blockydropdown) | Theme-aware dropdowns with 4 variants |
-| [RfuiModal]({{ site.baseurl }}/docs/components#blockymodal) | Full-featured modals with backdrop blur |
-| [RfuiCard]({{ site.baseurl }}/docs/components#blockycard) | Content containers with 3D styling |
-| [RfuiInfo]({{ site.baseurl }}/docs/components#blockyinfo) | Overlay popups with 5 color themes |
-| [RfuiTag]({{ site.baseurl }}/docs/components#blockytag) | Status tags with gradient styling |
-| [RfuiPage]({{ site.baseurl }}/docs/components#blockypage) | Full-screen pages with animated gradient borders |
+| [RfuiButton]({{ site.baseurl }}/docs/components#rfuibutton) | 4 variants with 3D hover effects |
+| [RfuiDropdown]({{ site.baseurl }}/docs/components#rfuidropdown) | Theme-aware dropdowns with 4 variants |
+| [RfuiModal]({{ site.baseurl }}/docs/components#rfuimodal) | Full-featured modals with backdrop blur |
+| [RfuiCard]({{ site.baseurl }}/docs/components#rfuicard) | Content containers with 3D styling |
+| [RfuiInfo]({{ site.baseurl }}/docs/components#rfuiinfo) | Overlay popups with 5 color themes |
+| [RfuiTag]({{ site.baseurl }}/docs/components#rfuitag) | Status tags with gradient styling |
+| [RfuiPage]({{ site.baseurl }}/docs/components#rfuipage) | Full-screen pages with animated gradient borders |
 
 ## Themes
 

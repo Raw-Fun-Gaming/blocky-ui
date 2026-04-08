@@ -645,7 +645,7 @@ export class RfuiNewComponent {
 
 ```css
 /* ========================================
-   BLOCKY NEW COMPONENT
+   RFUI NEW COMPONENT
    Description of component purpose
    ======================================== */
 
@@ -760,5 +760,5 @@ When adding new components or modifying existing ones:
 ## Related Projects
 
 - **Stack Rush**: Original project where the blocky aesthetic was born
-- **Planet Blue Invasion**: Project that used cosmic-ui-lite (predecessor)
-- **fuR Gaming Engine**: Casino game framework that raw-fun-ui integrates with
+- **Crowd Rush**: First project to adopt the Fall Guys theme
+- **Raw Fun Game Engine**: Casino game framework that raw-fun-ui integrates with
