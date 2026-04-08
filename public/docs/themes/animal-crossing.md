@@ -11,15 +11,13 @@ nav_order: 2
 
 The **Animal Crossing** theme is inspired by the NookPhone UI from Animal Crossing: New Horizons. A flat, minimal, cozy aesthetic with earthy/nature tones.
 
-Reference: `references/screen-1-home-screen-blank_orig.jpg` (NookPhone home screen with pill-shaped action buttons)
-
 ## Theme Name
 
 `animal-crossing` — applied via `data-blocky-theme="animal-crossing"` on the root element.
 
 ## Color Palette
 
-Extracted from the reference styleguide (`references/styleguide_orig.jpg`):
+Earthy, nature-inspired palette:
 
 | Token | Hex | Role |
 |-------|-----|------|
