@@ -1,24 +1,13 @@
 # Blocky UI
 
-[![npm version](https://img.shields.io/npm/v/blocky-ui-lite?style=for-the-badge&logo=npm&color=55dfff)](https://www.npmjs.com/package/blocky-ui-lite)
-[![npm downloads](https://img.shields.io/npm/dm/blocky-ui-lite?style=for-the-badge&logo=npm&color=ff4444)](https://www.npmjs.com/package/blocky-ui-lite)
-[![GitHub release](https://img.shields.io/github/v/release/raw-fun-gaming/blocky-ui?style=for-the-badge&logo=github&color=00ff88)](https://github.com/raw-fun-gaming/blocky-ui/releases)
-[![License](https://img.shields.io/github/license/raw-fun-gaming/blocky-ui?style=for-the-badge&color=ffaa00)](https://github.com/raw-fun-gaming/blocky-ui/blob/main/LICENSE)
-
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Pure CSS](https://img.shields.io/badge/Pure%20CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Zero Dependencies](https://img.shields.io/badge/Zero%20Dependencies-55dfff?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/blocky-ui-lite)
-[![Game Ready](https://img.shields.io/badge/Game%20Ready-ff4444?style=for-the-badge&logo=gamepad&logoColor=white)](https://raw-fun-gaming.github.io/blocky-ui/docs/examples)
-
-[![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/blocky-ui/ci.yml?style=for-the-badge&logo=github-actions)](https://github.com/raw-fun-gaming/blocky-ui/actions)
-[![GitHub Pages](https://img.shields.io/github/deployments/raw-fun-gaming/blocky-ui/github-pages?style=for-the-badge&logo=github&label=Demo%20Site&color=00ff88)](https://raw-fun-gaming.github.io/blocky-ui/)
-[![Docs](https://img.shields.io/badge/Docs-Documentation-00ff88?style=for-the-badge&logo=gitbook&logoColor=white)](https://raw-fun-gaming.github.io/blocky-ui/docs/)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/blocky-ui-lite?style=for-the-badge&logo=webpack&color=purple)](https://bundlephobia.com/package/blocky-ui-lite)
+[![npm](https://img.shields.io/npm/v/blocky-ui-lite)](https://www.npmjs.com/package/blocky-ui-lite)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/blocky-ui/ci.yml)](https://github.com/raw-fun-gaming/blocky-ui/actions)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/blocky-ui-lite)](https://bundlephobia.com/package/blocky-ui-lite)
+[![License](https://img.shields.io/github/license/raw-fun-gaming/blocky-ui)](LICENSE)
 
 A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS.
 
-> 🎮 **[Live Demo](https://raw-fun-gaming.github.io/blocky-ui/) - Try all components interactively!**
-> 📚 **[Documentation](https://raw-fun-gaming.github.io/blocky-ui/docs/)**
+[Live Demo](https://raw-fun-gaming.github.io/blocky-ui/) · [Documentation](https://raw-fun-gaming.github.io/blocky-ui/docs/)
 
 ![Blocky UI Demo](screenshots/demo-page.png)
 
