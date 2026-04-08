@@ -2,7 +2,7 @@
 title: Animal Crossing
 layout: default
 parent: Themes
-nav_order: 2
+nav_order: 3
 ---
 
 # Animal Crossing Theme — Design Spec
