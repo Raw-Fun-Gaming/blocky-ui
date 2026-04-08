@@ -26,5 +26,3 @@ nav_sort: order
 
 exclude:
   - Gemfile.lock
-  - blocky-ui.css
-  - index.umd.js
