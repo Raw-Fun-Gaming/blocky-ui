@@ -8,17 +8,17 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Pure CSS](https://img.shields.io/badge/Pure%20CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Zero Dependencies](https://img.shields.io/badge/Zero%20Dependencies-55dfff?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/blocky-ui-lite)
-[![Game Ready](https://img.shields.io/badge/Game%20Ready-ff4444?style=for-the-badge&logo=gamepad&logoColor=white)](https://github.com/raw-fun-gaming/blocky-ui/wiki/Complete-Examples)
+[![Game Ready](https://img.shields.io/badge/Game%20Ready-ff4444?style=for-the-badge&logo=gamepad&logoColor=white)](https://raw-fun-gaming.github.io/blocky-ui/docs/examples)
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/blocky-ui/ci.yml?style=for-the-badge&logo=github-actions)](https://github.com/raw-fun-gaming/blocky-ui/actions)
 [![GitHub Pages](https://img.shields.io/github/deployments/raw-fun-gaming/blocky-ui/github-pages?style=for-the-badge&logo=github&label=Demo%20Site&color=00ff88)](https://raw-fun-gaming.github.io/blocky-ui/)
-[![Wiki](https://img.shields.io/badge/Wiki-Documentation-00ff88?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/raw-fun-gaming/blocky-ui/wiki)
+[![Docs](https://img.shields.io/badge/Docs-Documentation-00ff88?style=for-the-badge&logo=gitbook&logoColor=white)](https://raw-fun-gaming.github.io/blocky-ui/docs/)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/blocky-ui-lite?style=for-the-badge&logo=webpack&color=purple)](https://bundlephobia.com/package/blocky-ui-lite)
 
 A lightweight, 3D blocky-themed UI component library built with TypeScript and pure CSS.
 
 > 🎮 **[Live Demo](https://raw-fun-gaming.github.io/blocky-ui/) - Try all components interactively!**
-> 📚 **[Complete Documentation](../../wiki) | [Local Docs](docs/wiki/) | [Architecture Guide](docs/wiki/Architecture-Overview.md)**
+> 📚 **[Documentation](https://raw-fun-gaming.github.io/blocky-ui/docs/)**
 
 ![Blocky UI Demo](screenshots/demo-page.png)
 
@@ -94,15 +94,15 @@ confirmModal.show();
 ## 📦 Components
 
 ### Interactive Components
-- **[BlockyButton](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockybutton)** - 4 variants with 3D hover effects
-- **[BlockyDropdown](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockydropdown)** - Theme-aware dropdowns with 4 variants and custom arrow
-- **[BlockyModal](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockymodal)** - Full-featured modals with backdrop blur and animations
+- **[BlockyButton](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockybutton)** - 4 variants with 3D hover effects
+- **[BlockyDropdown](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockydropdown)** - Theme-aware dropdowns with 4 variants and custom arrow
+- **[BlockyModal](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockymodal)** - Full-featured modals with backdrop blur and animations
 
 ### Display Components
-- **[BlockyCard](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockycard)** - Content containers with 3D styling
-- **[BlockyInfo](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockyinfo)** - Overlay popups with 5 color themes (yellow, green, blue, purple, red)
-- **[BlockyTag](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockytag)** - Status/location tags with gradient styling
-- **[BlockyPage](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference#blockypage)** - Full-screen pages with animated gradient borders (7 color sets) and optional auto-hide scrollbar
+- **[BlockyCard](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockycard)** - Content containers with 3D styling
+- **[BlockyInfo](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockyinfo)** - Overlay popups with 5 color themes (yellow, green, blue, purple, red)
+- **[BlockyTag](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockytag)** - Status/location tags with gradient styling
+- **[BlockyPage](https://raw-fun-gaming.github.io/blocky-ui/docs/components#blockypage)** - Full-screen pages with animated gradient borders (7 color sets) and optional auto-hide scrollbar
 
 ### Utility Components
 - **Error Dialogs** - Pre-configured error modals
@@ -164,14 +164,11 @@ The components feature:
 ## 📖 Documentation
 
 ### Quick Links
-- 🏠 **[Wiki Home](https://github.com/raw-fun-gaming/blocky-ui/wiki)** - Complete documentation
-- 🚀 **[Installation & Setup](https://github.com/raw-fun-gaming/blocky-ui/wiki/Installation-&-Setup)** - Get started quickly
-- 📚 **[Component Reference](https://github.com/raw-fun-gaming/blocky-ui/wiki/Component-Reference)** - Full API documentation
-- 💡 **[Complete Examples](https://github.com/raw-fun-gaming/blocky-ui/wiki/Complete-Examples)** - Real-world examples
-- 🎮 **[Game Integration](https://github.com/raw-fun-gaming/blocky-ui/wiki/Game-Integration)** - Framework integration guides
-
-### Local Documentation
-All documentation is also available in the `docs/wiki/` directory.
+- 🏠 **[Documentation Home](https://raw-fun-gaming.github.io/blocky-ui/docs/)** - Complete documentation
+- 🚀 **[Installation & Setup](https://raw-fun-gaming.github.io/blocky-ui/docs/installation)** - Get started quickly
+- 📚 **[Component Reference](https://raw-fun-gaming.github.io/blocky-ui/docs/components)** - Full API documentation
+- 💡 **[Complete Examples](https://raw-fun-gaming.github.io/blocky-ui/docs/examples)** - Real-world examples
+- 🎨 **[Themes](https://raw-fun-gaming.github.io/blocky-ui/docs/themes/)** - Theme design specs
 
 ## 🎮 Perfect for Games
 
@@ -225,7 +222,7 @@ blocky-ui/
 │   ├── index.d.ts         # TypeScript declarations
 │   └── blocky-ui.css      # Processed styles
 ├── docs/                  # Documentation
-│   ├── wiki/              # Wiki pages (local)
+│   ├── docs/              # Jekyll documentation pages
 │   └── index.html         # GitHub Pages demo
 └── screenshots/           # Component screenshots
 ```
