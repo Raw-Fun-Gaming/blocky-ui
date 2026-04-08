@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **BlockyDropdown Component**: New theme-aware dropdown component with:
   - 4 color variants (default, primary, secondary, danger)
-  - Theme support for both blocky and fall-guys themes
+  - Theme support for blocky, fall-guys, and animal-crossing themes
   - Custom CSS dropdown arrow for consistent cross-browser appearance
   - Optional label support
   - Disabled state handling

@@ -19,7 +19,7 @@ Inspired by the multiplier tags in Stack Rush, I wanted to create a lightweight 
 
 - **🎮 3D Blocky Aesthetic**: Multi-layer box shadows creating realistic 3D depth
 - **🎨 Pure CSS Styling**: No SVG generation, hardware-accelerated rendering
-- **🎭 Theme Support**: Built-in themes (blocky, fall-guys) with easy customization
+- **🎭 Theme Support**: 3 built-in themes (blocky, fall-guys, animal-crossing)
 - **📦 Zero Dependencies**: Pure TypeScript/JavaScript with no external dependencies
 - **💪 Full TypeScript Support**: Complete type safety with comprehensive interfaces
 - **📱 Responsive Design**: Mobile-first approach with adaptive breakpoints
@@ -95,34 +95,21 @@ confirmModal.show();
 
 ## 🎭 Themes
 
-Blocky UI supports multiple themes out of the box. Switch themes at runtime with a single line of code:
+Switch themes at runtime:
 
 ```typescript
-import { BlockyUI } from 'blocky-ui-lite';
-
-// Switch to Fall Guys theme (bright, playful cartoon style)
 BlockyUI.setTheme('fall-guys');
-
-// Switch back to default blocky theme
-BlockyUI.setTheme('blocky');
+BlockyUI.setTheme('animal-crossing');
+BlockyUI.setTheme('blocky'); // default
 ```
-
-### Available Themes
 
 | Theme | Description |
 |-------|-------------|
-| `blocky` | Default dark theme with deep shadows and purple accents |
-| `fall-guys` | Bright, playful cartoon style with cyan backgrounds, solid black shadows, purple headers, and rounded corners |
+| `blocky` | Default dark 3D with multi-layer shadows and gradient overlays |
+| `fall-guys` | Bright cartoon style — solid black offset shadows, thick white borders, 16px radius |
+| `animal-crossing` | Flat cozy NookPhone style — soft diffused shadows, earthy tones, 30px containers, pill buttons |
 
-### Theme Features
-
-**Fall Guys Theme** includes:
-- Light cyan (`#64d4ff`) backgrounds
-- Solid black drop shadows (no transparency)
-- Purple gradient headers with white text
-- White borders on components
-- More rounded corners (16-20px)
-- Playful, cartoon-like aesthetic
+See [Theme Design Specs](https://raw-fun-gaming.github.io/blocky-ui/docs/themes/) for full details.
 
 ## Styling
 
@@ -197,7 +184,8 @@ blocky-ui/
 │       │   ├── _tag.css
 │       │   └── _page.css
 │       ├── themes/
-│       │   └── _fall-guys.css  # Fall Guys theme
+│       │   ├── _fall-guys.css
+│       │   └── _animal-crossing.css
 │       └── blocky-ui.css   # Main entry point
 ├── dist/                  # Built output (generated)
 │   ├── index.esm.js       # ES Module build
@@ -205,9 +193,9 @@ blocky-ui/
 │   ├── index.umd.js       # UMD build
 │   ├── index.d.ts         # TypeScript declarations
 │   └── blocky-ui.css      # Processed styles
-├── docs/                  # Documentation
-│   ├── docs/              # Jekyll documentation pages
-│   └── index.html         # GitHub Pages demo
+├── public/                # GitHub Pages source
+│   ├── index.html         # Live demo page
+│   └── docs/              # Jekyll documentation pages
 └── screenshots/           # Component screenshots
 ```
 
