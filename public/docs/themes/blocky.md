@@ -1,15 +1,15 @@
 ---
-title: Rfui (Default)
+title: Blocky (Default)
 layout: default
 parent: Themes
 nav_order: 1
 ---
 
-# Rfui Theme — Design Spec
+# Blocky Theme — Design Spec
 
 ## Context
 
-The **Rfui** theme is the default dark 3D aesthetic. Inspired by the Stack Rush multiplier tag component, it features multi-layer box shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
+The **Blocky** theme is the default dark 3D aesthetic. Inspired by the Stack Rush multiplier tag component, it features multi-layer box shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
 
 ## Theme Name
 

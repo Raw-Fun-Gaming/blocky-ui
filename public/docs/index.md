@@ -56,7 +56,7 @@ const button = RawFunUI.createButton({
 
 Raw Fun UI ships with 3 themes:
 
-- **Rfui** (default) — dark 3D blocky aesthetic
+- **Blocky** (default) — dark 3D blocky aesthetic
 - **Fall Guys** — bright cartoon style with white borders
 - **Animal Crossing** — flat cozy NookPhone style with earthy tones
 
