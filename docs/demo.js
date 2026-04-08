@@ -23,7 +23,8 @@ themeLabel.style.cssText = 'font-weight: bold; opacity: 0.9;';
 const themeDropdown = BlockyUI.createDropdown({
   options: [
     { value: 'blocky', label: 'Blocky (Default)' },
-    { value: 'fall-guys', label: 'Fall Guys' }
+    { value: 'fall-guys', label: 'Fall Guys' },
+    { value: 'animal-crossing', label: 'Animal Crossing' }
   ],
   value: 'blocky',
   variant: 'secondary',

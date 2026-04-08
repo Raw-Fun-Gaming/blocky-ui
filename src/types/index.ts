@@ -7,8 +7,9 @@ export type TitleColorTheme = 'yellow' | 'green' | 'blue' | 'purple' | 'red';
  * Available BlockyUI themes
  * - 'blocky': Default dark 3D blocky theme
  * - 'fall-guys': Bright, playful cartoon theme with white borders
+ * - 'animal-crossing': Flat, cozy theme with earthy tones and pill shapes
  */
-export type BlockyTheme = 'blocky' | 'fall-guys';
+export type BlockyTheme = 'blocky' | 'fall-guys' | 'animal-crossing';
 
 export interface BlockyButtonOptions {
   text: string;
