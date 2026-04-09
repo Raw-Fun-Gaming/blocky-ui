@@ -23,7 +23,7 @@ import type { RfuiTheme } from './types';
 // Main RawFunUI class with static factory methods
 export class RawFunUI {
   // Current theme
-  private static currentTheme: RfuiTheme = 'blocky';
+  private static currentTheme: RfuiTheme = 'vanilla';
 
   // Component creation methods
   static createButton = RfuiButton.create;
@@ -36,15 +36,13 @@ export class RawFunUI {
 
   /**
    * Sets the current theme for all RawFunUI components
-   * @param theme - The theme to apply ('blocky' | 'fall-guys')
+   * @param theme - The theme to apply ('vanilla' | 'blocky' | 'fall-guys' | 'animal-crossing')
    */
   static setTheme(theme: RfuiTheme): void {
     RawFunUI.currentTheme = theme;
-    if (theme === 'blocky') {
-      // Remove theme attribute for default theme
+    if (theme === 'vanilla') {
       document.documentElement.removeAttribute('data-rfui-theme');
     } else {
-      // Set theme attribute for custom themes
       document.documentElement.setAttribute('data-rfui-theme', theme);
     }
   }

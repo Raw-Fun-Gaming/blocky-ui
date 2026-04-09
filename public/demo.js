@@ -7,6 +7,9 @@
 // Accessing from window.RawFunUI.RawFunUI
 const RawFunUI = window.RawFunUI?.RawFunUI || window.RawFunUI;
 
+// Default to blocky theme for demo
+RawFunUI.setTheme('blocky');
+
 // ========================================
 // THEME SWITCHER
 // ========================================
@@ -23,6 +26,7 @@ themeLabel.style.cssText = 'font-weight: bold; opacity: 0.9;';
 const themeDropdown = RawFunUI.createDropdown({
   options: [
     { value: 'blocky', label: 'Blocky (Default)' },
+    { value: 'vanilla', label: 'Vanilla (No Theme)' },
     { value: 'fall-guys', label: 'Fall Guys' },
     { value: 'animal-crossing', label: 'Animal Crossing' }
   ],
