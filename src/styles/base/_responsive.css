@@ -1,7 +1,7 @@
 /* ========================================
    RESPONSIVE DESIGN MEDIA QUERIES
-   Mobile-first responsive design for all blocky components
-   Matches Stack Rush game breakpoints
+   Mobile-first responsive design for all rfui components
+   Shared breakpoints for all games
    ======================================== */
 
 /* ========================================
@@ -275,7 +275,7 @@
 
 /* ========================================
    SCROLLBAR STYLING
-   Consistent with Stack Rush theme
+   Consistent with rfui theme
    ======================================== */
 
 .rfui-modal-wrapper::-webkit-scrollbar,

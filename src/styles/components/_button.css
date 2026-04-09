@@ -1,6 +1,6 @@
 /* ========================================
    RFUI BUTTON COMPONENT
-   3D blocky button with pure CSS styling
+   Button with pure CSS styling
    ======================================== */
 
 /* ========================================
@@ -16,7 +16,7 @@
 
 /* ========================================
    BUTTON ELEMENT
-   The actual button with 3D blocky effects
+   The actual button element
    ======================================== */
 
 .rfui-btn {

@@ -1,6 +1,6 @@
 /* ========================================
    SHARED COMPONENT STYLES
-   Base styles used across multiple blocky components
+   Base styles used across multiple rfui components
    ======================================== */
 
 /* ========================================
@@ -187,7 +187,7 @@
 
 /* ========================================
    DISABLED STATE (SHARED)
-   Only affects blocky components
+   Only affects rfui components
    ======================================== */
 
 .rfui-disabled,
