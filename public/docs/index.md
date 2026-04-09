@@ -7,7 +7,7 @@ permalink: /docs/
 
 # Raw Fun UI
 
-Welcome to the **Raw Fun UI** documentation! A lightweight, zero-dependency TypeScript UI component library for 3D rfui-themed interfaces.
+Welcome to the **Raw Fun UI** documentation! A lightweight, zero-dependency TypeScript UI component library for themeable game UI interfaces.
 
 [Live Demo]({{ site.baseurl }}/){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [GitHub](https://github.com/Raw-Fun-Gaming/raw-fun-ui){: .btn .fs-5 .mb-4 .mb-md-0 }
@@ -70,4 +70,4 @@ RawFunUI.setTheme('animal-crossing');
 - **Simplicity First**: Easy to use, minimal API surface
 - **Performance Focused**: Pure CSS for maximum performance
 - **Modular Architecture**: Use only what you need
-- **Casino Game Aesthetic**: Inspired by Stack Rush multiplier tags
+- **Casino Game Aesthetic**: Designed for casino and casual gaming UIs

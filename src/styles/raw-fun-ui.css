@@ -2,7 +2,7 @@
    RAW FUN UI - MODULAR CSS ARCHITECTURE
 
    A lightweight, zero-dependency TypeScript UI component library
-   for 3D rfui-themed interfaces.
+   for themeable game UI interfaces.
 
    Features:
    - Pure CSS 3D depth effects (no SVG)
@@ -39,7 +39,7 @@
 
 /* ========================================
    COMPONENTS
-   Individual component styles with 3D blocky effects
+   Individual component styles
    ======================================== */
 
 @import url('./components/_button.css');
@@ -67,12 +67,12 @@
    ├── base/
    │   ├── _variables.css         # CSS custom properties and design tokens
    │   ├── _shared.css            # Shared component styles and utilities
-   │   └── _responsive.css        # Mobile-first responsive design (matches Stack Rush breakpoints)
+   │   └── _responsive.css        # Mobile-first responsive design
    ├── animations/
    │   ├── _keyframes.css         # All animation definitions
    │   └── _hover-effects.css     # Interactive 3D hover states
    └── components/
-       ├── _button.css            # 3D blocky button styles
+       ├── _button.css            # Button styles
        ├── _modal.css             # Modal component styles
        ├── _card.css              # Card component styles
        ├── _info.css              # Info overlay styles with color themes
@@ -84,7 +84,7 @@
    - Gradient backgrounds with radial overlays
    - Component isolation for maintainability
    - Animation system with performance optimization
-   - Responsive design matching Stack Rush game breakpoints
+   - Responsive design with mobile-first breakpoints
 
    3D Depth System:
    - Base shadow: 0 4px 0 rgba(0, 0, 0, 0.3)

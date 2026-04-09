@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Raw Fun UI is a lightweight, 3D rfui-themed UI component library built with TypeScript and pure CSS. It provides casino-game-style UI components with distinctive 3D depth effects, gradient backgrounds, and blocky aesthetics.
+Raw Fun UI is a lightweight, themeable UI component library built with TypeScript and pure CSS. It provides casino-game-style UI components with configurable themes, gradient backgrounds, and depth effects.
 
-**Design Inspiration**: The library's visual style is inspired by the multiplierTag component from Stack Rush, featuring multi-layer box-shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
+**Origin**: Built as a configurable UI package that works across all games with minimal config for fast prototyping. The default blocky theme features multi-layer box-shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
 
 ## Tech Stack
 
@@ -18,7 +18,7 @@ Raw Fun UI is a lightweight, 3D rfui-themed UI component library built with Type
 
 ## Core Design Philosophy
 
-### 3D Rfui Aesthetic
+### Blocky Theme Aesthetic (Default)
 
 The library's signature look is achieved through:
 
@@ -326,10 +326,10 @@ All styling uses CSS variables for consistency and easy theming:
 
 ### Scoped Disabled State
 
-**IMPORTANT**: Disabled styles only affect blocky components to avoid conflicts:
+**IMPORTANT**: Disabled styles only affect rfui components to avoid conflicts:
 
 ```css
-/* ✅ Correct - Scoped to blocky components */
+/* ✅ Correct - Scoped to rfui components */
 .rfui-disabled,
 .rfui-btn[disabled],
 .rfui-btn-wrapper [disabled],
@@ -759,6 +759,6 @@ When adding new components or modifying existing ones:
 
 ## Related Projects
 
-- **Stack Rush**: Original project where the blocky aesthetic was born
+- **Stack Rush**: First game to use Raw Fun UI
 - **Crowd Rush**: First project to adopt the Fall Guys theme
 - **Raw Fun Game Engine**: Casino game framework that raw-fun-ui integrates with

@@ -9,7 +9,7 @@ nav_order: 1
 
 ## Context
 
-The **Blocky** theme is the default dark 3D aesthetic. Inspired by the Stack Rush multiplier tag component, it features multi-layer box shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
+The **Blocky** theme is the default dark 3D aesthetic. It features multi-layer box shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
 
 ## Theme Name
 

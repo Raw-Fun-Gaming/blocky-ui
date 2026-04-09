@@ -8,7 +8,7 @@ A game-themed UI component library with switchable themes, built with TypeScript
 
 ## 🚀 Motivation
 
-Inspired by the multiplier tags in Stack Rush, I wanted to create a lightweight UI library that brings that distinctive 3D blocky aesthetic to any web project. Unlike heavy framework-dependent UI libraries, Raw Fun UI is:
+A configurable UI package that works across all our games with minimal config for fast prototyping. Unlike heavy framework-dependent UI libraries, Raw Fun UI is:
 
 - **Zero Framework Dependencies** - Works with vanilla JavaScript/TypeScript
 - **Pure CSS Effects** - Multi-layer box shadows for authentic 3D depth
@@ -148,10 +148,6 @@ The components feature:
 - **Memory Efficient**: Minimal memory footprint
 - **Event-Driven**: Clean event handling
 - **Responsive**: Adapts to different screen sizes
-
-## 🖼️ Credits
-
-**Design Inspiration**: [Stack Rush](https://github.com/raw-fun-gaming) multiplier tags - The distinctive 3D blocky aesthetic with multi-layer box shadows and gradient backgrounds.
 
 ## 📁 File Structure
 

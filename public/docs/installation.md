@@ -58,7 +58,7 @@ document.body.appendChild(button);
 
 ### 3. Test It Out
 
-Open your application and you should see a beautiful 3D blocky button!
+Open your application and you should see a beautiful rfui button!
 
 ## TypeScript Configuration
 

@@ -128,7 +128,7 @@ dropdownsContainer.appendChild(disabledContainer);
 
 const cardsContainer = document.getElementById('cards-container');
 const cardData = [
-  { title: 'Default Card', content: 'This is a 3D blocky card with gradient styling.', variant: 'default' },
+  { title: 'Default Card', content: 'This is a card with gradient styling.', variant: 'default' },
   { title: 'Primary Card', content: 'Hover over the card to see the lifting effect.', variant: 'primary' },
   { title: 'Secondary Card', content: 'All components use pure CSS for 3D depth.', variant: 'secondary' }
 ];
@@ -365,7 +365,7 @@ RawFunUI.showNotification('Success!', 'Operation completed.');
       <p>GitHub: <a href="https://github.com/fuR-Gaming/raw-fun-ui" style="color: var(--rfui-primary);">fuR-Gaming/raw-fun-ui</a></p>
 
       <h2>Credits</h2>
-      <p>Design inspired by Stack Rush's multiplierTag component. Built with Claude Code.</p>
+      <p>Built with Claude Code by Raw Fun Gaming.</p>
 
       <p style="margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 6px;">
         <em>Scroll down to test the animated gradient border behavior with long content...</em>
