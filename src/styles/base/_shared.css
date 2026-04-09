@@ -103,7 +103,7 @@
    ======================================== */
 
 .rfui-3d {
-  border: var(--rfui-border-width) solid transparent;
+  border: var(--rfui-border-width) solid rgba(0, 0, 0, 0.15);
   border-radius: var(--rfui-border-radius);
   backdrop-filter: var(--rfui-blur-md);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
@@ -154,10 +154,10 @@
   width: 32px;
   height: 32px;
   padding: 0;
-  border: var(--rfui-border-width-thin) solid transparent;
+  border: var(--rfui-border-width-thin) solid rgba(0, 0, 0, 0.15);
   border-radius: var(--rfui-border-radius-sm);
-  background: transparent;
-  color: inherit;
+  background: #f0f0f0;
+  color: #333;
   font-size: var(--rfui-font-lg);
   font-weight: var(--rfui-font-weight-bold);
   cursor: pointer;

@@ -15,8 +15,8 @@
   transform: translateX(-50%);
   min-width: var(--rfui-tag-min-width);
   padding: var(--rfui-padding-sm) var(--rfui-padding-lg);
-  background: transparent;
-  border: var(--rfui-border-width) solid transparent;
+  background: #ffffff;
+  border: var(--rfui-border-width) solid rgba(0, 0, 0, 0.15);
   border-radius: var(--rfui-border-radius);
   backdrop-filter: var(--rfui-blur-md);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
@@ -45,22 +45,26 @@
 
 /* Default variant */
 .rfui-tag-wrapper.default {
-  background: transparent;
+  background: var(--rfui-button-default);
+  color: #fff;
 }
 
 /* Primary variant */
 .rfui-tag-wrapper.primary {
-  background: transparent;
+  background: var(--rfui-button-primary);
+  color: #fff;
 }
 
 /* Secondary variant */
 .rfui-tag-wrapper.secondary {
-  background: transparent;
+  background: var(--rfui-button-secondary);
+  color: #fff;
 }
 
 /* Danger variant */
 .rfui-tag-wrapper.danger {
-  background: transparent;
+  background: var(--rfui-button-danger);
+  color: #fff;
 }
 
 /* ========================================

@@ -17,8 +17,8 @@
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-  background: transparent;
-  border: var(--rfui-border-width) solid transparent;
+  background: #ffffff;
+  border: var(--rfui-border-width) solid rgba(0, 0, 0, 0.15);
   border-radius: var(--rfui-border-radius-lg);
   backdrop-filter: var(--rfui-blur-lg);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);

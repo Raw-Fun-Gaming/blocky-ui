@@ -46,7 +46,8 @@
    ======================================== */
 
 .rfui-btn.default {
-  background: transparent;
+  background: var(--rfui-button-default);
+  color: #fff;
 }
 
 .rfui-btn.default::before {
@@ -59,7 +60,8 @@
    ======================================== */
 
 .rfui-btn.primary {
-  background: transparent;
+  background: var(--rfui-button-primary);
+  color: #fff;
 }
 
 .rfui-btn.primary::before {
@@ -72,7 +74,8 @@
    ======================================== */
 
 .rfui-btn.secondary {
-  background: transparent;
+  background: var(--rfui-button-secondary);
+  color: #fff;
 }
 
 .rfui-btn.secondary::before {
@@ -85,7 +88,8 @@
    ======================================== */
 
 .rfui-btn.danger {
-  background: transparent;
+  background: var(--rfui-button-danger);
+  color: #fff;
 }
 
 .rfui-btn.danger::before {

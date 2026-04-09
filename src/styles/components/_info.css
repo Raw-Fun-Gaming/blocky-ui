@@ -13,8 +13,8 @@
   min-width: var(--rfui-info-min-width);
   max-width: min(500px, calc(100% - 80px));
   padding: var(--rfui-padding-xl);
-  background: transparent;
-  border: var(--rfui-border-width) solid transparent;
+  background: #ffffff;
+  border: var(--rfui-border-width) solid rgba(0, 0, 0, 0.15);
   border-radius: var(--rfui-border-radius-lg);
   backdrop-filter: var(--rfui-blur-lg);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
@@ -69,29 +69,29 @@
    Different color themes for info title
    ======================================== */
 
-/* Yellow Theme (vanilla: structural only, visuals via theme) */
+/* Yellow Theme */
 .rfui-info-wrapper.theme-yellow .rfui-info-title {
-  color: inherit;
+  color: var(--rfui-info-yellow);
 }
 
 /* Green Theme */
 .rfui-info-wrapper.theme-green .rfui-info-title {
-  color: inherit;
+  color: var(--rfui-info-green);
 }
 
 /* Blue Theme */
 .rfui-info-wrapper.theme-blue .rfui-info-title {
-  color: inherit;
+  color: var(--rfui-info-blue);
 }
 
 /* Purple Theme */
 .rfui-info-wrapper.theme-purple .rfui-info-title {
-  color: inherit;
+  color: var(--rfui-info-purple);
 }
 
 /* Red Theme */
 .rfui-info-wrapper.theme-red .rfui-info-title {
-  color: inherit;
+  color: var(--rfui-info-red);
 }
 
 /* ========================================

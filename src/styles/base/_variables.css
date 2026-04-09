@@ -8,45 +8,45 @@
      COLOR PALETTE
      ======================================== */
 
-  /* Primary Colors (vanilla: neutral, themed via data-rfui-theme) */
-  --rfui-primary: transparent;
-  --rfui-primary-dark: transparent;
-  --rfui-success: transparent;
-  --rfui-warning: transparent;
-  --rfui-danger: transparent;
+  /* Primary Colors (vanilla: minimal neutral defaults) */
+  --rfui-primary: #4a90d9;
+  --rfui-primary-dark: #357abd;
+  --rfui-success: #5cb85c;
+  --rfui-warning: #f0ad4e;
+  --rfui-danger: #d9534f;
 
   /* Button Variant Colors */
-  --rfui-button-default: transparent;
-  --rfui-button-primary: transparent;
-  --rfui-button-secondary: transparent;
-  --rfui-button-danger: transparent;
+  --rfui-button-default: #6c757d;
+  --rfui-button-primary: #4a90d9;
+  --rfui-button-secondary: #5bc0de;
+  --rfui-button-danger: #d9534f;
 
   /* Text Colors */
-  --rfui-text-primary: inherit;
-  --rfui-text-secondary: inherit;
-  --rfui-text-disabled: inherit;
+  --rfui-text-primary: #222222;
+  --rfui-text-secondary: #555555;
+  --rfui-text-disabled: #999999;
 
   /* Background Colors */
-  --rfui-overlay-modal: transparent;
-  --rfui-overlay-info: transparent;
-  --rfui-bg-dark: transparent;
+  --rfui-overlay-modal: rgba(0, 0, 0, 0.5);
+  --rfui-overlay-info: rgba(0, 0, 0, 0.3);
+  --rfui-bg-dark: rgba(0, 0, 0, 0.05);
 
   /* Info Title Colors */
-  --rfui-info-yellow: transparent;
-  --rfui-info-green: transparent;
-  --rfui-info-blue: transparent;
-  --rfui-info-purple: transparent;
-  --rfui-info-red: transparent;
+  --rfui-info-yellow: #f0ad4e;
+  --rfui-info-green: #5cb85c;
+  --rfui-info-blue: #4a90d9;
+  --rfui-info-purple: #8e44ad;
+  --rfui-info-red: #d9534f;
 
   /* ========================================
      3D DEPTH EFFECTS
      ======================================== */
 
-  /* Box Shadow Layers (vanilla: none, themed via data-rfui-theme) */
-  --rfui-shadow-base: none;
-  --rfui-shadow-far: none;
-  --rfui-shadow-hover: none;
-  --rfui-shadow-active: none;
+  /* Box Shadow Layers (vanilla: subtle defaults) */
+  --rfui-shadow-base: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --rfui-shadow-far: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --rfui-shadow-hover: 0 3px 10px rgba(0, 0, 0, 0.15);
+  --rfui-shadow-active: 0 1px 2px rgba(0, 0, 0, 0.1);
 
   /* Inset Highlights */
   --rfui-inset-highlight: none;
@@ -152,7 +152,7 @@
      PAGE BORDER GRADIENT COLORS
      Animated gradient colors for page borders
      ======================================== */
-  --rfui-page-border-color-1: transparent;
-  --rfui-page-border-color-2: transparent;
-  --rfui-page-border-color-3: transparent;
+  --rfui-page-border-color-1: rgba(0, 0, 0, 0.1);
+  --rfui-page-border-color-2: rgba(0, 0, 0, 0.08);
+  --rfui-page-border-color-3: rgba(0, 0, 0, 0.05);
 }
