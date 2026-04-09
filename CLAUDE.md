@@ -593,22 +593,35 @@ Use defined z-index variables for consistent layering:
 
 ### Adding a New Theme
 
-4 files need to be touched when adding a new theme:
+5 files need to be touched when adding a new theme:
 
 1. **Create theme CSS**: `src/styles/themes/_your-theme.css`
    - Use `[data-rfui-theme='your-theme']` selector for all overrides
-   - Follow the structure of `_fall-guys.css` or `_animal-crossing.css` as a template
+   - Theme must be SELF-CONTAINED — provide ALL visual properties (base CSS is vanilla/structural only)
+   - Follow the structure of `_blocky.css`, `_fall-guys.css`, or `_animal-crossing.css` as a template
    - Override CSS variables first (colors, shadows, borders, radii, typography)
    - Then add component-specific overrides (buttons, modals, cards, info, tags, pages, dropdowns, close buttons)
    - Remember to set `::before { background: none; }` on components if suppressing radial overlays
-2. **Import in CSS entry**: Add `@import url('./themes/_your-theme.css');` to `src/styles/raw-fun-ui.css` (after existing theme imports)
-3. **Update type**: Add theme name to `RfuiTheme` union in `src/types/index.ts`
-4. **Update demo**: Add option to theme dropdown in `docs/demo.js` (search for the `createDropdown` options array)
+2. **Create CSS entry**: Add `src/styles/theme-your-theme.css` that imports the theme file
+3. **Import in CSS entry**: Add `@import url('./themes/_your-theme.css');` to `src/styles/raw-fun-ui.css` (after existing theme imports)
+4. **Update type**: Add theme name to `RfuiTheme` union in `src/types/index.ts`
+5. **Update demo**: Add option to theme dropdown in `public/demo.js` (search for the `createDropdown` options array)
 
-**Existing themes for reference**:
-- `blocky` (default) — dark 3D blocky aesthetic, defined in base styles
+**Theme architecture**:
+- `vanilla` — structural base with no visual opinion (layout, sizing, typography, transitions)
+- `blocky` — dark 3D blocky aesthetic with multi-layer shadows and gradient overlays
 - `fall-guys` — bright cartoon style, solid black offset shadows, thick white borders, 16px radius
 - `animal-crossing` — flat cozy NookPhone style, soft diffused shadows, earthy tones, 30px containers, 999px pill buttons
+
+**CSS imports** — consumers can import only what they need:
+```typescript
+// All-in-one (backwards compatible, all themes included)
+import 'raw-fun-ui/styles';
+
+// Granular — only ship the theme you use
+import 'raw-fun-ui/styles/vanilla';
+import 'raw-fun-ui/styles/blocky';
+```
 
 ### Creating a New Component
 

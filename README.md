@@ -98,16 +98,32 @@ confirmModal.show();
 Switch themes at runtime:
 
 ```typescript
-RawFunUI.setTheme('fall-guys');
-RawFunUI.setTheme('animal-crossing');
-RawFunUI.setTheme('blocky'); // default
+RawFunUI.setTheme('blocky');           // dark 3D aesthetic
+RawFunUI.setTheme('fall-guys');        // bright cartoon style
+RawFunUI.setTheme('animal-crossing');  // flat cozy NookPhone style
+RawFunUI.setTheme('vanilla');          // structural base, no visual opinion
 ```
 
 | Theme | Description |
 |-------|-------------|
-| `blocky` | Default dark 3D with multi-layer shadows and gradient overlays |
+| `vanilla` | Structural base with no visual opinion — layout, sizing, transitions only |
+| `blocky` | Dark 3D with multi-layer shadows and gradient overlays |
 | `fall-guys` | Bright cartoon style — solid black offset shadows, thick white borders, 16px radius |
 | `animal-crossing` | Flat cozy NookPhone style — soft diffused shadows, earthy tones, 30px containers, pill buttons |
+
+### Granular CSS imports
+
+Import only the theme you need to reduce bundle size:
+
+```typescript
+// All-in-one (backwards compatible, all themes included)
+import 'raw-fun-ui/styles';
+
+// Minimal — only ship the theme you use
+import 'raw-fun-ui/styles/vanilla';
+import 'raw-fun-ui/styles/blocky';
+RawFunUI.setTheme('blocky');
+```
 
 See [Theme Design Specs](https://raw-fun-gaming.github.io/raw-fun-ui/docs/themes/) for full details.
 

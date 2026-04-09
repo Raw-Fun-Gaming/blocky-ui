@@ -36,6 +36,10 @@ jobs:
         test -f dist/index.cjs.js || exit 1
         test -f dist/index.d.ts || exit 1
         test -f dist/raw-fun-ui.css || exit 1
+        test -f dist/vanilla.css || exit 1
+        test -f dist/themes/blocky.css || exit 1
+        test -f dist/themes/fall-guys.css || exit 1
+        test -f dist/themes/animal-crossing.css || exit 1
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4

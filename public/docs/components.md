@@ -345,7 +345,7 @@ RawFunUI.showConfirmation(
 ### setTheme
 
 ```typescript
-RawFunUI.setTheme(theme: 'blocky' | 'fall-guys' | 'animal-crossing'): void
+RawFunUI.setTheme(theme: 'vanilla' | 'blocky' | 'fall-guys' | 'animal-crossing'): void
 ```
 
 ---
