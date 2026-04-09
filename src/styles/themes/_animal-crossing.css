@@ -123,6 +123,22 @@
   --rfui-header-red: linear-gradient(180deg, #d06868 0%, #c45c5c 100%);
 
   /* ========================================
+     INFO TITLE COLORS
+     ======================================== */
+  --rfui-info-yellow: #d69632;
+  --rfui-info-green: #34a09c;
+  --rfui-info-blue: #1f526e;
+  --rfui-info-purple: #8b7bb5;
+  --rfui-info-red: #c45c5c;
+
+  /* ========================================
+     BACKDROP BLUR - None (flat design)
+     ======================================== */
+  --rfui-blur-sm: none;
+  --rfui-blur-md: none;
+  --rfui-blur-lg: none;
+
+  /* ========================================
      GAME ENGINE DESIGN TOKENS
      ======================================== */
 
@@ -484,13 +500,83 @@
    ======================================== */
 
 [data-rfui-theme='animal-crossing'] .rfui-tag-wrapper {
-  border: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.2);
+  background: #fffbed;
+  border: var(--rfui-border-width-thin) solid var(--rfui-border-color);
   border-radius: 999px;
   box-shadow: var(--rfui-shadow-base);
 }
 
+/* Remove radial overlay */
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper::before {
+  background: none;
+}
+
 [data-rfui-theme='animal-crossing'] .rfui-tag {
   color: var(--rfui-text-primary);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-tag-content {
+  color: var(--rfui-text-primary);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-tag-header {
+  border-bottom-color: rgba(31, 82, 110, 0.08);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-tag-title {
+  text-shadow: none;
+}
+
+/* Default tag - Brown/Wood */
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper.default {
+  background: linear-gradient(
+    180deg,
+    #a08a70 0%,
+    #937c60 100%
+  );
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper.default .rfui-tag-content {
+  color: var(--rfui-text-light);
+}
+
+/* Primary tag - Teal */
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper.primary {
+  background: linear-gradient(
+    180deg,
+    #3db0a8 0%,
+    #34a09c 100%
+  );
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper.primary .rfui-tag-content {
+  color: var(--rfui-text-light);
+}
+
+/* Secondary tag - Amber */
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper.secondary {
+  background: linear-gradient(
+    180deg,
+    #e0a840 0%,
+    #d69632 100%
+  );
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper.secondary .rfui-tag-content {
+  color: var(--rfui-text-primary);
+}
+
+/* Danger tag - Muted Red */
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper.danger {
+  background: linear-gradient(
+    180deg,
+    #d06868 0%,
+    #c45c5c 100%
+  );
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-tag-wrapper.danger .rfui-tag-content {
+  color: var(--rfui-text-light);
 }
 
 /* ========================================
@@ -520,10 +606,71 @@
 }
 
 /* ========================================
+   OVERLAYS - Soft earthy backgrounds
+   ======================================== */
+
+[data-rfui-theme='animal-crossing'] .rfui-modal-overlay {
+  background: var(--rfui-overlay-modal);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-info-overlay {
+  background: var(--rfui-overlay-info);
+}
+
+/* ========================================
+   SHARED 3D & GRADIENT OVERRIDES
+   Provide border-color for .rfui-3d, suppress radial overlay
+   ======================================== */
+
+[data-rfui-theme='animal-crossing'] .rfui-3d {
+  border-color: var(--rfui-border-color);
+}
+
+/* Remove radial overlay globally (flat design) */
+[data-rfui-theme='animal-crossing'] .rfui-gradient::before {
+  background: none;
+}
+
+/* ========================================
+   HEADER BORDERS
+   ======================================== */
+
+[data-rfui-theme='animal-crossing'] .rfui-header-bordered {
+  border-bottom-color: rgba(31, 82, 110, 0.08);
+}
+
+/* ========================================
+   CARD TITLE BORDER
+   ======================================== */
+
+[data-rfui-theme='animal-crossing'] .rfui-card-title {
+  border-bottom-color: transparent;
+}
+
+/* ========================================
+   SCROLLBAR COLORS
+   ======================================== */
+
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper.custom-scrollbar:hover::-webkit-scrollbar-track,
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper.custom-scrollbar.scrolling::-webkit-scrollbar-track {
+  background: rgba(31, 82, 110, 0.06);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper.custom-scrollbar:hover::-webkit-scrollbar-thumb,
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper.custom-scrollbar.scrolling::-webkit-scrollbar-thumb {
+  background: rgba(31, 82, 110, 0.15);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-page-wrapper.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(31, 82, 110, 0.25) !important;
+}
+
+/* ========================================
    DROPDOWNS - Pill shaped
    ======================================== */
 
 [data-rfui-theme='animal-crossing'] .rfui-dropdown {
+  border-color: var(--rfui-border-color);
   border-radius: 999px;
   border-width: var(--rfui-border-width);
   box-shadow: var(--rfui-shadow-base);
@@ -563,4 +710,10 @@
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, #d06868 0%, #c45c5c 50%, #b04e4e 100%);
   color: var(--rfui-text-light);
+}
+
+/* Dropdown options */
+[data-rfui-theme='animal-crossing'] .rfui-dropdown option {
+  background: #fffbed;
+  color: var(--rfui-text-primary);
 }

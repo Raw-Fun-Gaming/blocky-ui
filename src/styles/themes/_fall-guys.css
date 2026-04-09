@@ -128,6 +128,22 @@
   --rfui-header-red: linear-gradient(180deg, #ff8585 0%, #ff6b6b 100%);
 
   /* ========================================
+     INFO TITLE COLORS
+     ======================================== */
+  --rfui-info-yellow: #f5a623;
+  --rfui-info-green: #4cd964;
+  --rfui-info-blue: #0984e3;
+  --rfui-info-purple: #9b59b6;
+  --rfui-info-red: #ff6b6b;
+
+  /* ========================================
+     BACKDROP BLUR - None (bright cartoon style)
+     ======================================== */
+  --rfui-blur-sm: none;
+  --rfui-blur-md: none;
+  --rfui-blur-lg: none;
+
+  /* ========================================
      GAME ENGINE DESIGN TOKENS
      Override --game-* tokens for light theme
      ======================================== */
@@ -557,10 +573,146 @@
 }
 
 /* ========================================
+   OVERLAYS - Light blue backgrounds
+   ======================================== */
+
+[data-rfui-theme='fall-guys'] .rfui-modal-overlay {
+  background: var(--rfui-overlay-modal);
+}
+
+[data-rfui-theme='fall-guys'] .rfui-info-overlay {
+  background: var(--rfui-overlay-info);
+}
+
+/* ========================================
+   SHARED 3D & GRADIENT OVERRIDES
+   Provide border-color and radial overlay for .rfui-3d / .rfui-gradient
+   ======================================== */
+
+[data-rfui-theme='fall-guys'] .rfui-3d {
+  border-color: var(--rfui-border-color);
+}
+
+[data-rfui-theme='fall-guys'] .rfui-gradient::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+}
+
+/* ========================================
+   HEADER BORDERS
+   ======================================== */
+
+[data-rfui-theme='fall-guys'] .rfui-header-bordered {
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   CARD TITLE BORDER
+   ======================================== */
+
+[data-rfui-theme='fall-guys'] .rfui-card-title {
+  border-bottom-color: transparent;
+}
+
+/* ========================================
+   TAG VARIANTS
+   Colored tags for different types
+   ======================================== */
+
+[data-rfui-theme='fall-guys'] .rfui-tag-wrapper::before {
+  background: radial-gradient(circle at center top, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+}
+
+[data-rfui-theme='fall-guys'] .rfui-tag-content {
+  color: var(--rfui-text-primary);
+}
+
+[data-rfui-theme='fall-guys'] .rfui-tag-header {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-rfui-theme='fall-guys'] .rfui-tag-title {
+  text-shadow: var(--rfui-text-shadow-sm);
+}
+
+/* Default tag - Light cyan */
+[data-rfui-theme='fall-guys'] .rfui-tag-wrapper.default {
+  background: linear-gradient(
+    180deg,
+    #7ee0ff 0%,
+    #64d4ff 50%,
+    #4ac8f5 100%
+  );
+}
+
+/* Primary tag - Hot pink */
+[data-rfui-theme='fall-guys'] .rfui-tag-wrapper.primary {
+  background: linear-gradient(
+    180deg,
+    #ff6eb0 0%,
+    #ff5096 50%,
+    #e6407d 100%
+  );
+  color: #ffffff;
+}
+
+[data-rfui-theme='fall-guys'] .rfui-tag-wrapper.primary .rfui-tag-content {
+  color: #ffffff;
+}
+
+/* Secondary tag - Purple */
+[data-rfui-theme='fall-guys'] .rfui-tag-wrapper.secondary {
+  background: linear-gradient(
+    180deg,
+    #b370d4 0%,
+    #9b59b6 50%,
+    #8447a0 100%
+  );
+  color: #ffffff;
+}
+
+[data-rfui-theme='fall-guys'] .rfui-tag-wrapper.secondary .rfui-tag-content {
+  color: #ffffff;
+}
+
+/* Danger tag - Coral red */
+[data-rfui-theme='fall-guys'] .rfui-tag-wrapper.danger {
+  background: linear-gradient(
+    180deg,
+    #ff8585 0%,
+    #ff6b6b 50%,
+    #e65555 100%
+  );
+  color: #ffffff;
+}
+
+[data-rfui-theme='fall-guys'] .rfui-tag-wrapper.danger .rfui-tag-content {
+  color: #ffffff;
+}
+
+/* ========================================
+   SCROLLBAR COLORS
+   ======================================== */
+
+[data-rfui-theme='fall-guys'] .rfui-page-wrapper.custom-scrollbar:hover::-webkit-scrollbar-track,
+[data-rfui-theme='fall-guys'] .rfui-page-wrapper.custom-scrollbar.scrolling::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+[data-rfui-theme='fall-guys'] .rfui-page-wrapper.custom-scrollbar:hover::-webkit-scrollbar-thumb,
+[data-rfui-theme='fall-guys'] .rfui-page-wrapper.custom-scrollbar.scrolling::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+[data-rfui-theme='fall-guys'] .rfui-page-wrapper.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ========================================
    FALL GUYS THEME - DROPDOWN
    ======================================== */
 
 [data-rfui-theme='fall-guys'] .rfui-dropdown {
+  border-color: var(--rfui-border-color);
   border-radius: var(--rfui-border-radius);
   border-width: var(--rfui-border-width);
   box-shadow: var(--rfui-shadow-base);
@@ -600,4 +752,10 @@
     linear-gradient(135deg, currentColor 50%, transparent 50%),
     linear-gradient(180deg, #ff8585 0%, #ff6b6b 50%, #e63946 100%);
   color: #ffffff;
+}
+
+/* Dropdown options */
+[data-rfui-theme='fall-guys'] .rfui-dropdown option {
+  background: #64d4ff;
+  color: var(--rfui-text-primary);
 }
