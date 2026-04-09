@@ -38,7 +38,12 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && npm run build:themes",
+    "build:themes": "mkdir -p dist/themes && npm run build:vanilla && npm run build:blocky && npm run build:fall-guys && npm run build:animal-crossing",
+    "build:vanilla": "postcss src/styles/vanilla.css -o dist/vanilla.css --no-map",
+    "build:blocky": "postcss src/styles/theme-blocky.css -o dist/themes/blocky.css --no-map",
+    "build:fall-guys": "postcss src/styles/theme-fall-guys.css -o dist/themes/fall-guys.css --no-map",
+    "build:animal-crossing": "postcss src/styles/theme-animal-crossing.css -o dist/themes/animal-crossing.css --no-map",
     "build:watch": "rollup -c -w",
     "dev": "npm run build:watch",
     "demo": "npm run build && cp dist/raw-fun-ui.css dist/index.umd.js public/ && python3 -m http.server 8002 --directory public & sleep 3 && open http://localhost:8002/index.html",
@@ -50,6 +55,7 @@
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@rollup/plugin-terser": "^0.4.0",
     "@rollup/plugin-typescript": "^11.0.0",
+    "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
     "rollup": "^3.0.0",
     "rollup-plugin-dts": "^6.0.0",
@@ -64,6 +70,10 @@
       "types": "./dist/index.d.ts"
     },
     "./styles": "./dist/raw-fun-ui.css",
+    "./styles/vanilla": "./dist/vanilla.css",
+    "./styles/blocky": "./dist/themes/blocky.css",
+    "./styles/fall-guys": "./dist/themes/fall-guys.css",
+    "./styles/animal-crossing": "./dist/themes/animal-crossing.css",
     "./dist/raw-fun-ui.css": "./dist/raw-fun-ui.css"
   }
 }
