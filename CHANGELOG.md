@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-04-09
+
+### Added
+- **Vanilla base theme**: Structural-only CSS base with no visual opinion
+- **Granular CSS imports**: Import only the theme you need (`raw-fun-ui/styles/vanilla`, `raw-fun-ui/styles/blocky`, etc.)
+- **Blocky theme file**: Extracted all blocky visual styles into a self-contained `_blocky.css` theme
+- **Vanilla option in demo**: Theme switcher now includes "Vanilla (No Theme)" option
+
+### Changed
+- Base CSS is now vanilla (layout, sizing, typography only) — visual styles come from themes
+- Fall Guys and Animal Crossing themes are now fully self-contained
+- Default `RfuiTheme` is `'vanilla'` — demo defaults to blocky via `setTheme('blocky')`
+- `RfuiTheme` type now includes `'vanilla'`
+
 ## [2.0.1] - 2026-04-09
 
 ### Fixed
