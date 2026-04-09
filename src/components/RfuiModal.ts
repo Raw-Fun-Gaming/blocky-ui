@@ -9,7 +9,7 @@ export interface RfuiModalInstance {
 
 export class RfuiModal {
   /**
-   * Creates a 3D rfui-themed modal with backdrop blur and pure CSS styling
+   * Creates a themed modal with backdrop blur and pure CSS styling
    * Returns an instance with show() and close() methods
    */
   static create(options: RfuiModalOptions): RfuiModalInstance {

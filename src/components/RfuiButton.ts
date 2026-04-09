@@ -2,7 +2,7 @@ import type { RfuiButtonOptions } from '../types';
 
 export class RfuiButton {
   /**
-   * Creates a 3D rfui-themed button with pure CSS styling
+   * Creates a themed button with pure CSS styling
    */
   static create(options: RfuiButtonOptions): HTMLButtonElement {
     // Create button wrapper

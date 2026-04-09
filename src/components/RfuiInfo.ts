@@ -2,7 +2,7 @@ import type { RfuiInfoOptions } from '../types';
 
 export class RfuiInfo {
   /**
-   * Create an info overlay with 3D blocky styling and color themes
+   * Creates a themed info overlay with color variants
    */
   static create(options: RfuiInfoOptions): HTMLDivElement {
     // Create info overlay with transparent blur

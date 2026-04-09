@@ -2,7 +2,7 @@ import type { RfuiDropdownOptions } from '../types';
 
 export class RfuiDropdown {
   /**
-   * Creates a 3D rfui-themed dropdown with pure CSS styling
+   * Creates a themed dropdown with pure CSS styling
    */
   static create(options: RfuiDropdownOptions): HTMLDivElement {
     // Create dropdown wrapper

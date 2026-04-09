@@ -5,7 +5,7 @@ export type TitleColorTheme = 'yellow' | 'green' | 'blue' | 'purple' | 'red';
 
 /**
  * Available RawFunUI themes
- * - 'blocky': Default dark 3D blocky theme
+ * - 'blocky': Default dark blocky theme
  * - 'fall-guys': Bright, playful cartoon theme with white borders
  * - 'animal-crossing': Flat, cozy theme with earthy tones and pill shapes
  */

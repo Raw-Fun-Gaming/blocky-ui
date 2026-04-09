@@ -2,7 +2,7 @@ import type { RfuiTagOptions } from '../types';
 
 export class RfuiTag {
   /**
-   * Creates a 3D rfui-themed tag (compact display element)
+   * Creates a themed tag (compact display element)
    */
   static create(options: RfuiTagOptions): HTMLDivElement {
     // Create tag wrapper

@@ -2,7 +2,7 @@ import type { RfuiCardOptions } from '../types';
 
 export class RfuiCard {
   /**
-   * Creates a 3D rfui-themed card with pure CSS styling
+   * Creates a themed card with pure CSS styling
    */
   static create(options: RfuiCardOptions): HTMLDivElement {
     // Create wrapper container
