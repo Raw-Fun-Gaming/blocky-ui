@@ -18,7 +18,7 @@ Raw Fun UI is a lightweight, themeable UI component library built with TypeScrip
 
 ## Core Design Philosophy
 
-### Blocky Theme Aesthetic (Default)
+### Blocky Theme Aesthetic
 
 The library's signature look is achieved through:
 

@@ -25,7 +25,7 @@ themeLabel.style.cssText = 'font-weight: bold; opacity: 0.9;';
 
 const themeDropdown = RawFunUI.createDropdown({
   options: [
-    { value: 'blocky', label: 'Blocky (Default)' },
+    { value: 'blocky', label: 'Blocky' },
     { value: 'vanilla', label: 'Vanilla (No Theme)' },
     { value: 'fall-guys', label: 'Fall Guys' },
     { value: 'animal-crossing', label: 'Animal Crossing' }

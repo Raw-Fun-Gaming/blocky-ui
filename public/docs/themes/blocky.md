@@ -1,5 +1,5 @@
 ---
-title: Blocky (Default)
+title: Blocky
 layout: default
 parent: Themes
 nav_order: 1
