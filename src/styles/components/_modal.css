@@ -17,13 +17,8 @@
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-  background: linear-gradient(
-    180deg,
-    rgba(60, 60, 80, 0.95) 0%,
-    rgba(40, 40, 60, 0.9) 50%,
-    rgba(30, 30, 50, 0.85) 100%
-  );
-  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border: var(--rfui-border-width) solid transparent;
   border-radius: var(--rfui-border-radius-lg);
   backdrop-filter: var(--rfui-blur-lg);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
@@ -37,7 +32,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  background: none;
   z-index: 1;
   pointer-events: none;
 }
@@ -93,7 +88,7 @@
   justify-content: center;
   align-items: center;
   padding: var(--rfui-padding-md) var(--rfui-padding-lg) var(--rfui-padding-lg);
-  border-top: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.2);
+  border-top: var(--rfui-border-width-thin) solid transparent;
   margin-top: var(--rfui-margin-md);
 }
 

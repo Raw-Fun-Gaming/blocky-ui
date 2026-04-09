@@ -18,7 +18,7 @@
 }
 
 .rfui-btn-wrapper:focus {
-  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline: 2px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -28,14 +28,12 @@
 
 .rfui-card-wrapper:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.5),
-    var(--rfui-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
 }
 
 .rfui-card-wrapper:active {
   transform: translateY(-2px);
-  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.4),
-    var(--rfui-inset-combined);
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
 }
 
 /* ========================================
@@ -58,8 +56,7 @@
 
 .rfui-info-wrapper:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.5),
-    var(--rfui-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
 }
 
 /* ========================================
@@ -68,8 +65,7 @@
 
 .rfui-modal-close:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4), 0 8px 20px rgba(255, 68, 68, 0.5),
-    var(--rfui-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
 }
 
 .rfui-modal-close:active {
@@ -82,27 +78,11 @@
    ======================================== */
 
 .rfui-hover-lift:hover {
-  animation: liftUp var(--rfui-transition-normal) ease forwards;
+  transform: translateY(-3px);
 }
 
 .rfui-hover-press:active {
-  animation: pressDown var(--rfui-transition-fast) ease forwards;
-}
-
-.rfui-hover-glow:hover {
-  animation: glowPulse 1s ease-in-out infinite;
-}
-
-.rfui-hover-border:hover {
-  animation: borderGlow 1s ease-in-out infinite;
-}
-
-/* ========================================
-   GRADIENT HOVER EFFECTS
-   ======================================== */
-
-.rfui-gradient:hover::before {
-  animation: radialPulse 1.5s ease-in-out infinite;
+  transform: translateY(2px);
 }
 
 /* ========================================
@@ -128,7 +108,7 @@
 .rfui-btn-wrapper:focus-visible,
 .rfui-card-wrapper:focus-visible,
 .rfui-modal-close:focus-visible {
-  outline: 3px solid rgba(255, 255, 255, 0.7);
+  outline: 3px solid currentColor;
   outline-offset: 3px;
 }
 

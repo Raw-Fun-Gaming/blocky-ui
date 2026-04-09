@@ -8,51 +8,50 @@
      COLOR PALETTE
      ======================================== */
 
-  /* Primary Colors */
-  --rfui-primary: #55dfff;
-  --rfui-primary-dark: #047bff;
-  --rfui-success: #1ce61c;
-  --rfui-warning: #ffc201;
-  --rfui-danger: #ff4444;
+  /* Primary Colors (vanilla: neutral, themed via data-rfui-theme) */
+  --rfui-primary: transparent;
+  --rfui-primary-dark: transparent;
+  --rfui-success: transparent;
+  --rfui-warning: transparent;
+  --rfui-danger: transparent;
 
   /* Button Variant Colors */
-  --rfui-button-default: rgba(100, 100, 100, 0.9);
-  --rfui-button-primary: rgba(4, 123, 255, 0.9);
-  --rfui-button-secondary: rgba(85, 223, 255, 0.9);
-  --rfui-button-danger: rgba(255, 68, 68, 0.9);
+  --rfui-button-default: transparent;
+  --rfui-button-primary: transparent;
+  --rfui-button-secondary: transparent;
+  --rfui-button-danger: transparent;
 
   /* Text Colors */
-  --rfui-text-primary: #ffffff;
-  --rfui-text-secondary: rgba(255, 255, 255, 0.8);
-  --rfui-text-disabled: #666666;
+  --rfui-text-primary: inherit;
+  --rfui-text-secondary: inherit;
+  --rfui-text-disabled: inherit;
 
   /* Background Colors */
-  --rfui-overlay-modal: rgba(0, 0, 0, 0.9);
-  --rfui-overlay-info: rgba(0, 0, 0, 0.6);
-  --rfui-bg-dark: rgba(0, 0, 0, 0.3);
+  --rfui-overlay-modal: transparent;
+  --rfui-overlay-info: transparent;
+  --rfui-bg-dark: transparent;
 
   /* Info Title Colors */
-  --rfui-info-yellow: rgba(255, 194, 1, 0.9);
-  --rfui-info-green: rgba(28, 230, 28, 0.9);
-  --rfui-info-blue: rgba(4, 123, 255, 0.9);
-  --rfui-info-purple: rgba(150, 50, 255, 0.9);
-  --rfui-info-red: rgba(255, 68, 68, 0.9);
+  --rfui-info-yellow: transparent;
+  --rfui-info-green: transparent;
+  --rfui-info-blue: transparent;
+  --rfui-info-purple: transparent;
+  --rfui-info-red: transparent;
 
   /* ========================================
      3D DEPTH EFFECTS
      ======================================== */
 
-  /* Box Shadow Layers for 3D Effect */
-  --rfui-shadow-base: 0 4px 0 rgba(0, 0, 0, 0.3);
-  --rfui-shadow-far: 0 8px 16px rgba(0, 0, 0, 0.4);
-  --rfui-shadow-hover: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.5);
-  --rfui-shadow-active: 0 2px 0 rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.4);
+  /* Box Shadow Layers (vanilla: none, themed via data-rfui-theme) */
+  --rfui-shadow-base: none;
+  --rfui-shadow-far: none;
+  --rfui-shadow-hover: none;
+  --rfui-shadow-active: none;
 
-  /* Inset Highlights for 3D Effect */
-  --rfui-inset-highlight: inset 0 2px 0 rgba(255, 255, 255, 0.2);
-  --rfui-inset-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
-  --rfui-inset-combined: inset 0 2px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  /* Inset Highlights */
+  --rfui-inset-highlight: none;
+  --rfui-inset-shadow: none;
+  --rfui-inset-combined: none;
 
   /* ========================================
      SPACING & SIZING
@@ -134,15 +133,15 @@
   --rfui-z-overlay-info: 800;
   --rfui-z-overlay-modal: 900;
 
-  /* Backdrop Blur */
-  --rfui-blur-sm: blur(4px);
-  --rfui-blur-md: blur(8px);
-  --rfui-blur-lg: blur(12px);
+  /* Backdrop Blur (vanilla: none, themed via data-rfui-theme) */
+  --rfui-blur-sm: none;
+  --rfui-blur-md: none;
+  --rfui-blur-lg: none;
 
   /* Text Shadow */
-  --rfui-text-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --rfui-text-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.5);
-  --rfui-text-shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 12px rgba(255, 255, 255, 0.3);
+  --rfui-text-shadow-sm: none;
+  --rfui-text-shadow-md: none;
+  --rfui-text-shadow-lg: none;
 
   /* Opacity Levels */
   --rfui-opacity-disabled: 0.5;
@@ -153,7 +152,7 @@
      PAGE BORDER GRADIENT COLORS
      Animated gradient colors for page borders
      ======================================== */
-  --rfui-page-border-color-1: rgba(255, 100, 100, 0.8);
-  --rfui-page-border-color-2: rgba(255, 150, 100, 0.8);
-  --rfui-page-border-color-3: rgba(255, 200, 100, 0.8);
+  --rfui-page-border-color-1: transparent;
+  --rfui-page-border-color-2: transparent;
+  --rfui-page-border-color-3: transparent;
 }

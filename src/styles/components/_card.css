@@ -14,13 +14,8 @@
   min-width: var(--rfui-card-min-width);
   min-height: var(--rfui-card-min-height);
   padding: var(--rfui-padding-lg);
-  background: linear-gradient(
-    180deg,
-    rgba(60, 60, 80, 0.9) 0%,
-    rgba(40, 40, 60, 0.85) 50%,
-    rgba(30, 30, 50, 0.8) 100%
-  );
-  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border: var(--rfui-border-width) solid transparent;
   border-radius: var(--rfui-border-radius);
   backdrop-filter: var(--rfui-blur-md);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
@@ -35,7 +30,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  background: none;
   z-index: 1;
   pointer-events: none;
 }
@@ -45,44 +40,24 @@
    Color variants for different card types
    ======================================== */
 
-/* Default variant - gray gradient */
+/* Default variant */
 .rfui-card-wrapper.default {
-  background: linear-gradient(
-    180deg,
-    rgba(100, 100, 100, 0.9) 0%,
-    rgba(100, 100, 100, 0.7) 50%,
-    rgba(100, 100, 100, 0.6) 100%
-  );
+  background: transparent;
 }
 
-/* Primary variant - blue gradient */
+/* Primary variant */
 .rfui-card-wrapper.primary {
-  background: linear-gradient(
-    180deg,
-    rgba(4, 123, 255, 0.9) 0%,
-    rgba(4, 123, 255, 0.7) 50%,
-    rgba(4, 123, 255, 0.6) 100%
-  );
+  background: transparent;
 }
 
-/* Secondary variant - cyan gradient */
+/* Secondary variant */
 .rfui-card-wrapper.secondary {
-  background: linear-gradient(
-    180deg,
-    rgba(85, 223, 255, 0.9) 0%,
-    rgba(85, 223, 255, 0.7) 50%,
-    rgba(85, 223, 255, 0.6) 100%
-  );
+  background: transparent;
 }
 
-/* Danger variant - red gradient */
+/* Danger variant */
 .rfui-card-wrapper.danger {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 68, 68, 0.9) 0%,
-    rgba(255, 68, 68, 0.7) 50%,
-    rgba(255, 68, 68, 0.6) 100%
-  );
+  background: transparent;
 }
 
 /* ========================================
@@ -112,7 +87,7 @@
   letter-spacing: var(--rfui-letter-spacing-wide);
   text-shadow: var(--rfui-text-shadow-md);
   padding-bottom: var(--rfui-padding-sm);
-  border-bottom: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.2);
+  border-bottom: var(--rfui-border-width-thin) solid transparent;
 }
 
 /* ========================================
@@ -142,9 +117,7 @@
 
 .rfui-card-wrapper:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.5),
-    var(--rfui-inset-combined);
-  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
 }
 
 /* ========================================
@@ -154,6 +127,5 @@
 
 .rfui-card-wrapper:active {
   transform: translateY(-2px);
-  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.4),
-    var(--rfui-inset-combined);
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
 }

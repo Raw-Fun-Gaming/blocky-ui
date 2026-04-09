@@ -13,13 +13,8 @@
   min-width: var(--rfui-info-min-width);
   max-width: min(500px, calc(100% - 80px));
   padding: var(--rfui-padding-xl);
-  background: linear-gradient(
-    180deg,
-    rgba(60, 60, 80, 0.95) 0%,
-    rgba(40, 40, 60, 0.9) 50%,
-    rgba(30, 30, 50, 0.85) 100%
-  );
-  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border: var(--rfui-border-width) solid transparent;
   border-radius: var(--rfui-border-radius-lg);
   backdrop-filter: var(--rfui-blur-lg);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
@@ -34,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  background: none;
   z-index: 1;
   pointer-events: none;
 }
@@ -74,74 +69,29 @@
    Different color themes for info title
    ======================================== */
 
-/* Yellow Theme */
-.rfui-info-wrapper.theme-yellow {
-  border-color: rgba(255, 194, 1, 0.5);
-}
-
+/* Yellow Theme (vanilla: structural only, visuals via theme) */
 .rfui-info-wrapper.theme-yellow .rfui-info-title {
-  color: #ffc201;
-  text-shadow: 0 0 12px rgba(255, 194, 1, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.rfui-info-wrapper.theme-yellow::before {
-  background: radial-gradient(circle at center, rgba(255, 194, 1, 0.2) 0%, transparent 70%);
+  color: inherit;
 }
 
 /* Green Theme */
-.rfui-info-wrapper.theme-green {
-  border-color: rgba(28, 230, 28, 0.5);
-}
-
 .rfui-info-wrapper.theme-green .rfui-info-title {
-  color: #1ce61c;
-  text-shadow: 0 0 12px rgba(28, 230, 28, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.rfui-info-wrapper.theme-green::before {
-  background: radial-gradient(circle at center, rgba(28, 230, 28, 0.2) 0%, transparent 70%);
+  color: inherit;
 }
 
 /* Blue Theme */
-.rfui-info-wrapper.theme-blue {
-  border-color: rgba(4, 123, 255, 0.5);
-}
-
 .rfui-info-wrapper.theme-blue .rfui-info-title {
-  color: #047bff;
-  text-shadow: 0 0 12px rgba(4, 123, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.rfui-info-wrapper.theme-blue::before {
-  background: radial-gradient(circle at center, rgba(4, 123, 255, 0.2) 0%, transparent 70%);
+  color: inherit;
 }
 
 /* Purple Theme */
-.rfui-info-wrapper.theme-purple {
-  border-color: rgba(150, 50, 255, 0.5);
-}
-
 .rfui-info-wrapper.theme-purple .rfui-info-title {
-  color: #9632ff;
-  text-shadow: 0 0 12px rgba(150, 50, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.rfui-info-wrapper.theme-purple::before {
-  background: radial-gradient(circle at center, rgba(150, 50, 255, 0.2) 0%, transparent 70%);
+  color: inherit;
 }
 
 /* Red Theme */
-.rfui-info-wrapper.theme-red {
-  border-color: rgba(255, 68, 68, 0.5);
-}
-
 .rfui-info-wrapper.theme-red .rfui-info-title {
-  color: #ff4444;
-  text-shadow: 0 0 12px rgba(255, 68, 68, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.rfui-info-wrapper.theme-red::before {
-  background: radial-gradient(circle at center, rgba(255, 68, 68, 0.2) 0%, transparent 70%);
+  color: inherit;
 }
 
 /* ========================================
@@ -151,8 +101,7 @@
 
 .rfui-info-wrapper:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.5),
-    var(--rfui-inset-combined);
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
 }
 
 /* ========================================

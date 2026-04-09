@@ -78,31 +78,9 @@
   }
 }
 
-@keyframes buttonPulse {
-  0%,
-  100% {
-    box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far),
-      var(--rfui-inset-combined);
-  }
-  50% {
-    box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far),
-      var(--rfui-inset-combined), 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-}
-
 /* ========================================
    CARD ANIMATIONS
    ======================================== */
-
-@keyframes cardFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
 
 @keyframes cardSlideIn {
   from {
@@ -127,92 +105,6 @@
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
-  }
-}
-
-@keyframes tagBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-/* ========================================
-   GLOW ANIMATIONS
-   ======================================== */
-
-@keyframes glowPulse {
-  0%,
-  100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.2);
-  }
-}
-
-@keyframes borderGlow {
-  0%,
-  100% {
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    border-color: rgba(255, 255, 255, 0.6);
-  }
-}
-
-/* ========================================
-   3D DEPTH ANIMATIONS
-   ======================================== */
-
-@keyframes liftUp {
-  from {
-    transform: translateY(0);
-    box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far);
-  }
-  to {
-    transform: translateY(-3px);
-    box-shadow: var(--rfui-shadow-hover);
-  }
-}
-
-@keyframes pressDown {
-  from {
-    transform: translateY(0);
-    box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far);
-  }
-  to {
-    transform: translateY(2px);
-    box-shadow: var(--rfui-shadow-active);
-  }
-}
-
-/* ========================================
-   GRADIENT ANIMATIONS
-   ======================================== */
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes radialPulse {
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.6;
   }
 }
 

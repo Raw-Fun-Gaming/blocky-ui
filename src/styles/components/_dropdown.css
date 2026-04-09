@@ -23,10 +23,10 @@
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
-  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  border: var(--rfui-border-width) solid transparent;
   border-radius: var(--rfui-border-radius);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
-  backdrop-filter: blur(8px);
+  backdrop-filter: var(--rfui-blur-md);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   outline: none;
   appearance: none;
@@ -48,8 +48,7 @@
   background-color: var(--rfui-button-default);
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
-    linear-gradient(135deg, currentColor 50%, transparent 50%),
-    linear-gradient(180deg, rgba(100, 100, 100, 0.95) 0%, rgba(100, 100, 100, 0.7) 50%, rgba(100, 100, 100, 0.5) 100%);
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
   color: var(--rfui-text-primary);
 }
 
@@ -58,8 +57,7 @@
   background-color: var(--rfui-button-primary);
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
-    linear-gradient(135deg, currentColor 50%, transparent 50%),
-    linear-gradient(180deg, rgba(4, 123, 255, 0.95) 0%, rgba(4, 123, 255, 0.7) 50%, rgba(4, 123, 255, 0.5) 100%);
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
   color: var(--rfui-text-primary);
 }
 
@@ -68,9 +66,8 @@
   background-color: var(--rfui-button-secondary);
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
-    linear-gradient(135deg, currentColor 50%, transparent 50%),
-    linear-gradient(180deg, rgba(85, 223, 255, 0.95) 0%, rgba(85, 223, 255, 0.7) 50%, rgba(85, 223, 255, 0.5) 100%);
-  color: #000;
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  color: var(--rfui-text-primary);
 }
 
 /* Variant styles - Danger */
@@ -78,8 +75,7 @@
   background-color: var(--rfui-button-danger);
   background-image:
     linear-gradient(45deg, transparent 50%, currentColor 50%),
-    linear-gradient(135deg, currentColor 50%, transparent 50%),
-    linear-gradient(180deg, rgba(255, 68, 68, 0.95) 0%, rgba(255, 68, 68, 0.7) 50%, rgba(255, 68, 68, 0.5) 100%);
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
   color: var(--rfui-text-primary);
 }
 
@@ -95,7 +91,7 @@
 
 /* Focus state */
 .rfui-dropdown:focus {
-  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline: 2px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -109,7 +105,7 @@
 
 /* Option elements */
 .rfui-dropdown option {
-  background: rgba(26, 26, 46, 0.95);
-  color: white;
+  background: transparent;
+  color: inherit;
   padding: 8px;
 }

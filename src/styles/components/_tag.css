@@ -15,13 +15,8 @@
   transform: translateX(-50%);
   min-width: var(--rfui-tag-min-width);
   padding: var(--rfui-padding-sm) var(--rfui-padding-lg);
-  background: linear-gradient(
-    180deg,
-    rgba(60, 60, 80, 0.95) 0%,
-    rgba(40, 40, 60, 0.85) 50%,
-    rgba(30, 30, 50, 0.8) 100%
-  );
-  border: var(--rfui-border-width) solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border: var(--rfui-border-width) solid transparent;
   border-radius: var(--rfui-border-radius);
   backdrop-filter: var(--rfui-blur-md);
   box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
@@ -38,7 +33,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  background: none;
   z-index: 1;
   pointer-events: none;
 }
@@ -48,44 +43,24 @@
    Color variants for different tag types
    ======================================== */
 
-/* Default variant - gray gradient */
+/* Default variant */
 .rfui-tag-wrapper.default {
-  background: linear-gradient(
-    180deg,
-    rgba(100, 100, 100, 0.95) 0%,
-    rgba(100, 100, 100, 0.7) 50%,
-    rgba(100, 100, 100, 0.5) 100%
-  );
+  background: transparent;
 }
 
-/* Primary variant - blue gradient */
+/* Primary variant */
 .rfui-tag-wrapper.primary {
-  background: linear-gradient(
-    180deg,
-    rgba(4, 123, 255, 0.95) 0%,
-    rgba(4, 123, 255, 0.7) 50%,
-    rgba(4, 123, 255, 0.5) 100%
-  );
+  background: transparent;
 }
 
-/* Secondary variant - cyan gradient */
+/* Secondary variant */
 .rfui-tag-wrapper.secondary {
-  background: linear-gradient(
-    180deg,
-    rgba(85, 223, 255, 0.95) 0%,
-    rgba(85, 223, 255, 0.7) 50%,
-    rgba(85, 223, 255, 0.5) 100%
-  );
+  background: transparent;
 }
 
-/* Danger variant - red gradient */
+/* Danger variant */
 .rfui-tag-wrapper.danger {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 68, 68, 0.95) 0%,
-    rgba(255, 68, 68, 0.7) 50%,
-    rgba(255, 68, 68, 0.5) 100%
-  );
+  background: transparent;
 }
 
 /* ========================================
@@ -107,7 +82,7 @@
 .rfui-tag-header {
   margin-bottom: var(--rfui-margin-sm);
   padding-bottom: var(--rfui-padding-xs);
-  border-bottom: var(--rfui-border-width-thin) solid rgba(255, 255, 255, 0.2);
+  border-bottom: var(--rfui-border-width-thin) solid transparent;
 }
 
 .rfui-tag-title {
@@ -141,7 +116,6 @@
 .rfui-tag-wrapper:hover {
   transform: translateX(-50%) translateY(-3px);
   box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
-  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .rfui-tag-wrapper.flipped:hover {
