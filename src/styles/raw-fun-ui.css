@@ -55,6 +55,7 @@
    Optional theme overrides for different visual styles
    ======================================== */
 
+@import url('./themes/_blocky.css');
 @import url('./themes/_fall-guys.css');
 @import url('./themes/_animal-crossing.css');
 

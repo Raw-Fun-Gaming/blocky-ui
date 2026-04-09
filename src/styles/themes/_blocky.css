@@ -1,0 +1,721 @@
+/* ========================================
+   BLOCKY THEME
+   Dark 3D aesthetic with multi-layer shadows
+   Default visual theme for Raw Fun UI
+
+   Key characteristics:
+   - Dark semi-transparent gradient backgrounds
+   - Multi-layer box shadows for 3D depth
+   - Radial gradient overlays for glass effect
+   - Backdrop blur (glassmorphism)
+   - Semi-transparent white borders
+   ======================================== */
+
+/* ========================================
+   THEME SELECTOR
+   Apply this theme by adding data-rfui-theme="blocky"
+   to the html or body element
+   ======================================== */
+
+[data-rfui-theme='blocky'] {
+  /* ========================================
+     COLOR PALETTE
+     ======================================== */
+
+  /* Primary Colors */
+  --rfui-primary: #55dfff;
+  --rfui-primary-dark: #047bff;
+  --rfui-success: #1ce61c;
+  --rfui-warning: #ffc201;
+  --rfui-danger: #ff4444;
+
+  /* Button Variant Colors */
+  --rfui-button-default: rgba(100, 100, 100, 0.9);
+  --rfui-button-primary: rgba(4, 123, 255, 0.9);
+  --rfui-button-secondary: rgba(85, 223, 255, 0.9);
+  --rfui-button-danger: rgba(255, 68, 68, 0.9);
+
+  /* Text Colors */
+  --rfui-text-primary: #ffffff;
+  --rfui-text-secondary: rgba(255, 255, 255, 0.8);
+  --rfui-text-disabled: #666666;
+
+  /* Background Colors */
+  --rfui-overlay-modal: rgba(0, 0, 0, 0.9);
+  --rfui-overlay-info: rgba(0, 0, 0, 0.6);
+  --rfui-bg-dark: rgba(0, 0, 0, 0.3);
+
+  /* Info Title Colors */
+  --rfui-info-yellow: rgba(255, 194, 1, 0.9);
+  --rfui-info-green: rgba(28, 230, 28, 0.9);
+  --rfui-info-blue: rgba(4, 123, 255, 0.9);
+  --rfui-info-purple: rgba(150, 50, 255, 0.9);
+  --rfui-info-red: rgba(255, 68, 68, 0.9);
+
+  /* ========================================
+     3D DEPTH EFFECTS
+     ======================================== */
+
+  /* Box Shadow Layers for 3D Effect */
+  --rfui-shadow-base: 0 4px 0 rgba(0, 0, 0, 0.3);
+  --rfui-shadow-far: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --rfui-shadow-hover: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.5);
+  --rfui-shadow-active: 0 2px 0 rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  /* Inset Highlights for 3D Effect */
+  --rfui-inset-highlight: inset 0 2px 0 rgba(255, 255, 255, 0.2);
+  --rfui-inset-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  --rfui-inset-combined: inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+
+  /* ========================================
+     BLUR
+     ======================================== */
+
+  --rfui-blur-sm: blur(4px);
+  --rfui-blur-md: blur(8px);
+  --rfui-blur-lg: blur(12px);
+
+  /* ========================================
+     TEXT SHADOW
+     ======================================== */
+
+  --rfui-text-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --rfui-text-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --rfui-text-shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.5), 0 0 12px rgba(255, 255, 255, 0.3);
+
+  /* ========================================
+     PAGE BORDER GRADIENT COLORS
+     ======================================== */
+
+  --rfui-page-border-color-1: rgba(255, 100, 100, 0.8);
+  --rfui-page-border-color-2: rgba(255, 150, 100, 0.8);
+  --rfui-page-border-color-3: rgba(255, 200, 100, 0.8);
+}
+
+/* ========================================
+   SHARED COMPONENT OVERRIDES
+   ======================================== */
+
+/* Bordered header */
+[data-rfui-theme='blocky'] .rfui-header-bordered {
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 3D base effect */
+[data-rfui-theme='blocky'] .rfui-3d {
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: var(--rfui-blur-md);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-3d:hover {
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-3d:active {
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
+}
+
+/* Gradient radial overlay */
+[data-rfui-theme='blocky'] .rfui-gradient::before {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+}
+
+/* Overlay backgrounds */
+[data-rfui-theme='blocky'] .rfui-modal-overlay {
+  background: var(--rfui-overlay-modal);
+  backdrop-filter: var(--rfui-blur-md);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-overlay {
+  background: var(--rfui-overlay-info);
+  backdrop-filter: var(--rfui-blur-md);
+  -webkit-backdrop-filter: var(--rfui-blur-md);
+}
+
+/* Close button */
+[data-rfui-theme='blocky'] .rfui-close-btn {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(180deg, rgba(255, 68, 68, 0.9) 0%, rgba(255, 68, 68, 0.7) 100%);
+  color: var(--rfui-text-primary);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-close-btn:hover {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.5),
+    var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-close-btn:active {
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
+}
+
+/* ========================================
+   BUTTON OVERRIDES
+   ======================================== */
+
+[data-rfui-theme='blocky'] .rfui-btn {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--rfui-text-primary);
+  text-shadow: var(--rfui-text-shadow-md);
+  backdrop-filter: var(--rfui-blur-md);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+}
+
+/* Default variant - Gray gradient */
+[data-rfui-theme='blocky'] .rfui-btn.default {
+  background: linear-gradient(
+    180deg,
+    rgba(100, 100, 100, 0.95) 0%,
+    rgba(100, 100, 100, 0.7) 50%,
+    rgba(100, 100, 100, 0.5) 100%
+  );
+}
+
+[data-rfui-theme='blocky'] .rfui-btn.default::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(100, 100, 100, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+/* Primary variant - Blue gradient */
+[data-rfui-theme='blocky'] .rfui-btn.primary {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 123, 255, 0.95) 0%,
+    rgba(4, 123, 255, 0.7) 50%,
+    rgba(4, 123, 255, 0.5) 100%
+  );
+  border-color: rgba(4, 123, 255, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-btn.primary::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(4, 123, 255, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+/* Secondary variant - Cyan gradient */
+[data-rfui-theme='blocky'] .rfui-btn.secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(85, 223, 255, 0.95) 0%,
+    rgba(85, 223, 255, 0.7) 50%,
+    rgba(85, 223, 255, 0.5) 100%
+  );
+  border-color: rgba(85, 223, 255, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-btn.secondary::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(85, 223, 255, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+/* Danger variant - Red gradient */
+[data-rfui-theme='blocky'] .rfui-btn.danger {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 68, 68, 0.95) 0%,
+    rgba(255, 68, 68, 0.7) 50%,
+    rgba(255, 68, 68, 0.5) 100%
+  );
+  border-color: rgba(255, 68, 68, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-btn.danger::before {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 68, 68, 0.4) 0%,
+    transparent 70%
+  );
+}
+
+/* Button hover */
+[data-rfui-theme='blocky'] .rfui-btn-wrapper:hover .rfui-btn {
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Button active */
+[data-rfui-theme='blocky'] .rfui-btn-wrapper:active .rfui-btn {
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
+}
+
+/* ========================================
+   MODAL OVERRIDES
+   ======================================== */
+
+[data-rfui-theme='blocky'] .rfui-modal-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.95) 0%,
+    rgba(40, 40, 60, 0.9) 50%,
+    rgba(30, 30, 50, 0.85) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: var(--rfui-blur-lg);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-modal-wrapper::before {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+}
+
+[data-rfui-theme='blocky'] .rfui-modal-body {
+  color: var(--rfui-text-primary);
+}
+
+[data-rfui-theme='blocky'] .rfui-modal-body h1,
+[data-rfui-theme='blocky'] .rfui-modal-body h2,
+[data-rfui-theme='blocky'] .rfui-modal-body h3,
+[data-rfui-theme='blocky'] .rfui-modal-body h4,
+[data-rfui-theme='blocky'] .rfui-modal-body h5,
+[data-rfui-theme='blocky'] .rfui-modal-body h6 {
+  color: var(--rfui-text-primary);
+}
+
+[data-rfui-theme='blocky'] .rfui-modal-footer {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   CARD OVERRIDES
+   ======================================== */
+
+[data-rfui-theme='blocky'] .rfui-card-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.9) 0%,
+    rgba(40, 40, 60, 0.85) 50%,
+    rgba(30, 30, 50, 0.8) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: var(--rfui-blur-md);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-card-wrapper::before {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+}
+
+/* Default variant - Gray gradient */
+[data-rfui-theme='blocky'] .rfui-card-wrapper.default {
+  background: linear-gradient(
+    180deg,
+    rgba(100, 100, 100, 0.9) 0%,
+    rgba(100, 100, 100, 0.7) 50%,
+    rgba(100, 100, 100, 0.6) 100%
+  );
+}
+
+/* Primary variant - Blue gradient */
+[data-rfui-theme='blocky'] .rfui-card-wrapper.primary {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 123, 255, 0.9) 0%,
+    rgba(4, 123, 255, 0.7) 50%,
+    rgba(4, 123, 255, 0.6) 100%
+  );
+}
+
+/* Secondary variant - Cyan gradient */
+[data-rfui-theme='blocky'] .rfui-card-wrapper.secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(85, 223, 255, 0.9) 0%,
+    rgba(85, 223, 255, 0.7) 50%,
+    rgba(85, 223, 255, 0.6) 100%
+  );
+}
+
+/* Danger variant - Red gradient */
+[data-rfui-theme='blocky'] .rfui-card-wrapper.danger {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 68, 68, 0.9) 0%,
+    rgba(255, 68, 68, 0.7) 50%,
+    rgba(255, 68, 68, 0.6) 100%
+  );
+}
+
+[data-rfui-theme='blocky'] .rfui-card {
+  color: var(--rfui-text-primary);
+}
+
+[data-rfui-theme='blocky'] .rfui-card-title {
+  color: var(--rfui-text-primary);
+  text-shadow: var(--rfui-text-shadow-md);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Card hover */
+[data-rfui-theme='blocky'] .rfui-card-wrapper:hover {
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.5),
+    var(--rfui-inset-combined);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Card active */
+[data-rfui-theme='blocky'] .rfui-card-wrapper:active {
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.4),
+    var(--rfui-inset-combined);
+}
+
+/* ========================================
+   INFO OVERRIDES
+   ======================================== */
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.95) 0%,
+    rgba(40, 40, 60, 0.9) 50%,
+    rgba(30, 30, 50, 0.85) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: var(--rfui-blur-lg);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper::before {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-title {
+  text-shadow: var(--rfui-text-shadow-lg);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-body {
+  color: var(--rfui-text-primary);
+}
+
+/* Yellow Theme */
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-yellow {
+  border-color: rgba(255, 194, 1, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-yellow .rfui-info-title {
+  color: #ffc201;
+  text-shadow: 0 0 12px rgba(255, 194, 1, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-yellow::before {
+  background: radial-gradient(circle at center, rgba(255, 194, 1, 0.2) 0%, transparent 70%);
+}
+
+/* Green Theme */
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-green {
+  border-color: rgba(28, 230, 28, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-green .rfui-info-title {
+  color: #1ce61c;
+  text-shadow: 0 0 12px rgba(28, 230, 28, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-green::before {
+  background: radial-gradient(circle at center, rgba(28, 230, 28, 0.2) 0%, transparent 70%);
+}
+
+/* Blue Theme */
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-blue {
+  border-color: rgba(4, 123, 255, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-blue .rfui-info-title {
+  color: #047bff;
+  text-shadow: 0 0 12px rgba(4, 123, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-blue::before {
+  background: radial-gradient(circle at center, rgba(4, 123, 255, 0.2) 0%, transparent 70%);
+}
+
+/* Purple Theme */
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-purple {
+  border-color: rgba(150, 50, 255, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-purple .rfui-info-title {
+  color: #9632ff;
+  text-shadow: 0 0 12px rgba(150, 50, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-purple::before {
+  background: radial-gradient(circle at center, rgba(150, 50, 255, 0.2) 0%, transparent 70%);
+}
+
+/* Red Theme */
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-red {
+  border-color: rgba(255, 68, 68, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-red .rfui-info-title {
+  color: #ff4444;
+  text-shadow: 0 0 12px rgba(255, 68, 68, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+[data-rfui-theme='blocky'] .rfui-info-wrapper.theme-red::before {
+  background: radial-gradient(circle at center, rgba(255, 68, 68, 0.2) 0%, transparent 70%);
+}
+
+/* Info hover */
+[data-rfui-theme='blocky'] .rfui-info-wrapper:hover {
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.5),
+    var(--rfui-inset-combined);
+}
+
+/* ========================================
+   TAG OVERRIDES
+   ======================================== */
+
+[data-rfui-theme='blocky'] .rfui-tag-wrapper {
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.95) 0%,
+    rgba(40, 40, 60, 0.85) 50%,
+    rgba(30, 30, 50, 0.8) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: var(--rfui-blur-md);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-tag-wrapper::before {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+}
+
+[data-rfui-theme='blocky'] .rfui-tag-content {
+  color: var(--rfui-text-primary);
+}
+
+[data-rfui-theme='blocky'] .rfui-tag-header {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-rfui-theme='blocky'] .rfui-tag-title {
+  text-shadow: var(--rfui-text-shadow-sm);
+}
+
+/* Default variant - Gray gradient */
+[data-rfui-theme='blocky'] .rfui-tag-wrapper.default {
+  background: linear-gradient(
+    180deg,
+    rgba(100, 100, 100, 0.95) 0%,
+    rgba(100, 100, 100, 0.7) 50%,
+    rgba(100, 100, 100, 0.5) 100%
+  );
+}
+
+/* Primary variant - Blue gradient */
+[data-rfui-theme='blocky'] .rfui-tag-wrapper.primary {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 123, 255, 0.95) 0%,
+    rgba(4, 123, 255, 0.7) 50%,
+    rgba(4, 123, 255, 0.5) 100%
+  );
+}
+
+/* Secondary variant - Cyan gradient */
+[data-rfui-theme='blocky'] .rfui-tag-wrapper.secondary {
+  background: linear-gradient(
+    180deg,
+    rgba(85, 223, 255, 0.95) 0%,
+    rgba(85, 223, 255, 0.7) 50%,
+    rgba(85, 223, 255, 0.5) 100%
+  );
+}
+
+/* Danger variant - Red gradient */
+[data-rfui-theme='blocky'] .rfui-tag-wrapper.danger {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 68, 68, 0.95) 0%,
+    rgba(255, 68, 68, 0.7) 50%,
+    rgba(255, 68, 68, 0.5) 100%
+  );
+}
+
+/* Tag hover */
+[data-rfui-theme='blocky'] .rfui-tag-wrapper:hover {
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Tag active */
+[data-rfui-theme='blocky'] .rfui-tag-wrapper:active {
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
+}
+
+/* ========================================
+   PAGE OVERRIDES
+   ======================================== */
+
+[data-rfui-theme='blocky'] .rfui-page-overlay {
+  background: var(--rfui-overlay-modal);
+}
+
+[data-rfui-theme='blocky'] .rfui-page-content {
+  backdrop-filter: var(--rfui-blur-lg);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-page-content::after {
+  background: linear-gradient(
+    180deg,
+    rgba(60, 60, 80, 0.95) 0%,
+    rgba(40, 40, 60, 0.9) 50%,
+    rgba(30, 30, 50, 0.85) 100%
+  );
+}
+
+[data-rfui-theme='blocky'] .rfui-page-content::before {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+}
+
+[data-rfui-theme='blocky'] .rfui-page-wrapper {
+  color: var(--rfui-text-primary);
+}
+
+[data-rfui-theme='blocky'] .rfui-page-wrapper h1,
+[data-rfui-theme='blocky'] .rfui-page-wrapper h2,
+[data-rfui-theme='blocky'] .rfui-page-wrapper h3,
+[data-rfui-theme='blocky'] .rfui-page-wrapper h4,
+[data-rfui-theme='blocky'] .rfui-page-wrapper h5,
+[data-rfui-theme='blocky'] .rfui-page-wrapper h6 {
+  color: var(--rfui-text-primary);
+}
+
+/* Custom scrollbar colors */
+[data-rfui-theme='blocky'] .rfui-page-wrapper.custom-scrollbar:hover::-webkit-scrollbar-track,
+[data-rfui-theme='blocky'] .rfui-page-wrapper.custom-scrollbar.scrolling::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+[data-rfui-theme='blocky'] .rfui-page-wrapper.custom-scrollbar:hover::-webkit-scrollbar-thumb,
+[data-rfui-theme='blocky'] .rfui-page-wrapper.custom-scrollbar.scrolling::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+[data-rfui-theme='blocky'] .rfui-page-wrapper.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   DROPDOWN OVERRIDES
+   ======================================== */
+
+[data-rfui-theme='blocky'] .rfui-dropdown {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far), var(--rfui-inset-combined);
+  backdrop-filter: blur(8px);
+}
+
+/* Default variant */
+[data-rfui-theme='blocky'] .rfui-dropdown.default {
+  background-color: var(--rfui-button-default);
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%),
+    linear-gradient(180deg, rgba(100, 100, 100, 0.95) 0%, rgba(100, 100, 100, 0.7) 50%, rgba(100, 100, 100, 0.5) 100%);
+  color: var(--rfui-text-primary);
+}
+
+/* Primary variant */
+[data-rfui-theme='blocky'] .rfui-dropdown.primary {
+  background-color: var(--rfui-button-primary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%),
+    linear-gradient(180deg, rgba(4, 123, 255, 0.95) 0%, rgba(4, 123, 255, 0.7) 50%, rgba(4, 123, 255, 0.5) 100%);
+  color: var(--rfui-text-primary);
+}
+
+/* Secondary variant */
+[data-rfui-theme='blocky'] .rfui-dropdown.secondary {
+  background-color: var(--rfui-button-secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%),
+    linear-gradient(180deg, rgba(85, 223, 255, 0.95) 0%, rgba(85, 223, 255, 0.7) 50%, rgba(85, 223, 255, 0.5) 100%);
+  color: #000;
+}
+
+/* Danger variant */
+[data-rfui-theme='blocky'] .rfui-dropdown.danger {
+  background-color: var(--rfui-button-danger);
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%),
+    linear-gradient(180deg, rgba(255, 68, 68, 0.95) 0%, rgba(255, 68, 68, 0.7) 50%, rgba(255, 68, 68, 0.5) 100%);
+  color: var(--rfui-text-primary);
+}
+
+/* Dropdown hover */
+[data-rfui-theme='blocky'] .rfui-dropdown:hover:not(:disabled) {
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
+}
+
+/* Dropdown options */
+[data-rfui-theme='blocky'] .rfui-dropdown option {
+  background: rgba(26, 26, 46, 0.95);
+  color: white;
+}
+
+/* ========================================
+   HOVER EFFECT OVERRIDES
+   ======================================== */
+
+/* Button wrapper hover */
+[data-rfui-theme='blocky'] .rfui-btn-wrapper:hover {
+  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-btn-wrapper:active {
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
+}
+
+/* Modal close hover */
+[data-rfui-theme='blocky'] .rfui-modal-close:hover {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4), 0 8px 20px rgba(255, 68, 68, 0.5),
+    var(--rfui-inset-combined);
+}
+
+[data-rfui-theme='blocky'] .rfui-modal-close:active {
+  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
+}
+
+/* Focus-visible outlines */
+[data-rfui-theme='blocky'] .rfui-btn-wrapper:focus-visible,
+[data-rfui-theme='blocky'] .rfui-card-wrapper:focus-visible,
+[data-rfui-theme='blocky'] .rfui-modal-close:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.7);
+}
+
+[data-rfui-theme='blocky'] .rfui-btn:focus-visible {
+  outline-color: rgba(255, 255, 255, 0.7);
+}
+
+[data-rfui-theme='blocky'] .rfui-dropdown:focus {
+  outline-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Disabled hover - maintain base shadows */
+[data-rfui-theme='blocky'] .rfui-disabled:hover,
+[data-rfui-theme='blocky'] .rfui-btn[disabled]:hover,
+[data-rfui-theme='blocky'] .rfui-btn-wrapper [disabled]:hover,
+[data-rfui-theme='blocky'] .rfui-modal-wrapper [disabled]:hover,
+[data-rfui-theme='blocky'] .rfui-card[disabled]:hover,
+[data-rfui-theme='blocky'] .rfui-info[disabled]:hover {
+  box-shadow: var(--rfui-shadow-base), var(--rfui-shadow-far),
+    var(--rfui-inset-combined);
+}
