@@ -9,11 +9,11 @@ nav_order: 1
 
 ## Context
 
-The **Blocky** theme is the default dark 3D aesthetic. It features multi-layer box shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
+The **Blocky** theme is a dark 3D aesthetic. It features multi-layer box shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
 
 ## Theme Name
 
-`blocky` — the default theme. No `data-rfui-theme` attribute needed (or use `RawFunUI.setTheme('blocky')` to reset).
+`blocky` — apply with `RawFunUI.setTheme('blocky')` or `data-rfui-theme="blocky"` on the root element.
 
 ## Color Palette
 

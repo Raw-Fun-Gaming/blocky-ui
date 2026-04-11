@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Raw Fun UI is a lightweight, themeable UI component library built with TypeScript and pure CSS. It provides casino-game-style UI components with configurable themes, gradient backgrounds, and depth effects.
 
-**Origin**: Built as a configurable UI package that works across all games with minimal config for fast prototyping. The default blocky theme features multi-layer box-shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
+**Origin**: Built as a configurable UI package that works across all games with minimal config for fast prototyping. The blocky theme features multi-layer box-shadows for depth, gradient backgrounds with radial overlays, and bold border styling.
 
 ## Tech Stack
 
