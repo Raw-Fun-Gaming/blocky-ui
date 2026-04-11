@@ -717,3 +717,51 @@
   background: #fffbed;
   color: var(--rfui-text-primary);
 }
+
+/* ========================================
+   SLIDER COMPONENT
+   ======================================== */
+
+[data-rfui-theme='animal-crossing'] .rfui-slider {
+  --rfui-slider-track: rgba(31, 82, 110, 0.12);
+  --rfui-slider-fill: #4ecdc4;
+  --rfui-slider-thumb: #42b5ad;
+  --rfui-slider-label: rgba(31, 82, 110, 0.4);
+  --rfui-slider-label-active: #1f526e;
+  height: 10px;
+  background: var(--rfui-slider-track);
+  border: 1.5px solid rgba(31, 82, 110, 0.08);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-slider::-webkit-slider-thumb {
+  width: 26px;
+  height: 26px;
+  border: 3px solid var(--rfui-slider-thumb);
+  box-shadow: 0 2px 8px rgba(31, 82, 110, 0.15);
+  margin-top: -9px;
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-slider::-webkit-slider-thumb:hover {
+  border-color: #4ecdc4;
+  box-shadow: 0 3px 12px rgba(78, 205, 196, 0.3);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border: 3px solid var(--rfui-slider-thumb);
+  box-shadow: 0 2px 8px rgba(31, 82, 110, 0.15);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-slider::-moz-range-progress {
+  background: linear-gradient(90deg, #4ecdc4, #42b5ad);
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-slider-label {
+  color: var(--rfui-slider-label);
+  font-size: 0.75rem;
+}
+
+[data-rfui-theme='animal-crossing'] .rfui-slider-label.active {
+  color: var(--rfui-slider-label-active);
+}
