@@ -38,8 +38,8 @@ npm install raw-fun-ui
 import { RawFunUI } from 'raw-fun-ui';
 import 'raw-fun-ui/styles';
 
-// Set a theme (optional - defaults to 'blocky')
-RawFunUI.setTheme('fall-guys'); // or 'blocky' for default theme
+// Set a theme (optional - defaults to 'vanilla')
+RawFunUI.setTheme('fall-guys'); // or 'blocky', 'animal-crossing', 'vanilla'
 
 // Create a button
 const button = RawFunUI.createButton({
