@@ -247,10 +247,6 @@ Contributions welcome! Please maintain the 3D blocky aesthetic and follow the es
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
 
-## 📄 License
-
-MIT © Richard Fu
-
 ---
 
 **Built for gaming. Designed with 3D depth. 🎮**
