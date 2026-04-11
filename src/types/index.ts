@@ -35,6 +35,7 @@ export interface RfuiCardOptions {
   content: string | HTMLElement;
   variant?: ComponentVariant;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface RfuiInfoOptions {

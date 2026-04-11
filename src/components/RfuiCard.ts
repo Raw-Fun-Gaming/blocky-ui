@@ -39,6 +39,11 @@ export class RfuiCard {
     card.appendChild(content);
     wrapper.appendChild(card);
 
+    if (options.onClick) {
+      wrapper.style.cursor = 'pointer';
+      wrapper.addEventListener('click', options.onClick);
+    }
+
     return wrapper;
   }
 }
