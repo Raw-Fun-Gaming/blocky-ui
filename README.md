@@ -1,4 +1,4 @@
-# [Raw Fun UI](https://raw-fun-gaming.github.io/raw-fun-ui/) &middot; [![npm](https://img.shields.io/npm/v/raw-fun-ui)](https://www.npmjs.com/package/raw-fun-ui) [![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/raw-fun-ui/ci.yml)](https://github.com/raw-fun-gaming/raw-fun-ui/actions) [![install size](https://packagephobia.com/badge?p=raw-fun-ui)](https://packagephobia.com/result?p=raw-fun-ui) [![License](https://img.shields.io/github/license/raw-fun-gaming/raw-fun-ui)](LICENSE)
+# [Raw Fun UI](https://raw-fun-gaming.github.io/raw-fun-ui/) &middot; [![npm](https://img.shields.io/npm/v/raw-fun-ui)](https://www.npmjs.com/package/raw-fun-ui) [![Build Status](https://img.shields.io/github/actions/workflow/status/raw-fun-gaming/raw-fun-ui/ci.yml)](https://github.com/raw-fun-gaming/raw-fun-ui/actions) [![Bundle Size](https://img.shields.io/bundlephobia/minzip/raw-fun-ui)](https://bundlephobia.com/package/raw-fun-ui) [![License](https://img.shields.io/github/license/raw-fun-gaming/raw-fun-ui)](LICENSE)
 
 A game-themed UI component library with switchable themes, built with TypeScript and pure CSS.
 
