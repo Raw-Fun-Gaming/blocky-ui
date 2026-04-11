@@ -1,0 +1,100 @@
+/* ========================================
+   SLIDER COMPONENT
+   Range input with snap positions and labels
+   ======================================== */
+
+.rfui-slider-wrapper {
+  width: 100%;
+  align-self: stretch;
+  padding: 0.25rem 0;
+}
+
+/* Range input — reset browser defaults */
+.rfui-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--rfui-slider-track, rgba(0, 0, 0, 0.2));
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Webkit track (Chrome, Safari) */
+.rfui-slider::-webkit-slider-runnable-track {
+  height: 10px;
+  border-radius: 999px;
+}
+
+/* Webkit thumb */
+.rfui-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--rfui-slider-thumb, #666);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-top: -8px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.rfui-slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Firefox track */
+.rfui-slider::-moz-range-track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--rfui-slider-track, rgba(0, 0, 0, 0.2));
+}
+
+/* Firefox thumb */
+.rfui-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--rfui-slider-thumb, #666);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Firefox progress (filled portion) */
+.rfui-slider::-moz-range-progress {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--rfui-slider-fill, #4ecdc4);
+}
+
+/* Labels */
+.rfui-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0 0;
+}
+
+.rfui-slider-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--rfui-slider-label, rgba(0, 0, 0, 0.4));
+  transition: color 0.15s ease, font-weight 0.15s ease;
+}
+
+.rfui-slider-label:first-child {
+  text-align: left;
+}
+
+.rfui-slider-label:last-child {
+  text-align: right;
+}
+
+.rfui-slider-label.active {
+  color: var(--rfui-slider-label-active, #333);
+  font-weight: 700;
+}

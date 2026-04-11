@@ -11,6 +11,7 @@ import { RfuiInfo } from './components/RfuiInfo';
 import { RfuiTag } from './components/RfuiTag';
 import { RfuiPage } from './components/RfuiPage';
 import { RfuiDropdown } from './components/RfuiDropdown';
+import { RfuiSlider } from './components/RfuiSlider';
 import type { RfuiPageInstance } from './types';
 
 // Export all types
@@ -33,6 +34,7 @@ export class RawFunUI {
   static createTag = RfuiTag.create;
   static createPage = RfuiPage.create;
   static createDropdown = RfuiDropdown.create;
+  static createSlider = RfuiSlider.create;
 
   /**
    * Sets the current theme for all RawFunUI components
@@ -125,7 +127,7 @@ export class RawFunUI {
 }
 
 // Export individual components
-export { RfuiButton, RfuiModal, RfuiCard, RfuiInfo, RfuiTag, RfuiPage, RfuiDropdown };
+export { RfuiButton, RfuiModal, RfuiCard, RfuiInfo, RfuiTag, RfuiPage, RfuiDropdown, RfuiSlider };
 
 // Default export
 export default RawFunUI;

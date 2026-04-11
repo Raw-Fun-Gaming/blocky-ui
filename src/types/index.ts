@@ -53,6 +53,16 @@ export interface RfuiTagOptions {
   className?: string;
 }
 
+export interface RfuiSliderOptions {
+  min: number;
+  max: number;
+  step: number;
+  value?: number;
+  labels?: string[];
+  onChange?: (value: number) => void;
+  className?: string;
+}
+
 export interface RfuiDropdownOption {
   value: string;
   label: string;
