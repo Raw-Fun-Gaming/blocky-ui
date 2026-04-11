@@ -261,6 +261,30 @@ const tag = RawFunUI.createTag({
 });
 ```
 
+### 6. RfuiSlider
+
+**Purpose**: Range input with snap positions and optional labels, themed per-theme
+
+**Usage**:
+```typescript
+const slider = RawFunUI.createSlider({
+  min: 0,
+  max: 3,
+  step: 1,
+  value: 1,
+  labels: ['Slow', 'Normal', 'Fast', 'Turbo'],
+  onChange: (value) => console.log('Value:', value)
+});
+document.body.appendChild(slider);
+```
+
+**CSS Variables** (overridden per theme):
+- `--rfui-slider-track`: Track background color
+- `--rfui-slider-fill`: Filled portion color (Firefox only)
+- `--rfui-slider-thumb`: Thumb border color
+- `--rfui-slider-label`: Label text color
+- `--rfui-slider-label-active`: Active label text color
+
 ## CSS Architecture
 
 ### CSS Custom Properties

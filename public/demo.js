@@ -264,6 +264,92 @@ infoColors.forEach(color => {
 });
 
 // ========================================
+// SLIDERS DEMO
+// ========================================
+
+const slidersContainer = document.getElementById('sliders-container');
+
+// Basic slider
+const basicSliderContainer = document.createElement('div');
+basicSliderContainer.style.cssText = 'padding: 20px; background: rgba(255,255,255,0.03); border-radius: 8px;';
+
+const basicSliderTitle = document.createElement('h3');
+basicSliderTitle.textContent = 'Basic Slider';
+basicSliderTitle.style.marginTop = '0';
+basicSliderContainer.appendChild(basicSliderTitle);
+
+const basicSliderValue = document.createElement('span');
+basicSliderValue.textContent = 'Value: 50';
+basicSliderValue.style.cssText = 'display: block; margin-bottom: 10px; opacity: 0.8;';
+basicSliderContainer.appendChild(basicSliderValue);
+
+const basicSlider = RawFunUI.createSlider({
+  min: 0,
+  max: 100,
+  step: 1,
+  value: 50,
+  onChange: (value) => {
+    basicSliderValue.textContent = `Value: ${value}`;
+  }
+});
+basicSliderContainer.appendChild(basicSlider);
+slidersContainer.appendChild(basicSliderContainer);
+
+// Labeled slider
+const labeledSliderContainer = document.createElement('div');
+labeledSliderContainer.style.cssText = 'padding: 20px; background: rgba(255,255,255,0.03); border-radius: 8px;';
+
+const labeledSliderTitle = document.createElement('h3');
+labeledSliderTitle.textContent = 'Labeled Slider (Snap Positions)';
+labeledSliderTitle.style.marginTop = '0';
+labeledSliderContainer.appendChild(labeledSliderTitle);
+
+const labeledSliderValue = document.createElement('span');
+labeledSliderValue.textContent = 'Speed: Normal';
+labeledSliderValue.style.cssText = 'display: block; margin-bottom: 10px; opacity: 0.8;';
+labeledSliderContainer.appendChild(labeledSliderValue);
+
+const speedLabels = ['Slow', 'Normal', 'Fast', 'Turbo'];
+const labeledSlider = RawFunUI.createSlider({
+  min: 0,
+  max: 3,
+  step: 1,
+  value: 1,
+  labels: speedLabels,
+  onChange: (value) => {
+    labeledSliderValue.textContent = `Speed: ${speedLabels[value]}`;
+  }
+});
+labeledSliderContainer.appendChild(labeledSlider);
+slidersContainer.appendChild(labeledSliderContainer);
+
+// Volume slider
+const volumeSliderContainer = document.createElement('div');
+volumeSliderContainer.style.cssText = 'padding: 20px; background: rgba(255,255,255,0.03); border-radius: 8px;';
+
+const volumeSliderTitle = document.createElement('h3');
+volumeSliderTitle.textContent = 'Volume Control';
+volumeSliderTitle.style.marginTop = '0';
+volumeSliderContainer.appendChild(volumeSliderTitle);
+
+const volumeSliderValue = document.createElement('span');
+volumeSliderValue.textContent = 'Volume: 75%';
+volumeSliderValue.style.cssText = 'display: block; margin-bottom: 10px; opacity: 0.8;';
+volumeSliderContainer.appendChild(volumeSliderValue);
+
+const volumeSlider = RawFunUI.createSlider({
+  min: 0,
+  max: 100,
+  step: 5,
+  value: 75,
+  onChange: (value) => {
+    volumeSliderValue.textContent = `Volume: ${value}%`;
+  }
+});
+volumeSliderContainer.appendChild(volumeSlider);
+slidersContainer.appendChild(volumeSliderContainer);
+
+// ========================================
 // PAGE DEMO
 // ========================================
 
