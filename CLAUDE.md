@@ -75,7 +75,8 @@ raw-fun-ui/
 │   │   ├── RfuiModal.ts
 │   │   ├── RfuiCard.ts
 │   │   ├── RfuiInfo.ts
-│   │   └── RfuiTag.ts
+│   │   ├── RfuiTag.ts
+│   │   └── RfuiSlider.ts
 │   ├── styles/              # CSS modules
 │   │   ├── base/
 │   │   │   ├── _variables.css    # CSS custom properties
@@ -86,7 +87,8 @@ raw-fun-ui/
 │   │   │   ├── _modal.css
 │   │   │   ├── _card.css
 │   │   │   ├── _info.css
-│   │   │   └── _tag.css
+│   │   │   ├── _tag.css
+│   │   │   └── _slider.css
 │   │   └── raw-fun-ui.css         # Main entry point
 │   ├── types/
 │   │   └── index.ts              # TypeScript type definitions

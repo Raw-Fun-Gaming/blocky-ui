@@ -80,6 +80,7 @@ confirmModal.show();
 ### Interactive Components
 - **[RfuiButton](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuibutton)** - 4 variants with 3D hover effects
 - **[RfuiDropdown](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuidropdown)** - Theme-aware dropdowns with 4 variants and custom arrow
+- **[RfuiSlider](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuislider)** - Range input with snap positions and optional labels
 - **[RfuiModal](https://raw-fun-gaming.github.io/raw-fun-ui/docs/components#rfuimodal)** - Full-featured modals with backdrop blur and animations
 
 ### Display Components
