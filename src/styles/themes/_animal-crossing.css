@@ -583,28 +583,6 @@
    CLOSE BUTTONS - Muted red circular
    ======================================== */
 
-[data-rfui-theme='animal-crossing'] .rfui-close-btn {
-  background: linear-gradient(
-    180deg,
-    #d06868 0%,
-    #c45c5c 100%
-  );
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 999px;
-  color: var(--rfui-text-light);
-  box-shadow: 0 1px 4px rgba(31, 82, 110, 0.12);
-}
-
-[data-rfui-theme='animal-crossing'] .rfui-close-btn:hover {
-  background: linear-gradient(
-    180deg,
-    #d87878 0%,
-    #d06868 100%
-  );
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(31, 82, 110, 0.15);
-}
-
 /* ========================================
    OVERLAYS - Soft earthy backgrounds
    ======================================== */

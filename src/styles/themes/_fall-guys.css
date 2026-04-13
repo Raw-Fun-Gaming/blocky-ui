@@ -551,27 +551,6 @@
    CLOSE BUTTONS - Red with white border
    ======================================== */
 
-[data-rfui-theme='fall-guys'] .rfui-close-btn {
-  background: linear-gradient(
-    180deg,
-    #ff8585 0%,
-    #ff6b6b 100%
-  );
-  border: 3px solid var(--rfui-border-color);
-  color: var(--rfui-text-light);
-  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
-}
-
-[data-rfui-theme='fall-guys'] .rfui-close-btn:hover {
-  background: linear-gradient(
-    180deg,
-    #ff9999 0%,
-    #ff8080 100%
-  );
-  transform: translate(-1px, -1px);
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
-}
-
 /* ========================================
    OVERLAYS - Light blue backgrounds
    ======================================== */

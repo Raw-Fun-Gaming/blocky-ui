@@ -149,21 +149,17 @@
 
 .rfui-close-btn {
   position: absolute;
-  top: var(--rfui-padding-sm);
-  right: var(--rfui-padding-sm);
+  top: var(--rfui-padding-md);
+  right: var(--rfui-padding-md);
   width: 32px;
   height: 32px;
   padding: 0;
-  border: var(--rfui-border-width-thin) solid rgba(0, 0, 0, 0.15);
-  border-radius: var(--rfui-border-radius-sm);
-  background: #f0f0f0;
-  color: #333;
-  font-size: var(--rfui-font-lg);
-  font-weight: var(--rfui-font-weight-bold);
+  border: none;
+  background: none;
   cursor: pointer;
-  box-shadow: var(--rfui-shadow-base), var(--rfui-inset-combined);
-  transition: all var(--rfui-transition-fast) ease;
   z-index: var(--rfui-z-dropdown);
+  opacity: 0.5;
+  transition: opacity var(--rfui-transition-fast) ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,17 +167,17 @@
 
 .rfui-close-btn::before {
   content: '×';
+  font-size: 24px;
   line-height: 1;
+  color: var(--rfui-text-primary, #333);
 }
 
 .rfui-close-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--rfui-shadow-hover), var(--rfui-inset-combined);
+  opacity: 0.8;
 }
 
 .rfui-close-btn:active {
-  transform: translateY(0);
-  box-shadow: var(--rfui-shadow-active), var(--rfui-inset-combined);
+  opacity: 1;
 }
 
 /* ========================================
