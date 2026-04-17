@@ -24,8 +24,10 @@
    TABLET AND MOBILE LANDSCAPE (≤768px)
    ======================================== */
 @media (max-width: 768px) {
-  .rfui-modal-max-width {
-    --rfui-modal-max-width: calc(100% - 60px);
+  :root {
+    /* Override modal max-width variable so tighter side padding actually applies
+       regardless of CSS import order (variables resolve at usage time). */
+    --rfui-modal-max-width: calc(100vw - 60px);
   }
 
   .rfui-title-enhanced,
@@ -40,7 +42,6 @@
   .rfui-modal-wrapper,
   .rfui-card-wrapper {
     min-width: 280px;
-    max-width: calc(100vw - 60px);
   }
 }
 
@@ -48,6 +49,10 @@
    MOBILE PORTRAIT (≤560px)
    ======================================== */
 @media (max-width: 560px) {
+  :root {
+    --rfui-modal-max-width: calc(100vw - 40px);
+  }
+
   .rfui-title-enhanced,
   .rfui-title {
     font-size: var(--rfui-font-md);
@@ -62,7 +67,6 @@
   .rfui-card-wrapper,
   .rfui-info-wrapper {
     min-width: 240px;
-    max-width: calc(100vw - 32px);
     border-width: var(--rfui-border-width-thin);
   }
 
@@ -84,6 +88,10 @@
    SMALL MOBILE (≤480px)
    ======================================== */
 @media (max-width: 480px) {
+  :root {
+    --rfui-modal-max-width: calc(100vw - 20px);
+  }
+
   .rfui-title-enhanced,
   .rfui-title {
     font-size: var(--rfui-font-sm);
@@ -93,7 +101,6 @@
   .rfui-card-wrapper,
   .rfui-info-wrapper {
     min-width: 220px;
-    max-width: calc(100vw - 24px);
   }
 
   .rfui-btn-wrapper {
@@ -111,11 +118,14 @@
    30% smaller, landscape orientation
    ======================================== */
 @media screen and (max-width: 480px) and (orientation: landscape) {
+  :root {
+    --rfui-modal-max-width: calc(100vw - 20px);
+  }
+
   .rfui-modal-wrapper,
   .rfui-card-wrapper,
   .rfui-info-wrapper {
     min-width: 200px;
-    max-width: calc(100vw - 20px);
   }
 
   .rfui-title-enhanced,
