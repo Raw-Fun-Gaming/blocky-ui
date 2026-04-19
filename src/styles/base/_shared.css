@@ -30,6 +30,7 @@
 }
 
 .rfui-header-bordered {
+  position: relative;
   margin: 0;
   padding: var(--rfui-padding-md) var(--rfui-padding-lg);
   border-bottom: var(--rfui-border-width-thin) solid transparent;
@@ -157,6 +158,7 @@
   border: none;
   background: none;
   cursor: pointer;
+  color: var(--rfui-text-primary);
   z-index: var(--rfui-z-dropdown);
   opacity: 0.5;
   transition: opacity var(--rfui-transition-fast) ease;
@@ -165,11 +167,25 @@
   justify-content: center;
 }
 
-.rfui-close-btn::before {
-  content: '×';
-  font-size: 24px;
-  line-height: 1;
-  color: var(--rfui-text-primary, #333);
+.rfui-close-btn::before,
+.rfui-close-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.rfui-close-btn::before { transform: translate(-50%, -50%) rotate(45deg); }
+.rfui-close-btn::after  { transform: translate(-50%, -50%) rotate(-45deg); }
+
+/* Vertically center the close button when it lives inside a bordered header */
+.rfui-header-bordered .rfui-close-btn {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .rfui-close-btn:hover {

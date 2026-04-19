@@ -121,6 +121,7 @@ export class RfuiPage {
     // Create close button
     const closeBtn = document.createElement('button');
     closeBtn.className = 'rfui-close-btn';
+    closeBtn.setAttribute('aria-label', 'Close');
     closeBtn.addEventListener('click', () => {
       instance.close();
     });

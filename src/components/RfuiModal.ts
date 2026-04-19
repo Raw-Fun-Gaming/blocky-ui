@@ -55,14 +55,15 @@ export class RfuiModal {
       }
     };
 
-    // Create close button if enabled
+    // Append close button into header so CSS can vertically center it within the header bar
     if (options.showCloseButton !== false) {
       const closeBtn = document.createElement('button');
       closeBtn.className = 'rfui-close-btn';
+      closeBtn.setAttribute('aria-label', 'Close');
       closeBtn.addEventListener('click', () => {
         instance.close();
       });
-      modalWrapper.appendChild(closeBtn);
+      header.appendChild(closeBtn);
     }
 
     // Create body
