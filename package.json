@@ -1,6 +1,6 @@
 {
   "name": "raw-fun-ui",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A game-themed UI component library with switchable themes, built with TypeScript and pure CSS",
   "type": "module",
   "main": "dist/index.cjs.js",

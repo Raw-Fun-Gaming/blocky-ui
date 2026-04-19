@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2026-04-19
+
+### Fixed
+- Close button vertically centered within modal header bar
+- Close button glyph replaced with font-independent CSS cross (two rotated bars via `::before`/`::after`) — position no longer shifts when page font changes
+
+### Added
+- `--rfui-close-btn-bar-width` token (default `60%`) — controls bar length
+- `--rfui-close-btn-bar-height` token (default `2px`) — controls stroke thickness
+- `aria-label="Close"` on Modal and Page close buttons
+
+### Changed
+- Close button now lives inside `.rfui-header-bordered` in Modal (was on wrapper)
+
 ## [2.1.0] - 2026-04-09
 
 ### Added
