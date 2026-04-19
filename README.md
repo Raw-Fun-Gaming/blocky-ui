@@ -139,6 +139,48 @@ Raw Fun UI uses pure CSS with 3D box-shadow effects, gradient backgrounds, and s
 - Customizable color variants
 - Theme-based styling via `data-rfui-theme` attribute
 
+### Customising the close button
+
+The close button (`.rfui-close-btn`) renders as two rotated CSS bars. Two design tokens control its proportions:
+
+| Token | Default | Effect |
+|---|---|---|
+| `--rfui-close-btn-bar-width` | `60%` | Length of each bar (relative to button width) |
+| `--rfui-close-btn-bar-height` | `2px` | Stroke thickness |
+
+**Tweak via tokens** (scoped to a theme or any selector):
+
+```css
+[data-rfui-theme='my-theme'] {
+  --rfui-close-btn-bar-width: 50%;
+  --rfui-close-btn-bar-height: 3px;
+}
+```
+
+**Full replacement with an SVG** — suppress the bars and provide a background image:
+
+```css
+/* suppress default bars */
+.rfui-close-btn::before,
+.rfui-close-btn::after { content: none; }
+
+/* your own icon — inherits opacity/hover from the shared class */
+.rfui-close-btn {
+  background: url("data:image/svg+xml,...") center / 60% 60% no-repeat;
+}
+```
+
+Scoped to a theme:
+
+```css
+[data-rfui-theme='my-theme'] .rfui-close-btn::before,
+[data-rfui-theme='my-theme'] .rfui-close-btn::after { content: none; }
+
+[data-rfui-theme='my-theme'] .rfui-close-btn {
+  background: url("data:image/svg+xml,...") center / 60% 60% no-repeat;
+}
+```
+
 ## 🎨 Visual Design
 
 The components feature:

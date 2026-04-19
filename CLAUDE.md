@@ -337,16 +337,24 @@ All styling uses CSS variables for consistency and easy theming:
 }
 ```
 
-**Close Button** (Shared by Modal and Info):
+**Close Button** (Shared by Modal and Page):
+
+The close button renders two rotated CSS bars via `::before`/`::after` — font-independent.
+In Modal it lives inside `.rfui-header-bordered` and is vertically centered via CSS.
+
+Two tokens control proportions:
 ```css
-.rfui-close-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(180deg, rgba(255, 68, 68, 0.9) 0%, rgba(255, 68, 68, 0.7) 100%);
-  z-index: 100;
+--rfui-close-btn-bar-width: 60%;   /* bar length relative to button */
+--rfui-close-btn-bar-height: 2px;  /* stroke thickness */
+```
+
+To replace with an SVG (e.g. in a theme), suppress the bars and supply a background:
+```css
+[data-rfui-theme='x'] .rfui-close-btn::before,
+[data-rfui-theme='x'] .rfui-close-btn::after { content: none; }
+
+[data-rfui-theme='x'] .rfui-close-btn {
+  background: url("data:image/svg+xml,...") center / 60% 60% no-repeat;
 }
 ```
 

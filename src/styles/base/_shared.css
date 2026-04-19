@@ -173,8 +173,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 60%;
-  height: 2px;
+  width: var(--rfui-close-btn-bar-width);
+  height: var(--rfui-close-btn-bar-height);
   background: currentColor;
   border-radius: 1px;
 }

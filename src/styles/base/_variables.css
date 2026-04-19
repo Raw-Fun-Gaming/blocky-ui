@@ -143,6 +143,10 @@
   --rfui-text-shadow-md: none;
   --rfui-text-shadow-lg: none;
 
+  /* Close Button */
+  --rfui-close-btn-bar-width: 60%;
+  --rfui-close-btn-bar-height: 2px;
+
   /* Opacity Levels */
   --rfui-opacity-disabled: 0.5;
   --rfui-opacity-hover: 0.9;
