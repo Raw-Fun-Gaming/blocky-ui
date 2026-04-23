@@ -106,20 +106,33 @@ export class RawFunUI {
   }
 
   /**
-   * Creates and shows an error modal with danger-styled OK button
+   * Dismissible error modal — OK button, close button, overlay click closes.
+   * Use for soft errors like insufficient balance where the player can continue.
    */
   static showError(title: string, message: string, onClose?: () => void): RfuiModalInstance {
     const modal = RawFunUI.createModal({
       title: title,
       content: message,
-      buttons: [
-        {
-          text: 'OK',
-          variant: 'danger',
-          onClick: onClose || (() => {}),
-        },
-      ],
+      buttons: [{ text: 'OK', variant: 'danger', onClick: onClose || (() => {}) }],
       onClose: onClose,
+      showCloseButton: true,
+      closeOnOverlayClick: true,
+    });
+    modal.show();
+    return modal;
+  }
+
+  /**
+   * Blocking error modal — no buttons, no close, overlay non-clickable.
+   * Use for fatal/game-breaking errors where the session cannot continue.
+   */
+  static showFatalError(title: string, message: string): RfuiModalInstance {
+    const modal = RawFunUI.createModal({
+      title: title,
+      content: message,
+      buttons: [],
+      showCloseButton: false,
+      closeOnOverlayClick: false,
     });
     modal.show();
     return modal;

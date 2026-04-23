@@ -58,6 +58,7 @@
   color: var(--rfui-text-primary);
   line-height: var(--rfui-line-height-normal);
   font-size: var(--rfui-font-md);
+  text-align: center;
 }
 
 .rfui-modal-body p {
