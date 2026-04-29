@@ -150,8 +150,8 @@
 
 .rfui-close-btn {
   position: absolute;
-  top: var(--rfui-padding-md);
-  right: var(--rfui-padding-md);
+  top: var(--rfui-padding-sm);
+  right: var(--rfui-padding-sm);
   width: 32px;
   height: 32px;
   padding: 0;
